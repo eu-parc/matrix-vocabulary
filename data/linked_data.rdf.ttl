@@ -1,0 +1,203 @@
+<http://www.eirene.eu/references#Matrixadi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.eirene.eu/references#Matrixadi> <http://www.w3.org/2004/02/skos/core#altLabel> "adipose tissue/fat"@nl .
+<http://www.eirene.eu/references#Matrixadi> <http://www.w3.org/2004/02/skos/core#altLabel> "vetweefsel/vet" .
+<http://www.eirene.eu/references#Matrixadi> <http://www.w3.org/2004/02/skos/core#prefLabel> "adi" .
+<http://www.eirene.eu/references#Matrixaf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.eirene.eu/references#Matrixaf> <http://www.w3.org/2004/02/skos/core#altLabel> "amniotic fluid"@nl .
+<http://www.eirene.eu/references#Matrixaf> <http://www.w3.org/2004/02/skos/core#altLabel> "vruchtwater" .
+<http://www.eirene.eu/references#Matrixaf> <http://www.w3.org/2004/02/skos/core#prefLabel> "af" .
+<http://www.eirene.eu/references#Matrixair> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.eirene.eu/references#Matrixair> <http://www.w3.org/2004/02/skos/core#altLabel> "air"@nl .
+<http://www.eirene.eu/references#Matrixair> <http://www.w3.org/2004/02/skos/core#altLabel> "lucht" .
+<http://www.eirene.eu/references#Matrixair> <http://www.w3.org/2004/02/skos/core#prefLabel> "air" .
+<http://www.eirene.eu/references#Matrixatn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.eirene.eu/references#Matrixatn> <http://www.w3.org/2004/02/skos/core#altLabel> "All toe nail"@nl .
+<http://www.eirene.eu/references#Matrixatn> <http://www.w3.org/2004/02/skos/core#altLabel> "alle teennagels" .
+<http://www.eirene.eu/references#Matrixatn> <http://www.w3.org/2004/02/skos/core#narrower> <http://www.eirene.eu/references#Matrixn> .
+<http://www.eirene.eu/references#Matrixatn> <http://www.w3.org/2004/02/skos/core#prefLabel> "atn" .
+<http://www.eirene.eu/references#Matrixbbc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.eirene.eu/references#Matrixbbc> <http://www.w3.org/2004/02/skos/core#altLabel> "blood-blood cells"@nl .
+<http://www.eirene.eu/references#Matrixbbc> <http://www.w3.org/2004/02/skos/core#altLabel> "bloed-bloedcellen" .
+<http://www.eirene.eu/references#Matrixbbc> <http://www.w3.org/2004/02/skos/core#narrower> <http://www.eirene.eu/references#Matrixbloodcells> .
+<http://www.eirene.eu/references#Matrixbbc> <http://www.w3.org/2004/02/skos/core#prefLabel> "bbc" .
+<http://www.eirene.eu/references#Matrixblood> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.eirene.eu/references#Matrixblood> <http://www.w3.org/2004/02/skos/core#altLabel> "blood"@nl .
+<http://www.eirene.eu/references#Matrixblood> <http://www.w3.org/2004/02/skos/core#altLabel> "bloed" .
+<http://www.eirene.eu/references#Matrixblood> <http://www.w3.org/2004/02/skos/core#prefLabel> "blood" .
+<http://www.eirene.eu/references#Matrixbloodcells> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.eirene.eu/references#Matrixbloodcells> <http://www.w3.org/2004/02/skos/core#altLabel> "bloodcells"@nl .
+<http://www.eirene.eu/references#Matrixbloodcells> <http://www.w3.org/2004/02/skos/core#altLabel> "bloedcellen" .
+<http://www.eirene.eu/references#Matrixbloodcells> <http://www.w3.org/2004/02/skos/core#prefLabel> "bloodcells" .
+<http://www.eirene.eu/references#Matrixbm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.eirene.eu/references#Matrixbm> <http://www.w3.org/2004/02/skos/core#altLabel> "breast milk"@nl .
+<http://www.eirene.eu/references#Matrixbm> <http://www.w3.org/2004/02/skos/core#altLabel> "moedermelk" .
+<http://www.eirene.eu/references#Matrixbm> <http://www.w3.org/2004/02/skos/core#prefLabel> "bm" .
+<http://www.eirene.eu/references#Matrixbp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.eirene.eu/references#Matrixbp> <http://www.w3.org/2004/02/skos/core#altLabel> "blood plasma"@nl .
+<http://www.eirene.eu/references#Matrixbp> <http://www.w3.org/2004/02/skos/core#altLabel> "bloed-plasma" .
+<http://www.eirene.eu/references#Matrixbp> <http://www.w3.org/2004/02/skos/core#narrower> <http://www.eirene.eu/references#Matrixblood> .
+<http://www.eirene.eu/references#Matrixbp> <http://www.w3.org/2004/02/skos/core#prefLabel> "bp" .
+<http://www.eirene.eu/references#Matrixbs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.eirene.eu/references#Matrixbs> <http://www.w3.org/2004/02/skos/core#altLabel> "blood serum"@nl .
+<http://www.eirene.eu/references#Matrixbs> <http://www.w3.org/2004/02/skos/core#altLabel> "bloed-serum" .
+<http://www.eirene.eu/references#Matrixbs> <http://www.w3.org/2004/02/skos/core#narrower> <http://www.eirene.eu/references#Matrixblood> .
+<http://www.eirene.eu/references#Matrixbs> <http://www.w3.org/2004/02/skos/core#prefLabel> "bs" .
+<http://www.eirene.eu/references#Matrixbtn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.eirene.eu/references#Matrixbtn> <http://www.w3.org/2004/02/skos/core#altLabel> "Big toe nail"@nl .
+<http://www.eirene.eu/references#Matrixbtn> <http://www.w3.org/2004/02/skos/core#altLabel> "grote teen nagel" .
+<http://www.eirene.eu/references#Matrixbtn> <http://www.w3.org/2004/02/skos/core#narrower> <http://www.eirene.eu/references#Matrixn> .
+<http://www.eirene.eu/references#Matrixbtn> <http://www.w3.org/2004/02/skos/core#prefLabel> "btn" .
+<http://www.eirene.eu/references#Matrixbwb> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.eirene.eu/references#Matrixbwb> <http://www.w3.org/2004/02/skos/core#altLabel> "blood-whole blood"@nl .
+<http://www.eirene.eu/references#Matrixbwb> <http://www.w3.org/2004/02/skos/core#altLabel> "bloed-volbloed" .
+<http://www.eirene.eu/references#Matrixbwb> <http://www.w3.org/2004/02/skos/core#narrower> <http://www.eirene.eu/references#Matrixblood> .
+<http://www.eirene.eu/references#Matrixbwb> <http://www.w3.org/2004/02/skos/core#prefLabel> "bwb" .
+<http://www.eirene.eu/references#Matrixcbbc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.eirene.eu/references#Matrixcbbc> <http://www.w3.org/2004/02/skos/core#altLabel> "cord blood-cells"@nl .
+<http://www.eirene.eu/references#Matrixcbbc> <http://www.w3.org/2004/02/skos/core#altLabel> "navelstrengbloed-bloed cellen" .
+<http://www.eirene.eu/references#Matrixcbbc> <http://www.w3.org/2004/02/skos/core#prefLabel> "cbbc" .
+<http://www.eirene.eu/references#Matrixcbp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.eirene.eu/references#Matrixcbp> <http://www.w3.org/2004/02/skos/core#altLabel> "cord blood-plasma"@nl .
+<http://www.eirene.eu/references#Matrixcbp> <http://www.w3.org/2004/02/skos/core#altLabel> "navelstrengbloed-plasma" .
+<http://www.eirene.eu/references#Matrixcbp> <http://www.w3.org/2004/02/skos/core#narrower> <http://www.eirene.eu/references#Matrixcord%20blood> .
+<http://www.eirene.eu/references#Matrixcbp> <http://www.w3.org/2004/02/skos/core#prefLabel> "cbp" .
+<http://www.eirene.eu/references#Matrixcbs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.eirene.eu/references#Matrixcbs> <http://www.w3.org/2004/02/skos/core#altLabel> "cord blood-serum"@nl .
+<http://www.eirene.eu/references#Matrixcbs> <http://www.w3.org/2004/02/skos/core#altLabel> "navelstrengbloed-serum" .
+<http://www.eirene.eu/references#Matrixcbs> <http://www.w3.org/2004/02/skos/core#narrower> <http://www.eirene.eu/references#Matrixcord%20blood> .
+<http://www.eirene.eu/references#Matrixcbs> <http://www.w3.org/2004/02/skos/core#prefLabel> "cbs" .
+<http://www.eirene.eu/references#Matrixcbt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.eirene.eu/references#Matrixcbt> <http://www.w3.org/2004/02/skos/core#altLabel> "umbilical cord tissue"@nl .
+<http://www.eirene.eu/references#Matrixcbt> <http://www.w3.org/2004/02/skos/core#altLabel> "weefsel van navelstreng" .
+<http://www.eirene.eu/references#Matrixcbt> <http://www.w3.org/2004/02/skos/core#prefLabel> "cbt" .
+<http://www.eirene.eu/references#Matrixcbwb> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.eirene.eu/references#Matrixcbwb> <http://www.w3.org/2004/02/skos/core#altLabel> "cord blood-whole blood"@nl .
+<http://www.eirene.eu/references#Matrixcbwb> <http://www.w3.org/2004/02/skos/core#altLabel> "navelstrengbloed-volbloed" .
+<http://www.eirene.eu/references#Matrixcbwb> <http://www.w3.org/2004/02/skos/core#narrower> <http://www.eirene.eu/references#Matrixcord%20blood> .
+<http://www.eirene.eu/references#Matrixcbwb> <http://www.w3.org/2004/02/skos/core#prefLabel> "cbwb" .
+<http://www.eirene.eu/references#Matrixcord%20blood> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.eirene.eu/references#Matrixcord%20blood> <http://www.w3.org/2004/02/skos/core#altLabel> "cord blood"@nl .
+<http://www.eirene.eu/references#Matrixcord%20blood> <http://www.w3.org/2004/02/skos/core#altLabel> "navelstrengbloed" .
+<http://www.eirene.eu/references#Matrixcord%20blood> <http://www.w3.org/2004/02/skos/core#prefLabel> "cord blood" .
+<http://www.eirene.eu/references#Matrixdbs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.eirene.eu/references#Matrixdbs> <http://www.w3.org/2004/02/skos/core#altLabel> "dried blood spots"@nl .
+<http://www.eirene.eu/references#Matrixdbs> <http://www.w3.org/2004/02/skos/core#altLabel> "blood spot gedroogd" .
+<http://www.eirene.eu/references#Matrixdbs> <http://www.w3.org/2004/02/skos/core#narrower> <http://www.eirene.eu/references#Matrixblood> .
+<http://www.eirene.eu/references#Matrixdbs> <http://www.w3.org/2004/02/skos/core#prefLabel> "dbs" .
+<http://www.eirene.eu/references#Matrixdw> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.eirene.eu/references#Matrixdw> <http://www.w3.org/2004/02/skos/core#altLabel> "dermal wipes"@nl .
+<http://www.eirene.eu/references#Matrixdw> <http://www.w3.org/2004/02/skos/core#altLabel> "dermale doekjes" .
+<http://www.eirene.eu/references#Matrixdw> <http://www.w3.org/2004/02/skos/core#prefLabel> "dw" .
+<http://www.eirene.eu/references#Matrixebc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.eirene.eu/references#Matrixebc> <http://www.w3.org/2004/02/skos/core#altLabel> "exhaled breath condensate"@nl .
+<http://www.eirene.eu/references#Matrixebc> <http://www.w3.org/2004/02/skos/core#altLabel> "uitgeademde lucht condensaat" .
+<http://www.eirene.eu/references#Matrixebc> <http://www.w3.org/2004/02/skos/core#prefLabel> "ebc" .
+<http://www.eirene.eu/references#Matrixegg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.eirene.eu/references#Matrixegg> <http://www.w3.org/2004/02/skos/core#altLabel> "eggs"@nl .
+<http://www.eirene.eu/references#Matrixegg> <http://www.w3.org/2004/02/skos/core#altLabel> "kippenei" .
+<http://www.eirene.eu/references#Matrixegg> <http://www.w3.org/2004/02/skos/core#narrower> <http://www.eirene.eu/references#Matrixfood> .
+<http://www.eirene.eu/references#Matrixegg> <http://www.w3.org/2004/02/skos/core#prefLabel> "egg" .
+<http://www.eirene.eu/references#Matrixfood> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.eirene.eu/references#Matrixfood> <http://www.w3.org/2004/02/skos/core#altLabel> "food"@nl .
+<http://www.eirene.eu/references#Matrixfood> <http://www.w3.org/2004/02/skos/core#altLabel> "voedsel" .
+<http://www.eirene.eu/references#Matrixfood> <http://www.w3.org/2004/02/skos/core#prefLabel> "food" .
+<http://www.eirene.eu/references#Matrixh> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.eirene.eu/references#Matrixh> <http://www.w3.org/2004/02/skos/core#altLabel> "hair"@nl .
+<http://www.eirene.eu/references#Matrixh> <http://www.w3.org/2004/02/skos/core#altLabel> "haar" .
+<http://www.eirene.eu/references#Matrixh> <http://www.w3.org/2004/02/skos/core#prefLabel> "h" .
+<http://www.eirene.eu/references#Matrixiair> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.eirene.eu/references#Matrixiair> <http://www.w3.org/2004/02/skos/core#altLabel> "indoor air-stationary"@nl .
+<http://www.eirene.eu/references#Matrixiair> <http://www.w3.org/2004/02/skos/core#altLabel> "binnenlucht" .
+<http://www.eirene.eu/references#Matrixiair> <http://www.w3.org/2004/02/skos/core#narrower> <http://www.eirene.eu/references#Matrixair> .
+<http://www.eirene.eu/references#Matrixiair> <http://www.w3.org/2004/02/skos/core#prefLabel> "iair" .
+<http://www.eirene.eu/references#Matrixidust> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.eirene.eu/references#Matrixidust> <http://www.w3.org/2004/02/skos/core#altLabel> "indoor dust"@nl .
+<http://www.eirene.eu/references#Matrixidust> <http://www.w3.org/2004/02/skos/core#altLabel> "binnen stof" .
+<http://www.eirene.eu/references#Matrixidust> <http://www.w3.org/2004/02/skos/core#narrower> <http://www.eirene.eu/references#Matrixair> .
+<http://www.eirene.eu/references#Matrixidust> <http://www.w3.org/2004/02/skos/core#prefLabel> "idust" .
+<http://www.eirene.eu/references#Matrixkgfood> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.eirene.eu/references#Matrixkgfood> <http://www.w3.org/2004/02/skos/core#altLabel> "kitchengarden food"@nl .
+<http://www.eirene.eu/references#Matrixkgfood> <http://www.w3.org/2004/02/skos/core#altLabel> "moestuin voedsel" .
+<http://www.eirene.eu/references#Matrixkgfood> <http://www.w3.org/2004/02/skos/core#narrower> <http://www.eirene.eu/references#Matrixfood> .
+<http://www.eirene.eu/references#Matrixkgfood> <http://www.w3.org/2004/02/skos/core#prefLabel> "kgfood" .
+<http://www.eirene.eu/references#Matrixn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.eirene.eu/references#Matrixn> <http://www.w3.org/2004/02/skos/core#altLabel> "nail"@nl .
+<http://www.eirene.eu/references#Matrixn> <http://www.w3.org/2004/02/skos/core#altLabel> "nagel" .
+<http://www.eirene.eu/references#Matrixn> <http://www.w3.org/2004/02/skos/core#prefLabel> "n" .
+<http://www.eirene.eu/references#Matrixnm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.eirene.eu/references#Matrixnm> <http://www.w3.org/2004/02/skos/core#altLabel> "nasal mucus"@nl .
+<http://www.eirene.eu/references#Matrixnm> <http://www.w3.org/2004/02/skos/core#altLabel> "neusslijm" .
+<http://www.eirene.eu/references#Matrixnm> <http://www.w3.org/2004/02/skos/core#prefLabel> "nm" .
+<http://www.eirene.eu/references#Matrixoair> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.eirene.eu/references#Matrixoair> <http://www.w3.org/2004/02/skos/core#altLabel> "outdoor air-stationary"@nl .
+<http://www.eirene.eu/references#Matrixoair> <http://www.w3.org/2004/02/skos/core#altLabel> "buitenlucht" .
+<http://www.eirene.eu/references#Matrixoair> <http://www.w3.org/2004/02/skos/core#narrower> <http://www.eirene.eu/references#Matrixair> .
+<http://www.eirene.eu/references#Matrixoair> <http://www.w3.org/2004/02/skos/core#prefLabel> "oair" .
+<http://www.eirene.eu/references#Matrixodust> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.eirene.eu/references#Matrixodust> <http://www.w3.org/2004/02/skos/core#altLabel> "outdoor dust"@nl .
+<http://www.eirene.eu/references#Matrixodust> <http://www.w3.org/2004/02/skos/core#altLabel> "outdoor stof" .
+<http://www.eirene.eu/references#Matrixodust> <http://www.w3.org/2004/02/skos/core#narrower> <http://www.eirene.eu/references#Matrixair> .
+<http://www.eirene.eu/references#Matrixodust> <http://www.w3.org/2004/02/skos/core#prefLabel> "odust" .
+<http://www.eirene.eu/references#Matrixpair> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.eirene.eu/references#Matrixpair> <http://www.w3.org/2004/02/skos/core#altLabel> "personal air"@nl .
+<http://www.eirene.eu/references#Matrixpair> <http://www.w3.org/2004/02/skos/core#altLabel> "persoonlijke lucht" .
+<http://www.eirene.eu/references#Matrixpair> <http://www.w3.org/2004/02/skos/core#narrower> <http://www.eirene.eu/references#Matrixair> .
+<http://www.eirene.eu/references#Matrixpair> <http://www.w3.org/2004/02/skos/core#prefLabel> "pair" .
+<http://www.eirene.eu/references#Matrixplt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.eirene.eu/references#Matrixplt> <http://www.w3.org/2004/02/skos/core#altLabel> "placenta tissue"@nl .
+<http://www.eirene.eu/references#Matrixplt> <http://www.w3.org/2004/02/skos/core#altLabel> "placenta weefsel" .
+<http://www.eirene.eu/references#Matrixplt> <http://www.w3.org/2004/02/skos/core#prefLabel> "plt" .
+<http://www.eirene.eu/references#Matrixrbc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.eirene.eu/references#Matrixrbc> <http://www.w3.org/2004/02/skos/core#altLabel> "blood - red blood cells"@nl .
+<http://www.eirene.eu/references#Matrixrbc> <http://www.w3.org/2004/02/skos/core#altLabel> "bloed-rode bloedcellen" .
+<http://www.eirene.eu/references#Matrixrbc> <http://www.w3.org/2004/02/skos/core#narrower> <http://www.eirene.eu/references#Matrixbloodcells> .
+<http://www.eirene.eu/references#Matrixrbc> <http://www.w3.org/2004/02/skos/core#prefLabel> "rbc" .
+<http://www.eirene.eu/references#Matrixsa> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.eirene.eu/references#Matrixsa> <http://www.w3.org/2004/02/skos/core#altLabel> "saliva/sputum"@nl .
+<http://www.eirene.eu/references#Matrixsa> <http://www.w3.org/2004/02/skos/core#altLabel> "speeksel" .
+<http://www.eirene.eu/references#Matrixsa> <http://www.w3.org/2004/02/skos/core#prefLabel> "sa" .
+<http://www.eirene.eu/references#Matrixsem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.eirene.eu/references#Matrixsem> <http://www.w3.org/2004/02/skos/core#altLabel> "semen"@nl .
+<http://www.eirene.eu/references#Matrixsem> <http://www.w3.org/2004/02/skos/core#altLabel> "zaad" .
+<http://www.eirene.eu/references#Matrixsem> <http://www.w3.org/2004/02/skos/core#prefLabel> "sem" .
+<http://www.eirene.eu/references#Matrixsoil> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.eirene.eu/references#Matrixsoil> <http://www.w3.org/2004/02/skos/core#altLabel> "soil"@nl .
+<http://www.eirene.eu/references#Matrixsoil> <http://www.w3.org/2004/02/skos/core#altLabel> "grond" .
+<http://www.eirene.eu/references#Matrixsoil> <http://www.w3.org/2004/02/skos/core#prefLabel> "soil" .
+<http://www.eirene.eu/references#Matrixst> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.eirene.eu/references#Matrixst> <http://www.w3.org/2004/02/skos/core#altLabel> "stool"@nl .
+<http://www.eirene.eu/references#Matrixst> <http://www.w3.org/2004/02/skos/core#altLabel> "stoelgang" .
+<http://www.eirene.eu/references#Matrixst> <http://www.w3.org/2004/02/skos/core#prefLabel> "st" .
+<http://www.eirene.eu/references#Matrixud> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.eirene.eu/references#Matrixud> <http://www.w3.org/2004/02/skos/core#altLabel> "urine 24h"@nl .
+<http://www.eirene.eu/references#Matrixud> <http://www.w3.org/2004/02/skos/core#altLabel> "urine 24u" .
+<http://www.eirene.eu/references#Matrixud> <http://www.w3.org/2004/02/skos/core#narrower> <http://www.eirene.eu/references#Matrixurine> .
+<http://www.eirene.eu/references#Matrixud> <http://www.w3.org/2004/02/skos/core#prefLabel> "ud" .
+<http://www.eirene.eu/references#Matrixuf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.eirene.eu/references#Matrixuf> <http://www.w3.org/2004/02/skos/core#altLabel> "fasting urine"@nl .
+<http://www.eirene.eu/references#Matrixuf> <http://www.w3.org/2004/02/skos/core#altLabel> "urine nuchter" .
+<http://www.eirene.eu/references#Matrixuf> <http://www.w3.org/2004/02/skos/core#narrower> <http://www.eirene.eu/references#Matrixurine> .
+<http://www.eirene.eu/references#Matrixuf> <http://www.w3.org/2004/02/skos/core#prefLabel> "uf" .
+<http://www.eirene.eu/references#Matrixum> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.eirene.eu/references#Matrixum> <http://www.w3.org/2004/02/skos/core#altLabel> "first morning urine"@nl .
+<http://www.eirene.eu/references#Matrixum> <http://www.w3.org/2004/02/skos/core#altLabel> "eerste ochtend-urine" .
+<http://www.eirene.eu/references#Matrixum> <http://www.w3.org/2004/02/skos/core#narrower> <http://www.eirene.eu/references#Matrixurine> .
+<http://www.eirene.eu/references#Matrixum> <http://www.w3.org/2004/02/skos/core#prefLabel> "um" .
+<http://www.eirene.eu/references#Matrixurine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.eirene.eu/references#Matrixurine> <http://www.w3.org/2004/02/skos/core#altLabel> "urine"@nl .
+<http://www.eirene.eu/references#Matrixurine> <http://www.w3.org/2004/02/skos/core#altLabel> "urine" .
+<http://www.eirene.eu/references#Matrixurine> <http://www.w3.org/2004/02/skos/core#prefLabel> "urine" .
+<http://www.eirene.eu/references#Matrixus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.eirene.eu/references#Matrixus> <http://www.w3.org/2004/02/skos/core#altLabel> "random spot urine"@nl .
+<http://www.eirene.eu/references#Matrixus> <http://www.w3.org/2004/02/skos/core#altLabel> "random spot-urine" .
+<http://www.eirene.eu/references#Matrixus> <http://www.w3.org/2004/02/skos/core#narrower> <http://www.eirene.eu/references#Matrixurine> .
+<http://www.eirene.eu/references#Matrixus> <http://www.w3.org/2004/02/skos/core#prefLabel> "us" .
+<http://www.eirene.eu/references#Matrixvams> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.eirene.eu/references#Matrixvams> <http://www.w3.org/2004/02/skos/core#altLabel> "volumetric absorptive microsample (VAMS)"@nl .
+<http://www.eirene.eu/references#Matrixvams> <http://www.w3.org/2004/02/skos/core#altLabel> "blood volumetrische absorptieve microsample" .
+<http://www.eirene.eu/references#Matrixvams> <http://www.w3.org/2004/02/skos/core#narrower> <http://www.eirene.eu/references#Matrixblood> .
+<http://www.eirene.eu/references#Matrixvams> <http://www.w3.org/2004/02/skos/core#prefLabel> "vams" .
+<http://www.eirene.eu/references#Matrixwater> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.eirene.eu/references#Matrixwater> <http://www.w3.org/2004/02/skos/core#altLabel> "water"@nl .
+<http://www.eirene.eu/references#Matrixwater> <http://www.w3.org/2004/02/skos/core#altLabel> "water" .
+<http://www.eirene.eu/references#Matrixwater> <http://www.w3.org/2004/02/skos/core#prefLabel> "water" .

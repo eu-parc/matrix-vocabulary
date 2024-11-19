@@ -1,0 +1,47 @@
+id,unique_name,name,sort_order,aggregation_target,parent_matrix,translations_translated_value,translations_property_name,translations_language
+atn,atn,All toe nail,17,False,nail,alle teennagels,name,nl-be
+water,water,water,37,False,,water,name,nl-be
+oair,oair,outdoor air-stationary,31,False,air,buitenlucht,name,nl-be
+cbs,cbs,cord blood-serum,7,False,cord blood,navelstrengbloed-serum,name,nl-be
+ebc,ebc,exhaled breath condensate,23,False,,uitgeademde lucht condensaat,name,nl-be
+sem,sem,semen,22,False,,zaad,name,nl-be
+us,us,random spot urine,10,False,urine,random spot-urine,name,nl-be
+rbc,rbc,blood - red blood cells,5,False,bloodcells,bloed-rode bloedcellen,name,nl-be
+vams,vams,volumetric absorptive microsample (VAMS),38,False,blood,blood volumetrische absorptieve microsample,name,nl-be
+cbt,cbt,umbilical cord tissue,24,False,,weefsel van navelstreng,name,nl-be
+egg,egg,eggs,36,False,food,kippenei,name,nl-be
+sa,sa,saliva/sputum,20,False,,speeksel,name,nl-be
+dw,dw,dermal wipes,26,False,,dermale doekjes,name,nl-be
+adi,adi,adipose tissue/fat,25,False,,vetweefsel/vet,name,nl-be
+uf,uf,fasting urine,12,False,urine,urine nuchter,name,nl-be
+st,st,stool,21,False,,stoelgang,name,nl-be
+cbwb,cbwb,cord blood-whole blood,6,False,cord blood,navelstrengbloed-volbloed,name,nl-be
+bbc,bbc,blood-blood cells,4,False,bloodcells,bloed-bloedcellen,name,nl-be
+bm,bm,breast milk,14,False,,moedermelk,name,nl-be
+n,n,nail,16,False,,nagel,name,nl-be
+bp,bp,blood plasma,3,False,blood,bloed-plasma,name,nl-be
+cbbc,cbbc,cord blood-cells,9,False,,navelstrengbloed-bloed cellen,name,nl-be
+odust,odust,outdoor dust,30,False,air,outdoor stof,name,nl-be
+btn,btn,Big toe nail,18,False,nail,grote teen nagel,name,nl-be
+nm,nm,nasal mucus,19,False,,neusslijm,name,nl-be
+plt,plt,placenta tissue,28,False,,placenta weefsel,name,nl-be
+kgfood,kgfood,kitchengarden food,35,False,food,moestuin voedsel,name,nl-be
+soil,soil,soil,34,False,,grond,name,nl-be
+bs,bs,blood serum,2,False,blood,bloed-serum,name,nl-be
+cbp,cbp,cord blood-plasma,8,False,cord blood,navelstrengbloed-plasma,name,nl-be
+h,h,hair,15,False,,haar,name,nl-be
+dbs,dbs,dried blood spots,39,False,blood,blood spot gedroogd,name,nl-be
+idust,idust,indoor dust,29,False,air,binnen stof,name,nl-be
+bwb,bwb,blood-whole blood,1,False,blood,bloed-volbloed,name,nl-be
+af,af,amniotic fluid,27,False,,vruchtwater,name,nl-be
+um,um,first morning urine,11,False,urine,eerste ochtend-urine,name,nl-be
+pair,pair,personal air,33,False,air,persoonlijke lucht,name,nl-be
+ud,ud,urine 24h,13,False,urine,urine 24u,name,nl-be
+iair,iair,indoor air-stationary,32,False,air,binnenlucht,name,nl-be
+air,air,air,0.1,False,,lucht,name,nl-be
+food,food,food,0.1,False,,voedsel,name,nl-be
+bloodcells,bloodcells,bloodcells,0.1,False,,bloedcellen,name,nl-be
+urine,urine,urine,0.1,False,,urine,name,nl-be
+cord blood,cord blood,cord blood,0.1,False,,navelstrengbloed,name,nl-be
+blood,blood,blood,0.1,False,,bloed,name,nl-be
+

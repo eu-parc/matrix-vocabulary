@@ -1,0 +1,429 @@
+matrices:
+- aggregation_target: false
+  id: atn
+  name: All toe nail
+  parent_matrix: nail
+  sort_order: 17
+  translations:
+  - language: nl-be
+    property_name: name
+    translated_value: alle teennagels
+  unique_name: atn
+- aggregation_target: false
+  id: water
+  name: water
+  sort_order: 37
+  translations:
+  - language: nl-be
+    property_name: name
+    translated_value: water
+  unique_name: water
+- aggregation_target: false
+  id: oair
+  name: outdoor air-stationary
+  parent_matrix: air
+  sort_order: 31
+  translations:
+  - language: nl-be
+    property_name: name
+    translated_value: buitenlucht
+  unique_name: oair
+- aggregation_target: false
+  id: cbs
+  name: cord blood-serum
+  parent_matrix: cord blood
+  sort_order: 7
+  translations:
+  - language: nl-be
+    property_name: name
+    translated_value: navelstrengbloed-serum
+  unique_name: cbs
+- aggregation_target: false
+  id: ebc
+  name: exhaled breath condensate
+  sort_order: 23
+  translations:
+  - language: nl-be
+    property_name: name
+    translated_value: uitgeademde lucht condensaat
+  unique_name: ebc
+- aggregation_target: false
+  id: sem
+  name: semen
+  sort_order: 22
+  translations:
+  - language: nl-be
+    property_name: name
+    translated_value: zaad
+  unique_name: sem
+- aggregation_target: false
+  id: us
+  name: random spot urine
+  parent_matrix: urine
+  sort_order: 10
+  translations:
+  - language: nl-be
+    property_name: name
+    translated_value: random spot-urine
+  unique_name: us
+- aggregation_target: false
+  id: rbc
+  name: blood - red blood cells
+  parent_matrix: bloodcells
+  sort_order: 5
+  translations:
+  - language: nl-be
+    property_name: name
+    translated_value: bloed-rode bloedcellen
+  unique_name: rbc
+- aggregation_target: false
+  id: vams
+  name: volumetric absorptive microsample (VAMS)
+  parent_matrix: blood
+  sort_order: 38
+  translations:
+  - language: nl-be
+    property_name: name
+    translated_value: blood volumetrische absorptieve microsample
+  unique_name: vams
+- aggregation_target: false
+  id: cbt
+  name: umbilical cord tissue
+  sort_order: 24
+  translations:
+  - language: nl-be
+    property_name: name
+    translated_value: weefsel van navelstreng
+  unique_name: cbt
+- aggregation_target: false
+  id: egg
+  name: eggs
+  parent_matrix: food
+  sort_order: 36
+  translations:
+  - language: nl-be
+    property_name: name
+    translated_value: kippenei
+  unique_name: egg
+- aggregation_target: false
+  id: sa
+  name: saliva/sputum
+  sort_order: 20
+  translations:
+  - language: nl-be
+    property_name: name
+    translated_value: speeksel
+  unique_name: sa
+- aggregation_target: false
+  id: dw
+  name: dermal wipes
+  sort_order: 26
+  translations:
+  - language: nl-be
+    property_name: name
+    translated_value: dermale doekjes
+  unique_name: dw
+- aggregation_target: false
+  id: adi
+  name: adipose tissue/fat
+  sort_order: 25
+  translations:
+  - language: nl-be
+    property_name: name
+    translated_value: vetweefsel/vet
+  unique_name: adi
+- aggregation_target: false
+  id: uf
+  name: fasting urine
+  parent_matrix: urine
+  sort_order: 12
+  translations:
+  - language: nl-be
+    property_name: name
+    translated_value: urine nuchter
+  unique_name: uf
+- aggregation_target: false
+  id: st
+  name: stool
+  sort_order: 21
+  translations:
+  - language: nl-be
+    property_name: name
+    translated_value: stoelgang
+  unique_name: st
+- aggregation_target: false
+  id: cbwb
+  name: cord blood-whole blood
+  parent_matrix: cord blood
+  sort_order: 6
+  translations:
+  - language: nl-be
+    property_name: name
+    translated_value: navelstrengbloed-volbloed
+  unique_name: cbwb
+- aggregation_target: false
+  id: bbc
+  name: blood-blood cells
+  parent_matrix: bloodcells
+  sort_order: 4
+  translations:
+  - language: nl-be
+    property_name: name
+    translated_value: bloed-bloedcellen
+  unique_name: bbc
+- aggregation_target: false
+  id: bm
+  name: breast milk
+  sort_order: 14
+  translations:
+  - language: nl-be
+    property_name: name
+    translated_value: moedermelk
+  unique_name: bm
+- aggregation_target: false
+  id: n
+  name: nail
+  sort_order: 16
+  translations:
+  - language: nl-be
+    property_name: name
+    translated_value: nagel
+  unique_name: n
+- aggregation_target: false
+  id: bp
+  name: blood plasma
+  parent_matrix: blood
+  sort_order: 3
+  translations:
+  - language: nl-be
+    property_name: name
+    translated_value: bloed-plasma
+  unique_name: bp
+- aggregation_target: false
+  id: cbbc
+  name: cord blood-cells
+  sort_order: 9
+  translations:
+  - language: nl-be
+    property_name: name
+    translated_value: navelstrengbloed-bloed cellen
+  unique_name: cbbc
+- aggregation_target: false
+  id: odust
+  name: outdoor dust
+  parent_matrix: air
+  sort_order: 30
+  translations:
+  - language: nl-be
+    property_name: name
+    translated_value: outdoor stof
+  unique_name: odust
+- aggregation_target: false
+  id: btn
+  name: Big toe nail
+  parent_matrix: nail
+  sort_order: 18
+  translations:
+  - language: nl-be
+    property_name: name
+    translated_value: grote teen nagel
+  unique_name: btn
+- aggregation_target: false
+  id: nm
+  name: nasal mucus
+  sort_order: 19
+  translations:
+  - language: nl-be
+    property_name: name
+    translated_value: neusslijm
+  unique_name: nm
+- aggregation_target: false
+  id: plt
+  name: placenta tissue
+  sort_order: 28
+  translations:
+  - language: nl-be
+    property_name: name
+    translated_value: placenta weefsel
+  unique_name: plt
+- aggregation_target: false
+  id: kgfood
+  name: kitchengarden food
+  parent_matrix: food
+  sort_order: 35
+  translations:
+  - language: nl-be
+    property_name: name
+    translated_value: moestuin voedsel
+  unique_name: kgfood
+- aggregation_target: false
+  id: soil
+  name: soil
+  sort_order: 34
+  translations:
+  - language: nl-be
+    property_name: name
+    translated_value: grond
+  unique_name: soil
+- aggregation_target: false
+  id: bs
+  name: blood serum
+  parent_matrix: blood
+  sort_order: 2
+  translations:
+  - language: nl-be
+    property_name: name
+    translated_value: bloed-serum
+  unique_name: bs
+- aggregation_target: false
+  id: cbp
+  name: cord blood-plasma
+  parent_matrix: cord blood
+  sort_order: 8
+  translations:
+  - language: nl-be
+    property_name: name
+    translated_value: navelstrengbloed-plasma
+  unique_name: cbp
+- aggregation_target: false
+  id: h
+  name: hair
+  sort_order: 15
+  translations:
+  - language: nl-be
+    property_name: name
+    translated_value: haar
+  unique_name: h
+- aggregation_target: false
+  id: dbs
+  name: dried blood spots
+  parent_matrix: blood
+  sort_order: 39
+  translations:
+  - language: nl-be
+    property_name: name
+    translated_value: blood spot gedroogd
+  unique_name: dbs
+- aggregation_target: false
+  id: idust
+  name: indoor dust
+  parent_matrix: air
+  sort_order: 29
+  translations:
+  - language: nl-be
+    property_name: name
+    translated_value: binnen stof
+  unique_name: idust
+- aggregation_target: false
+  id: bwb
+  name: blood-whole blood
+  parent_matrix: blood
+  sort_order: 1
+  translations:
+  - language: nl-be
+    property_name: name
+    translated_value: bloed-volbloed
+  unique_name: bwb
+- aggregation_target: false
+  id: af
+  name: amniotic fluid
+  sort_order: 27
+  translations:
+  - language: nl-be
+    property_name: name
+    translated_value: vruchtwater
+  unique_name: af
+- aggregation_target: false
+  id: um
+  name: first morning urine
+  parent_matrix: urine
+  sort_order: 11
+  translations:
+  - language: nl-be
+    property_name: name
+    translated_value: eerste ochtend-urine
+  unique_name: um
+- aggregation_target: false
+  id: pair
+  name: personal air
+  parent_matrix: air
+  sort_order: 33
+  translations:
+  - language: nl-be
+    property_name: name
+    translated_value: persoonlijke lucht
+  unique_name: pair
+- aggregation_target: false
+  id: ud
+  name: urine 24h
+  parent_matrix: urine
+  sort_order: 13
+  translations:
+  - language: nl-be
+    property_name: name
+    translated_value: urine 24u
+  unique_name: ud
+- aggregation_target: false
+  id: iair
+  name: indoor air-stationary
+  parent_matrix: air
+  sort_order: 32
+  translations:
+  - language: nl-be
+    property_name: name
+    translated_value: binnenlucht
+  unique_name: iair
+- aggregation_target: false
+  id: air
+  name: air
+  sort_order: 0.1
+  translations:
+  - language: nl-be
+    property_name: name
+    translated_value: lucht
+  unique_name: air
+- aggregation_target: false
+  id: food
+  name: food
+  sort_order: 0.1
+  translations:
+  - language: nl-be
+    property_name: name
+    translated_value: voedsel
+  unique_name: food
+- aggregation_target: false
+  id: bloodcells
+  name: bloodcells
+  sort_order: 0.1
+  translations:
+  - language: nl-be
+    property_name: name
+    translated_value: bloedcellen
+  unique_name: bloodcells
+- aggregation_target: false
+  id: urine
+  name: urine
+  sort_order: 0.1
+  translations:
+  - language: nl-be
+    property_name: name
+    translated_value: urine
+  unique_name: urine
+- aggregation_target: false
+  id: cord blood
+  name: cord blood
+  sort_order: 0.1
+  translations:
+  - language: nl-be
+    property_name: name
+    translated_value: navelstrengbloed
+  unique_name: cord blood
+- aggregation_target: false
+  id: blood
+  name: blood
+  sort_order: 0.1
+  translations:
+  - language: nl-be
+    property_name: name
+    translated_value: bloed
+  unique_name: blood
