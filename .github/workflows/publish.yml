@@ -2,6 +2,8 @@ name: Publish Vocabulary
 
 on:
     pull_request:
+    push:
+        branches: [main]
     release:
         types: [published]
 
@@ -9,7 +11,11 @@ on:
 jobs:
     publish-vocabulary:
         if: github.repository != 'eu-parc/vocabulary-template'
-        uses: eu-parc/voc2skosmos-workflows/.github/workflows/csv2skos.yml@main
+        uses: eu-parc/voc2skosmos-workflow/.github/workflows/csv2skos.yml@fix-workflow
         with:
-            namespace: http://www.placeholder.com/
-            namespace_label: placeholder
+            ref: ${{ github.ref }}
+            namespace: http://www.eirene.eu/references#Matrix
+            namespace_label: eirene
+            mappings_file: rules/mappings.yarrr.yml
+        secrets:
+            token: ${{ secrets.GITHUB_TOKEN }}
