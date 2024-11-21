@@ -11,7 +11,7 @@ on:
 jobs:
     publish-vocabulary:
         if: github.repository != 'eu-parc/vocabulary-template'
-        uses: eu-parc/voc2skosmos-workflow/.github/workflows/csv2skos.yml@fix-workflow
+        uses: eu-parc/voc2skosmos-workflow/.github/workflows/csv2skos.yml@main
         with:
             ref: ${{ github.ref }}
             namespace: http://www.eirene.eu/references#Matrix
