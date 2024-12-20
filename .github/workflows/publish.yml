@@ -11,11 +11,12 @@ on:
 jobs:
     publish-vocabulary:
         if: github.repository != 'eu-parc/vocabulary-template'
-        uses: eu-parc/voc2skosmos-workflow/.github/workflows/csv2skos.yml@main
+        uses: eu-parc/voc2skosmos-workflow/.github/workflows/yml2skos.yml@main
         with:
             ref: ${{ github.ref }}
             namespace: http://www.eirene.eu/references#Matrix
             namespace_label: eirene
-            mappings_file: rules/mappings.yarrr.yml
+            linkml_schema: schema/MatrixList.linkml.yml
+            data: data/MatrixList_data.yml
         secrets:
             token: ${{ secrets.GITHUB_TOKEN }}
