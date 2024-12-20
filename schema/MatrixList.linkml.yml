@@ -1,0 +1,71 @@
+id: http://www.eirene.eu/Matrix
+name: matrix-vocabulary
+description: Matrix vocabulary for HBM data.
+imports:
+- linkml:types
+prefixes:
+  ei: http://www.eirene.eu/Matrix#
+  linkml: https://w3id.org/linkml/
+  schema: http://schema.org/
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  skos: http://www.w3.org/2004/02/skos/core#
+  xsd: http://www.w3.org/2001/XMLSchema#
+  thesoz: http://lod.gesis.org/thesoz/
+default_range: string
+default_prefix: ei
+
+classes:
+  Matrix:
+    class_uri: skos:Concept
+    mixins:
+      - HasTranslations
+    slots:
+      - aggregation_target
+      - id
+      - name
+      - parent_matrix
+      - sort_order
+      - unique_name
+
+  HasTranslations:
+    class_uri: thesoz:hasTranslation
+    mixin: true
+    slots:
+      - translations
+  Translation:
+    slots:
+      - property_name
+      - language
+      - translated_value
+  Data:
+    tree_root: true
+    attributes:
+      matrices:
+        multivalued: true
+        inlined_as_list: true
+        range: Matrix
+
+slots:
+  id:
+    identifier: true
+    slot_uri: schema:identifier
+  name:
+    slot_uri: skos:altLabel
+    range: string
+  parent_matrix:
+    range: Matrix
+    slot_uri: skos:broader
+  unique_name:
+    slot_uri: skos:prefLabel
+    range: string
+  aggregation_target:
+    range: boolean
+  sort_order:
+    range: integer
+  translations:
+    multivalued: true
+    inlined_as_list: true
+    range: Translation
+  property_name:
+  language:
+  translated_value:

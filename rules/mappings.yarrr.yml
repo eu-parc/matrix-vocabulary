@@ -1,5 +1,5 @@
 prefixes:
-  ei: http://www.eirene.eu/references#Matrix
+  ei: http://www.eirene.eu/Matrix#
   skos: http://www.w3.org/2004/02/skos/core#
   schema: http://schema.org/ 
 
@@ -14,9 +14,10 @@ mappings:
       - predicates: skos:altLabel
         objects:
         - value: $(name) 
-          language: nl
+          language: en
         - value: $(translations_translated_value)
-      - predicates: skos:narrower
+          language: nl
+      - predicates: skos:broader
         objects:
           mapping: matrix
           condition:
