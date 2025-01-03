@@ -1,2 +1,6 @@
 # intermediate .ttl files
 _temp/*.ttl
+_temp/*
+
+# virtual environments
+venv/*
