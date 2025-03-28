@@ -1,57 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Term peh:1</title>
+  <title>Term peh:3</title>
   <meta charset="UTF-8">
-  <style>
-    body { font-family: monospace; white-space: pre; margin: 20px; }
-  </style>
+  <meta http-equiv="refresh" content="0;url=index.json">
+  
+  <!-- Typed links for alternative representations -->
+  <link rel="alternate" type="application/json" href="index.json" title="JSON representation">
+  <link rel="alternate" type="text/turtle" href="index.ttl" title="Turtle representation">
+  
+  <!-- Self reference -->
+  <link rel="canonical" href="./"/>
 </head>
-<body id="content">Loading term data...</body>
-
-<script>
-  // Content negotiation script (run this first)
-  (function() {
-    // Simple content negotiation
-    const accepts = {
-      'application/json': 'index.json',
-      'text/turtle': 'index.ttl',
-      'application/rdf+xml': 'index.rdf',
-      'text/html': 'index.html'
-    };
-    
-    const acceptHeader = navigator.userAgent.includes('curl') ? 
-      'text/turtle' : // Default to Turtle for curl
-      (navigator.userAgent.includes('wget') ? 'text/turtle' : 'text/html');
-      
-    // Check if ?format= is in URL
-    const urlParams = new URLSearchParams(window.location.search);
-    const format = urlParams.get('format');
-    
-    if (format === 'json') {
-      window.location.href = 'index.json';
-      return; // Stop execution to prevent the JSON display code from running
-    } else if (format === 'ttl' || format === 'turtle') {
-      window.location.href = 'index.ttl';
-      return; // Stop execution
-    } else if (format === 'rdf') {
-      window.location.href = 'index.rdf';
-      return; // Stop execution
-    }
-    // Otherwise, continue to display JSON in HTML
-  })();
-
-  // Display JSON in the HTML page (only runs if content negotiation didn't redirect)
-  document.addEventListener('DOMContentLoaded', async function() {
-    try {
-      const response = await fetch('index.json');
-      if (!response.ok) throw new Error('Failed to load term data');
-      
-      const termData = await response.json();
-      document.getElementById('content').textContent = JSON.stringify(termData, null, 2);
-    } catch (error) {
-      document.getElementById('content').textContent = 'Error loading term data: ' + error.message;
-    }
-  });
-</script>
+<body>
+  <p>Redirecting to <a href="index.json">JSON representation</a>...</p>
+  <p>
+    Available formats:
+    <a href="index.json">JSON</a> |
+    <a href="index.ttl">Turtle</a>
+  </p>
+</body>
 </html>
