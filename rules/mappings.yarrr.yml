@@ -1,5 +1,5 @@
 prefixes:
-  ei: http://www.eirene.eu/Matrix#
+  peh: http://www.w3id.org/peh/Matrix#
   skos: http://www.w3.org/2004/02/skos/core#
   schema: http://schema.org/ 
 
@@ -7,7 +7,7 @@ mappings:
   matrix:
     sources:
       - ['data/MatrixList_data.csv~csv']
-    subjects: ei:$(id)
+    subjects: peh:$(id)
     predicateobjects:
       - [a, skos:Concept]
       - [skos:prefLabel, $(unique_name)]
