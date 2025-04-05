@@ -1,10 +1,10 @@
-id: http://www.eirene.eu/Matrix
+id: https://w3id.org/peh/Matrix
 name: matrix-vocabulary
 description: Matrix vocabulary for HBM data.
 imports:
 - linkml:types
 prefixes:
-  ei: http://www.eirene.eu/Matrix#
+  peh: https://w3id.org/peh/Matrix#
   linkml: https://w3id.org/linkml/
   schema: http://schema.org/
   rdfs: http://www.w3.org/2000/01/rdf-schema#
@@ -12,7 +12,7 @@ prefixes:
   xsd: http://www.w3.org/2001/XMLSchema#
   thesoz: http://lod.gesis.org/thesoz/
 default_range: string
-default_prefix: ei
+default_prefix: peh
 
 classes:
   Matrix:

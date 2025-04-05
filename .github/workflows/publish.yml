@@ -14,8 +14,8 @@ jobs:
         uses: eu-parc/voc2skosmos-workflow/.github/workflows/yml2skos.yml@main
         with:
             ref: ${{ github.ref }}
-            namespace: http://www.eirene.eu/Matrix#
-            namespace_label: eirene/Matrix#
+            namespace: https://w3id.org/peh/Matrix#
+            namespace_label: peh/Matrix#
             linkml_schema: schema/MatrixList.linkml.yml
             data: data/MatrixList_data.yml
         secrets:

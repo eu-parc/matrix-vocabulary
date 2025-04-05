@@ -1,13 +1,13 @@
 @prefix dct: <http://purl.org/dc/terms/> .
-@prefix ei: <http://www.eirene.eu/Matrix#> .
+@prefix peh: <https://w3id.org/peh/Matrix#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-ei:adi a skos:Concept ;
-    ei:aggregation_target false ;
-    ei:sort_order 25 ;
-    skos:altLabel "adipose tissue/fat"@en,
-        "vetweefsel/vet"@nl-be ;
-    skos:inScheme ei: ;
-    skos:prefLabel "adi"@en ;
-    skos:topConceptOf ei: .
+peh:atn a skos:Concept ;
+    skos:altLabel "All toe nail"@en,
+        "alle teennagels"@nl-be ;
+    skos:broader peh:n ;
+    skos:inScheme peh: ;
+    skos:prefLabel "atn"@en ;
+    peh:aggregation_target false ;
+    peh:sort_order 17 .

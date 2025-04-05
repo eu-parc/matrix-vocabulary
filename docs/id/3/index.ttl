@@ -1,13 +1,13 @@
 @prefix dct: <http://purl.org/dc/terms/> .
-@prefix ei: <http://www.eirene.eu/Matrix#> .
+@prefix peh: <https://w3id.org/peh/Matrix#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-ei:atn a skos:Concept ;
-    ei:aggregation_target false ;
-    ei:sort_order 17 ;
-    skos:altLabel "All toe nail"@en,
-        "alle teennagels"@nl-be ;
-    skos:broader ei:n ;
-    skos:inScheme ei: ;
-    skos:prefLabel "atn"@en .
+peh:bbc a skos:Concept ;
+    skos:altLabel "blood-blood cells"@en,
+        "bloed-bloedcellen"@nl-be ;
+    skos:broader peh:bloodcells ;
+    skos:inScheme peh: ;
+    skos:prefLabel "bbc"@en ;
+    peh:aggregation_target false ;
+    peh:sort_order 4 .
