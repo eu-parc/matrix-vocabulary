@@ -1,0 +1,96 @@
+{
+  "Identifier": "https://eu-parc.github.io/matrix-vocabulary/schema",
+  "name": "PEH Matrix Schema",
+  "description": "Schema of matrix in PEH context",
+  "provenance": {
+    "contributors": [
+      {
+        "Name": "Dirk Devriendt"
+      },
+      {
+        "Name": "Hanny Willems"
+      },
+      {
+        "Name": "Gertjan Bisschop"
+      }
+    ],
+    "creationDate": "2024-04-30T09:15:08.668Z",
+    "lastModificationDate": "2025-03-30T10:03:10.326Z"
+  },
+  "Schema": {
+    "Type": "Object",
+    "additionalProperties": true,
+    "required": [
+      "schemaIdentifier",
+      "id",
+      "name",
+      "unique_name"
+    ],
+    "Properties": [
+      {
+        "Name": "schemaIdentifier",
+        "Type": "string",
+        "Properties": {
+          "Const Value": "https://eu-parc.github.io/matrix-vocabulary/schema",
+          "Cardinality": "1"
+        }
+      },
+      {
+        "Name": "id",
+        "Type": "string",
+        "Properties": {
+          "Cardinality": "1"
+        }
+      },
+      {
+        "Name": "name",
+        "Type": "string",
+        "Properties": {
+          "Cardinality": "1"
+        }
+      },
+      {
+        "Name": "parent_matrix",
+        "Type": "https://eu-parc.github.io/matrix-vocabulary/schema",
+        "Properties": {
+          "Cardinality": "0-1"
+        }
+      },
+      {
+        "Name": "unique_name",
+        "Description": "Unique name english name describing the matrix",
+        "Type": "str",
+        "Properties": {
+          "Cardinality": "1"
+        }
+      },
+      {
+        "Name": "translations",
+        "Description": "Array of translations for schema properties.",
+        "Type": "array",
+        "Properties": {
+          "Items": {
+            "Type": "object",
+            "Properties": [
+              {
+                "Name": "language",
+                "Type": "string",
+                "Description": "Language code of the translation."
+              },
+              {
+                "Name": "property_name",
+                "Type": "string",
+                "Description": "Name of the property being translated (e.g., 'name')."
+              },
+              {
+                "Name": "translated_value",
+                "Type": "string",
+                "Description": "Translated text of the property."
+              }
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,450 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix peh: <https://w3id.org/peh/Matrix#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+peh:adi a skos:Concept ;
+    skos:altLabel "adipose tissue/fat"@en,
+        "vetweefsel/vet"@nl-be ;
+    skos:inScheme peh: ;
+    skos:prefLabel "adi"@en ;
+    skos:topConceptOf peh: ;
+    peh:aggregation_target false ;
+    peh:sort_order 25 .
+
+peh:af a skos:Concept ;
+    skos:altLabel "amniotic fluid"@en,
+        "vruchtwater"@nl-be ;
+    skos:inScheme peh: ;
+    skos:prefLabel "af"@en ;
+    skos:topConceptOf peh: ;
+    peh:aggregation_target false ;
+    peh:sort_order 27 .
+
+peh:atn a skos:Concept ;
+    skos:altLabel "All toe nail"@en,
+        "alle teennagels"@nl-be ;
+    skos:broader peh:n ;
+    skos:inScheme peh: ;
+    skos:prefLabel "atn"@en ;
+    peh:aggregation_target false ;
+    peh:sort_order 17 .
+
+peh:bbc a skos:Concept ;
+    skos:altLabel "blood-blood cells"@en,
+        "bloed-bloedcellen"@nl-be ;
+    skos:broader peh:bloodcells ;
+    skos:inScheme peh: ;
+    skos:prefLabel "bbc"@en ;
+    peh:aggregation_target false ;
+    peh:sort_order 4 .
+
+peh:bm a skos:Concept ;
+    skos:altLabel "breast milk"@en,
+        "moedermelk"@nl-be ;
+    skos:inScheme peh: ;
+    skos:prefLabel "bm"@en ;
+    skos:topConceptOf peh: ;
+    peh:aggregation_target false ;
+    peh:sort_order 14 .
+
+peh:bp a skos:Concept ;
+    skos:altLabel "blood plasma"@en,
+        "bloed-plasma"@nl-be ;
+    skos:broader peh:blood ;
+    skos:inScheme peh: ;
+    skos:prefLabel "bp"@en ;
+    peh:aggregation_target false ;
+    peh:sort_order 3 .
+
+peh:bs a skos:Concept ;
+    skos:altLabel "blood serum"@en,
+        "bloed-serum"@nl-be ;
+    skos:broader peh:blood ;
+    skos:inScheme peh: ;
+    skos:prefLabel "bs"@en ;
+    peh:aggregation_target false ;
+    peh:sort_order 2 .
+
+peh:btn a skos:Concept ;
+    skos:altLabel "Big toe nail"@en,
+        "grote teen nagel"@nl-be ;
+    skos:broader peh:n ;
+    skos:inScheme peh: ;
+    skos:prefLabel "btn"@en ;
+    peh:aggregation_target false ;
+    peh:sort_order 18 .
+
+peh:bwb a skos:Concept ;
+    skos:altLabel "blood-whole blood"@en,
+        "bloed-volbloed"@nl-be ;
+    skos:broader peh:blood ;
+    skos:inScheme peh: ;
+    skos:prefLabel "bwb"@en ;
+    peh:aggregation_target false ;
+    peh:sort_order 1 .
+
+peh:cbbc a skos:Concept ;
+    skos:altLabel "cord blood-cells"@en,
+        "navelstrengbloed-bloed cellen"@nl-be ;
+    skos:inScheme peh: ;
+    skos:prefLabel "cbbc"@en ;
+    skos:topConceptOf peh: ;
+    peh:aggregation_target false ;
+    peh:sort_order 9 .
+
+peh:cbp a skos:Concept ;
+    skos:altLabel "cord blood-plasma"@en,
+        "navelstrengbloed-plasma"@nl-be ;
+    skos:broader peh:cordBlood ;
+    skos:inScheme peh: ;
+    skos:prefLabel "cbp"@en ;
+    peh:aggregation_target false ;
+    peh:sort_order 8 .
+
+peh:cbs a skos:Concept ;
+    skos:altLabel "cord blood-serum"@en,
+        "navelstrengbloed-serum"@nl-be ;
+    skos:broader peh:cordBlood ;
+    skos:inScheme peh: ;
+    skos:prefLabel "cbs"@en ;
+    peh:aggregation_target false ;
+    peh:sort_order 7 .
+
+peh:cbt a skos:Concept ;
+    skos:altLabel "umbilical cord tissue"@en,
+        "weefsel van navelstreng"@nl-be ;
+    skos:inScheme peh: ;
+    skos:prefLabel "cbt"@en ;
+    skos:topConceptOf peh: ;
+    peh:aggregation_target false ;
+    peh:sort_order 24 .
+
+peh:cbwb a skos:Concept ;
+    skos:altLabel "cord blood-whole blood"@en,
+        "navelstrengbloed-volbloed"@nl-be ;
+    skos:broader peh:cordBlood ;
+    skos:inScheme peh: ;
+    skos:prefLabel "cbwb"@en ;
+    peh:aggregation_target false ;
+    peh:sort_order 6 .
+
+peh:dbs a skos:Concept ;
+    skos:altLabel "dried blood spots"@en,
+        "blood spot gedroogd"@nl-be ;
+    skos:broader peh:blood ;
+    skos:inScheme peh: ;
+    skos:prefLabel "dbs"@en ;
+    peh:aggregation_target false ;
+    peh:sort_order 39 .
+
+peh:dw a skos:Concept ;
+    skos:altLabel "dermal wipes"@en,
+        "dermale doekjes"@nl-be ;
+    skos:inScheme peh: ;
+    skos:prefLabel "dw"@en ;
+    skos:topConceptOf peh: ;
+    peh:aggregation_target false ;
+    peh:sort_order 26 .
+
+peh:ebc a skos:Concept ;
+    skos:altLabel "exhaled breath condensate"@en,
+        "uitgeademde lucht condensaat"@nl-be ;
+    skos:inScheme peh: ;
+    skos:prefLabel "ebc"@en ;
+    skos:topConceptOf peh: ;
+    peh:aggregation_target false ;
+    peh:sort_order 23 .
+
+peh:egg a skos:Concept ;
+    skos:altLabel "eggs"@en,
+        "kippenei"@nl-be ;
+    skos:broader peh:food ;
+    skos:inScheme peh: ;
+    skos:prefLabel "egg"@en ;
+    peh:aggregation_target false ;
+    peh:sort_order 36 .
+
+peh:h a skos:Concept ;
+    skos:altLabel "hair"@en,
+        "haar"@nl-be ;
+    skos:inScheme peh: ;
+    skos:prefLabel "h"@en ;
+    skos:topConceptOf peh: ;
+    peh:aggregation_target false ;
+    peh:sort_order 15 .
+
+peh:iair a skos:Concept ;
+    skos:altLabel "indoor air-stationary"@en,
+        "binnenlucht"@nl-be ;
+    skos:broader peh:air ;
+    skos:inScheme peh: ;
+    skos:prefLabel "iair"@en ;
+    peh:aggregation_target false ;
+    peh:sort_order 32 .
+
+peh:idust a skos:Concept ;
+    skos:altLabel "indoor dust"@en,
+        "binnen stof"@nl-be ;
+    skos:broader peh:air ;
+    skos:inScheme peh: ;
+    skos:prefLabel "idust"@en ;
+    peh:aggregation_target false ;
+    peh:sort_order 29 .
+
+peh:kgfood a skos:Concept ;
+    skos:altLabel "kitchengarden food"@en,
+        "moestuin voedsel"@nl-be ;
+    skos:broader peh:food ;
+    skos:inScheme peh: ;
+    skos:prefLabel "kgfood"@en ;
+    peh:aggregation_target false ;
+    peh:sort_order 35 .
+
+peh:nm a skos:Concept ;
+    skos:altLabel "nasal mucus"@en,
+        "neusslijm"@nl-be ;
+    skos:inScheme peh: ;
+    skos:prefLabel "nm"@en ;
+    skos:topConceptOf peh: ;
+    peh:aggregation_target false ;
+    peh:sort_order 19 .
+
+peh:oair a skos:Concept ;
+    skos:altLabel "outdoor air-stationary"@en,
+        "buitenlucht"@nl-be ;
+    skos:broader peh:air ;
+    skos:inScheme peh: ;
+    skos:prefLabel "oair"@en ;
+    peh:aggregation_target false ;
+    peh:sort_order 31 .
+
+peh:odust a skos:Concept ;
+    skos:altLabel "outdoor dust"@en,
+        "outdoor stof"@nl-be ;
+    skos:broader peh:air ;
+    skos:inScheme peh: ;
+    skos:prefLabel "odust"@en ;
+    peh:aggregation_target false ;
+    peh:sort_order 30 .
+
+peh:pair a skos:Concept ;
+    skos:altLabel "personal air"@en,
+        "persoonlijke lucht"@nl-be ;
+    skos:broader peh:air ;
+    skos:inScheme peh: ;
+    skos:prefLabel "pair"@en ;
+    peh:aggregation_target false ;
+    peh:sort_order 33 .
+
+peh:plt a skos:Concept ;
+    skos:altLabel "placenta tissue"@en,
+        "placenta weefsel"@nl-be ;
+    skos:inScheme peh: ;
+    skos:prefLabel "plt"@en ;
+    skos:topConceptOf peh: ;
+    peh:aggregation_target false ;
+    peh:sort_order 28 .
+
+peh:rbc a skos:Concept ;
+    skos:altLabel "blood - red blood cells"@en,
+        "bloed-rode bloedcellen"@nl-be ;
+    skos:broader peh:bloodcells ;
+    skos:inScheme peh: ;
+    skos:prefLabel "rbc"@en ;
+    peh:aggregation_target false ;
+    peh:sort_order 5 .
+
+peh:sa a skos:Concept ;
+    skos:altLabel "saliva/sputum"@en,
+        "speeksel"@nl-be ;
+    skos:inScheme peh: ;
+    skos:prefLabel "sa"@en ;
+    skos:topConceptOf peh: ;
+    peh:aggregation_target false ;
+    peh:sort_order 20 .
+
+peh:sem a skos:Concept ;
+    skos:altLabel "semen"@en,
+        "zaad"@nl-be ;
+    skos:inScheme peh: ;
+    skos:prefLabel "sem"@en ;
+    skos:topConceptOf peh: ;
+    peh:aggregation_target false ;
+    peh:sort_order 22 .
+
+peh:soil a skos:Concept ;
+    skos:altLabel "grond"@nl-be ;
+    skos:inScheme peh: ;
+    skos:prefLabel "soil"@en ;
+    skos:topConceptOf peh: ;
+    peh:aggregation_target false ;
+    peh:sort_order 34 .
+
+peh:st a skos:Concept ;
+    skos:altLabel "stool"@en,
+        "stoelgang"@nl-be ;
+    skos:inScheme peh: ;
+    skos:prefLabel "st"@en ;
+    skos:topConceptOf peh: ;
+    peh:aggregation_target false ;
+    peh:sort_order 21 .
+
+peh:ud a skos:Concept ;
+    skos:altLabel "urine 24h"@en,
+        "urine 24u"@nl-be ;
+    skos:broader peh:urine ;
+    skos:inScheme peh: ;
+    skos:prefLabel "ud"@en ;
+    peh:aggregation_target false ;
+    peh:sort_order 13 .
+
+peh:uf a skos:Concept ;
+    skos:altLabel "fasting urine"@en,
+        "urine nuchter"@nl-be ;
+    skos:broader peh:urine ;
+    skos:inScheme peh: ;
+    skos:prefLabel "uf"@en ;
+    peh:aggregation_target false ;
+    peh:sort_order 12 .
+
+peh:um a skos:Concept ;
+    skos:altLabel "first morning urine"@en,
+        "eerste ochtend-urine"@nl-be ;
+    skos:broader peh:urine ;
+    skos:inScheme peh: ;
+    skos:prefLabel "um"@en ;
+    peh:aggregation_target false ;
+    peh:sort_order 11 .
+
+peh:us a skos:Concept ;
+    skos:altLabel "random spot urine"@en,
+        "random spot-urine"@nl-be ;
+    skos:broader peh:urine ;
+    skos:inScheme peh: ;
+    skos:prefLabel "us"@en ;
+    peh:aggregation_target false ;
+    peh:sort_order 10 .
+
+peh:vams a skos:Concept ;
+    skos:altLabel "volumetric absorptive microsample (VAMS)"@en,
+        "blood volumetrische absorptieve microsample"@nl-be ;
+    skos:broader peh:blood ;
+    skos:inScheme peh: ;
+    skos:prefLabel "vams"@en ;
+    peh:aggregation_target false ;
+    peh:sort_order 38 .
+
+peh:water a skos:Concept ;
+    skos:altLabel "water"@nl-be ;
+    skos:inScheme peh: ;
+    skos:prefLabel "water"@en ;
+    skos:topConceptOf peh: ;
+    peh:aggregation_target false ;
+    peh:sort_order 37 .
+
+peh:bloodcells a skos:Concept ;
+    skos:altLabel "bloedcellen"@nl-be ;
+    skos:inScheme peh: ;
+    skos:narrower peh:bbc,
+        peh:rbc ;
+    skos:prefLabel "bloodcells"@en ;
+    skos:topConceptOf peh: ;
+    peh:aggregation_target false ;
+    peh:sort_order 0 .
+
+peh:food a skos:Concept ;
+    skos:altLabel "voedsel"@nl-be ;
+    skos:inScheme peh: ;
+    skos:narrower peh:egg,
+        peh:kgfood ;
+    skos:prefLabel "food"@en ;
+    skos:topConceptOf peh: ;
+    peh:aggregation_target false ;
+    peh:sort_order 0 .
+
+peh:n a skos:Concept ;
+    skos:altLabel "nail"@en,
+        "nagel"@nl-be ;
+    skos:inScheme peh: ;
+    skos:narrower peh:atn,
+        peh:btn ;
+    skos:prefLabel "n"@en ;
+    skos:topConceptOf peh: ;
+    peh:aggregation_target false ;
+    peh:sort_order 16 .
+
+peh:cordBlood a skos:Concept ;
+    skos:altLabel "navelstrengbloed"@nl-be ;
+    skos:inScheme peh: ;
+    skos:narrower peh:cbp,
+        peh:cbs,
+        peh:cbwb ;
+    skos:prefLabel "cord blood"@en ;
+    skos:topConceptOf peh: ;
+    peh:aggregation_target false ;
+    peh:sort_order 0 .
+
+peh:urine a skos:Concept ;
+    skos:altLabel "urine"@nl-be ;
+    skos:inScheme peh: ;
+    skos:narrower peh:ud,
+        peh:uf,
+        peh:um,
+        peh:us ;
+    skos:prefLabel "urine"@en ;
+    skos:topConceptOf peh: ;
+    peh:aggregation_target false ;
+    peh:sort_order 0 .
+
+peh:air a skos:Concept ;
+    skos:altLabel "lucht"@nl-be ;
+    skos:inScheme peh: ;
+    skos:narrower peh:iair,
+        peh:idust,
+        peh:oair,
+        peh:odust,
+        peh:pair ;
+    skos:prefLabel "air"@en ;
+    skos:topConceptOf peh: ;
+    peh:aggregation_target false ;
+    peh:sort_order 0 .
+
+peh:blood a skos:Concept ;
+    skos:altLabel "bloed"@nl-be ;
+    skos:inScheme peh: ;
+    skos:narrower peh:bp,
+        peh:bs,
+        peh:bwb,
+        peh:dbs,
+        peh:vams ;
+    skos:prefLabel "blood"@en ;
+    skos:topConceptOf peh: ;
+    peh:aggregation_target false ;
+    peh:sort_order 0 .
+
+peh: a skos:ConceptScheme ;
+    dct:modified "2025-04-05T20:18:15+00:00"^^xsd:dateTime ;
+    skos:hasTopConcept peh:adi,
+        peh:af,
+        peh:air,
+        peh:blood,
+        peh:bloodcells,
+        peh:bm,
+        peh:cbbc,
+        peh:cbt,
+        peh:cordBlood,
+        peh:dw,
+        peh:ebc,
+        peh:food,
+        peh:h,
+        peh:n,
+        peh:nm,
+        peh:plt,
+        peh:sa,
+        peh:sem,
+        peh:soil,
+        peh:st,
+        peh:urine,
+        peh:water .
+

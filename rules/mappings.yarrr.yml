@@ -1,5 +1,5 @@
 prefixes:
-  peh: http://www.w3id.org/peh/Matrix#
+  peh: https://w3id.org/peh/Matrix#
   skos: http://www.w3.org/2004/02/skos/core#
   schema: http://schema.org/ 
 

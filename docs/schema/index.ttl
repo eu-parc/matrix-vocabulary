@@ -1,0 +1,424 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix linkml: <https://w3id.org/linkml/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix shex: <http://www.w3.org/ns/shex#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/peh/matrix-vocabulary> a linkml:SchemaDefinition ;
+    dcterms:license "https://creativecommons.org/publicdomain/zero/1.0/" ;
+    skos:definition "Matrix vocabulary for HBM data." ;
+    sh:declare [ sh:namespace linkml: ;
+            sh:prefix "linkml" ],
+        [ sh:namespace schema1: ;
+            sh:prefix "schema" ],
+        [ sh:namespace rdfs: ;
+            sh:prefix "rdfs" ],
+        [ sh:namespace <https://w3id.org/peh/Matrix#> ;
+            sh:prefix "peh" ],
+        [ sh:namespace xsd: ;
+            sh:prefix "xsd" ],
+        [ sh:namespace <http://lod.gesis.org/thesoz/> ;
+            sh:prefix "thesoz" ],
+        [ sh:namespace skos: ;
+            sh:prefix "skos" ] ;
+    linkml:classes <https://w3id.org/peh/Data>,
+        <https://w3id.org/peh/HasTranslations>,
+        <https://w3id.org/peh/Matrix>,
+        <https://w3id.org/peh/Translation> ;
+    linkml:default_prefix "peh" ;
+    linkml:default_range <https://w3id.org/peh/string> ;
+    linkml:generation_date "2025-04-05T21:52:05"^^xsd:dateTime ;
+    linkml:id <https://w3id.org/peh/Matrix> ;
+    linkml:imports linkml:types ;
+    linkml:metamodel_version "1.7.0" ;
+    linkml:slots <https://w3id.org/peh/aggregation_target>,
+        <https://w3id.org/peh/data__matrices>,
+        <https://w3id.org/peh/id>,
+        <https://w3id.org/peh/language>,
+        <https://w3id.org/peh/name>,
+        <https://w3id.org/peh/parent_matrix>,
+        <https://w3id.org/peh/property_name>,
+        <https://w3id.org/peh/sort_order>,
+        <https://w3id.org/peh/translated_value>,
+        <https://w3id.org/peh/translations>,
+        <https://w3id.org/peh/unique_name> ;
+    linkml:source_file "MatrixList.linkml.yml" ;
+    linkml:source_file_date "2025-04-03T11:45:41"^^xsd:dateTime ;
+    linkml:source_file_size 1448 ;
+    linkml:types <https://w3id.org/peh/boolean>,
+        <https://w3id.org/peh/curie>,
+        <https://w3id.org/peh/date>,
+        <https://w3id.org/peh/date_or_datetime>,
+        <https://w3id.org/peh/datetime>,
+        <https://w3id.org/peh/decimal>,
+        <https://w3id.org/peh/double>,
+        <https://w3id.org/peh/float>,
+        <https://w3id.org/peh/integer>,
+        <https://w3id.org/peh/jsonpath>,
+        <https://w3id.org/peh/jsonpointer>,
+        <https://w3id.org/peh/ncname>,
+        <https://w3id.org/peh/nodeidentifier>,
+        <https://w3id.org/peh/objectidentifier>,
+        <https://w3id.org/peh/sparqlpath>,
+        <https://w3id.org/peh/string>,
+        <https://w3id.org/peh/time>,
+        <https://w3id.org/peh/uri>,
+        <https://w3id.org/peh/uriorcurie> .
+
+<https://w3id.org/peh/curie> a linkml:TypeDefinition ;
+    dcterms:conformsTo "https://www.w3.org/TR/curie/" ;
+    skos:definition "a compact URI" ;
+    skos:editorialNote "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"curie\"." ;
+    skos:inScheme linkml:types ;
+    skos:note "in RDF serializations this MUST be expanded to a URI",
+        "in non-RDF serializations MAY be serialized as the compact representation" ;
+    linkml:base "Curie" ;
+    linkml:definition_uri linkml:Curie ;
+    linkml:imported_from "linkml:types" ;
+    linkml:repr "str" ;
+    linkml:uri xsd:string .
+
+<https://w3id.org/peh/date> a linkml:TypeDefinition ;
+    skos:definition "a date (year, month and day) in an idealized calendar" ;
+    skos:editorialNote "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"date\".",
+        "URI is dateTime because OWL reasoners don't work with straight date or time" ;
+    skos:exactMatch schema1:Date ;
+    skos:inScheme linkml:types ;
+    linkml:base "XSDDate" ;
+    linkml:definition_uri linkml:Date ;
+    linkml:imported_from "linkml:types" ;
+    linkml:repr "str" ;
+    linkml:uri xsd:date .
+
+<https://w3id.org/peh/date_or_datetime> a linkml:TypeDefinition ;
+    skos:definition "Either a date or a datetime" ;
+    skos:editorialNote "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"date_or_datetime\"." ;
+    skos:inScheme linkml:types ;
+    linkml:base "str" ;
+    linkml:definition_uri linkml:DateOrDatetime ;
+    linkml:imported_from "linkml:types" ;
+    linkml:repr "str" ;
+    linkml:uri linkml:DateOrDatetime .
+
+<https://w3id.org/peh/datetime> a linkml:TypeDefinition ;
+    skos:definition "The combination of a date and time" ;
+    skos:editorialNote "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"datetime\"." ;
+    skos:exactMatch schema1:DateTime ;
+    skos:inScheme linkml:types ;
+    linkml:base "XSDDateTime" ;
+    linkml:definition_uri linkml:Datetime ;
+    linkml:imported_from "linkml:types" ;
+    linkml:repr "str" ;
+    linkml:uri xsd:dateTime .
+
+<https://w3id.org/peh/decimal> a linkml:TypeDefinition ;
+    skos:broadMatch schema1:Number ;
+    skos:definition "A real number with arbitrary precision that conforms to the xsd:decimal specification" ;
+    skos:editorialNote "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"decimal\"." ;
+    skos:inScheme linkml:types ;
+    linkml:base "Decimal" ;
+    linkml:definition_uri linkml:Decimal ;
+    linkml:imported_from "linkml:types" ;
+    linkml:uri xsd:decimal .
+
+<https://w3id.org/peh/double> a linkml:TypeDefinition ;
+    skos:closeMatch schema1:Float ;
+    skos:definition "A real number that conforms to the xsd:double specification" ;
+    skos:editorialNote "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"double\"." ;
+    skos:inScheme linkml:types ;
+    linkml:base "float" ;
+    linkml:definition_uri linkml:Double ;
+    linkml:imported_from "linkml:types" ;
+    linkml:uri xsd:double .
+
+<https://w3id.org/peh/float> a linkml:TypeDefinition ;
+    skos:definition "A real number that conforms to the xsd:float specification" ;
+    skos:editorialNote "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"float\"." ;
+    skos:exactMatch schema1:Float ;
+    skos:inScheme linkml:types ;
+    linkml:base "float" ;
+    linkml:definition_uri linkml:Float ;
+    linkml:imported_from "linkml:types" ;
+    linkml:uri xsd:float .
+
+<https://w3id.org/peh/jsonpath> a linkml:TypeDefinition ;
+    dcterms:conformsTo "https://www.ietf.org/archive/id/draft-goessner-dispatch-jsonpath-00.html" ;
+    skos:definition "A string encoding a JSON Path. The value of the string MUST conform to JSON Point syntax and SHOULD dereference to zero or more valid objects within the current instance document when encoded in tree form." ;
+    skos:editorialNote "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"jsonpath\"." ;
+    skos:inScheme linkml:types ;
+    linkml:base "str" ;
+    linkml:definition_uri linkml:Jsonpath ;
+    linkml:imported_from "linkml:types" ;
+    linkml:repr "str" ;
+    linkml:uri xsd:string .
+
+<https://w3id.org/peh/jsonpointer> a linkml:TypeDefinition ;
+    dcterms:conformsTo "https://datatracker.ietf.org/doc/html/rfc6901" ;
+    skos:definition "A string encoding a JSON Pointer. The value of the string MUST conform to JSON Point syntax and SHOULD dereference to a valid object within the current instance document when encoded in tree form." ;
+    skos:editorialNote "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"jsonpointer\"." ;
+    skos:inScheme linkml:types ;
+    linkml:base "str" ;
+    linkml:definition_uri linkml:Jsonpointer ;
+    linkml:imported_from "linkml:types" ;
+    linkml:repr "str" ;
+    linkml:uri xsd:string .
+
+<https://w3id.org/peh/matrices> a linkml:SlotDefinition ;
+    linkml:inlined_as_list true ;
+    linkml:multivalued true ;
+    linkml:range <https://w3id.org/peh/Matrix> .
+
+<https://w3id.org/peh/ncname> a linkml:TypeDefinition ;
+    skos:definition "Prefix part of CURIE" ;
+    skos:editorialNote "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"ncname\"." ;
+    skos:inScheme linkml:types ;
+    linkml:base "NCName" ;
+    linkml:definition_uri linkml:Ncname ;
+    linkml:imported_from "linkml:types" ;
+    linkml:repr "str" ;
+    linkml:uri xsd:string .
+
+<https://w3id.org/peh/nodeidentifier> a linkml:TypeDefinition ;
+    skos:definition "A URI, CURIE or BNODE that represents a node in a model." ;
+    skos:editorialNote "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"nodeidentifier\"." ;
+    skos:inScheme linkml:types ;
+    linkml:base "NodeIdentifier" ;
+    linkml:definition_uri linkml:Nodeidentifier ;
+    linkml:imported_from "linkml:types" ;
+    linkml:repr "str" ;
+    linkml:uri shex:nonLiteral .
+
+<https://w3id.org/peh/objectidentifier> a linkml:TypeDefinition ;
+    skos:definition "A URI or CURIE that represents an object in the model." ;
+    skos:editorialNote "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"objectidentifier\"." ;
+    skos:inScheme linkml:types ;
+    skos:note "Used for inheritance and type checking" ;
+    linkml:base "ElementIdentifier" ;
+    linkml:definition_uri linkml:Objectidentifier ;
+    linkml:imported_from "linkml:types" ;
+    linkml:repr "str" ;
+    linkml:uri shex:iri .
+
+<https://w3id.org/peh/sparqlpath> a linkml:TypeDefinition ;
+    dcterms:conformsTo "https://www.w3.org/TR/sparql11-query/#propertypaths" ;
+    skos:definition "A string encoding a SPARQL Property Path. The value of the string MUST conform to SPARQL syntax and SHOULD dereference to zero or more valid objects within the current instance document when encoded as RDF." ;
+    skos:editorialNote "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"sparqlpath\"." ;
+    skos:inScheme linkml:types ;
+    linkml:base "str" ;
+    linkml:definition_uri linkml:Sparqlpath ;
+    linkml:imported_from "linkml:types" ;
+    linkml:repr "str" ;
+    linkml:uri xsd:string .
+
+<https://w3id.org/peh/time> a linkml:TypeDefinition ;
+    skos:definition "A time object represents a (local) time of day, independent of any particular day" ;
+    skos:editorialNote "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"time\".",
+        "URI is dateTime because OWL reasoners do not work with straight date or time" ;
+    skos:exactMatch schema1:Time ;
+    skos:inScheme linkml:types ;
+    linkml:base "XSDTime" ;
+    linkml:definition_uri linkml:Time ;
+    linkml:imported_from "linkml:types" ;
+    linkml:repr "str" ;
+    linkml:uri xsd:time .
+
+<https://w3id.org/peh/uri> a linkml:TypeDefinition ;
+    dcterms:conformsTo "https://www.ietf.org/rfc/rfc3987.txt" ;
+    skos:closeMatch schema1:URL ;
+    skos:definition "a complete URI" ;
+    skos:editorialNote "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"uri\"." ;
+    skos:inScheme linkml:types ;
+    skos:note "in RDF serializations a slot with range of uri is treated as a literal or type xsd:anyURI unless it is an identifier or a reference to an identifier, in which case it is translated directly to a node" ;
+    linkml:base "URI" ;
+    linkml:definition_uri linkml:Uri ;
+    linkml:imported_from "linkml:types" ;
+    linkml:repr "str" ;
+    linkml:uri xsd:anyURI .
+
+<https://w3id.org/peh/uriorcurie> a linkml:TypeDefinition ;
+    skos:definition "a URI or a CURIE" ;
+    skos:editorialNote "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"uriorcurie\"." ;
+    skos:inScheme linkml:types ;
+    linkml:base "URIorCURIE" ;
+    linkml:definition_uri linkml:Uriorcurie ;
+    linkml:imported_from "linkml:types" ;
+    linkml:repr "str" ;
+    linkml:uri xsd:anyURI .
+
+<https://w3id.org/peh/aggregation_target> a linkml:SlotDefinition ;
+    skos:inScheme <https://w3id.org/peh/Matrix> ;
+    linkml:definition_uri <https://w3id.org/peh/Matrix#aggregation_target> ;
+    linkml:domain_of <https://w3id.org/peh/Matrix> ;
+    linkml:owner <https://w3id.org/peh/Matrix> ;
+    linkml:range <https://w3id.org/peh/boolean> ;
+    linkml:slot_uri <https://w3id.org/peh/Matrix#aggregation_target> .
+
+<https://w3id.org/peh/boolean> a linkml:TypeDefinition ;
+    skos:definition "A binary (true or false) value" ;
+    skos:editorialNote "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"boolean\"." ;
+    skos:exactMatch schema1:Boolean ;
+    skos:inScheme linkml:types ;
+    linkml:base "Bool" ;
+    linkml:definition_uri linkml:Boolean ;
+    linkml:imported_from "linkml:types" ;
+    linkml:repr "bool" ;
+    linkml:uri xsd:boolean .
+
+<https://w3id.org/peh/data__matrices> a linkml:SlotDefinition ;
+    skos:inScheme <https://w3id.org/peh/Matrix> ;
+    skos:prefLabel "matrices" ;
+    linkml:domain_of <https://w3id.org/peh/Data> ;
+    linkml:inlined true ;
+    linkml:inlined_as_list true ;
+    linkml:multivalued true ;
+    linkml:owner <https://w3id.org/peh/Data> ;
+    linkml:range <https://w3id.org/peh/Matrix> ;
+    linkml:slot_uri <https://w3id.org/peh/Matrix#matrices> .
+
+<https://w3id.org/peh/id> a linkml:SlotDefinition ;
+    skos:inScheme <https://w3id.org/peh/Matrix> ;
+    skos:mappingRelation schema1:identifier ;
+    linkml:definition_uri <https://w3id.org/peh/Matrix#id> ;
+    linkml:domain_of <https://w3id.org/peh/Matrix> ;
+    linkml:identifier true ;
+    linkml:owner <https://w3id.org/peh/Matrix> ;
+    linkml:range <https://w3id.org/peh/string> ;
+    linkml:required true ;
+    linkml:slot_uri schema1:identifier .
+
+<https://w3id.org/peh/integer> a linkml:TypeDefinition ;
+    skos:definition "An integer" ;
+    skos:editorialNote "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"integer\"." ;
+    skos:exactMatch schema1:Integer ;
+    skos:inScheme linkml:types ;
+    linkml:base "int" ;
+    linkml:definition_uri linkml:Integer ;
+    linkml:imported_from "linkml:types" ;
+    linkml:uri xsd:integer .
+
+<https://w3id.org/peh/language> a linkml:SlotDefinition ;
+    skos:inScheme <https://w3id.org/peh/Matrix> ;
+    linkml:definition_uri <https://w3id.org/peh/Matrix#language> ;
+    linkml:domain_of <https://w3id.org/peh/Translation> ;
+    linkml:owner <https://w3id.org/peh/Translation> ;
+    linkml:range <https://w3id.org/peh/string> ;
+    linkml:slot_uri <https://w3id.org/peh/Matrix#language> .
+
+<https://w3id.org/peh/name> a linkml:SlotDefinition ;
+    skos:inScheme <https://w3id.org/peh/Matrix> ;
+    skos:mappingRelation skos:altLabel ;
+    linkml:definition_uri <https://w3id.org/peh/Matrix#name> ;
+    linkml:domain_of <https://w3id.org/peh/Matrix> ;
+    linkml:owner <https://w3id.org/peh/Matrix> ;
+    linkml:range <https://w3id.org/peh/string> ;
+    linkml:slot_uri skos:altLabel .
+
+<https://w3id.org/peh/parent_matrix> a linkml:SlotDefinition ;
+    skos:inScheme <https://w3id.org/peh/Matrix> ;
+    skos:mappingRelation skos:broader ;
+    linkml:definition_uri <https://w3id.org/peh/Matrix#parent_matrix> ;
+    linkml:domain_of <https://w3id.org/peh/Matrix> ;
+    linkml:owner <https://w3id.org/peh/Matrix> ;
+    linkml:range <https://w3id.org/peh/Matrix> ;
+    linkml:slot_uri skos:broader .
+
+<https://w3id.org/peh/property_name> a linkml:SlotDefinition ;
+    skos:inScheme <https://w3id.org/peh/Matrix> ;
+    linkml:definition_uri <https://w3id.org/peh/Matrix#property_name> ;
+    linkml:domain_of <https://w3id.org/peh/Translation> ;
+    linkml:owner <https://w3id.org/peh/Translation> ;
+    linkml:range <https://w3id.org/peh/string> ;
+    linkml:slot_uri <https://w3id.org/peh/Matrix#property_name> .
+
+<https://w3id.org/peh/sort_order> a linkml:SlotDefinition ;
+    skos:inScheme <https://w3id.org/peh/Matrix> ;
+    linkml:definition_uri <https://w3id.org/peh/Matrix#sort_order> ;
+    linkml:domain_of <https://w3id.org/peh/Matrix> ;
+    linkml:owner <https://w3id.org/peh/Matrix> ;
+    linkml:range <https://w3id.org/peh/integer> ;
+    linkml:slot_uri <https://w3id.org/peh/Matrix#sort_order> .
+
+<https://w3id.org/peh/translated_value> a linkml:SlotDefinition ;
+    skos:inScheme <https://w3id.org/peh/Matrix> ;
+    linkml:definition_uri <https://w3id.org/peh/Matrix#translated_value> ;
+    linkml:domain_of <https://w3id.org/peh/Translation> ;
+    linkml:owner <https://w3id.org/peh/Translation> ;
+    linkml:range <https://w3id.org/peh/string> ;
+    linkml:slot_uri <https://w3id.org/peh/Matrix#translated_value> .
+
+<https://w3id.org/peh/unique_name> a linkml:SlotDefinition ;
+    skos:inScheme <https://w3id.org/peh/Matrix> ;
+    skos:mappingRelation skos:prefLabel ;
+    linkml:definition_uri <https://w3id.org/peh/Matrix#unique_name> ;
+    linkml:domain_of <https://w3id.org/peh/Matrix> ;
+    linkml:owner <https://w3id.org/peh/Matrix> ;
+    linkml:range <https://w3id.org/peh/string> ;
+    linkml:slot_uri skos:prefLabel .
+
+<https://w3id.org/peh/Data> a linkml:ClassDefinition ;
+    skos:inScheme <https://w3id.org/peh/Matrix> ;
+    linkml:attributes <https://w3id.org/peh/matrices> ;
+    linkml:class_uri <https://w3id.org/peh/Matrix#Data> ;
+    linkml:definition_uri <https://w3id.org/peh/Matrix#Data> ;
+    linkml:slot_usage [ ] ;
+    linkml:slots <https://w3id.org/peh/data__matrices> ;
+    linkml:tree_root true .
+
+<https://w3id.org/peh/translations> a linkml:SlotDefinition ;
+    skos:inScheme <https://w3id.org/peh/Matrix> ;
+    linkml:definition_uri <https://w3id.org/peh/Matrix#translations> ;
+    linkml:domain_of <https://w3id.org/peh/HasTranslations> ;
+    linkml:inlined true ;
+    linkml:inlined_as_list true ;
+    linkml:multivalued true ;
+    linkml:owner <https://w3id.org/peh/HasTranslations> ;
+    linkml:range <https://w3id.org/peh/Translation> ;
+    linkml:slot_uri <https://w3id.org/peh/Matrix#translations> .
+
+<https://w3id.org/peh/HasTranslations> a linkml:ClassDefinition ;
+    skos:inScheme <https://w3id.org/peh/Matrix> ;
+    skos:mappingRelation <thesoz:hasTranslation> ;
+    linkml:class_uri <http://lod.gesis.org/thesoz/hasTranslation> ;
+    linkml:definition_uri <https://w3id.org/peh/Matrix#HasTranslations> ;
+    linkml:mixin true ;
+    linkml:slot_usage [ ] ;
+    linkml:slots <https://w3id.org/peh/translations> .
+
+<https://w3id.org/peh/Translation> a linkml:ClassDefinition ;
+    skos:inScheme <https://w3id.org/peh/Matrix> ;
+    linkml:class_uri <https://w3id.org/peh/Matrix#Translation> ;
+    linkml:definition_uri <https://w3id.org/peh/Matrix#Translation> ;
+    linkml:slot_usage [ ] ;
+    linkml:slots <https://w3id.org/peh/language>,
+        <https://w3id.org/peh/property_name>,
+        <https://w3id.org/peh/translated_value> .
+
+<https://w3id.org/peh/string> a linkml:TypeDefinition ;
+    skos:definition "A character string" ;
+    skos:editorialNote "In RDF serializations, a slot with range of string is treated as a literal or type xsd:string.   If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"string\"." ;
+    skos:exactMatch schema1:Text ;
+    skos:inScheme linkml:types ;
+    linkml:base "str" ;
+    linkml:definition_uri linkml:String ;
+    linkml:imported_from "linkml:types" ;
+    linkml:uri xsd:string .
+
+<https://w3id.org/peh/Matrix> a linkml:ClassDefinition ;
+    skos:inScheme <https://w3id.org/peh/Matrix> ;
+    skos:mappingRelation skos:Concept ;
+    linkml:class_uri skos:Concept ;
+    linkml:definition_uri <https://w3id.org/peh/Matrix#Matrix> ;
+    linkml:mixins <https://w3id.org/peh/HasTranslations> ;
+    linkml:slot_usage [ ] ;
+    linkml:slots <https://w3id.org/peh/aggregation_target>,
+        <https://w3id.org/peh/id>,
+        <https://w3id.org/peh/name>,
+        <https://w3id.org/peh/parent_matrix>,
+        <https://w3id.org/peh/sort_order>,
+        <https://w3id.org/peh/translations>,
+        <https://w3id.org/peh/unique_name> .
+
+
