@@ -1,0 +1,42 @@
+# changelog.schema.yaml
+$schema: "http://json-schema.org/draft-07/schema#"
+title: "Changelog Schema"
+type: object
+required:
+  - version
+  - release_date
+  - maintainer
+  - changes
+properties:
+  version:
+    type: string
+    pattern: "^\\d+\\.\\d+\\.\\d+$"
+  release_date:
+    type: string
+    format: date  # ISO 8601 date format (YYYY-MM-DD)
+  maintainer:
+    type: string
+    format: email
+  changes:
+    type: array
+    items:
+      type: object
+      required:
+        - label
+        - action
+      properties:
+        label:
+          type: string
+        action:
+          type: string
+          enum: [added, modified, deprecated]
+        term_uri:
+          type: string
+          format: uri
+        nanopub_uri:
+          type: string
+          format: uri
+        pr_reference:
+          type: string
+        replacement_term:
+          type: string
