@@ -1,6 +1,7 @@
 matrices:
 - aggregation_target: false
   id: peh:atn
+  label: atn
   name: All toe nail
   parent_matrix: peh:n
   sort_order: 17
@@ -11,6 +12,7 @@ matrices:
   unique_name: atn
 - aggregation_target: false
   id: peh:water
+  label: water
   name: water
   sort_order: 37
   translations:
@@ -20,6 +22,7 @@ matrices:
   unique_name: water
 - aggregation_target: false
   id: peh:oair
+  label: oair
   name: outdoor air-stationary
   parent_matrix: peh:air
   sort_order: 31
@@ -30,6 +33,7 @@ matrices:
   unique_name: oair
 - aggregation_target: false
   id: peh:cbs
+  label: cbs
   name: cord blood-serum
   parent_matrix: peh:cordBlood
   sort_order: 7
@@ -40,6 +44,7 @@ matrices:
   unique_name: cbs
 - aggregation_target: false
   id: peh:ebc
+  label: ebc
   name: exhaled breath condensate
   sort_order: 23
   translations:
@@ -49,6 +54,7 @@ matrices:
   unique_name: ebc
 - aggregation_target: false
   id: peh:sem
+  label: sem
   name: semen
   sort_order: 22
   translations:
@@ -58,6 +64,7 @@ matrices:
   unique_name: sem
 - aggregation_target: false
   id: peh:us
+  label: us
   name: random spot urine
   parent_matrix: peh:urine
   sort_order: 10
@@ -68,6 +75,7 @@ matrices:
   unique_name: us
 - aggregation_target: false
   id: peh:rbc
+  label: rbc
   name: blood - red blood cells
   parent_matrix: peh:bloodcells
   sort_order: 5
@@ -78,6 +86,7 @@ matrices:
   unique_name: rbc
 - aggregation_target: false
   id: peh:vams
+  label: vams
   name: volumetric absorptive microsample (VAMS)
   parent_matrix: peh:blood
   sort_order: 38
@@ -88,6 +97,7 @@ matrices:
   unique_name: vams
 - aggregation_target: false
   id: peh:cbt
+  label: cbt
   name: umbilical cord tissue
   sort_order: 24
   translations:
@@ -97,6 +107,7 @@ matrices:
   unique_name: cbt
 - aggregation_target: false
   id: peh:egg
+  label: egg
   name: eggs
   parent_matrix: peh:food
   sort_order: 36
@@ -107,6 +118,7 @@ matrices:
   unique_name: egg
 - aggregation_target: false
   id: peh:sa
+  label: sa
   name: saliva/sputum
   sort_order: 20
   translations:
@@ -116,6 +128,7 @@ matrices:
   unique_name: sa
 - aggregation_target: false
   id: peh:dw
+  label: dw
   name: dermal wipes
   sort_order: 26
   translations:
@@ -125,6 +138,7 @@ matrices:
   unique_name: dw
 - aggregation_target: false
   id: peh:adi
+  label: adi
   name: adipose tissue/fat
   sort_order: 25
   translations:
@@ -134,6 +148,7 @@ matrices:
   unique_name: adi
 - aggregation_target: false
   id: peh:uf
+  label: uf
   name: fasting urine
   parent_matrix: peh:urine
   sort_order: 12
@@ -144,6 +159,7 @@ matrices:
   unique_name: uf
 - aggregation_target: false
   id: peh:st
+  label: st
   name: stool
   sort_order: 21
   translations:
@@ -153,6 +169,7 @@ matrices:
   unique_name: st
 - aggregation_target: false
   id: peh:cbwb
+  label: cbwb
   name: cord blood-whole blood
   parent_matrix: peh:cordBlood
   sort_order: 6
@@ -163,6 +180,7 @@ matrices:
   unique_name: cbwb
 - aggregation_target: false
   id: peh:bbc
+  label: bbc
   name: blood-blood cells
   parent_matrix: peh:bloodcells
   sort_order: 4
@@ -173,6 +191,7 @@ matrices:
   unique_name: bbc
 - aggregation_target: false
   id: peh:bm
+  label: bm
   name: breast milk
   sort_order: 14
   translations:
@@ -182,6 +201,7 @@ matrices:
   unique_name: bm
 - aggregation_target: false
   id: peh:n
+  label: n
   name: nail
   sort_order: 16
   translations:
@@ -191,6 +211,7 @@ matrices:
   unique_name: n
 - aggregation_target: false
   id: peh:bp
+  label: bp
   name: blood plasma
   parent_matrix: peh:blood
   sort_order: 3
@@ -201,6 +222,7 @@ matrices:
   unique_name: bp
 - aggregation_target: false
   id: peh:cbbc
+  label: cbbc
   name: cord blood-cells
   sort_order: 9
   translations:
@@ -210,6 +232,7 @@ matrices:
   unique_name: cbbc
 - aggregation_target: false
   id: peh:odust
+  label: odust
   name: outdoor dust
   parent_matrix: peh:air
   sort_order: 30
@@ -220,6 +243,7 @@ matrices:
   unique_name: odust
 - aggregation_target: false
   id: peh:btn
+  label: btn
   name: Big toe nail
   parent_matrix: peh:n
   sort_order: 18
@@ -230,6 +254,7 @@ matrices:
   unique_name: btn
 - aggregation_target: false
   id: peh:nm
+  label: nm
   name: nasal mucus
   sort_order: 19
   translations:
@@ -239,6 +264,7 @@ matrices:
   unique_name: nm
 - aggregation_target: false
   id: peh:plt
+  label: plt
   name: placenta tissue
   sort_order: 28
   translations:
@@ -248,6 +274,7 @@ matrices:
   unique_name: plt
 - aggregation_target: false
   id: peh:kgfood
+  label: kgfood
   name: kitchengarden food
   parent_matrix: peh:food
   sort_order: 35
@@ -258,6 +285,7 @@ matrices:
   unique_name: kgfood
 - aggregation_target: false
   id: peh:soil
+  label: soil
   name: soil
   sort_order: 34
   translations:
@@ -267,6 +295,7 @@ matrices:
   unique_name: soil
 - aggregation_target: false
   id: peh:bs
+  label: bs
   name: blood serum
   parent_matrix: peh:blood
   sort_order: 2
@@ -277,6 +306,7 @@ matrices:
   unique_name: bs
 - aggregation_target: false
   id: peh:cbp
+  label: cbp
   name: cord blood-plasma
   parent_matrix: peh:cordBlood
   sort_order: 8
@@ -287,6 +317,7 @@ matrices:
   unique_name: cbp
 - aggregation_target: false
   id: peh:h
+  label: h
   name: hair
   sort_order: 15
   translations:
@@ -296,6 +327,7 @@ matrices:
   unique_name: h
 - aggregation_target: false
   id: peh:dbs
+  label: dbs
   name: dried blood spots
   parent_matrix: peh:blood
   sort_order: 39
@@ -306,6 +338,7 @@ matrices:
   unique_name: dbs
 - aggregation_target: false
   id: peh:idust
+  label: idust
   name: indoor dust
   parent_matrix: peh:air
   sort_order: 29
@@ -316,6 +349,7 @@ matrices:
   unique_name: idust
 - aggregation_target: false
   id: peh:bwb
+  label: bwb
   name: blood-whole blood
   parent_matrix: peh:blood
   sort_order: 1
@@ -326,6 +360,7 @@ matrices:
   unique_name: bwb
 - aggregation_target: false
   id: peh:af
+  label: af
   name: amniotic fluid
   sort_order: 27
   translations:
@@ -335,6 +370,7 @@ matrices:
   unique_name: af
 - aggregation_target: false
   id: peh:um
+  label: um
   name: first morning urine
   parent_matrix: peh:urine
   sort_order: 11
@@ -345,6 +381,7 @@ matrices:
   unique_name: um
 - aggregation_target: false
   id: peh:pair
+  label: pair
   name: personal air
   parent_matrix: peh:air
   sort_order: 33
@@ -355,6 +392,7 @@ matrices:
   unique_name: pair
 - aggregation_target: false
   id: peh:ud
+  label: ud
   name: urine 24h
   parent_matrix: peh:urine
   sort_order: 13
@@ -365,6 +403,7 @@ matrices:
   unique_name: ud
 - aggregation_target: false
   id: peh:iair
+  label: iair
   name: indoor air-stationary
   parent_matrix: peh:air
   sort_order: 32
@@ -375,6 +414,7 @@ matrices:
   unique_name: iair
 - aggregation_target: false
   id: peh:air
+  label: air
   name: air
   sort_order: 0.1
   translations:
@@ -384,6 +424,7 @@ matrices:
   unique_name: air
 - aggregation_target: false
   id: peh:food
+  label: food
   name: food
   sort_order: 0.1
   translations:
@@ -393,6 +434,7 @@ matrices:
   unique_name: food
 - aggregation_target: false
   id: peh:bloodcells
+  label: bloodcells
   name: bloodcells
   sort_order: 0.1
   translations:
@@ -402,6 +444,7 @@ matrices:
   unique_name: bloodcells
 - aggregation_target: false
   id: peh:urine
+  label: urine
   name: urine
   sort_order: 0.1
   translations:
@@ -411,6 +454,7 @@ matrices:
   unique_name: urine
 - aggregation_target: false
   id: peh:cordBlood
+  label: cord blood
   name: cord blood
   sort_order: 0.1
   translations:
@@ -420,6 +464,7 @@ matrices:
   unique_name: cord blood
 - aggregation_target: false
   id: peh:blood
+  label: blood
   name: blood
   sort_order: 0.1
   translations:

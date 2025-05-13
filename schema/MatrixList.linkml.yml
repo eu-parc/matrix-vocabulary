@@ -56,7 +56,11 @@ slots:
     range: Matrix
     slot_uri: skos:broader
   unique_name:
+    slot_uri: schema:alternateName
+    range: string
+  label:
     slot_uri: skos:prefLabel
+    exact_mappings: schema:alternateName
     range: string
   aggregation_target:
     range: boolean
