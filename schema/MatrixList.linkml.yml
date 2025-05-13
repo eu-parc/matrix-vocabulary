@@ -26,6 +26,7 @@ classes:
       - parent_matrix
       - sort_order
       - unique_name
+      - label
 
   HasTranslations:
     class_uri: thesoz:hasTranslation
