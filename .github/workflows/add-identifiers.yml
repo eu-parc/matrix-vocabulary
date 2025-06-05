@@ -1,0 +1,85 @@
+name: Add identifiers
+
+permissions:
+  contents: write
+
+on:
+    pull_request:
+    push:
+        branches: [main]
+
+jobs:
+    generate-ids:
+        if: github.repository != 'eu-parc/vocabulary-template'
+        uses: eu-parc/voc-identifier-service/.github/workflows/generate-ids.yml@main
+        with:
+            ref: ${{ github.ref }}
+            data: data/data.yaml
+            target_name: matrices
+            parent_key: parent_matrix
+            preflabel: label
+            type_prefix: MA
+            namespace: https://w3id.org/peh/
+            artefact_name: data-with-id.yaml
+            output: data-with-id.yaml
+        secrets:
+            token: ${{ secrets.GITHUB_TOKEN }}
+
+    push-to-main:  
+        needs: generate-ids
+        runs-on: ubuntu-latest
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        steps:
+          - name: Checkout repository
+            uses: actions/checkout@v4
+            with:
+              token: ${{ secrets.GITHUB_TOKEN }}
+              fetch-depth: 0
+
+          - name: Download artifact
+            uses: actions/download-artifact@v4
+            with:
+              name: data-with-id.yaml
+              path: ./downloaded-artifacts
+
+          - name: Move artifact to correct location
+            run: |
+              # Adjust the path based on where the artifact should be placed
+              # This assumes the artifact should replace the original data file
+              if [ -f "./downloaded-artifacts/data-with-id.yaml" ]; then
+                cp ./downloaded-artifacts/data-with-id.yaml data/data.yaml
+              else
+                echo "Artifact file not found in expected location"
+                ls -la ./downloaded-artifacts/
+                exit 1
+              fi
+
+          - name: Check for changes and commit
+            run: |
+              git config --local user.email "github-actions[bot]@users.noreply.github.com"
+              git config --local user.name "github-actions[bot]"
+                  
+              # Add the modified files
+              git add data/data.yaml
+                  
+              # Check if there are changes to commit
+              if git diff --staged --quiet; then
+                echo "No changes to commit"
+                exit 0
+              fi
+                  
+              git commit -m "Auto-update identifiers in data.yaml [skip ci]"
+              git push
+
+    test-publish:
+      if: github.event_name == 'pull_request'
+      needs: generate-ids
+      uses: eu-parc/voc2skosmos-workflow/.github/workflows/yml2skos.yml@main
+      with:
+        ref: ${{ github.ref }}
+        namespace: https://w3id.org/peh/terms/
+        namespace_label: pehterms
+        linkml_schema: https://raw.githubusercontent.com/eu-parc/parco-hbm/main/linkml/schema/peh.yaml
+        artefact_name: data-with-id.yaml
+      secrets:
+            token: ${{ secrets.GITHUB_TOKEN }}
