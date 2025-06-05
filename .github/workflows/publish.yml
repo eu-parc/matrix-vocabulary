@@ -4,9 +4,6 @@ permissions:
   contents: write
 
 on:
-    pull_request:
-    push:
-        branches: [main]
     release:
         types: [published]
 
@@ -17,9 +14,9 @@ jobs:
         uses: eu-parc/voc2skosmos-workflow/.github/workflows/yml2skos.yml@main
         with:
             ref: ${{ github.ref }}
-            namespace: https://w3id.org/peh/Matrix#
-            namespace_label: peh/Matrix#
-            linkml_schema: schema/MatrixList.linkml.yml
-            data: data/MatrixList_data.yml
+            namespace: https://w3id.org/peh/terms/
+            namespace_label: pehterms
+            linkml_schema: https://raw.githubusercontent.com/eu-parc/parco-hbm/main/linkml/schema/peh.yaml
+            data: data/data.yaml
         secrets:
             token: ${{ secrets.GITHUB_TOKEN }}
