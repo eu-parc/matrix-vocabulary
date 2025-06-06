@@ -1,9 +1,9 @@
 matrices:
 - aggregation_target: false
-  id: peh:atn testing
+  id: https://w3id.org/peh/MA-44bff383cf
   label: atn
   name: All toe nail
-  parent_matrix: peh:n
+  parent_matrix: https://w3id.org/peh/MA-7b8b965ad4
   sort_order: 17
   translations:
   - language: nl-be
@@ -11,7 +11,7 @@ matrices:
     translated_value: alle teennagels
   unique_name: atn
 - aggregation_target: false
-  id: peh:water
+  id: https://w3id.org/peh/MA-9460370bb0
   label: water
   name: water
   sort_order: 37
@@ -21,10 +21,10 @@ matrices:
     translated_value: water
   unique_name: water
 - aggregation_target: false
-  id: peh:oair
+  id: https://w3id.org/peh/MA-f28eb01b1a
   label: oair
   name: outdoor air-stationary
-  parent_matrix: peh:air
+  parent_matrix: https://w3id.org/peh/MA-3c45881163
   sort_order: 31
   translations:
   - language: nl-be
@@ -32,10 +32,10 @@ matrices:
     translated_value: buitenlucht
   unique_name: oair
 - aggregation_target: false
-  id: peh:cbs
+  id: https://w3id.org/peh/MA-8e113caded
   label: cbs
   name: cord blood-serum
-  parent_matrix: peh:cordBlood
+  parent_matrix: https://w3id.org/peh/MA-1c6b3cd2ac
   sort_order: 7
   translations:
   - language: nl-be
@@ -43,7 +43,7 @@ matrices:
     translated_value: navelstrengbloed-serum
   unique_name: cbs
 - aggregation_target: false
-  id: peh:ebc
+  id: https://w3id.org/peh/MA-01e40bb5c7
   label: ebc
   name: exhaled breath condensate
   sort_order: 23
@@ -53,7 +53,7 @@ matrices:
     translated_value: uitgeademde lucht condensaat
   unique_name: ebc
 - aggregation_target: false
-  id: peh:sem
+  id: https://w3id.org/peh/MA-bd9a2916f0
   label: sem
   name: semen
   sort_order: 22
@@ -63,10 +63,10 @@ matrices:
     translated_value: zaad
   unique_name: sem
 - aggregation_target: false
-  id: peh:us
+  id: https://w3id.org/peh/MA-0b3b97fa66
   label: us
   name: random spot urine
-  parent_matrix: peh:urine
+  parent_matrix: https://w3id.org/peh/MA-3e88197d1d
   sort_order: 10
   translations:
   - language: nl-be
@@ -74,10 +74,10 @@ matrices:
     translated_value: random spot-urine
   unique_name: us
 - aggregation_target: false
-  id: peh:rbc
+  id: https://w3id.org/peh/MA-6a49f67ed8
   label: rbc
   name: blood - red blood cells
-  parent_matrix: peh:bloodcells
+  parent_matrix: https://w3id.org/peh/MA-fef1807051
   sort_order: 5
   translations:
   - language: nl-be
@@ -85,10 +85,10 @@ matrices:
     translated_value: bloed-rode bloedcellen
   unique_name: rbc
 - aggregation_target: false
-  id: peh:vams
+  id: https://w3id.org/peh/MA-6685e16510
   label: vams
   name: volumetric absorptive microsample (VAMS)
-  parent_matrix: peh:blood
+  parent_matrix: https://w3id.org/peh/MA-6b157916b4
   sort_order: 38
   translations:
   - language: nl-be
@@ -96,7 +96,7 @@ matrices:
     translated_value: blood volumetrische absorptieve microsample
   unique_name: vams
 - aggregation_target: false
-  id: peh:cbt
+  id: https://w3id.org/peh/MA-7638e20f13
   label: cbt
   name: umbilical cord tissue
   sort_order: 24
@@ -106,10 +106,10 @@ matrices:
     translated_value: weefsel van navelstreng
   unique_name: cbt
 - aggregation_target: false
-  id: peh:egg
+  id: https://w3id.org/peh/MA-0e9312087f
   label: egg
   name: eggs
-  parent_matrix: peh:food
+  parent_matrix: https://w3id.org/peh/MA-62506be34d
   sort_order: 36
   translations:
   - language: nl-be
@@ -117,7 +117,7 @@ matrices:
     translated_value: kippenei
   unique_name: egg
 - aggregation_target: false
-  id: peh:sa
+  id: https://w3id.org/peh/MA-c12e01f2a1
   label: sa
   name: saliva/sputum
   sort_order: 20
@@ -127,7 +127,7 @@ matrices:
     translated_value: speeksel
   unique_name: sa
 - aggregation_target: false
-  id: peh:dw
+  id: https://w3id.org/peh/MA-1f2121f36f
   label: dw
   name: dermal wipes
   sort_order: 26
@@ -137,7 +137,7 @@ matrices:
     translated_value: dermale doekjes
   unique_name: dw
 - aggregation_target: false
-  id: peh:adi
+  id: https://w3id.org/peh/MA-c46335eb26
   label: adi
   name: adipose tissue/fat
   sort_order: 25
@@ -147,10 +147,10 @@ matrices:
     translated_value: vetweefsel/vet
   unique_name: adi
 - aggregation_target: false
-  id: peh:uf
+  id: https://w3id.org/peh/MA-9fbcd7dce5
   label: uf
   name: fasting urine
-  parent_matrix: peh:urine
+  parent_matrix: https://w3id.org/peh/MA-3e88197d1d
   sort_order: 12
   translations:
   - language: nl-be
@@ -158,7 +158,7 @@ matrices:
     translated_value: urine nuchter
   unique_name: uf
 - aggregation_target: false
-  id: peh:st
+  id: https://w3id.org/peh/MA-627fcdb6cc
   label: st
   name: stool
   sort_order: 21
@@ -168,10 +168,10 @@ matrices:
     translated_value: stoelgang
   unique_name: st
 - aggregation_target: false
-  id: peh:cbwb
+  id: https://w3id.org/peh/MA-a8b88464e5
   label: cbwb
   name: cord blood-whole blood
-  parent_matrix: peh:cordBlood
+  parent_matrix: https://w3id.org/peh/MA-1c6b3cd2ac
   sort_order: 6
   translations:
   - language: nl-be
@@ -179,10 +179,10 @@ matrices:
     translated_value: navelstrengbloed-volbloed
   unique_name: cbwb
 - aggregation_target: false
-  id: peh:bbc
+  id: https://w3id.org/peh/MA-99be496ab9
   label: bbc
   name: blood-blood cells
-  parent_matrix: peh:bloodcells
+  parent_matrix: https://w3id.org/peh/MA-fef1807051
   sort_order: 4
   translations:
   - language: nl-be
@@ -190,7 +190,7 @@ matrices:
     translated_value: bloed-bloedcellen
   unique_name: bbc
 - aggregation_target: false
-  id: peh:bm
+  id: https://w3id.org/peh/MA-0842438558
   label: bm
   name: breast milk
   sort_order: 14
@@ -200,7 +200,7 @@ matrices:
     translated_value: moedermelk
   unique_name: bm
 - aggregation_target: false
-  id: peh:n
+  id: https://w3id.org/peh/MA-7b8b965ad4
   label: n
   name: nail
   sort_order: 16
@@ -210,10 +210,10 @@ matrices:
     translated_value: nagel
   unique_name: n
 - aggregation_target: false
-  id: peh:bp
+  id: https://w3id.org/peh/MA-5cfdb867e9
   label: bp
   name: blood plasma
-  parent_matrix: peh:blood
+  parent_matrix: https://w3id.org/peh/MA-6b157916b4
   sort_order: 3
   translations:
   - language: nl-be
@@ -221,7 +221,7 @@ matrices:
     translated_value: bloed-plasma
   unique_name: bp
 - aggregation_target: false
-  id: peh:cbbc
+  id: https://w3id.org/peh/MA-b9aa273080
   label: cbbc
   name: cord blood-cells
   sort_order: 9
@@ -231,10 +231,10 @@ matrices:
     translated_value: navelstrengbloed-bloed cellen
   unique_name: cbbc
 - aggregation_target: false
-  id: peh:odust
+  id: https://w3id.org/peh/MA-d1c84f12ec
   label: odust
   name: outdoor dust
-  parent_matrix: peh:air
+  parent_matrix: https://w3id.org/peh/MA-3c45881163
   sort_order: 30
   translations:
   - language: nl-be
@@ -242,10 +242,10 @@ matrices:
     translated_value: outdoor stof
   unique_name: odust
 - aggregation_target: false
-  id: peh:btn
+  id: https://w3id.org/peh/MA-d4f5c2c948
   label: btn
   name: Big toe nail
-  parent_matrix: peh:n
+  parent_matrix: https://w3id.org/peh/MA-7b8b965ad4
   sort_order: 18
   translations:
   - language: nl-be
@@ -253,7 +253,7 @@ matrices:
     translated_value: grote teen nagel
   unique_name: btn
 - aggregation_target: false
-  id: peh:nm
+  id: https://w3id.org/peh/MA-93122a9e4a
   label: nm
   name: nasal mucus
   sort_order: 19
@@ -263,7 +263,7 @@ matrices:
     translated_value: neusslijm
   unique_name: nm
 - aggregation_target: false
-  id: peh:plt
+  id: https://w3id.org/peh/MA-60443f67c6
   label: plt
   name: placenta tissue
   sort_order: 28
@@ -273,10 +273,10 @@ matrices:
     translated_value: placenta weefsel
   unique_name: plt
 - aggregation_target: false
-  id: peh:kgfood
+  id: https://w3id.org/peh/MA-8c947d566d
   label: kgfood
   name: kitchengarden food
-  parent_matrix: peh:food
+  parent_matrix: https://w3id.org/peh/MA-62506be34d
   sort_order: 35
   translations:
   - language: nl-be
@@ -284,7 +284,7 @@ matrices:
     translated_value: moestuin voedsel
   unique_name: kgfood
 - aggregation_target: false
-  id: peh:soil
+  id: https://w3id.org/peh/MA-cf6c9df68d
   label: soil
   name: soil
   sort_order: 34
@@ -294,10 +294,10 @@ matrices:
     translated_value: grond
   unique_name: soil
 - aggregation_target: false
-  id: peh:bs
+  id: https://w3id.org/peh/MA-7c9df80123
   label: bs
   name: blood serum
-  parent_matrix: peh:blood
+  parent_matrix: https://w3id.org/peh/MA-6b157916b4
   sort_order: 2
   translations:
   - language: nl-be
@@ -305,10 +305,10 @@ matrices:
     translated_value: bloed-serum
   unique_name: bs
 - aggregation_target: false
-  id: peh:cbp
+  id: https://w3id.org/peh/MA-87cd3c0eee
   label: cbp
   name: cord blood-plasma
-  parent_matrix: peh:cordBlood
+  parent_matrix: https://w3id.org/peh/MA-1c6b3cd2ac
   sort_order: 8
   translations:
   - language: nl-be
@@ -316,7 +316,7 @@ matrices:
     translated_value: navelstrengbloed-plasma
   unique_name: cbp
 - aggregation_target: false
-  id: peh:h
+  id: https://w3id.org/peh/MA-2510c39011
   label: h
   name: hair
   sort_order: 15
@@ -326,10 +326,10 @@ matrices:
     translated_value: haar
   unique_name: h
 - aggregation_target: false
-  id: peh:dbs
+  id: https://w3id.org/peh/MA-85afaab5f3
   label: dbs
   name: dried blood spots
-  parent_matrix: peh:blood
+  parent_matrix: https://w3id.org/peh/MA-6b157916b4
   sort_order: 39
   translations:
   - language: nl-be
@@ -337,10 +337,10 @@ matrices:
     translated_value: blood spot gedroogd
   unique_name: dbs
 - aggregation_target: false
-  id: peh:idust
+  id: https://w3id.org/peh/MA-9e1a0008e3
   label: idust
   name: indoor dust
-  parent_matrix: peh:air
+  parent_matrix: https://w3id.org/peh/MA-3c45881163
   sort_order: 29
   translations:
   - language: nl-be
@@ -348,10 +348,10 @@ matrices:
     translated_value: binnen stof
   unique_name: idust
 - aggregation_target: false
-  id: peh:bwb
+  id: https://w3id.org/peh/MA-f9b8d97e48
   label: bwb
   name: blood-whole blood
-  parent_matrix: peh:blood
+  parent_matrix: https://w3id.org/peh/MA-6b157916b4
   sort_order: 1
   translations:
   - language: nl-be
@@ -359,7 +359,7 @@ matrices:
     translated_value: bloed-volbloed
   unique_name: bwb
 - aggregation_target: false
-  id: peh:af
+  id: https://w3id.org/peh/MA-f0357a3f15
   label: af
   name: amniotic fluid
   sort_order: 27
@@ -369,10 +369,10 @@ matrices:
     translated_value: vruchtwater
   unique_name: af
 - aggregation_target: false
-  id: peh:um
+  id: https://w3id.org/peh/MA-0dd00e33b6
   label: um
   name: first morning urine
-  parent_matrix: peh:urine
+  parent_matrix: https://w3id.org/peh/MA-3e88197d1d
   sort_order: 11
   translations:
   - language: nl-be
@@ -380,10 +380,10 @@ matrices:
     translated_value: eerste ochtend-urine
   unique_name: um
 - aggregation_target: false
-  id: peh:pair
+  id: https://w3id.org/peh/MA-33c9b363aa
   label: pair
   name: personal air
-  parent_matrix: peh:air
+  parent_matrix: https://w3id.org/peh/MA-3c45881163
   sort_order: 33
   translations:
   - language: nl-be
@@ -391,10 +391,10 @@ matrices:
     translated_value: persoonlijke lucht
   unique_name: pair
 - aggregation_target: false
-  id: peh:ud
+  id: https://w3id.org/peh/MA-3dfe3d7a17
   label: ud
   name: urine 24h
-  parent_matrix: peh:urine
+  parent_matrix: https://w3id.org/peh/MA-3e88197d1d
   sort_order: 13
   translations:
   - language: nl-be
@@ -402,10 +402,10 @@ matrices:
     translated_value: urine 24u
   unique_name: ud
 - aggregation_target: false
-  id: peh:iair
+  id: https://w3id.org/peh/MA-4dc65edf50
   label: iair
   name: indoor air-stationary
-  parent_matrix: peh:air
+  parent_matrix: https://w3id.org/peh/MA-3c45881163
   sort_order: 32
   translations:
   - language: nl-be
@@ -413,7 +413,7 @@ matrices:
     translated_value: binnenlucht
   unique_name: iair
 - aggregation_target: false
-  id: peh:air
+  id: https://w3id.org/peh/MA-3c45881163
   label: air
   name: air
   sort_order: 0.1
@@ -423,7 +423,7 @@ matrices:
     translated_value: lucht
   unique_name: air
 - aggregation_target: false
-  id: peh:food
+  id: https://w3id.org/peh/MA-62506be34d
   label: food
   name: food
   sort_order: 0.1
@@ -433,7 +433,7 @@ matrices:
     translated_value: voedsel
   unique_name: food
 - aggregation_target: false
-  id: peh:bloodcells
+  id: https://w3id.org/peh/MA-fef1807051
   label: bloodcells
   name: bloodcells
   sort_order: 0.1
@@ -443,7 +443,7 @@ matrices:
     translated_value: bloedcellen
   unique_name: bloodcells
 - aggregation_target: false
-  id: peh:urine
+  id: https://w3id.org/peh/MA-3e88197d1d
   label: urine
   name: urine
   sort_order: 0.1
@@ -453,7 +453,7 @@ matrices:
     translated_value: urine
   unique_name: urine
 - aggregation_target: false
-  id: peh:cordBlood
+  id: https://w3id.org/peh/MA-1c6b3cd2ac
   label: cord blood
   name: cord blood
   sort_order: 0.1
@@ -463,7 +463,7 @@ matrices:
     translated_value: navelstrengbloed
   unique_name: cord blood
 - aggregation_target: false
-  id: peh:blood
+  id: https://w3id.org/peh/MA-6b157916b4
   label: blood
   name: blood
   sort_order: 0.1
