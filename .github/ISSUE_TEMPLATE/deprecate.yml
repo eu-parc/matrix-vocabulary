@@ -1,0 +1,42 @@
+name: Request deprecation of vocabulary term.
+
+description: Indicate and motivate the request to deprecate a vocabulary term.
+
+title: Deprecate vocabulary term [X]
+
+labels: [ Deprecate, VocabularyTerm ]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this deprecate vocabulary term request form!
+
+        Please provide the necessary details.
+  
+  - type: input
+    id: id
+    attributes:
+      label: Vocabulary term URI
+      description: Unique resource identifier for the vocabulary term.
+      placeholder: ex. peh:MA-45ad441454
+    validations:
+      required: true
+
+  - type: input
+    id: label
+    attributes:
+      label: label
+      description: The consie and unique, human-readable name for the matrix.
+      placeholder: ex. example_voc_term
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Provide a brief motivation to deprecate the vocabulary term.
+    validations:
+      required: false
+

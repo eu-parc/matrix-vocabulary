@@ -1,18 +1,27 @@
-name: Request new matrix
+name: Request modifications to an existing vocabulary term.
 
-description: Add metadata about a new matrix, including its hierarchy, translations, and key attributes.
+description: Provide details about the vocabulary term that requires modification.
 
-title: Add matrix [X]
+title: Modify vocabulary term [X]
 
-labels: [ New, Matrix ]
+labels: [ Modify, VocabularyTerm ]
 
 body:
   - type: markdown
     attributes:
       value: |
-        Thanks for taking the time to fill out this new matrix request form!
+        Thanks for taking the time to fill out this vocabulary term modification form!
 
-        Please provide the necessary details about the matrix, including its unique identifier, name, description, and relevant hierarchy information.
+        Please provide the necessary details about the vocabulary term. Don't forget to include the term URI, and only provide info on those fields that you would want to see changed.
+  
+  - type: input
+    id: id
+    attributes:
+      label: Vocabulary term URI
+      description: Unique resource identifier for the vocabulary term.
+      placeholder: ex. peh:MA-0014ab7741xt
+    validations:
+      required: true
 
   - type: input
     id: unique_name
@@ -21,7 +30,7 @@ body:
       description: A unique, human-readable name for the matrix.
       placeholder: ex. example_matrix
     validations:
-      required: true
+      required: false
 
   - type: input
     id: name
@@ -30,7 +39,7 @@ body:
       description: The official name of the matrix.
       placeholder: ex. Example Matrix
     validations:
-      required: true
+      required: false
 
   - type: textarea
     id: description
@@ -57,41 +66,6 @@ body:
     validations:
       required: false
 
-  - type: input
-    id: sort_order
-    attributes:
-      label: Sort Order
-      description: The order in which the matrix should be sorted.
-      placeholder: ex. 1
-    validations:
-      required: false
-
-  - type: input
-    id: aggregation_target
-    attributes:
-      label: Aggregation Target
-      description: The primary target for aggregation.
-      placeholder: ex. Target X
-    validations:
-      required: false
-
-  - type: input
-    id: parent_matrix
-    attributes:
-      label: Parent Matrix
-      description: Specify the parent matrix if applicable.
-      placeholder: ex. ParentMatrixX
-    validations:
-      required: false
-
-  - type: textarea
-    id: secondary_parent_matrix_id_list
-    attributes:
-      label: Secondary Parent Matrices
-      description: List any secondary parent matrices (comma-separated).
-      placeholder: ex. ParentMatrixY, ParentMatrixZ
-    validations:
-      required: false
 
   - type: textarea
     id: translations
