@@ -5,8 +5,13 @@ permissions:
 
 on:
     pull_request:
+      paths:
+      - '.github/workflows/add-identifiers.yaml'
+      - 'data/data.yaml'
     push:
         branches: [main]
+        paths:
+        - 'data/data.yaml'
 
 jobs:
     generate-ids:

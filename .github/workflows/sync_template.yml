@@ -1,0 +1,20 @@
+on:
+  # manual trigger
+  workflow_dispatch:
+jobs:
+  repo-sync:
+    if: github.repository != 'eu-parc/vocabulary-template'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: actions-template-sync
+        uses: AndreasAugustin/actions-template-sync@v2
+        with:
+          source_repo_path: eu-parc/vocabulary-template
+          template_sync_ignore_file_path: .github/.templatesyncignore
