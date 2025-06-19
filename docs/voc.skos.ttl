@@ -1,0 +1,505 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix p_base: <https://w3id.org/peh/terms/> .
+@prefix peh: <https://eu-parc.github.io/matrix-vocabulary/> .
+@prefix schema1: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+peh:MA-01e40bb5c7 a skos:Concept ;
+    schema1:alternateName "ebc" ;
+    schema1:name "exhaled breath condensate",
+        "uitgeademde lucht condensaat"@nl-be ;
+    skos:inScheme peh:matrices ;
+    skos:prefLabel "ebc"@en ;
+    skos:topConceptOf peh:matrices ;
+    p_base:aggregation_target false ;
+    p_base:sort_order 23.0 .
+
+peh:MA-0842438558 a skos:Concept ;
+    schema1:alternateName "bm" ;
+    schema1:name "breast milk",
+        "moedermelk"@nl-be ;
+    skos:inScheme peh:matrices ;
+    skos:prefLabel "bm"@en ;
+    skos:topConceptOf peh:matrices ;
+    p_base:aggregation_target false ;
+    p_base:sort_order 14.0 .
+
+peh:MA-0b3b97fa66 a skos:Concept ;
+    schema1:alternateName "us" ;
+    schema1:name "random spot urine",
+        "random spot-urine"@nl-be ;
+    skos:broader peh:MA-3e88197d1d ;
+    skos:inScheme peh:matrices ;
+    skos:prefLabel "us"@en ;
+    p_base:aggregation_target false ;
+    p_base:sort_order 10.0 .
+
+peh:MA-0dd00e33b6 a skos:Concept ;
+    schema1:alternateName "um" ;
+    schema1:name "first morning urine",
+        "eerste ochtend-urine"@nl-be ;
+    skos:broader peh:MA-3e88197d1d ;
+    skos:inScheme peh:matrices ;
+    skos:prefLabel "um"@en ;
+    p_base:aggregation_target false ;
+    p_base:sort_order 11.0 .
+
+peh:MA-0e9312087f a skos:Concept ;
+    schema1:alternateName "egg" ;
+    schema1:name "eggs",
+        "kippenei"@nl-be ;
+    skos:broader peh:MA-62506be34d ;
+    skos:inScheme peh:matrices ;
+    skos:prefLabel "egg"@en ;
+    p_base:aggregation_target false ;
+    p_base:sort_order 36.0 .
+
+peh:MA-1f2121f36f a skos:Concept ;
+    schema1:alternateName "dw" ;
+    schema1:name "dermal wipes",
+        "dermale doekjes"@nl-be ;
+    skos:inScheme peh:matrices ;
+    skos:prefLabel "dw"@en ;
+    skos:topConceptOf peh:matrices ;
+    p_base:aggregation_target false ;
+    p_base:sort_order 26.0 .
+
+peh:MA-2510c39011 a skos:Concept ;
+    schema1:alternateName "h" ;
+    schema1:name "hair",
+        "haar"@nl-be ;
+    skos:inScheme peh:matrices ;
+    skos:prefLabel "h"@en ;
+    skos:topConceptOf peh:matrices ;
+    p_base:aggregation_target false ;
+    p_base:sort_order 15.0 .
+
+peh:MA-33c9b363aa a skos:Concept ;
+    schema1:alternateName "pair" ;
+    schema1:name "personal air",
+        "persoonlijke lucht"@nl-be ;
+    skos:broader peh:MA-3c45881163 ;
+    skos:inScheme peh:matrices ;
+    skos:prefLabel "pair"@en ;
+    p_base:aggregation_target false ;
+    p_base:sort_order 33.0 .
+
+peh:MA-3dfe3d7a17 a skos:Concept ;
+    schema1:alternateName "ud" ;
+    schema1:name "urine 24h",
+        "urine 24u"@nl-be ;
+    skos:broader peh:MA-3e88197d1d ;
+    skos:inScheme peh:matrices ;
+    skos:prefLabel "ud"@en ;
+    p_base:aggregation_target false ;
+    p_base:sort_order 13.0 .
+
+peh:MA-44bff383cf a skos:Concept ;
+    schema1:alternateName "atn" ;
+    schema1:name "All toe nail",
+        "alle teennagels"@nl-be ;
+    skos:broader peh:MA-7b8b965ad4 ;
+    skos:inScheme peh:matrices ;
+    skos:prefLabel "atn"@en ;
+    p_base:aggregation_target false ;
+    p_base:sort_order 17.0 .
+
+peh:MA-4dc65edf50 a skos:Concept ;
+    schema1:alternateName "iair" ;
+    schema1:name "indoor air-stationary",
+        "binnenlucht"@nl-be ;
+    skos:broader peh:MA-3c45881163 ;
+    skos:inScheme peh:matrices ;
+    skos:prefLabel "iair"@en ;
+    p_base:aggregation_target false ;
+    p_base:sort_order 32.0 .
+
+peh:MA-5cfdb867e9 a skos:Concept ;
+    schema1:alternateName "bp" ;
+    schema1:name "blood plasma",
+        "bloed-plasma"@nl-be ;
+    skos:broader peh:MA-6b157916b4 ;
+    skos:inScheme peh:matrices ;
+    skos:prefLabel "bp"@en ;
+    p_base:aggregation_target false ;
+    p_base:sort_order 3.0 .
+
+peh:MA-60443f67c6 a skos:Concept ;
+    schema1:alternateName "plt" ;
+    schema1:name "placenta tissue",
+        "placenta weefsel"@nl-be ;
+    skos:inScheme peh:matrices ;
+    skos:prefLabel "plt"@en ;
+    skos:topConceptOf peh:matrices ;
+    p_base:aggregation_target false ;
+    p_base:sort_order 28.0 .
+
+peh:MA-627fcdb6cc a skos:Concept ;
+    schema1:alternateName "st" ;
+    schema1:name "stool",
+        "stoelgang"@nl-be ;
+    skos:inScheme peh:matrices ;
+    skos:prefLabel "st"@en ;
+    skos:topConceptOf peh:matrices ;
+    p_base:aggregation_target false ;
+    p_base:sort_order 21.0 .
+
+peh:MA-6685e16510 a skos:Concept ;
+    schema1:alternateName "vams" ;
+    schema1:name "volumetric absorptive microsample (VAMS)",
+        "blood volumetrische absorptieve microsample"@nl-be ;
+    skos:broader peh:MA-6b157916b4 ;
+    skos:inScheme peh:matrices ;
+    skos:prefLabel "vams"@en ;
+    p_base:aggregation_target false ;
+    p_base:sort_order 38.0 .
+
+peh:MA-6a49f67ed8 a skos:Concept ;
+    schema1:alternateName "rbc" ;
+    schema1:name "blood - red blood cells",
+        "bloed-rode bloedcellen"@nl-be ;
+    skos:broader peh:MA-fef1807051 ;
+    skos:inScheme peh:matrices ;
+    skos:prefLabel "rbc"@en ;
+    p_base:aggregation_target false ;
+    p_base:sort_order 5.0 .
+
+peh:MA-7638e20f13 a skos:Concept ;
+    schema1:alternateName "cbt" ;
+    schema1:name "umbilical cord tissue",
+        "weefsel van navelstreng"@nl-be ;
+    skos:inScheme peh:matrices ;
+    skos:prefLabel "cbt"@en ;
+    skos:topConceptOf peh:matrices ;
+    p_base:aggregation_target false ;
+    p_base:sort_order 24.0 .
+
+peh:MA-7c9df80123 a skos:Concept ;
+    schema1:alternateName "bs" ;
+    schema1:name "blood serum",
+        "bloed-serum"@nl-be ;
+    skos:broader peh:MA-6b157916b4 ;
+    skos:inScheme peh:matrices ;
+    skos:prefLabel "bs"@en ;
+    p_base:aggregation_target false ;
+    p_base:sort_order 2.0 .
+
+peh:MA-85afaab5f3 a skos:Concept ;
+    schema1:alternateName "dbs" ;
+    schema1:name "dried blood spots",
+        "blood spot gedroogd"@nl-be ;
+    skos:broader peh:MA-6b157916b4 ;
+    skos:inScheme peh:matrices ;
+    skos:prefLabel "dbs"@en ;
+    p_base:aggregation_target false ;
+    p_base:sort_order 39.0 .
+
+peh:MA-87cd3c0eee a skos:Concept ;
+    schema1:alternateName "cbp" ;
+    schema1:name "cord blood-plasma",
+        "navelstrengbloed-plasma"@nl-be ;
+    skos:broader peh:MA-1c6b3cd2ac ;
+    skos:inScheme peh:matrices ;
+    skos:prefLabel "cbp"@en ;
+    p_base:aggregation_target false ;
+    p_base:sort_order 8.0 .
+
+peh:MA-8c947d566d a skos:Concept ;
+    schema1:alternateName "kgfood" ;
+    schema1:name "kitchengarden food",
+        "moestuin voedsel"@nl-be ;
+    skos:broader peh:MA-62506be34d ;
+    skos:inScheme peh:matrices ;
+    skos:prefLabel "kgfood"@en ;
+    p_base:aggregation_target false ;
+    p_base:sort_order 35.0 .
+
+peh:MA-8e113caded a skos:Concept ;
+    schema1:alternateName "cbs" ;
+    schema1:name "cord blood-serum",
+        "navelstrengbloed-serum"@nl-be ;
+    skos:broader peh:MA-1c6b3cd2ac ;
+    skos:inScheme peh:matrices ;
+    skos:prefLabel "cbs"@en ;
+    p_base:aggregation_target false ;
+    p_base:sort_order 7.0 .
+
+peh:MA-93122a9e4a a skos:Concept ;
+    schema1:alternateName "nm" ;
+    schema1:name "nasal mucus",
+        "neusslijm"@nl-be ;
+    skos:inScheme peh:matrices ;
+    skos:prefLabel "nm"@en ;
+    skos:topConceptOf peh:matrices ;
+    p_base:aggregation_target false ;
+    p_base:sort_order 19.0 .
+
+peh:MA-9460370bb0 a skos:Concept ;
+    schema1:alternateName "water" ;
+    schema1:name "water",
+        "water"@nl-be ;
+    skos:inScheme peh:matrices ;
+    skos:prefLabel "water"@en ;
+    skos:topConceptOf peh:matrices ;
+    p_base:aggregation_target false ;
+    p_base:sort_order 37.0 .
+
+peh:MA-99be496ab9 a skos:Concept ;
+    schema1:alternateName "bbc" ;
+    schema1:name "blood-blood cells",
+        "bloed-bloedcellen"@nl-be ;
+    skos:broader peh:MA-fef1807051 ;
+    skos:inScheme peh:matrices ;
+    skos:prefLabel "bbc"@en ;
+    p_base:aggregation_target false ;
+    p_base:sort_order 4.0 .
+
+peh:MA-9e1a0008e3 a skos:Concept ;
+    schema1:alternateName "idust" ;
+    schema1:name "indoor dust",
+        "binnen stof"@nl-be ;
+    skos:broader peh:MA-3c45881163 ;
+    skos:inScheme peh:matrices ;
+    skos:prefLabel "idust"@en ;
+    p_base:aggregation_target false ;
+    p_base:sort_order 29.0 .
+
+peh:MA-9fbcd7dce5 a skos:Concept ;
+    schema1:alternateName "uf" ;
+    schema1:name "fasting urine",
+        "urine nuchter"@nl-be ;
+    skos:broader peh:MA-3e88197d1d ;
+    skos:inScheme peh:matrices ;
+    skos:prefLabel "uf"@en ;
+    p_base:aggregation_target false ;
+    p_base:sort_order 12.0 .
+
+peh:MA-a8b88464e5 a skos:Concept ;
+    schema1:alternateName "cbwb" ;
+    schema1:name "cord blood-whole blood",
+        "navelstrengbloed-volbloed"@nl-be ;
+    skos:broader peh:MA-1c6b3cd2ac ;
+    skos:inScheme peh:matrices ;
+    skos:prefLabel "cbwb"@en ;
+    p_base:aggregation_target false ;
+    p_base:sort_order 6.0 .
+
+peh:MA-b9aa273080 a skos:Concept ;
+    schema1:alternateName "cbbc" ;
+    schema1:name "cord blood-cells",
+        "navelstrengbloed-bloed cellen"@nl-be ;
+    skos:inScheme peh:matrices ;
+    skos:prefLabel "cbbc"@en ;
+    skos:topConceptOf peh:matrices ;
+    p_base:aggregation_target false ;
+    p_base:sort_order 9.0 .
+
+peh:MA-bd9a2916f0 a skos:Concept ;
+    schema1:alternateName "sem" ;
+    schema1:name "semen",
+        "zaad"@nl-be ;
+    skos:inScheme peh:matrices ;
+    skos:prefLabel "sem"@en ;
+    skos:topConceptOf peh:matrices ;
+    p_base:aggregation_target false ;
+    p_base:sort_order 22.0 .
+
+peh:MA-c12e01f2a1 a skos:Concept ;
+    schema1:alternateName "sa" ;
+    schema1:name "saliva/sputum",
+        "speeksel"@nl-be ;
+    skos:inScheme peh:matrices ;
+    skos:prefLabel "sa"@en ;
+    skos:topConceptOf peh:matrices ;
+    p_base:aggregation_target false ;
+    p_base:sort_order 20.0 .
+
+peh:MA-c46335eb26 a skos:Concept ;
+    schema1:alternateName "adi" ;
+    schema1:name "adipose tissue/fat",
+        "vetweefsel/vet"@nl-be ;
+    skos:inScheme peh:matrices ;
+    skos:prefLabel "adi"@en ;
+    skos:topConceptOf peh:matrices ;
+    p_base:aggregation_target false ;
+    p_base:sort_order 25.0 .
+
+peh:MA-cf6c9df68d a skos:Concept ;
+    schema1:alternateName "soil" ;
+    schema1:name "soil",
+        "grond"@nl-be ;
+    skos:inScheme peh:matrices ;
+    skos:prefLabel "soil"@en ;
+    skos:topConceptOf peh:matrices ;
+    p_base:aggregation_target false ;
+    p_base:sort_order 34.0 .
+
+peh:MA-d1c84f12ec a skos:Concept ;
+    schema1:alternateName "odust" ;
+    schema1:name "outdoor dust",
+        "outdoor stof"@nl-be ;
+    skos:broader peh:MA-3c45881163 ;
+    skos:inScheme peh:matrices ;
+    skos:prefLabel "odust"@en ;
+    p_base:aggregation_target false ;
+    p_base:sort_order 30.0 .
+
+peh:MA-d4f5c2c948 a skos:Concept ;
+    schema1:alternateName "btn" ;
+    schema1:name "Big toe nail",
+        "grote teen nagel"@nl-be ;
+    skos:broader peh:MA-7b8b965ad4 ;
+    skos:inScheme peh:matrices ;
+    skos:prefLabel "btn"@en ;
+    p_base:aggregation_target false ;
+    p_base:sort_order 18.0 .
+
+peh:MA-f0357a3f15 a skos:Concept ;
+    schema1:alternateName "af" ;
+    schema1:name "amniotic fluid",
+        "vruchtwater"@nl-be ;
+    skos:inScheme peh:matrices ;
+    skos:prefLabel "af"@en ;
+    skos:topConceptOf peh:matrices ;
+    p_base:aggregation_target false ;
+    p_base:sort_order 27.0 .
+
+peh:MA-f28eb01b1a a skos:Concept ;
+    schema1:alternateName "oair" ;
+    schema1:name "outdoor air-stationary",
+        "buitenlucht"@nl-be ;
+    skos:broader peh:MA-3c45881163 ;
+    skos:inScheme peh:matrices ;
+    skos:prefLabel "oair"@en ;
+    p_base:aggregation_target false ;
+    p_base:sort_order 31.0 .
+
+peh:MA-f9b8d97e48 a skos:Concept ;
+    schema1:alternateName "bwb" ;
+    schema1:name "blood-whole blood",
+        "bloed-volbloed"@nl-be ;
+    skos:broader peh:MA-6b157916b4 ;
+    skos:inScheme peh:matrices ;
+    skos:prefLabel "bwb"@en ;
+    p_base:aggregation_target false ;
+    p_base:sort_order 1.0 .
+
+peh:MA-62506be34d a skos:Concept ;
+    schema1:alternateName "food" ;
+    schema1:name "food",
+        "voedsel"@nl-be ;
+    skos:inScheme peh:matrices ;
+    skos:narrower peh:MA-0e9312087f,
+        peh:MA-8c947d566d ;
+    skos:prefLabel "food"@en ;
+    skos:topConceptOf peh:matrices ;
+    p_base:aggregation_target false ;
+    p_base:sort_order 0.1000000000000000055511151231257827021181583404541015625 .
+
+peh:MA-7b8b965ad4 a skos:Concept ;
+    schema1:alternateName "n" ;
+    schema1:name "nail",
+        "nagel"@nl-be ;
+    skos:inScheme peh:matrices ;
+    skos:narrower peh:MA-44bff383cf,
+        peh:MA-d4f5c2c948 ;
+    skos:prefLabel "n"@en ;
+    skos:topConceptOf peh:matrices ;
+    p_base:aggregation_target false ;
+    p_base:sort_order 16.0 .
+
+peh:MA-fef1807051 a skos:Concept ;
+    schema1:alternateName "bloodcells" ;
+    schema1:name "bloodcells",
+        "bloedcellen"@nl-be ;
+    skos:inScheme peh:matrices ;
+    skos:narrower peh:MA-6a49f67ed8,
+        peh:MA-99be496ab9 ;
+    skos:prefLabel "bloodcells"@en ;
+    skos:topConceptOf peh:matrices ;
+    p_base:aggregation_target false ;
+    p_base:sort_order 0.1000000000000000055511151231257827021181583404541015625 .
+
+peh:MA-1c6b3cd2ac a skos:Concept ;
+    schema1:alternateName "cord blood" ;
+    schema1:name "cord blood",
+        "navelstrengbloed"@nl-be ;
+    skos:inScheme peh:matrices ;
+    skos:narrower peh:MA-87cd3c0eee,
+        peh:MA-8e113caded,
+        peh:MA-a8b88464e5 ;
+    skos:prefLabel "cord blood"@en ;
+    skos:topConceptOf peh:matrices ;
+    p_base:aggregation_target false ;
+    p_base:sort_order 0.1000000000000000055511151231257827021181583404541015625 .
+
+peh:MA-3e88197d1d a skos:Concept ;
+    schema1:alternateName "urine" ;
+    schema1:name "urine",
+        "urine"@nl-be ;
+    skos:inScheme peh:matrices ;
+    skos:narrower peh:MA-0b3b97fa66,
+        peh:MA-0dd00e33b6,
+        peh:MA-3dfe3d7a17,
+        peh:MA-9fbcd7dce5 ;
+    skos:prefLabel "urine"@en ;
+    skos:topConceptOf peh:matrices ;
+    p_base:aggregation_target false ;
+    p_base:sort_order 0.1000000000000000055511151231257827021181583404541015625 .
+
+peh:MA-3c45881163 a skos:Concept ;
+    schema1:alternateName "air" ;
+    schema1:name "air",
+        "lucht"@nl-be ;
+    skos:inScheme peh:matrices ;
+    skos:narrower peh:MA-33c9b363aa,
+        peh:MA-4dc65edf50,
+        peh:MA-9e1a0008e3,
+        peh:MA-d1c84f12ec,
+        peh:MA-f28eb01b1a ;
+    skos:prefLabel "air"@en ;
+    skos:topConceptOf peh:matrices ;
+    p_base:aggregation_target false ;
+    p_base:sort_order 0.1000000000000000055511151231257827021181583404541015625 .
+
+peh:MA-6b157916b4 a skos:Concept ;
+    schema1:alternateName "blood" ;
+    schema1:name "blood",
+        "bloed"@nl-be ;
+    skos:inScheme peh:matrices ;
+    skos:narrower peh:MA-5cfdb867e9,
+        peh:MA-6685e16510,
+        peh:MA-7c9df80123,
+        peh:MA-85afaab5f3,
+        peh:MA-f9b8d97e48 ;
+    skos:prefLabel "blood"@en ;
+    skos:topConceptOf peh:matrices ;
+    p_base:aggregation_target false ;
+    p_base:sort_order 0.1000000000000000055511151231257827021181583404541015625 .
+
+peh:matrices a skos:ConceptScheme ;
+    dct:modified "2025-06-13T16:14:58+00:00"^^xsd:dateTime ;
+    skos:hasTopConcept peh:MA-01e40bb5c7,
+        peh:MA-0842438558,
+        peh:MA-1c6b3cd2ac,
+        peh:MA-1f2121f36f,
+        peh:MA-2510c39011,
+        peh:MA-3c45881163,
+        peh:MA-3e88197d1d,
+        peh:MA-60443f67c6,
+        peh:MA-62506be34d,
+        peh:MA-627fcdb6cc,
+        peh:MA-6b157916b4,
+        peh:MA-7638e20f13,
+        peh:MA-7b8b965ad4,
+        peh:MA-93122a9e4a,
+        peh:MA-9460370bb0,
+        peh:MA-b9aa273080,
+        peh:MA-bd9a2916f0,
+        peh:MA-c12e01f2a1,
+        peh:MA-c46335eb26,
+        peh:MA-cf6c9df68d,
+        peh:MA-f0357a3f15,
+        peh:MA-fef1807051 .
+
