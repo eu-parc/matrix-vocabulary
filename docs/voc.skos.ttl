@@ -479,6 +479,7 @@ peh:MA-6b157916b4 a skos:Concept ;
     p_base:sort_order 0.1000000000000000055511151231257827021181583404541015625 .
 
 peh:matrices a skos:ConceptScheme ;
+    skos:prefLabel "PEH Matrix vocabulary";
     dct:modified "2025-06-13T16:14:58+00:00"^^xsd:dateTime ;
     skos:hasTopConcept peh:MA-01e40bb5c7,
         peh:MA-0842438558,

@@ -5,7 +5,6 @@ custom_domain: "https://eu-parc.github.io/matrix-vocabulary/"
 fail_on_validation: false
 searchableAttributes:
   - "prefLabel" # you should not delete this one
-  - "altLabel"
 
 ui:
   title: "PEH Matrix Vocabulary" # Title is mandatory
