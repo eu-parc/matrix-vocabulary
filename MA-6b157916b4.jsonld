@@ -8,31 +8,31 @@
     {
       "id": "https://eu-parc.github.io/matrix-vocabulary/MA-5cfdb867e9",
       "prefLabel": {
-        "en": "bp"
+        "en": "blood plasma"
       }
     },
     {
       "id": "https://eu-parc.github.io/matrix-vocabulary/MA-6685e16510",
       "prefLabel": {
-        "en": "vams"
+        "en": "volumetric absorptive microsample (VAMS)"
       }
     },
     {
       "id": "https://eu-parc.github.io/matrix-vocabulary/MA-7c9df80123",
       "prefLabel": {
-        "en": "bs"
+        "en": "blood serum"
       }
     },
     {
       "id": "https://eu-parc.github.io/matrix-vocabulary/MA-85afaab5f3",
       "prefLabel": {
-        "en": "dbs"
+        "en": "dried blood spots"
       }
     },
     {
       "id": "https://eu-parc.github.io/matrix-vocabulary/MA-f9b8d97e48",
       "prefLabel": {
-        "en": "bwb"
+        "en": "blood-whole blood"
       }
     }
   ],

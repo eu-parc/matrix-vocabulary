@@ -2,7 +2,7 @@
   "id": "https://eu-parc.github.io/matrix-vocabulary/MA-4dc65edf50",
   "type": "Concept",
   "prefLabel": {
-    "en": "iair"
+    "en": "indoor air-stationary"
   },
   "broader": {
     "id": "https://eu-parc.github.io/matrix-vocabulary/MA-3c45881163",

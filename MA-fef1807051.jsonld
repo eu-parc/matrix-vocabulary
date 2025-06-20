@@ -8,13 +8,13 @@
     {
       "id": "https://eu-parc.github.io/matrix-vocabulary/MA-6a49f67ed8",
       "prefLabel": {
-        "en": "rbc"
+        "en": "blood - red blood cells"
       }
     },
     {
       "id": "https://eu-parc.github.io/matrix-vocabulary/MA-99be496ab9",
       "prefLabel": {
-        "en": "bbc"
+        "en": "blood-blood cells"
       }
     }
   ],

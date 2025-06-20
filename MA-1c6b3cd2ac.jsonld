@@ -8,19 +8,19 @@
     {
       "id": "https://eu-parc.github.io/matrix-vocabulary/MA-87cd3c0eee",
       "prefLabel": {
-        "en": "cbp"
+        "en": "cord blood-plasma"
       }
     },
     {
       "id": "https://eu-parc.github.io/matrix-vocabulary/MA-8e113caded",
       "prefLabel": {
-        "en": "cbs"
+        "en": "cord blood-serum"
       }
     },
     {
       "id": "https://eu-parc.github.io/matrix-vocabulary/MA-a8b88464e5",
       "prefLabel": {
-        "en": "cbwb"
+        "en": "cord blood-whole blood"
       }
     }
   ],

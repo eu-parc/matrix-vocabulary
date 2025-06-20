@@ -2,12 +2,12 @@
   "id": "https://eu-parc.github.io/matrix-vocabulary/MA-d4f5c2c948",
   "type": "Concept",
   "prefLabel": {
-    "en": "btn"
+    "en": "Big toe nail"
   },
   "broader": {
     "id": "https://eu-parc.github.io/matrix-vocabulary/MA-7b8b965ad4",
     "prefLabel": {
-      "en": "n"
+      "en": "nail"
     }
   },
   "inScheme": [

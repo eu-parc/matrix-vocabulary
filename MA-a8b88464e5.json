@@ -2,7 +2,7 @@
   "id": "https://eu-parc.github.io/matrix-vocabulary/MA-a8b88464e5",
   "type": "Concept",
   "prefLabel": {
-    "en": "cbwb"
+    "en": "cord blood-whole blood"
   },
   "broader": {
     "id": "https://eu-parc.github.io/matrix-vocabulary/MA-1c6b3cd2ac",

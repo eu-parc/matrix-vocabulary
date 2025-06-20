@@ -2,7 +2,7 @@
   "id": "https://eu-parc.github.io/matrix-vocabulary/MA-f28eb01b1a",
   "type": "Concept",
   "prefLabel": {
-    "en": "oair"
+    "en": "outdoor air-stationary"
   },
   "broader": {
     "id": "https://eu-parc.github.io/matrix-vocabulary/MA-3c45881163",

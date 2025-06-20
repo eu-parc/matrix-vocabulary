@@ -2,19 +2,19 @@
   "id": "https://eu-parc.github.io/matrix-vocabulary/MA-7b8b965ad4",
   "type": "Concept",
   "prefLabel": {
-    "en": "n"
+    "en": "nail"
   },
   "narrower": [
     {
       "id": "https://eu-parc.github.io/matrix-vocabulary/MA-44bff383cf",
       "prefLabel": {
-        "en": "atn"
+        "en": "All toe nail"
       }
     },
     {
       "id": "https://eu-parc.github.io/matrix-vocabulary/MA-d4f5c2c948",
       "prefLabel": {
-        "en": "btn"
+        "en": "Big toe nail"
       }
     }
   ],

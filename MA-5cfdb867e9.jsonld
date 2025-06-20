@@ -2,7 +2,7 @@
   "id": "https://eu-parc.github.io/matrix-vocabulary/MA-5cfdb867e9",
   "type": "Concept",
   "prefLabel": {
-    "en": "bp"
+    "en": "blood plasma"
   },
   "broader": {
     "id": "https://eu-parc.github.io/matrix-vocabulary/MA-6b157916b4",

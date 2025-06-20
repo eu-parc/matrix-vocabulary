@@ -2,7 +2,7 @@
   "id": "https://eu-parc.github.io/matrix-vocabulary/MA-8e113caded",
   "type": "Concept",
   "prefLabel": {
-    "en": "cbs"
+    "en": "cord blood-serum"
   },
   "broader": {
     "id": "https://eu-parc.github.io/matrix-vocabulary/MA-1c6b3cd2ac",

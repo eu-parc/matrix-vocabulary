@@ -2,7 +2,7 @@
   "id": "https://eu-parc.github.io/matrix-vocabulary/MA-9e1a0008e3",
   "type": "Concept",
   "prefLabel": {
-    "en": "idust"
+    "en": "indoor dust"
   },
   "broader": {
     "id": "https://eu-parc.github.io/matrix-vocabulary/MA-3c45881163",

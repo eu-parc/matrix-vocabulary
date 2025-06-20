@@ -2,7 +2,7 @@
   "id": "https://eu-parc.github.io/matrix-vocabulary/MA-6a49f67ed8",
   "type": "Concept",
   "prefLabel": {
-    "en": "rbc"
+    "en": "blood - red blood cells"
   },
   "broader": {
     "id": "https://eu-parc.github.io/matrix-vocabulary/MA-fef1807051",

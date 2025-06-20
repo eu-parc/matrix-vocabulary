@@ -2,7 +2,7 @@
   "id": "https://eu-parc.github.io/matrix-vocabulary/MA-6685e16510",
   "type": "Concept",
   "prefLabel": {
-    "en": "vams"
+    "en": "volumetric absorptive microsample (VAMS)"
   },
   "broader": {
     "id": "https://eu-parc.github.io/matrix-vocabulary/MA-6b157916b4",

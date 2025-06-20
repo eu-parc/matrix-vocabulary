@@ -2,7 +2,7 @@
   "id": "https://eu-parc.github.io/matrix-vocabulary/MA-d1c84f12ec",
   "type": "Concept",
   "prefLabel": {
-    "en": "odust"
+    "en": "outdoor dust"
   },
   "broader": {
     "id": "https://eu-parc.github.io/matrix-vocabulary/MA-3c45881163",

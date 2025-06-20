@@ -2,7 +2,7 @@
   "id": "https://eu-parc.github.io/matrix-vocabulary/MA-87cd3c0eee",
   "type": "Concept",
   "prefLabel": {
-    "en": "cbp"
+    "en": "cord blood-plasma"
   },
   "broader": {
     "id": "https://eu-parc.github.io/matrix-vocabulary/MA-1c6b3cd2ac",

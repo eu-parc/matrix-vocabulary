@@ -2,12 +2,12 @@
   "id": "https://eu-parc.github.io/matrix-vocabulary/MA-44bff383cf",
   "type": "Concept",
   "prefLabel": {
-    "en": "atn"
+    "en": "All toe nail"
   },
   "broader": {
     "id": "https://eu-parc.github.io/matrix-vocabulary/MA-7b8b965ad4",
     "prefLabel": {
-      "en": "n"
+      "en": "nail"
     }
   },
   "inScheme": [
