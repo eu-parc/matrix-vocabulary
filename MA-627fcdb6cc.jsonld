@@ -2,7 +2,13 @@
   "id": "https://eu-parc.github.io/matrix-vocabulary/MA-627fcdb6cc",
   "type": "Concept",
   "prefLabel": {
-    "en": "stool"
+    "en": "stool",
+    "nl": "stoelgang"
+  },
+  "altLabel": {
+    "en": [
+      "st"
+    ]
   },
   "inScheme": [
     {

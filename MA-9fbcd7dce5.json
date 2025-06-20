@@ -2,12 +2,19 @@
   "id": "https://eu-parc.github.io/matrix-vocabulary/MA-9fbcd7dce5",
   "type": "Concept",
   "prefLabel": {
-    "en": "fasting urine"
+    "en": "fasting urine",
+    "nl": "urine nuchter"
+  },
+  "altLabel": {
+    "en": [
+      "uf"
+    ]
   },
   "broader": {
     "id": "https://eu-parc.github.io/matrix-vocabulary/MA-3e88197d1d",
     "prefLabel": {
-      "en": "urine"
+      "en": "urine",
+      "nl": "urine"
     }
   },
   "inScheme": [

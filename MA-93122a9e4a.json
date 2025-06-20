@@ -2,7 +2,13 @@
   "id": "https://eu-parc.github.io/matrix-vocabulary/MA-93122a9e4a",
   "type": "Concept",
   "prefLabel": {
-    "en": "nasal mucus"
+    "en": "nasal mucus",
+    "nl": "neusslijm"
+  },
+  "altLabel": {
+    "en": [
+      "nm"
+    ]
   },
   "inScheme": [
     {

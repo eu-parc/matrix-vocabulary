@@ -2,7 +2,13 @@
   "id": "https://eu-parc.github.io/matrix-vocabulary/MA-b9aa273080",
   "type": "Concept",
   "prefLabel": {
-    "en": "cord blood-cells"
+    "en": "cord blood-cells",
+    "nl": "navelstrengbloed-bloed cellen"
+  },
+  "altLabel": {
+    "en": [
+      "cbbc"
+    ]
   },
   "inScheme": [
     {

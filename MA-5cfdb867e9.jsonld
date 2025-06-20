@@ -2,12 +2,19 @@
   "id": "https://eu-parc.github.io/matrix-vocabulary/MA-5cfdb867e9",
   "type": "Concept",
   "prefLabel": {
-    "en": "blood plasma"
+    "en": "blood plasma",
+    "nl": "bloed-plasma"
+  },
+  "altLabel": {
+    "en": [
+      "bp"
+    ]
   },
   "broader": {
     "id": "https://eu-parc.github.io/matrix-vocabulary/MA-6b157916b4",
     "prefLabel": {
-      "en": "blood"
+      "en": "blood",
+      "nl": "bloed"
     }
   },
   "inScheme": [

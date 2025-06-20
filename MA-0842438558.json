@@ -2,7 +2,13 @@
   "id": "https://eu-parc.github.io/matrix-vocabulary/MA-0842438558",
   "type": "Concept",
   "prefLabel": {
-    "en": "breast milk"
+    "en": "breast milk",
+    "nl": "moedermelk"
+  },
+  "altLabel": {
+    "en": [
+      "bm"
+    ]
   },
   "inScheme": [
     {

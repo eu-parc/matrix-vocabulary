@@ -2,12 +2,19 @@
   "id": "https://eu-parc.github.io/matrix-vocabulary/MA-33c9b363aa",
   "type": "Concept",
   "prefLabel": {
-    "en": "personal air"
+    "en": "personal air",
+    "nl": "persoonlijke lucht"
+  },
+  "altLabel": {
+    "en": [
+      "pair"
+    ]
   },
   "broader": {
     "id": "https://eu-parc.github.io/matrix-vocabulary/MA-3c45881163",
     "prefLabel": {
-      "en": "air"
+      "en": "air",
+      "nl": "lucht"
     }
   },
   "inScheme": [

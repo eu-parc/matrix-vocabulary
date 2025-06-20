@@ -2,7 +2,13 @@
   "id": "https://eu-parc.github.io/matrix-vocabulary/MA-7638e20f13",
   "type": "Concept",
   "prefLabel": {
-    "en": "umbilical cord tissue"
+    "en": "umbilical cord tissue",
+    "nl": "weefsel van navelstreng"
+  },
+  "altLabel": {
+    "en": [
+      "cbt"
+    ]
   },
   "inScheme": [
     {

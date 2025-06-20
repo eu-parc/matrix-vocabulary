@@ -2,12 +2,19 @@
   "id": "https://eu-parc.github.io/matrix-vocabulary/MA-0dd00e33b6",
   "type": "Concept",
   "prefLabel": {
-    "en": "first morning urine"
+    "en": "first morning urine",
+    "nl": "eerste ochtend-urine"
+  },
+  "altLabel": {
+    "en": [
+      "um"
+    ]
   },
   "broader": {
     "id": "https://eu-parc.github.io/matrix-vocabulary/MA-3e88197d1d",
     "prefLabel": {
-      "en": "urine"
+      "en": "urine",
+      "nl": "urine"
     }
   },
   "inScheme": [

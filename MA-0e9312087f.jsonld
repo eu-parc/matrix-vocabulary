@@ -2,12 +2,19 @@
   "id": "https://eu-parc.github.io/matrix-vocabulary/MA-0e9312087f",
   "type": "Concept",
   "prefLabel": {
-    "en": "eggs"
+    "en": "eggs",
+    "nl": "kippenei"
+  },
+  "altLabel": {
+    "en": [
+      "egg"
+    ]
   },
   "broader": {
     "id": "https://eu-parc.github.io/matrix-vocabulary/MA-62506be34d",
     "prefLabel": {
-      "en": "food"
+      "en": "food",
+      "nl": "voedsel"
     }
   },
   "inScheme": [

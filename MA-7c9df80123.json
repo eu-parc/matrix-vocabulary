@@ -2,12 +2,19 @@
   "id": "https://eu-parc.github.io/matrix-vocabulary/MA-7c9df80123",
   "type": "Concept",
   "prefLabel": {
-    "en": "blood serum"
+    "en": "blood serum",
+    "nl": "bloed-serum"
+  },
+  "altLabel": {
+    "en": [
+      "bs"
+    ]
   },
   "broader": {
     "id": "https://eu-parc.github.io/matrix-vocabulary/MA-6b157916b4",
     "prefLabel": {
-      "en": "blood"
+      "en": "blood",
+      "nl": "bloed"
     }
   },
   "inScheme": [

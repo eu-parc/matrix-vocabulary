@@ -2,19 +2,27 @@
   "id": "https://eu-parc.github.io/matrix-vocabulary/MA-62506be34d",
   "type": "Concept",
   "prefLabel": {
-    "en": "food"
+    "en": "food",
+    "nl": "voedsel"
+  },
+  "altLabel": {
+    "en": [
+      "food"
+    ]
   },
   "narrower": [
     {
       "id": "https://eu-parc.github.io/matrix-vocabulary/MA-0e9312087f",
       "prefLabel": {
-        "en": "eggs"
+        "en": "eggs",
+        "nl": "kippenei"
       }
     },
     {
       "id": "https://eu-parc.github.io/matrix-vocabulary/MA-8c947d566d",
       "prefLabel": {
-        "en": "kitchengarden food"
+        "en": "kitchengarden food",
+        "nl": "moestuin voedsel"
       }
     }
   ],

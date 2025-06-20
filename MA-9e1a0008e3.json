@@ -2,12 +2,19 @@
   "id": "https://eu-parc.github.io/matrix-vocabulary/MA-9e1a0008e3",
   "type": "Concept",
   "prefLabel": {
-    "en": "indoor dust"
+    "en": "indoor dust",
+    "nl": "binnen stof"
+  },
+  "altLabel": {
+    "en": [
+      "idust"
+    ]
   },
   "broader": {
     "id": "https://eu-parc.github.io/matrix-vocabulary/MA-3c45881163",
     "prefLabel": {
-      "en": "air"
+      "en": "air",
+      "nl": "lucht"
     }
   },
   "inScheme": [

@@ -2,12 +2,19 @@
   "id": "https://eu-parc.github.io/matrix-vocabulary/MA-87cd3c0eee",
   "type": "Concept",
   "prefLabel": {
-    "en": "cord blood-plasma"
+    "en": "cord blood-plasma",
+    "nl": "navelstrengbloed-plasma"
+  },
+  "altLabel": {
+    "en": [
+      "cbp"
+    ]
   },
   "broader": {
     "id": "https://eu-parc.github.io/matrix-vocabulary/MA-1c6b3cd2ac",
     "prefLabel": {
-      "en": "cord blood"
+      "en": "cord blood",
+      "nl": "navelstrengbloed"
     }
   },
   "inScheme": [

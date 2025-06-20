@@ -2,37 +2,48 @@
   "id": "https://eu-parc.github.io/matrix-vocabulary/MA-6b157916b4",
   "type": "Concept",
   "prefLabel": {
-    "en": "blood"
+    "en": "blood",
+    "nl": "bloed"
+  },
+  "altLabel": {
+    "en": [
+      "blood"
+    ]
   },
   "narrower": [
     {
       "id": "https://eu-parc.github.io/matrix-vocabulary/MA-5cfdb867e9",
       "prefLabel": {
-        "en": "blood plasma"
+        "en": "blood plasma",
+        "nl": "bloed-plasma"
       }
     },
     {
       "id": "https://eu-parc.github.io/matrix-vocabulary/MA-6685e16510",
       "prefLabel": {
-        "en": "volumetric absorptive microsample (VAMS)"
+        "en": "volumetric absorptive microsample (VAMS)",
+        "nl": "blood volumetrische absorptieve microsample"
       }
     },
     {
       "id": "https://eu-parc.github.io/matrix-vocabulary/MA-7c9df80123",
       "prefLabel": {
-        "en": "blood serum"
+        "en": "blood serum",
+        "nl": "bloed-serum"
       }
     },
     {
       "id": "https://eu-parc.github.io/matrix-vocabulary/MA-85afaab5f3",
       "prefLabel": {
-        "en": "dried blood spots"
+        "en": "dried blood spots",
+        "nl": "blood spot gedroogd"
       }
     },
     {
       "id": "https://eu-parc.github.io/matrix-vocabulary/MA-f9b8d97e48",
       "prefLabel": {
-        "en": "blood-whole blood"
+        "en": "blood-whole blood",
+        "nl": "bloed-volbloed"
       }
     }
   ],

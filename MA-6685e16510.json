@@ -2,12 +2,19 @@
   "id": "https://eu-parc.github.io/matrix-vocabulary/MA-6685e16510",
   "type": "Concept",
   "prefLabel": {
-    "en": "volumetric absorptive microsample (VAMS)"
+    "en": "volumetric absorptive microsample (VAMS)",
+    "nl": "blood volumetrische absorptieve microsample"
+  },
+  "altLabel": {
+    "en": [
+      "vams"
+    ]
   },
   "broader": {
     "id": "https://eu-parc.github.io/matrix-vocabulary/MA-6b157916b4",
     "prefLabel": {
-      "en": "blood"
+      "en": "blood",
+      "nl": "bloed"
     }
   },
   "inScheme": [

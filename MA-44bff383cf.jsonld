@@ -2,12 +2,19 @@
   "id": "https://eu-parc.github.io/matrix-vocabulary/MA-44bff383cf",
   "type": "Concept",
   "prefLabel": {
-    "en": "All toe nail"
+    "en": "All toe nail",
+    "nl": "alle teennagels"
+  },
+  "altLabel": {
+    "en": [
+      "atn"
+    ]
   },
   "broader": {
     "id": "https://eu-parc.github.io/matrix-vocabulary/MA-7b8b965ad4",
     "prefLabel": {
-      "en": "nail"
+      "en": "nail",
+      "nl": "nagel"
     }
   },
   "inScheme": [

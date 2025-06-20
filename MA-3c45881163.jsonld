@@ -2,37 +2,48 @@
   "id": "https://eu-parc.github.io/matrix-vocabulary/MA-3c45881163",
   "type": "Concept",
   "prefLabel": {
-    "en": "air"
+    "en": "air",
+    "nl": "lucht"
+  },
+  "altLabel": {
+    "en": [
+      "air"
+    ]
   },
   "narrower": [
     {
       "id": "https://eu-parc.github.io/matrix-vocabulary/MA-33c9b363aa",
       "prefLabel": {
-        "en": "personal air"
+        "en": "personal air",
+        "nl": "persoonlijke lucht"
       }
     },
     {
       "id": "https://eu-parc.github.io/matrix-vocabulary/MA-4dc65edf50",
       "prefLabel": {
-        "en": "indoor air-stationary"
+        "en": "indoor air-stationary",
+        "nl": "binnenlucht"
       }
     },
     {
       "id": "https://eu-parc.github.io/matrix-vocabulary/MA-9e1a0008e3",
       "prefLabel": {
-        "en": "indoor dust"
+        "en": "indoor dust",
+        "nl": "binnen stof"
       }
     },
     {
       "id": "https://eu-parc.github.io/matrix-vocabulary/MA-d1c84f12ec",
       "prefLabel": {
-        "en": "outdoor dust"
+        "en": "outdoor dust",
+        "nl": "outdoor stof"
       }
     },
     {
       "id": "https://eu-parc.github.io/matrix-vocabulary/MA-f28eb01b1a",
       "prefLabel": {
-        "en": "outdoor air-stationary"
+        "en": "outdoor air-stationary",
+        "nl": "buitenlucht"
       }
     }
   ],

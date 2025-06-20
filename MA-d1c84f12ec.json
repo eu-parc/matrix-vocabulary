@@ -2,12 +2,19 @@
   "id": "https://eu-parc.github.io/matrix-vocabulary/MA-d1c84f12ec",
   "type": "Concept",
   "prefLabel": {
-    "en": "outdoor dust"
+    "en": "outdoor dust",
+    "nl": "outdoor stof"
+  },
+  "altLabel": {
+    "en": [
+      "odust"
+    ]
   },
   "broader": {
     "id": "https://eu-parc.github.io/matrix-vocabulary/MA-3c45881163",
     "prefLabel": {
-      "en": "air"
+      "en": "air",
+      "nl": "lucht"
     }
   },
   "inScheme": [

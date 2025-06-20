@@ -2,12 +2,19 @@
   "id": "https://eu-parc.github.io/matrix-vocabulary/MA-8c947d566d",
   "type": "Concept",
   "prefLabel": {
-    "en": "kitchengarden food"
+    "en": "kitchengarden food",
+    "nl": "moestuin voedsel"
+  },
+  "altLabel": {
+    "en": [
+      "kgfood"
+    ]
   },
   "broader": {
     "id": "https://eu-parc.github.io/matrix-vocabulary/MA-62506be34d",
     "prefLabel": {
-      "en": "food"
+      "en": "food",
+      "nl": "voedsel"
     }
   },
   "inScheme": [

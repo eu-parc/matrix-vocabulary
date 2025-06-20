@@ -2,12 +2,19 @@
   "id": "https://eu-parc.github.io/matrix-vocabulary/MA-6a49f67ed8",
   "type": "Concept",
   "prefLabel": {
-    "en": "blood - red blood cells"
+    "en": "blood - red blood cells",
+    "nl": "bloed-rode bloedcellen"
+  },
+  "altLabel": {
+    "en": [
+      "rbc"
+    ]
   },
   "broader": {
     "id": "https://eu-parc.github.io/matrix-vocabulary/MA-fef1807051",
     "prefLabel": {
-      "en": "bloodcells"
+      "en": "bloodcells",
+      "nl": "bloedcellen"
     }
   },
   "inScheme": [

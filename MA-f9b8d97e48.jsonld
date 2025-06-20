@@ -2,12 +2,19 @@
   "id": "https://eu-parc.github.io/matrix-vocabulary/MA-f9b8d97e48",
   "type": "Concept",
   "prefLabel": {
-    "en": "blood-whole blood"
+    "en": "blood-whole blood",
+    "nl": "bloed-volbloed"
+  },
+  "altLabel": {
+    "en": [
+      "bwb"
+    ]
   },
   "broader": {
     "id": "https://eu-parc.github.io/matrix-vocabulary/MA-6b157916b4",
     "prefLabel": {
-      "en": "blood"
+      "en": "blood",
+      "nl": "bloed"
     }
   },
   "inScheme": [

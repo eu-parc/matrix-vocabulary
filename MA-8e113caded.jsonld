@@ -2,12 +2,19 @@
   "id": "https://eu-parc.github.io/matrix-vocabulary/MA-8e113caded",
   "type": "Concept",
   "prefLabel": {
-    "en": "cord blood-serum"
+    "en": "cord blood-serum",
+    "nl": "navelstrengbloed-serum"
+  },
+  "altLabel": {
+    "en": [
+      "cbs"
+    ]
   },
   "broader": {
     "id": "https://eu-parc.github.io/matrix-vocabulary/MA-1c6b3cd2ac",
     "prefLabel": {
-      "en": "cord blood"
+      "en": "cord blood",
+      "nl": "navelstrengbloed"
     }
   },
   "inScheme": [

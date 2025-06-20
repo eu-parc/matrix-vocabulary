@@ -2,31 +2,41 @@
   "id": "https://eu-parc.github.io/matrix-vocabulary/MA-3e88197d1d",
   "type": "Concept",
   "prefLabel": {
-    "en": "urine"
+    "en": "urine",
+    "nl": "urine"
+  },
+  "altLabel": {
+    "en": [
+      "urine"
+    ]
   },
   "narrower": [
     {
       "id": "https://eu-parc.github.io/matrix-vocabulary/MA-0b3b97fa66",
       "prefLabel": {
-        "en": "random spot urine"
+        "en": "random spot urine",
+        "nl": "random spot-urine"
       }
     },
     {
       "id": "https://eu-parc.github.io/matrix-vocabulary/MA-0dd00e33b6",
       "prefLabel": {
-        "en": "first morning urine"
+        "en": "first morning urine",
+        "nl": "eerste ochtend-urine"
       }
     },
     {
       "id": "https://eu-parc.github.io/matrix-vocabulary/MA-3dfe3d7a17",
       "prefLabel": {
-        "en": "urine 24h"
+        "en": "urine 24h",
+        "nl": "urine 24u"
       }
     },
     {
       "id": "https://eu-parc.github.io/matrix-vocabulary/MA-9fbcd7dce5",
       "prefLabel": {
-        "en": "fasting urine"
+        "en": "fasting urine",
+        "nl": "urine nuchter"
       }
     }
   ],

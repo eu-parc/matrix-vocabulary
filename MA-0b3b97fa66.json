@@ -2,12 +2,19 @@
   "id": "https://eu-parc.github.io/matrix-vocabulary/MA-0b3b97fa66",
   "type": "Concept",
   "prefLabel": {
-    "en": "random spot urine"
+    "en": "random spot urine",
+    "nl": "random spot-urine"
+  },
+  "altLabel": {
+    "en": [
+      "us"
+    ]
   },
   "broader": {
     "id": "https://eu-parc.github.io/matrix-vocabulary/MA-3e88197d1d",
     "prefLabel": {
-      "en": "urine"
+      "en": "urine",
+      "nl": "urine"
     }
   },
   "inScheme": [

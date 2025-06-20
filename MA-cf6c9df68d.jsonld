@@ -2,7 +2,13 @@
   "id": "https://eu-parc.github.io/matrix-vocabulary/MA-cf6c9df68d",
   "type": "Concept",
   "prefLabel": {
-    "en": "soil"
+    "en": "soil",
+    "nl": "grond"
+  },
+  "altLabel": {
+    "en": [
+      "soil"
+    ]
   },
   "inScheme": [
     {

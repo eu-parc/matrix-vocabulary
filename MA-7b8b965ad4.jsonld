@@ -2,19 +2,27 @@
   "id": "https://eu-parc.github.io/matrix-vocabulary/MA-7b8b965ad4",
   "type": "Concept",
   "prefLabel": {
-    "en": "nail"
+    "en": "nail",
+    "nl": "nagel"
+  },
+  "altLabel": {
+    "en": [
+      "n"
+    ]
   },
   "narrower": [
     {
       "id": "https://eu-parc.github.io/matrix-vocabulary/MA-44bff383cf",
       "prefLabel": {
-        "en": "All toe nail"
+        "en": "All toe nail",
+        "nl": "alle teennagels"
       }
     },
     {
       "id": "https://eu-parc.github.io/matrix-vocabulary/MA-d4f5c2c948",
       "prefLabel": {
-        "en": "Big toe nail"
+        "en": "Big toe nail",
+        "nl": "grote teen nagel"
       }
     }
   ],

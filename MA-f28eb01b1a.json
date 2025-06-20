@@ -2,12 +2,19 @@
   "id": "https://eu-parc.github.io/matrix-vocabulary/MA-f28eb01b1a",
   "type": "Concept",
   "prefLabel": {
-    "en": "outdoor air-stationary"
+    "en": "outdoor air-stationary",
+    "nl": "buitenlucht"
+  },
+  "altLabel": {
+    "en": [
+      "oair"
+    ]
   },
   "broader": {
     "id": "https://eu-parc.github.io/matrix-vocabulary/MA-3c45881163",
     "prefLabel": {
-      "en": "air"
+      "en": "air",
+      "nl": "lucht"
     }
   },
   "inScheme": [

@@ -2,12 +2,19 @@
   "id": "https://eu-parc.github.io/matrix-vocabulary/MA-4dc65edf50",
   "type": "Concept",
   "prefLabel": {
-    "en": "indoor air-stationary"
+    "en": "indoor air-stationary",
+    "nl": "binnenlucht"
+  },
+  "altLabel": {
+    "en": [
+      "iair"
+    ]
   },
   "broader": {
     "id": "https://eu-parc.github.io/matrix-vocabulary/MA-3c45881163",
     "prefLabel": {
-      "en": "air"
+      "en": "air",
+      "nl": "lucht"
     }
   },
   "inScheme": [

@@ -2,7 +2,13 @@
   "id": "https://eu-parc.github.io/matrix-vocabulary/MA-c46335eb26",
   "type": "Concept",
   "prefLabel": {
-    "en": "adipose tissue/fat"
+    "en": "adipose tissue/fat",
+    "nl": "vetweefsel/vet"
+  },
+  "altLabel": {
+    "en": [
+      "adi"
+    ]
   },
   "inScheme": [
     {

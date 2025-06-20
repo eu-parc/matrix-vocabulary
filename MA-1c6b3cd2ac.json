@@ -2,25 +2,34 @@
   "id": "https://eu-parc.github.io/matrix-vocabulary/MA-1c6b3cd2ac",
   "type": "Concept",
   "prefLabel": {
-    "en": "cord blood"
+    "en": "cord blood",
+    "nl": "navelstrengbloed"
+  },
+  "altLabel": {
+    "en": [
+      "cord blood"
+    ]
   },
   "narrower": [
     {
       "id": "https://eu-parc.github.io/matrix-vocabulary/MA-87cd3c0eee",
       "prefLabel": {
-        "en": "cord blood-plasma"
+        "en": "cord blood-plasma",
+        "nl": "navelstrengbloed-plasma"
       }
     },
     {
       "id": "https://eu-parc.github.io/matrix-vocabulary/MA-8e113caded",
       "prefLabel": {
-        "en": "cord blood-serum"
+        "en": "cord blood-serum",
+        "nl": "navelstrengbloed-serum"
       }
     },
     {
       "id": "https://eu-parc.github.io/matrix-vocabulary/MA-a8b88464e5",
       "prefLabel": {
-        "en": "cord blood-whole blood"
+        "en": "cord blood-whole blood",
+        "nl": "navelstrengbloed-volbloed"
       }
     }
   ],

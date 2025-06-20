@@ -2,7 +2,13 @@
   "id": "https://eu-parc.github.io/matrix-vocabulary/MA-9460370bb0",
   "type": "Concept",
   "prefLabel": {
-    "en": "water"
+    "en": "water",
+    "nl": "water"
+  },
+  "altLabel": {
+    "en": [
+      "water"
+    ]
   },
   "inScheme": [
     {

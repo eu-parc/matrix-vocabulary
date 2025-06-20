@@ -2,12 +2,19 @@
   "id": "https://eu-parc.github.io/matrix-vocabulary/MA-d4f5c2c948",
   "type": "Concept",
   "prefLabel": {
-    "en": "Big toe nail"
+    "en": "Big toe nail",
+    "nl": "grote teen nagel"
+  },
+  "altLabel": {
+    "en": [
+      "btn"
+    ]
   },
   "broader": {
     "id": "https://eu-parc.github.io/matrix-vocabulary/MA-7b8b965ad4",
     "prefLabel": {
-      "en": "nail"
+      "en": "nail",
+      "nl": "nagel"
     }
   },
   "inScheme": [

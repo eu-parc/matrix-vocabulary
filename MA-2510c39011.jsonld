@@ -2,7 +2,13 @@
   "id": "https://eu-parc.github.io/matrix-vocabulary/MA-2510c39011",
   "type": "Concept",
   "prefLabel": {
-    "en": "hair"
+    "en": "hair",
+    "nl": "haar"
+  },
+  "altLabel": {
+    "en": [
+      "h"
+    ]
   },
   "inScheme": [
     {

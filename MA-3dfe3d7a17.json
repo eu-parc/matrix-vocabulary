@@ -2,12 +2,19 @@
   "id": "https://eu-parc.github.io/matrix-vocabulary/MA-3dfe3d7a17",
   "type": "Concept",
   "prefLabel": {
-    "en": "urine 24h"
+    "en": "urine 24h",
+    "nl": "urine 24u"
+  },
+  "altLabel": {
+    "en": [
+      "ud"
+    ]
   },
   "broader": {
     "id": "https://eu-parc.github.io/matrix-vocabulary/MA-3e88197d1d",
     "prefLabel": {
-      "en": "urine"
+      "en": "urine",
+      "nl": "urine"
     }
   },
   "inScheme": [

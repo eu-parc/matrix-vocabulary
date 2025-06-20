@@ -2,12 +2,19 @@
   "id": "https://eu-parc.github.io/matrix-vocabulary/MA-99be496ab9",
   "type": "Concept",
   "prefLabel": {
-    "en": "blood-blood cells"
+    "en": "blood-blood cells",
+    "nl": "bloed-bloedcellen"
+  },
+  "altLabel": {
+    "en": [
+      "bbc"
+    ]
   },
   "broader": {
     "id": "https://eu-parc.github.io/matrix-vocabulary/MA-fef1807051",
     "prefLabel": {
-      "en": "bloodcells"
+      "en": "bloodcells",
+      "nl": "bloedcellen"
     }
   },
   "inScheme": [

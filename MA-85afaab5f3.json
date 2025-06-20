@@ -2,12 +2,19 @@
   "id": "https://eu-parc.github.io/matrix-vocabulary/MA-85afaab5f3",
   "type": "Concept",
   "prefLabel": {
-    "en": "dried blood spots"
+    "en": "dried blood spots",
+    "nl": "blood spot gedroogd"
+  },
+  "altLabel": {
+    "en": [
+      "dbs"
+    ]
   },
   "broader": {
     "id": "https://eu-parc.github.io/matrix-vocabulary/MA-6b157916b4",
     "prefLabel": {
-      "en": "blood"
+      "en": "blood",
+      "nl": "bloed"
     }
   },
   "inScheme": [
