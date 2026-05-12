@@ -1,0 +1,6 @@
+matrix_subclasses:
+- id: null
+  name: Our example matrix
+  parent_matrices:
+    - https://w3id.org/peh/matrices/01KQ9QXVQNNJBQFZTAC8Y3ARD1
+  description: "This is just an example matrix"
