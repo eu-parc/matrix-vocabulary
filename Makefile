@@ -100,7 +100,7 @@ graph2assertions: build
 
 validate-pipeline: graph2assertions
 
-archive-dropbox: prepare
+archive-dropbox: graph2assertions
 	@set -e; \
 	if [ -n "$(DRY)" ]; then \
 		echo "DRY mode enabled. Keeping YAML files in $(DROPBOX_FOLDER)."; \
@@ -111,23 +111,23 @@ archive-dropbox: prepare
 		echo "No YAML files found in $(DROPBOX_FOLDER). Nothing to archive."; \
 		exit 0; \
 	fi; \
+	if [ ! -f "$(COMBINED_DATA)" ]; then \
+		echo "No minted combined YAML available. Nothing to archive."; \
+		exit 1; \
+	fi; \
+	while :; do \
+		label=$$(python3 -c 'import os, time; alphabet = "0123456789ABCDEFGHJKMNPQRSTVWXYZ"; value = (int(time.time() * 1000) << 80) | int.from_bytes(os.urandom(10), "big"); print("".join(alphabet[(value >> shift) & 31] for shift in range(125, -1, -5)))'); \
+		dest="$(ARCHIVE_FOLDER)/combined_$${label}.yaml"; \
+		[ ! -e "$$dest" ] && break; \
+	done; \
+	cp "$(COMBINED_DATA)" "$$dest"; \
+	echo "Archived minted combined YAML -> $$dest"; \
 	for src in $$files; do \
-		name=$$(basename "$$src"); \
-		stem=$${name%.yaml}; \
-		while :; do \
-			label=$$(python3 -c 'import os, time; alphabet = "0123456789ABCDEFGHJKMNPQRSTVWXYZ"; value = (int(time.time() * 1000) << 80) | int.from_bytes(os.urandom(10), "big"); print("".join(alphabet[(value >> shift) & 31] for shift in range(125, -1, -5)))'); \
-			dest="$(ARCHIVE_FOLDER)/$${stem}_$${label}.yaml"; \
-			[ ! -e "$$dest" ] && break; \
-		done; \
-		if [ -e "$$dest" ]; then \
-			echo "Refusing to overwrite existing archive file $$dest"; \
-			exit 1; \
-		fi; \
-		mv "$$src" "$$dest"; \
-		echo "Archived $$src -> $$dest"; \
+		rm "$$src"; \
+		echo "Removed processed dropbox file $$src"; \
 	done
 
-process-dropbox: graph2assertions archive-dropbox
+process-dropbox: archive-dropbox
 
 publish-nanopubs: prepare
 	@set -e; \
