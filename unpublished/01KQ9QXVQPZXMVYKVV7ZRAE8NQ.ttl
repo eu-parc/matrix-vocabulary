@@ -2,7 +2,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-<http://w3id.org/peh/matrices/01KQ9QXVQPZXMVYKVV7ZRAE8NQ> a owl:Class ;
+<https://w3id.org/peh/matrices/01KQ9QXVQPZXMVYKVV7ZRAE8NQ> a owl:Class ;
     rdfs:label "food matrix" ;
     ns1:description "All edible materials derived from plants or animals that may be analyzed for chemical residues or contaminants" ;
     rdfs:subClassOf <https://w3id.org/peh/terms/Matrix> .

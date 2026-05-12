@@ -23,6 +23,6 @@ jobs:
       - name: Validate expected processing effects
         run: |
           test -f build/combined.yaml || (echo "Expected build/combined.yaml to exist" && exit 1)
-          grep -q "http://w3id.org/peh/matrices/" build/combined.yaml || (echo "Expected build/combined.yaml to contain minted matrix URIs" && exit 1)
+          grep -q "https://w3id.org/peh/matrices/" build/combined.yaml || (echo "Expected build/combined.yaml to contain minted matrix URIs" && exit 1)
           test -f build/matrices.ttl || (echo "Expected build/matrices.ttl to exist" && exit 1)
           find unpublished -maxdepth 1 -name "*.ttl" | grep -q . || (echo "Expected unpublished to contain generated assertions" && exit 1)
