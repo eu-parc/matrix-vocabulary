@@ -3,7 +3,7 @@ name: PEH-Model
 description: |-
   Entity and relation ontology and datamodel for Personal Exposure and Health data
 
-version: 0.5.3
+version: 0.6.0
 
 imports:
   - linkml:types
@@ -160,11 +160,11 @@ classes:
       - HasValidationStatus
     slots:
       - grouping_id_list
-      - biochementity_type
       - molweight_grampermol
-      - parent_compounds
-      - group_compound_members
-      - member_of_group_compounds
+      - has_role
+      - is_metabolite_of
+      - is_isomer_of
+      - parent_biochementities
   
   Matrix:
     class_uri: wikidata:Q685816
@@ -184,7 +184,7 @@ classes:
     description: >
       Template class used to generate OWL Classes.
     slots:
-      - parent_matrix
+      - parent_matrices
 
   Indicator:
     class_uri: wikidata:Q937228
@@ -211,7 +211,7 @@ classes:
       - grouping_id_list
       - relevant_observable_entity_types
       - biochementity
-      - parent_indicator
+      - parent_indicators
 
   QUDTUnit:
     class_uri: qudt:Unit
@@ -297,7 +297,7 @@ classes:
       - relevant_observation_types
       - calculation_design
       - validation_designs
-      # instance-specific
+      - has_iadopt_variable
       - has_observable_property_type
   
   ObservablePropertyValueOption:
@@ -677,6 +677,19 @@ classes:
     slots:
       - observed_values
 
+  IAdoptVariable:
+    description: >-
+      Placeholder class for actual IAdoptVariable
+    slots:
+      - id
+  BioChemRole:
+    description: >- 
+      A role is particular behaviour which a material entity may exhibit.
+    slots:
+      - id
+    close_mappings: 
+      - http://purl.obolibrary.org/obo/chebi_50906
+
 slots:
   id:
     identifier: true
@@ -704,6 +717,7 @@ slots:
     description: >-
       Long form description or definition for the entity.
   ui_label:
+    slot_uri: pehterms:hasUiLabel
     # restricted to internal use
     description: >-
       Human readable label, to be used in user interactions through forms or documents.
@@ -722,11 +736,15 @@ slots:
   rorid:
     slot_uri: schema:identifier
   label:
+    slot_uri: rdfs:label
   alias:
+    slot_uri: schema:alternateName
   aliases:
+    slot_uri: schema:alternateName
     multivalued: true
     inlined_as_list: true
   context_aliases:
+    slot_uri: pehterms:hasContextAlias
     multivalued: true
     inlined_as_list: true
     range: ContextAlias
@@ -735,18 +753,23 @@ slots:
     range: uriorcurie
     slot_uri: skos:exactMatch
   context:
+    slot_uri: pehterms:hasContext
     range: NamedThing
     inlined: false
   translations:
+    slot_uri: pehterms:hasTranslation
     multivalued: true
     inlined_as_list: true
     range: Translation
   property_name:
     slot_uri: schema:identifier
   language:
+    slot_uri: schema:inLanguage
   translated_value:
+    slot_uri: pehterms:hasTranslatedValue
 
   validation_history:
+    slot_uri: pehterms:hasValidationHistoryRecord
     multivalued: true
     inlined_as_list: true
     range: ValidationHistoryRecord
@@ -756,6 +779,7 @@ slots:
     annotations:
       rdf_type: qudt:QuantityKind
   groupings:
+    slot_uri: pehterms:hasGrouping
     multivalued: true
     inlined_as_list: true
     range: Grouping
@@ -769,322 +793,430 @@ slots:
     slot_uri: rdfs:subClassOf
 
   current_validation_status:
+    slot_uri: pehterms:hasCurrentValidationStatus
     range: ValidationStatus
   validation_datetime:
+    slot_uri: pehterms:hasValidationDateTime
     range: datetime
   validation_status:
+    slot_uri: pehterms:hasValidationStatus
     range: ValidationStatus
   validation_actor:
+    slot_uri: pehterms:hasValidationActor
   validation_institute:
+    slot_uri: pehterms:hasValidationInstitute
   validation_remark:
-
-  biochementity_type:
-    range: BioChemEntityType
-  molweight_grampermol:
-    range: decimal
-  parent_compounds:
-    multivalued: true
-    range: BioChemEntitySubClass
-    slot_uri: rdfs:subClassOf
-  group_compound_members:
-    multivalued: true
-    domain: BioChemEntity
-    range: BioChemEntity
-    slot_uri: skos:narrower
-    description: >-
-      For a compound that groups other compounds, links to members of the group.
-      Inverse of the BioChemEntity member_of_group_compounds slot
-    inverse: member_of_group_compounds
-  member_of_group_compounds:
-    multivalued: true
-    domain: BioChemEntity
-    range: BioChemEntity
-    slot_uri: skos:broader
-    description: >-
-      Declares the compound being part of one or more group compounds.
-      Inverse of the BioChemEntity group_compound_members slot
-    inverse: group_compound_members
+    slot_uri: pehterms:hasValidationRemark
 
   matrix_subclasses:
+    slot_uri: pehterms:hasMatrixSubclass
     multivalued: true
     inlined_as_list: true
     range: MatrixSubClass
   biochementity_subclasses:
+    slot_uri: pehterms:hasBioChemEntitySubclass
     multivalued: true
     inlined_as_list: true
     range: BioChemEntitySubClass
   indicator_subclasses:
+    slot_uri: pehterms:hasIndicatorSubclass
     multivalued: true
     inlined_as_list: true
     range: IndicatorSubClass
 
-  parent_matrix:
+  parent_matrices:
     range: MatrixSubClass
     slot_uri: rdfs:subClassOf
+    multivalued: true
   indicator_type:
+    slot_uri: pehterms:hasIndicatorType
     range: IndicatorType
-  parent_indicator:
+  parent_indicators:
     range: IndicatorSubClass
     slot_uri: rdfs:subClassOf
+    multivalued: true
+  parent_biochementities:
+    range: BioChemEntitySubClass
+    slot_uri: rdfs:subClassOf
+    multivalued: true
   property:
+    slot_uri: pehterms:hasProperty
   matrix:
+    slot_uri: pehterms:hasMatrix
     range: Matrix
   constraints:
+    slot_uri: pehterms:hasConstraint
     multivalued: true
   relevant_observable_entity_types:
+    slot_uri: pehterms:hasRelevantObservableEntityType
     multivalued: true
     range: ObservableEntityType
   biochementity:
+    slot_uri: pehterms:hasBioChemEntity
     range: BioChemEntity
     inlined: false
 
+  molweight_grampermol:
+    slot_uri: pehterms:hasMolecularWeight
+    range: decimal
+    description: The molecular weight of the chemical entity in g/mol
+    unit:
+      ucum_code: "g/mol"
+  is_metabolite_of:
+    description: Indicates that this molecular entity is a metabolite of another molecular entity
+    range: BioChemEntity
+    multivalued: true
+    slot_uri: pehterms:isMetaboliteOf
+  is_isomer_of:
+    description: Indicates that this molecular entity is an isomer of another molecular entity
+    range: BioChemEntity
+    multivalued: true
+    slot_uri: pehterms:isIsomerOf
+  has_role:
+    multivalued: true
+    slot_uri: http://purl.obolibrary.org/obo/RO_0000087
+    range: BioChemRole
+    domain: BioChemEntity
+
   categorical:
+    slot_uri: pehterms:isCategorical
     range: boolean
   multivalued:
+    slot_uri: pehterms:isMultivalued
     range: boolean
   value_type:
+    slot_uri: pehterms:hasValueType
   value_metadata:
+    slot_uri: pehterms:hasValueMetadata
     multivalued: true
     inlined_as_list: true
     range: ObservablePropertyMetadataElement
   value_options:
+    slot_uri: pehterms:hasValueOption
     multivalued: true
     inlined_as_list: true
     range: ObservablePropertyValueOption
   required:
+    slot_uri: pehterms:isRequired
     range: boolean
   zeroallowed:
+    slot_uri: pehterms:isZeroAllowed
     range: boolean
   min_value:
+    slot_uri: pehterms:hasMinimumValue
     description: String representation of the expected lower bound in observations, usable for data validation
   max_value:
+    slot_uri: pehterms:hasMaximumValue
     description: String representation of the expected upper bound in observations, usable for data validation
   significantdecimals:
+    slot_uri: pehterms:hasSignificantDecimals
     description: Variable precision indication, expressed as the number of significant decimals
     range: integer
   immutable:
+    slot_uri: pehterms:isImmutable
     description: Variable values are not expected to change over time (e.g. birthdate of a person)
     range: boolean
   relevant_observation_types:
+    slot_uri: pehterms:hasRelevantObservationType
     multivalued: true
     range: ObservationType
   has_observable_property_type:
     slot_uri: rdf:type
     multivalued: true
     range: IndicatorSubClass
-
+  has_iadopt_variable:
+    slot_uri: pehterms:hasVariable
+    range: IAdoptVariable
+    domain: ObservableProperty
   calculation_design:
+    slot_uri: pehterms:hasCalculationDesign
     range: CalculationDesign
   calculation_name:
+    slot_uri: pehterms:hasCalculationName
   conditional:
+    slot_uri: pehterms:isConditional
   calculation_implementation_as_json:
+    slot_uri: pehterms:hasCalculationImplementationAsJson
   calculation_implementation:
+    slot_uri: pehterms:hasCalculationImplementation
     range: CalculationImplementation
   function_name:
+    slot_uri: pehterms:hasFunctionName
   function_kwargs:
+    slot_uri: pehterms:hasFunctionKeywordArgument
     multivalued: true
     inlined_as_list: true
     range: CalculationKeywordArgument
   function_results:
+    slot_uri: pehterms:hasFunctionResult
     multivalued: true
     inlined_as_list: true
     range: CalculationResult
   
   validation_designs:
+    slot_uri: pehterms:hasValidationDesign
     multivalued: true
     inlined_as_list: true
     range: ValidationDesign
   validation_name:
+    slot_uri: pehterms:hasValidationName
   validation_expression:
+    slot_uri: pehterms:hasValidationExpression
     range: ValidationExpression
   validation_condition_expression:
+    slot_uri: pehterms:hasValidationConditionExpression
     range: ValidationExpression
   validation_error_level:
+    slot_uri: pehterms:hasValidationErrorLevel
     range: ValidationErrorLevel
   validation_error_message_template:
+    slot_uri: pehterms:hasValidationErrorMessageTemplate
   validation_subject_contextual_field_references:
+    slot_uri: pehterms:hasValidationSubjectContextualFieldReference
     multivalued: true
     inlined_as_list: true
     range: ContextualFieldReference
   validation_command:
+    slot_uri: pehterms:hasValidationCommand
     range: ValidationCommand
   validation_arg_values:
+    slot_uri: pehterms:hasValidationArgumentValue
     multivalued: true
   validation_arg_contextual_field_references:
+    slot_uri: pehterms:hasValidationArgumentContextualFieldReference
     multivalued: true
     inlined_as_list: true
     range: ContextualFieldReference
   validation_arg_expressions:
+    slot_uri: pehterms:hasValidationArgumentExpression
     multivalued: true
     inlined_as_list: true
     range: ValidationExpression
   contextual_field_reference:
+    slot_uri: pehterms:hasContextualFieldReference
     range: ContextualFieldReference
   dataset_label:
+    slot_uri: pehterms:hasDatasetLabel
   field_label:
+    slot_uri: pehterms:hasFieldLabel
 
   process_state:
+    slot_uri: pehterms:hasProcessState
   imputation_state:
+    slot_uri: pehterms:hasImputationState
   mapping_name:
+    slot_uri: pehterms:hasMappingName
   round_decimals:
+    slot_uri: pehterms:hasRoundDecimals
     range: integer
   scale_factor:
+    slot_uri: pehterms:hasScaleFactor
     range: decimal
   field:
+    slot_uri: pehterms:hasField
     range: ObservablePropertyMetadataField
     inlined: false
   key:
+    slot_uri: pehterms:hasKey
   value:
+    slot_uri: rdf:value
     description: String representation of a measured or configured value, to be parsed according to the corresponding value type
   metadata_fields:
+    slot_uri: pehterms:hasMetadataField
     multivalued: true
     inlined_as_list: true
     range: ObservablePropertyMetadataField
 
   stakeholders:
+    slot_uri: pehterms:hasStakeholder
     multivalued: true
     inlined_as_list: true
     range: Stakeholder
   project_id_list:
+    slot_uri: pehterms:hasProject
     multivalued: true
     range: Project
   study_id_list:
+    slot_uri: pehterms:hasStudy
     multivalued: true
     range: Study
   observation_group_id_list:
+    slot_uri: pehterms:hasObservationGroup
     multivalued: true
     range: ObservationGroup
   observation_id_list:
+    slot_uri: pehterms:hasObservation
     multivalued: true
     range: Observation
   member_id_list:
+    slot_uri: pehterms:hasMember
     multivalued: true
     range: StudyEntity
   sample_id_list:
+    slot_uri: pehterms:hasSample
     multivalued: true
     range: Sample
   projects:
+    slot_uri: pehterms:hasProject
     multivalued: true
     inlined_as_list: true
     range: Project
   geographic_scope:
-  #project: ## unused
-  #  slot_uri: schema:ResearchProject
+    slot_uri: schema:spatialCoverage
   default_language:
+    slot_uri: schema:inLanguage
   stakeholder:
+    slot_uri: pehterms:hasStakeholder
     range: Stakeholder
   project_stakeholders:
+    slot_uri: pehterms:hasProjectStakeholder
     multivalued: true
     inlined_as_list: true
     range: ProjectStakeholder
   studies:
+    slot_uri: pehterms:hasStudy
     multivalued: true
     inlined_as_list: true
     range: Study
   project_roles:
+    slot_uri: pehterms:hasProjectRole
     multivalued: true
     range: ProjectRole
   study_stakeholders:
+    slot_uri: pehterms:hasStudyStakeholder
     multivalued: true
     inlined_as_list: true
     range: StudyStakeholder
   research_population_type:
+    slot_uri: pehterms:hasResearchPopulationType
     range: ResearchPopulationType
   study_roles:
+    slot_uri: pehterms:hasStudyRole
     multivalued: true
     range: StudyRole
   observation_groups:
+    slot_uri: pehterms:hasObservationGroup
     multivalued: true
     inlined_as_list: true
     range: ObservationGroup
   observations:
+    slot_uri: pehterms:hasObservation
     multivalued: true
     inlined_as_list: true
     range: Observation
   derived_observations:
+    slot_uri: pehterms:hasDerivedObservation
     multivalued: true
     inlined_as_list: true
     range: DerivedObservation
   linktype:
+    slot_uri: pehterms:hasLinkType
     range: LinkType
   physical_entities:
+    slot_uri: pehterms:hasPhysicalEntity
     multivalued: true
     inlined_as_list: true
     range: PhysicalEntity
   physical_entity_links:
+    slot_uri: pehterms:hasPhysicalEntityLink
     multivalued: true
     inlined_as_list: true
     range: PhysicalEntityLink
   physical_entity:
+    slot_uri: pehterms:hasPhysicalEntity
     range: PhysicalEntity
     inlined: false
   study_entities:
+    slot_uri: pehterms:hasStudyEntity
     multivalued: true
     inlined_as_list: true
     range: StudyEntity
   study_entity_id_list:
+    slot_uri: pehterms:hasStudyEntity
     multivalued: true
     range: StudyEntity
   study_entity_links:
+    slot_uri: pehterms:hasStudyEntityLink
     multivalued: true
     inlined_as_list: true
     range: StudyEntityLink
   study_entity:
+    slot_uri: pehterms:hasStudyEntity
     range: StudyEntity
     inlined: false
   recruited_in_project:
+    slot_uri: pehterms:wasRecruitedInProject
     range: Project
     inlined: false
   sampled_in_project:
+    slot_uri: pehterms:wasSampledInProject
     range: Project
     inlined: false
   physical_label:
+    slot_uri: pehterms:hasPhysicalLabel
   location:
+    slot_uri: schema:location
   observation:
+    slot_uri: pehterms:hasObservation
     range: Observation
     inlined: false
   observation_type:
+    slot_uri: pehterms:hasObservationType
     range: ObservationType
   observation_design:
+    slot_uri: pehterms:hasObservationDesign
     range: ObservationDesign
     inlined: false
   observation_designs:
+    slot_uri: pehterms:hasObservationDesign
     multivalued: true
     inlined_as_list: true
     range: ObservationDesign
   observation_design_id_list:
+    slot_uri: pehterms:hasObservationDesign
     multivalued: true
     range: ObservationDesign
   observation_result_type:
+    slot_uri: pehterms:hasObservationResultType
     range: ObservationResultType
   observable_property_specifications:
+    slot_uri: pehterms:hasObservablePropertySpecification
     multivalued: true
     inlined_as_list: true
     range: ObservablePropertySpecification
   specification_category:
+    slot_uri: pehterms:hasSpecificationCategory
     range: ObservablePropertySpecificationCategory
   observation_results:
+    slot_uri: pehterms:hasObservationResult
     multivalued: true
     inlined_as_list: true
     range: ObservationResult
   observation_result_id_list:
+    slot_uri: pehterms:hasObservationResult
     multivalued: true
     range: ObservationResult
   observable_entity_type:
+    slot_uri: pehterms:hasObservableEntityType
     range: ObservableEntityType
   observable_entity_id_list:
+    slot_uri: pehterms:hasObservableEntity
     multivalued: true
     range: StudyEntity
   observable_entity:
+    slot_uri: pehterms:hasObservableEntity
     range: StudyEntity
   observable_properties:
+    slot_uri: pehterms:hasObservableProperty
     multivalued: true
     inlined_as_list: true
     range: ObservableProperty
   observable_property:
+    slot_uri: pehterms:hasObservableProperty
     range: ObservableProperty
     inlined: false
   observed_values:
+    slot_uri: pehterms:hasObservedValue
     multivalued: true
     inlined_as_list: true
     range: ObservedValue
@@ -1094,124 +1226,173 @@ slots:
     annotations:
       rdf_type: qudt:Unit
   raw_value:
+    slot_uri: pehterms:hasRawValue
   raw_unit:
+    slot_uri: pehterms:hasRawUnit
     range: QUDTUnit
     annotations:
       rdf_type: qudt:Unit
   imputed_value:
+    slot_uri: pehterms:hasImputedValue
   imputed_unit:
+    slot_uri: pehterms:hasImputedUnit
     range: QUDTUnit
     annotations:
       rdf_type: qudt:Unit
   normalised_value:
+    slot_uri: pehterms:hasNormalisedValue
   normalised_unit:
+    slot_uri: pehterms:hasNormalisedUnit
     range: QUDTUnit
     annotations:
       rdf_type: qudt:Unit
   value_as_string:
+    slot_uri: pehterms:hasValueAsString
   quality_data:
+    slot_uri: pehterms:hasQualityData
     multivalued: true
     inlined_as_list: true
     range: QualityData
   quality_context_key:
+    slot_uri: pehterms:hasQualityContextKey
   quality_value:
+    slot_uri: pehterms:hasQualityValue
   provenance_data:
+    slot_uri: pehterms:hasProvenanceData
     multivalued: true
     inlined_as_list: true
     range: ProvenanceData
   provenance_context_key:
+    slot_uri: pehterms:hasProvenanceContextKey
   provenance_value:
+    slot_uri: pehterms:hasProvenanceValue
   
   layout:
+    slot_uri: pehterms:hasLayout
     range: DataLayout
     inlined: false
   layouts:
+    slot_uri: pehterms:hasLayout
     multivalued: true
     inlined_as_list: true
     range: DataLayout
   section:
+    slot_uri: pehterms:hasSection
     range: DataLayoutSection
     inlined: false
   sections:
+    slot_uri: pehterms:hasSection
     multivalued: true
     inlined_as_list: true
     range: DataLayoutSection
   section_type:
+    slot_uri: pehterms:hasSectionType
     range: DataLayoutSectionType
   elements:
+    slot_uri: pehterms:hasElement
     multivalued: true
     inlined_as_list: true
     range: DataLayoutElement
   element_type:
+    slot_uri: pehterms:hasElementType
     range: DataLayoutElementType
   element_style:
+    slot_uri: pehterms:hasElementStyle
     range: DataLayoutElementStyle
   is_observable_entity_key:
+    slot_uri: pehterms:isObservableEntityKey
     range: boolean
   foreign_key_link:
+    slot_uri: pehterms:hasForeignKeyLink
     range: DataLayoutElementLink
   import_configs:
+    slot_uri: pehterms:hasImportConfig
     multivalued: true
     inlined_as_list: true
     range: DataImportConfig
   section_mapping:
+    slot_uri: pehterms:hasSectionMapping
     range: DataImportSectionMapping
   section_mapping_links:
+    slot_uri: pehterms:hasSectionMappingLink
     multivalued: true
     inlined_as_list: true
     range: DataImportSectionMappingLink
 
   data_requests:
+    slot_uri: pehterms:hasDataRequest
     multivalued: true
     inlined_as_list: true
     range: DataRequest
 
   data_roles:
+    slot_uri: pehterms:hasDataRole
     multivalued: true
     range: DataRole
   contacts:
+    slot_uri: pehterms:hasContact
     multivalued: true
     inlined_as_list: true
     range: Contact
   contact_roles:
+    slot_uri: pehterms:hasContactRole
     multivalued: true
     range: ContactRole
   contact_email:
+    slot_uri: schema:email
   contact_phone:
+    slot_uri: schema:telephone
   request_properties:
+    slot_uri: pehterms:hasRequestProperty
   data_stakeholders:
+    slot_uri: pehterms:hasDataStakeholder
     multivalued: true
     range: DataStakeholder
   research_objectives:
+    slot_uri: pehterms:hasResearchObjective
     multivalued: true
     range: ResearchObjective
   processing_actions:
+    slot_uri: pehterms:hasProcessingAction
     multivalued: true
     range: ProcessingAction
   processing_steps:
+    slot_uri: pehterms:hasProcessingStep
     multivalued: true
     range: ProcessingStep
   remark_on_content:
+    slot_uri: pehterms:hasRemarkOnContent
   remark_on_methodology:
+    slot_uri: pehterms:hasRemarkOnMethodology
   observed_entity_properties:
+    slot_uri: pehterms:hasObservedEntityProperty
     multivalued: true
     range: ObservedEntityProperty
   processing_description:
+    slot_uri: pehterms:hasProcessingDescription
   objective_type:
+    slot_uri: pehterms:hasObjectiveType
     range: ObjectiveType
   authors:
+    slot_uri: schema:author
     multivalued: true
   start_date:
+    slot_uri: schema:startDate
     range: date
   end_date:
+    slot_uri: schema:endDate
     range: date
   delivery_date:
+    slot_uri: pehterms:hasDeliveryDate
     range: date
   observation_start_date:
+    slot_uri: pehterms:hasObservationStartDate
     range: date
   observation_end_date:
+    slot_uri: pehterms:hasObservationEndDate
     range: date
   collection_date:
+    slot_uri: pehterms:hasCollectionDate
     range: date
 
 enums:
@@ -1260,12 +1441,6 @@ enums:
       exposuremarker:
       geomarker:
       observation:
-  BioChemEntityType:
-    permissible_values:
-      compound_group:
-      compound:
-      conjugated_compound:
-      unconjugated_compound:
   ResearchPopulationType:
     permissible_values:
       general_population:

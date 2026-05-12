@@ -5,7 +5,7 @@ ARCHIVE_FOLDER ?= archive
 REDIRECT_FOLDER ?= redirect
 SCHEMA ?= schema/peh.yaml
 PEH_SCHEMA_REPO ?= eu-parc/parco-hbm
-PEH_SCHEMA_TAG ?= v0.5.3
+PEH_SCHEMA_TAG ?= v0.6.0
 PEH_SCHEMA_SOURCE_PATH ?= linkml/schema/peh.yaml
 PEH_SCHEMA_DEST ?= schema/peh.yaml
 PEH_SCHEMA_URL ?= https://raw.githubusercontent.com/$(PEH_SCHEMA_REPO)/$(PEH_SCHEMA_TAG)/$(PEH_SCHEMA_SOURCE_PATH)
@@ -14,7 +14,7 @@ ONTOLOGY_LABEL ?= matrices.ttl
 TARGET_CLASS ?= matrix_subclasses
 BASE_NAMESPACE ?= https://w3id.org/peh/terms/
 TERM_PARENT_CLASS ?= https://w3id.org/peh/terms/Matrix
-MINT_NAMESPACE ?= http://w3id.org/peh/matrices/
+MINT_NAMESPACE ?= https://w3id.org/peh/matrices/
 COMBINED_DATA ?= $(OUT_FOLDER)/combined.yaml
 DRY ?=
 

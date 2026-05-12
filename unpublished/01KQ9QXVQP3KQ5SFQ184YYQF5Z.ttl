@@ -2,7 +2,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-<http://w3id.org/peh/matrices/01KQ9QXVQP3KQ5SFQ184YYQF5Z> a owl:Class ;
+<https://w3id.org/peh/matrices/01KQ9QXVQP3KQ5SFQ184YYQF5Z> a owl:Class ;
     rdfs:label "biotic matrix" ;
     ns1:description "All biological organisms and their tissues" ;
     rdfs:subClassOf <https://w3id.org/peh/terms/Matrix> .

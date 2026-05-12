@@ -4,18 +4,20 @@ This repository implements a staged vocabulary workflow for matrices:
 
 ## Proposing a new matrix
 
-1. All new matrix info can be added to one or more `*.yaml` files following this structure. This is a minimal example for such a `*.yaml`. A json-schema can be found in [schema/dropbox-matrix.schema.json](schema/dropbox-matrix.schema.json).
+1. All new matrix info can be added to one or more `*.yaml` files following this structure. This is a minimal example for such a `*.yaml`.
 
 ```{json}
 matrix_subclasses:
 - id: environmentalmatrix
   name: "environmental matrix"
   description: All abiotic environmental compartments in which chemicals can be measured
-  parent_matrix: https://w3id.org/peh/terms/Matrix
+  parent_matrices: 
+    - https://w3id.org/peh/terms/Matrix
 - id: bioticmatrix
   name: "biotic matrix"
   description: All biological organisms and their tissues
-  parent_matrix: https://w3id.org/peh/terms/Matrix
+  parent_matrices: 
+    - https://w3id.org/peh/terms/Matrix
 ```
 Note that the identifier field does not need to be provided, identifiers are minted on the fly.
 
@@ -56,7 +58,7 @@ make fetch-peh-schema
 Override the upstream tag when you want a different schema release:
 
 ```bash
-make fetch-peh-schema PEH_SCHEMA_TAG=v0.4.0
+make fetch-peh-schema PEH_SCHEMA_TAG=v0.6.0
 ```
 
 Process incoming YAML from `dropbox/`:
