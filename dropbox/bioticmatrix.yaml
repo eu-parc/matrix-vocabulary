@@ -1,0 +1,10 @@
+matrix_subclasses:
+- name: plant matrix
+  description: All plant-based materials in which chemicals can be measured.
+  parent_matrices: https://w3id.org/peh/matrices/01KQ9QXVQP3KQ5SFQ184YYQF5Z
+- name: animal matrix
+  description: All animal-based materials in which chemicals can be measured.
+  parent_matrices: https://w3id.org/peh/matrices/01KQ9QXVQP3KQ5SFQ184YYQF5Z
+- name: human matrix
+  description: All human-based materials in which chemicals can be measured.
+  parent_matrices: https://w3id.org/peh/matrices/01KQ9QXVQP3KQ5SFQ184YYQF5Z
