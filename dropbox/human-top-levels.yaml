@@ -1,0 +1,13 @@
+matrix_subclasses:
+- name: human body fluid
+  description: Liquid substances produced by the body. (NCI)
+  parent_matrices: https://w3id.org/peh/matrices/01KT1NMJDAK0MRPZ6GFYQ6899W
+  exact_matches: http://purl.obolibrary.org/obo/NCIT_C13236
+- name: human tissue
+  description: An anatomical structure consisting of similarly specialized cells and intercellular matrix, aggregated according to genetically determined spatial relationships, performing a specific function. (NCI)
+  parent_matrices: https://w3id.org/peh/matrices/01KT1NMJDAK0MRPZ6GFYQ6899W
+  exact_matches: http://purl.obolibrary.org/obo/NCIT_C12801
+- name: integumentary system
+  description: Any component of the enveloping membrane of the body, including the epidermis and dermis, and all of the derivatives of the epidermis. (NCI)
+  parent_matrices: https://w3id.org/peh/matrices/01KT1NMJDAK0MRPZ6GFYQ6899W
+  exact_matches: http://purl.obolibrary.org/obo/NCIT_C38620
