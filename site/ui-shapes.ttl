@@ -1,0 +1,38 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pehterms: <https://w3id.org/peh/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix ui: <https://w3id.org/peh/ui/> .
+
+<#MatrixTable>
+    a sh:NodeShape ;
+    sh:targetClass pehterms:Matrix ;
+    ui:hierarchyEnabled true ;
+    ui:hierarchyPath rdfs:subClassOf ;
+    sh:property [
+        sh:path rdfs:label ;
+        sh:name "Label" ;
+        sh:order 10 ;
+        ui:searchable true ;
+    ] ;
+    sh:property [
+        sh:path schema:alternateName ;
+        sh:name "Alternate names" ;
+        sh:order 20 ;
+        ui:searchable true ;
+    ] ;
+    sh:property [
+        sh:path rdfs:subClassOf ;
+        sh:name "Parent matrix" ;
+        sh:order 30 ;
+        ui:renderAs "label" ;
+        ui:searchable true ;
+    ] ;
+    sh:property [
+        sh:path skos:exactMatch ;
+        sh:name "Exact matches" ;
+        sh:order 40 ;
+    ] .
