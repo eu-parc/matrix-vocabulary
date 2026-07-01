@@ -1,5 +1,5 @@
 [project]
-name = "voc2pub"
+name = "matrix-vocabulary"
 version = "0.0.1"
 description = "Add your description here"
 readme = "README.md"
@@ -10,4 +10,4 @@ dependencies = [
 ]
 
 [tool.uv.sources]
-pubmate = { git = "https://github.com/eu-parc/pubmate.git", tag = "v0.0.2" }
+pubmate = { git = "https://github.com/eu-parc/pubmate.git", tag = "v0.2.1" }

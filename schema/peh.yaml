@@ -3,7 +3,7 @@ name: PEH-Model
 description: |-
   Entity and relation ontology and datamodel for Personal Exposure and Health data
 
-version: 0.6.0
+version: 0.6.1
 
 imports:
   - linkml:types
@@ -160,11 +160,13 @@ classes:
       - HasValidationStatus
     slots:
       - grouping_id_list
+      - group_labels
       - molweight_grampermol
       - has_role
       - is_metabolite_of
       - is_isomer_of
       - parent_biochementities
+      - suggester
   
   Matrix:
     class_uri: wikidata:Q685816
@@ -185,6 +187,7 @@ classes:
       Template class used to generate OWL Classes.
     slots:
       - parent_matrices
+      - suggester
 
   Indicator:
     class_uri: wikidata:Q937228
@@ -212,6 +215,7 @@ classes:
       - relevant_observable_entity_types
       - biochementity
       - parent_indicators
+      - suggester
 
   QUDTUnit:
     class_uri: qudt:Unit
@@ -731,6 +735,12 @@ slots:
     slot_uri: prov:wasDerivedFrom
     range: NamedThing
     domain: NamedThing
+  suggester:
+    slot_uri: prov:wasAttributedTo
+    range: uriorcurie
+    description: >-
+      ORCID of the person who suggested this entity, recorded as the provenance
+      attribution (prov:wasAttributedTo) of the resulting nanopublication.
   orcid:
     slot_uri: schema:identifier
   rorid:
@@ -787,6 +797,11 @@ slots:
     multivalued: true
     range: Grouping
     slot_uri: skos:broader
+  group_labels:
+    multivalued: true
+    range: string
+    inlined_as_list: true
+    slot_uri: pehterms:hasGroupLabel
   parent_grouping_id_list:
     multivalued: true
     range: Grouping

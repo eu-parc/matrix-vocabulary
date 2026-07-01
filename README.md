@@ -1,44 +1,58 @@
 ## Matrix Vocabulary Dropbox to Nanopublication Template
 
-This repository implements a staged vocabulary workflow for matrices:
+This repository implements a staged vocabulary workflow for matrices using
+pubmate defining nanopublications.
 
 ## Proposing a new matrix
 
-1. All new matrix info can be added to one or more `*.yaml` files following this structure. This is a minimal example for such a `*.yaml`.
+All new matrix info can be added to one or more `*.yaml` files following this
+structure. This is a minimal example for such a file. The full contract is the
+JSON schema in [schema/dropbox-matrix.schema.json](schema/dropbox-matrix.schema.json),
+with a worked example in [schema/dropbox-matrix.example.yaml](schema/dropbox-matrix.example.yaml).
 
-```{json}
+```yaml
+# Optional file-level default suggester (ORCID); applied to entries without their own.
+suggester: https://orcid.org/0000-0002-1825-0097
+
 matrix_subclasses:
-- id: environmentalmatrix
-  name: "environmental matrix"
+- name: "environmental matrix"
   description: All abiotic environmental compartments in which chemicals can be measured
-  parent_matrices: 
+  parent_matrices:
     - https://w3id.org/peh/terms/Matrix
 - id: bioticmatrix
   name: "biotic matrix"
   description: All biological organisms and their tissues
-  parent_matrices: 
+  parent_matrices:
     - https://w3id.org/peh/terms/Matrix
 ```
-Note that the identifier field does not need to be provided, identifiers are minted on the fly.
 
-2. Open a PR with these *.yaml files added to the dropbox
+The `id` field does not need to be provided; identifiers are minted on the fly.
+
+The optional `suggester` field (an ORCID) records who proposed the term; it
+becomes the `prov:wasAttributedTo` provenance of the resulting nanopublication.
+Set it once at the top of the file as a default, or per entry to override.
+
+Open a PR with these `*.yaml` files added to `dropbox/`.
 
 ## Under the hood
 
 1. New YAML vocab files are dropped into `dropbox/`.
 2. Processing converts them into RDF assertions in `unpublished/`.
-3. Processed source YAML files move to `archive/` with a ULID suffix to avoid overwriting earlier submissions.
-4. Publishing creates nanopublications from `unpublished/`.
-5. Publishing also writes a timestamped term-to-nanopub redirect mapping into `redirect/`.
-6. Successfully published assertion files move to `published/`.
+3. The minted combined YAML file is copied to `archive/` with a ULID suffix to
+   avoid overwriting earlier submissions, and processed source YAML files are
+   removed from `dropbox/`.
+4. Publishing creates defining nanopublications from `unpublished/`.
+5. Publishing writes/updates `redirect/id-map.tsv` with old identifier, new
+   matrix thing URI, and nanopub URI.
+6. Published nanopublications are written to `published/` as `.trig`.
 
 ## Folder Semantics
 
 - `dropbox/`: incoming YAML vocabulary files
-- `archive/`: processed YAML files moved out of dropbox with ULID-labeled filenames
+- `archive/`: processed combined YAML files with minted identifiers and ULID-labeled filenames
 - `unpublished/`: generated RDF term assertions waiting for publish
-- `redirect/`: timestamped term identifier to nanopub identifier mappings produced during publishing
-- `published/`: assertions already published as nanopublications
+- `redirect/`: old identifier to nanopub identifier mappings
+- `published/`: signed defining nanopublications
 - `build/`: transient build artifacts
 
 ## Local Usage
@@ -58,7 +72,7 @@ make fetch-peh-schema
 Override the upstream tag when you want a different schema release:
 
 ```bash
-make fetch-peh-schema PEH_SCHEMA_TAG=v0.6.0
+make fetch-peh-schema PEH_SCHEMA_TAG=v0.6.1
 ```
 
 Process incoming YAML from `dropbox/`:
@@ -67,23 +81,20 @@ Process incoming YAML from `dropbox/`:
 make pipeline
 ```
 
-Dry-run publish (no move to `published/`):
+Validate proposed defining nanopubs:
 
 ```bash
-make publish-pipeline DRY=--dry-run
+make validate-pr
 ```
 
-Real publish (requires nanopub credentials in environment):
+Dry-run minting from generated assertions:
 
 ```bash
-export NANOPUB_PRIVATE_KEY=...
-export NANOPUB_PUBLIC_KEY=...
-export INTRO_NANOPUB_URI=...
-make publish-pipeline
+make publish-defining PUBLISH_KEY_ARGS= DRY=--dry-run
 ```
 
-Each publish run writes a uniquely named redirect mapping file such as
-`redirect/term-to-nanopub_20260424T120102Z.tsv`.
+Live publishing uses the matrix bot identity; see
+[docs/bot-identity-setup.md](docs/bot-identity-setup.md).
 
 End-to-end local smoke test:
 
@@ -91,13 +102,19 @@ End-to-end local smoke test:
 make test-flow
 ```
 
+## Publishing Details
+
+- Matrix term namespace: `https://w3id.org/peh/matrices/`
+- Matrix vocabulary space: `https://w3id.org/spaces/matrix/r/vocabulary`
+- Nanopub type: `https://w3id.org/peh/terms/Matrix`
+- Bot: `Matrix bot` (`matrix-bot`)
+- Nanodash template: set `NANOPUB_TEMPLATE` once the "Defining a matrix"
+  template is published.
+
 ## GitHub Workflows
 
-- `serialize.yaml`: on push to `main` with `dropbox/**` changes, runs `make pipeline` and commits `archive/` + `unpublished/` updates.
-- `test-serialize.yaml`: on PR with `dropbox/**` changes, validates processing behavior.
-- `publish.yaml`: publishes nanopublications on:
-  - release publish (real publish),
-  - tag push (dry-run),
-  - manual `workflow_dispatch` ("Publish mode" input: `dry-run` or `publish`).
-
-In manual real publish mode (`workflow_dispatch` with `publish`), published assertion files are moved from `unpublished/` to `published/`, the new redirect mapping file is committed from `redirect/`, and both changes are pushed.
+- `publish.yaml`: validates PRs, processes accepted dropbox files on `main`, and
+  mints/publishes defining nanopublications when the matrix bot secret is
+  configured.
+- `pages.yaml`: extracts assertion TTL from `published/*.trig` and builds the
+  vocabulary browser.
