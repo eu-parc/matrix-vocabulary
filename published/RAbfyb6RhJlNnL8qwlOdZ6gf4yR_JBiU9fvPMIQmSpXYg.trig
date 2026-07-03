@@ -1,0 +1,46 @@
+@prefix this: <https://w3id.org/np/RAbfyb6RhJlNnL8qwlOdZ6gf4yR_JBiU9fvPMIQmSpXYg> .
+@prefix sub: <https://w3id.org/np/RAbfyb6RhJlNnL8qwlOdZ6gf4yR_JBiU9fvPMIQmSpXYg/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix ns1: <http://schema.org/> .
+@prefix orcid: <https://orcid.org/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pehterms: <https://w3id.org/peh/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+sub:Head {
+    this: a np:Nanopublication ;
+        np:hasAssertion sub:assertion ;
+        np:hasProvenance sub:provenance ;
+        np:hasPublicationInfo sub:pubinfo .
+}
+
+sub:assertion {
+    <https://w3id.org/peh/matrices/RAbfyb6RhJlNnL8qwlOdZ6gf4yR_JBiU9fvPMIQmSpXYg> a owl:Class ;
+        rdfs:label "material matrix" ;
+        dcterms:isPartOf <https://w3id.org/spaces/chemical-exposome-matrix/r/vocabulary> ;
+        ns1:description "Non-biological, non-environmental materials used for sampling or exposure assessment" ;
+        rdfs:subClassOf pehterms:Matrix .
+}
+
+sub:provenance {
+    sub:assertion prov:generatedAtTime "2026-07-03T14:25:01.105125+02:00"^^xsd:dateTime ;
+        prov:wasAttributedTo orcid:0000-0001-8327-0142 .
+}
+
+sub:pubinfo {
+    sub:sig npx:hasAlgorithm "RSA" ;
+        npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoYXKCw/BWx+0exERmA7cxc7MUibjOCXzSZOUOquHYk9ugwE2qMo6dYxNCOWWMyge5tqrdqi7kqiTPCNmUhwLzUa35OIhWUNHf6bgF0Giw6nRetEH6ILbXX+l16DCHQjMWeCweZIpnghryEy1kyO6UU03qVZinBByf0UpfoB25ZUWyS2zKJiulVFAFK193Wd5lPsltmaOnmyKoVOA34aTIJkAxWEHrK1OuSuF9UCH+belw+QRNJWFKJcoJ+r8OsFM89+DKncnUuVDx8B04TpDoTby7UQ09608eMUPKOlfi//TfzzG3tgvP8kNNb1yczrwNYPvXnstN3LChLvmMjT2KQIDAQAB" ;
+        npx:hasSignature "XnhcjaihYCLeZq0ZHoiwojGySxOkNx6SBy4Bh2jrOc8AdsqU/iHcYSQVg1T0JyG59ezFwbEygFxObBL/n10Nn7zP/1C2xDjGqgZSU8a1ncCtqYduzd1McsNR6pfpixa363mQYiCKEsu/Bh3Njsh2FzyzgO1eErrlIz4B4xSlgJmul08qGjThRkH/uxf6qA1Gt3+To4vj17uLqdm47Dg2lRXS9GQWDDD1L/H/N8zrQWkG/ZvjW3ZxN/RQaQOOb8QnwTbygd0FY05fXZHPXs5K/wzUpatJ1lmcRVqxE9L8TRkYZDZ/V0BdcI5U2yVtg66/RlxuBlf6MheDAlE6TdpIZA==" ;
+        npx:hasSignatureTarget this: ;
+        npx:signedBy <https://w3id.org/np/RArbMo6bMp74oD1SpHhwsDut0n_b_uoNc7QnZWUu8js5I/matrix-bot> .
+    this: rdfs:label "material matrix" ;
+        dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+        npx:hasNanopubType pehterms:Matrix ;
+        npx:introduces <https://w3id.org/peh/matrices/RAbfyb6RhJlNnL8qwlOdZ6gf4yR_JBiU9fvPMIQmSpXYg> ;
+        prov:generatedAtTime "2026-07-03T14:25:01.105125+02:00"^^xsd:dateTime ;
+        prov:wasAttributedTo <https://w3id.org/np/RArbMo6bMp74oD1SpHhwsDut0n_b_uoNc7QnZWUu8js5I/matrix-bot> .
+}
