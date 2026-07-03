@@ -1,0 +1,47 @@
+@prefix this: <https://w3id.org/np/RAYnAn73ckYTntumb6ebToNrKsVSnUh51eZfdC2D3k1kc> .
+@prefix sub: <https://w3id.org/np/RAYnAn73ckYTntumb6ebToNrKsVSnUh51eZfdC2D3k1kc/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix ns1: <http://schema.org/> .
+@prefix orcid: <https://orcid.org/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pehterms: <https://w3id.org/peh/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+sub:Head {
+    this: a np:Nanopublication ;
+        np:hasAssertion sub:assertion ;
+        np:hasProvenance sub:provenance ;
+        np:hasPublicationInfo sub:pubinfo .
+}
+
+sub:assertion {
+    <https://w3id.org/peh/matrices/RAYnAn73ckYTntumb6ebToNrKsVSnUh51eZfdC2D3k1kc> a owl:Class ;
+        rdfs:label "water",
+            "water"@nl ;
+        dcterms:isPartOf <https://w3id.org/spaces/chemical-exposome-matrix/r/vocabulary> ;
+        ns1:alternateName "water" ;
+        rdfs:subClassOf <https://w3id.org/peh/matrices/RA1pfcwPnFNCcg9yYs4RClmzylUCyurYhMT4BYwomb11g> .
+}
+
+sub:provenance {
+    sub:assertion prov:generatedAtTime "2026-07-03T21:19:16.433167+02:00"^^xsd:dateTime ;
+        prov:wasAttributedTo orcid:0000-0001-8327-0142 .
+}
+
+sub:pubinfo {
+    sub:sig npx:hasAlgorithm "RSA" ;
+        npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoYXKCw/BWx+0exERmA7cxc7MUibjOCXzSZOUOquHYk9ugwE2qMo6dYxNCOWWMyge5tqrdqi7kqiTPCNmUhwLzUa35OIhWUNHf6bgF0Giw6nRetEH6ILbXX+l16DCHQjMWeCweZIpnghryEy1kyO6UU03qVZinBByf0UpfoB25ZUWyS2zKJiulVFAFK193Wd5lPsltmaOnmyKoVOA34aTIJkAxWEHrK1OuSuF9UCH+belw+QRNJWFKJcoJ+r8OsFM89+DKncnUuVDx8B04TpDoTby7UQ09608eMUPKOlfi//TfzzG3tgvP8kNNb1yczrwNYPvXnstN3LChLvmMjT2KQIDAQAB" ;
+        npx:hasSignature "dTVWalvvP+fdbIp1UVnaP3G7QSOES+xhy3rfVsh/x5IfVEgVo/nw7q0FX7P7bILmem9mOUzaoZa5WUA/9JdaXh1M2NyZMlTldn9PeB8wfggCawjCqwfS/ARBv9tVDDiFuzeb64mOp46oftp41ZlH+7FXil5l1Ynuzss3LxEMsnVKbGUR08ELawr8FE1DcgMMEaQYijVyr1IpImOMgPpqzh7v8rDU70sqOfxBX303JPIHhmA3MT1lnfWFxIUGQXV0/oqq8r0CnkuRjc7umb40/6xUfiJllilcvWIYN270hSdRLHOCt2Fb08YR4PIMGEzyFoS87+vRKJqg2tO6cwbsWg==" ;
+        npx:hasSignatureTarget this: ;
+        npx:signedBy <https://w3id.org/np/RArbMo6bMp74oD1SpHhwsDut0n_b_uoNc7QnZWUu8js5I/matrix-bot> .
+    this: rdfs:label "water" ;
+        dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+        npx:hasNanopubType pehterms:Matrix ;
+        npx:introduces <https://w3id.org/peh/matrices/RAYnAn73ckYTntumb6ebToNrKsVSnUh51eZfdC2D3k1kc> ;
+        prov:generatedAtTime "2026-07-03T21:19:16.433167+02:00"^^xsd:dateTime ;
+        prov:wasAttributedTo <https://w3id.org/np/RArbMo6bMp74oD1SpHhwsDut0n_b_uoNc7QnZWUu8js5I/matrix-bot> .
+}

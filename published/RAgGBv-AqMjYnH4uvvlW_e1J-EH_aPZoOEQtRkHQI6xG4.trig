@@ -1,0 +1,44 @@
+@prefix this: <https://w3id.org/np/RAgGBv-AqMjYnH4uvvlW_e1J-EH_aPZoOEQtRkHQI6xG4> .
+@prefix sub: <https://w3id.org/np/RAgGBv-AqMjYnH4uvvlW_e1J-EH_aPZoOEQtRkHQI6xG4/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix orcid: <https://orcid.org/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pehterms: <https://w3id.org/peh/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+sub:Head {
+    this: a np:Nanopublication ;
+        np:hasAssertion sub:assertion ;
+        np:hasProvenance sub:provenance ;
+        np:hasPublicationInfo sub:pubinfo .
+}
+
+sub:assertion {
+    <https://w3id.org/peh/matrices/RAgGBv-AqMjYnH4uvvlW_e1J-EH_aPZoOEQtRkHQI6xG4> a owl:Class ;
+        rdfs:label "sediment" ;
+        dcterms:isPartOf <https://w3id.org/spaces/chemical-exposome-matrix/r/vocabulary> ;
+        rdfs:subClassOf <https://w3id.org/peh/matrices/RA1pfcwPnFNCcg9yYs4RClmzylUCyurYhMT4BYwomb11g> .
+}
+
+sub:provenance {
+    sub:assertion prov:generatedAtTime "2026-07-03T21:19:22.176705+02:00"^^xsd:dateTime ;
+        prov:wasAttributedTo orcid:0000-0001-8327-0142 .
+}
+
+sub:pubinfo {
+    sub:sig npx:hasAlgorithm "RSA" ;
+        npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoYXKCw/BWx+0exERmA7cxc7MUibjOCXzSZOUOquHYk9ugwE2qMo6dYxNCOWWMyge5tqrdqi7kqiTPCNmUhwLzUa35OIhWUNHf6bgF0Giw6nRetEH6ILbXX+l16DCHQjMWeCweZIpnghryEy1kyO6UU03qVZinBByf0UpfoB25ZUWyS2zKJiulVFAFK193Wd5lPsltmaOnmyKoVOA34aTIJkAxWEHrK1OuSuF9UCH+belw+QRNJWFKJcoJ+r8OsFM89+DKncnUuVDx8B04TpDoTby7UQ09608eMUPKOlfi//TfzzG3tgvP8kNNb1yczrwNYPvXnstN3LChLvmMjT2KQIDAQAB" ;
+        npx:hasSignature "VOLobmN5cIoKxKCTjwPZCc4e1xLHkb+j0lBOhgY8WrM+XOWxKb6se93l7lOl/egQ9m+49JMmbQ2EqFelM7qfgFwea8+oHoC8MsW3XCM6arTN3ZP3V4Psb806GLr9wBrj6b/bjFj2YTociPRFOG8hXpRQgtJb8ysVikP3+AKFH26aMiWYmU4+DXzM7U+Bz78n4Gz4/Igo4J8DR63QMHKKOgHZQdifFCe+iyPKKGdKsBdcmbZnWQgfFqLjEXMIR0ggH5NsR8sseypggC5E4YxzgousbPlfW1C+yDg4S9je4pwYfzlziJ6pUK+kVwE7HEY0vj4nz1SwnxWckSdzDQ61qQ==" ;
+        npx:hasSignatureTarget this: ;
+        npx:signedBy <https://w3id.org/np/RArbMo6bMp74oD1SpHhwsDut0n_b_uoNc7QnZWUu8js5I/matrix-bot> .
+    this: rdfs:label "sediment" ;
+        dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+        npx:hasNanopubType pehterms:Matrix ;
+        npx:introduces <https://w3id.org/peh/matrices/RAgGBv-AqMjYnH4uvvlW_e1J-EH_aPZoOEQtRkHQI6xG4> ;
+        prov:generatedAtTime "2026-07-03T21:19:22.176705+02:00"^^xsd:dateTime ;
+        prov:wasAttributedTo <https://w3id.org/np/RArbMo6bMp74oD1SpHhwsDut0n_b_uoNc7QnZWUu8js5I/matrix-bot> .
+}

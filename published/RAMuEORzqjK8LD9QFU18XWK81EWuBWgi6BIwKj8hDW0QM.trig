@@ -1,0 +1,47 @@
+@prefix this: <https://w3id.org/np/RAMuEORzqjK8LD9QFU18XWK81EWuBWgi6BIwKj8hDW0QM> .
+@prefix sub: <https://w3id.org/np/RAMuEORzqjK8LD9QFU18XWK81EWuBWgi6BIwKj8hDW0QM/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix ns1: <http://schema.org/> .
+@prefix orcid: <https://orcid.org/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pehterms: <https://w3id.org/peh/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+sub:Head {
+    this: a np:Nanopublication ;
+        np:hasAssertion sub:assertion ;
+        np:hasProvenance sub:provenance ;
+        np:hasPublicationInfo sub:pubinfo .
+}
+
+sub:assertion {
+    <https://w3id.org/peh/matrices/RAMuEORzqjK8LD9QFU18XWK81EWuBWgi6BIwKj8hDW0QM> a owl:Class ;
+        rdfs:label "dried blood spots",
+            "bloed spot gedroogd"@nl ;
+        dcterms:isPartOf <https://w3id.org/spaces/chemical-exposome-matrix/r/vocabulary> ;
+        ns1:alternateName "dwb" ;
+        rdfs:subClassOf <https://w3id.org/peh/matrices/RAKDUpflxTKHJUZlsFCh-Ab54sP--MYRlc-cb9XI0R4G8> .
+}
+
+sub:provenance {
+    sub:assertion prov:generatedAtTime "2026-07-03T21:19:23.981778+02:00"^^xsd:dateTime ;
+        prov:wasAttributedTo orcid:0000-0001-8327-0142 .
+}
+
+sub:pubinfo {
+    sub:sig npx:hasAlgorithm "RSA" ;
+        npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoYXKCw/BWx+0exERmA7cxc7MUibjOCXzSZOUOquHYk9ugwE2qMo6dYxNCOWWMyge5tqrdqi7kqiTPCNmUhwLzUa35OIhWUNHf6bgF0Giw6nRetEH6ILbXX+l16DCHQjMWeCweZIpnghryEy1kyO6UU03qVZinBByf0UpfoB25ZUWyS2zKJiulVFAFK193Wd5lPsltmaOnmyKoVOA34aTIJkAxWEHrK1OuSuF9UCH+belw+QRNJWFKJcoJ+r8OsFM89+DKncnUuVDx8B04TpDoTby7UQ09608eMUPKOlfi//TfzzG3tgvP8kNNb1yczrwNYPvXnstN3LChLvmMjT2KQIDAQAB" ;
+        npx:hasSignature "WzgrE3zi4E1md+5lElYxevaJGT3tAoOjvrkB4Q3FkHbrVQkjNrLvPJLGEtsQeOHvQnCxtHUu9pcw/ecnFV/rRkV2LLJZlgwTTLHuxo/zpS3iUK/kojmywM2pSxQQUKimmW6N1E72jN+c5wlrxiwUupVLorOBsinC0jjHr7URa33GGo+n4ajlPGZ5GkYWuGejbLdC7xmm2wKa6esoxTisHrdcA8jz0ReGfNCvz/VkdH/fEGgteMoXmSAZlMc0JWlPGzckYuZ6Xrc4US3olheq4gdJGlApQo/oFtJQaAiGpIiWpk20IGmJSHh+OomISlyNjyYo/qBrmuDePELBBmUrZQ==" ;
+        npx:hasSignatureTarget this: ;
+        npx:signedBy <https://w3id.org/np/RArbMo6bMp74oD1SpHhwsDut0n_b_uoNc7QnZWUu8js5I/matrix-bot> .
+    this: rdfs:label "dried blood spots" ;
+        dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+        npx:hasNanopubType pehterms:Matrix ;
+        npx:introduces <https://w3id.org/peh/matrices/RAMuEORzqjK8LD9QFU18XWK81EWuBWgi6BIwKj8hDW0QM> ;
+        prov:generatedAtTime "2026-07-03T21:19:23.981778+02:00"^^xsd:dateTime ;
+        prov:wasAttributedTo <https://w3id.org/np/RArbMo6bMp74oD1SpHhwsDut0n_b_uoNc7QnZWUu8js5I/matrix-bot> .
+}

@@ -1,0 +1,44 @@
+@prefix this: <https://w3id.org/np/RA2aXLICa6EJdbaFMQ4RpEEki-fjmFTxpenqhUspZsIdA> .
+@prefix sub: <https://w3id.org/np/RA2aXLICa6EJdbaFMQ4RpEEki-fjmFTxpenqhUspZsIdA/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix orcid: <https://orcid.org/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pehterms: <https://w3id.org/peh/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+sub:Head {
+    this: a np:Nanopublication ;
+        np:hasAssertion sub:assertion ;
+        np:hasProvenance sub:provenance ;
+        np:hasPublicationInfo sub:pubinfo .
+}
+
+sub:assertion {
+    <https://w3id.org/peh/matrices/RA2aXLICa6EJdbaFMQ4RpEEki-fjmFTxpenqhUspZsIdA> a owl:Class ;
+        rdfs:label "air particulate phase" ;
+        dcterms:isPartOf <https://w3id.org/spaces/chemical-exposome-matrix/r/vocabulary> ;
+        rdfs:subClassOf <https://w3id.org/peh/matrices/RA1NmPPzHrbQcDcCcUSD1c_Jx0gEqIkrym9w6jY0sGsqA> .
+}
+
+sub:provenance {
+    sub:assertion prov:generatedAtTime "2026-07-03T21:19:25.967171+02:00"^^xsd:dateTime ;
+        prov:wasAttributedTo orcid:0000-0001-8327-0142 .
+}
+
+sub:pubinfo {
+    sub:sig npx:hasAlgorithm "RSA" ;
+        npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoYXKCw/BWx+0exERmA7cxc7MUibjOCXzSZOUOquHYk9ugwE2qMo6dYxNCOWWMyge5tqrdqi7kqiTPCNmUhwLzUa35OIhWUNHf6bgF0Giw6nRetEH6ILbXX+l16DCHQjMWeCweZIpnghryEy1kyO6UU03qVZinBByf0UpfoB25ZUWyS2zKJiulVFAFK193Wd5lPsltmaOnmyKoVOA34aTIJkAxWEHrK1OuSuF9UCH+belw+QRNJWFKJcoJ+r8OsFM89+DKncnUuVDx8B04TpDoTby7UQ09608eMUPKOlfi//TfzzG3tgvP8kNNb1yczrwNYPvXnstN3LChLvmMjT2KQIDAQAB" ;
+        npx:hasSignature "QfPq0pMVNr2j6n/Ig96D+BcDtqDrVGjmp9AxeXvAzBOBt9m/SR5XylzoxzyorjtaijCF8AbcwKojk9GzL4pR3sKCdGAiEaKV/42DnnZK3hCGlffaFgvDR4uBzTh2obOJ2YAKP5SNmDc+91epyv1wOleNkpamfnmplSH9TUuptW90uZR0skTL7t0/uL01lELg7l9TSb+w0rwzTkBUVLxn299sL2NJVjoabgEsJFmY3uw/eHfulafr7Opb79ZKF10D74fdnHQz53/gamTIRh0++WkjrlyolBmvf/AaKYvqfMa4plOk6EIGdwzeBXWXxB7kZAEPXBi7NuFvxDODbyNDhQ==" ;
+        npx:hasSignatureTarget this: ;
+        npx:signedBy <https://w3id.org/np/RArbMo6bMp74oD1SpHhwsDut0n_b_uoNc7QnZWUu8js5I/matrix-bot> .
+    this: rdfs:label "air particulate phase" ;
+        dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+        npx:hasNanopubType pehterms:Matrix ;
+        npx:introduces <https://w3id.org/peh/matrices/RA2aXLICa6EJdbaFMQ4RpEEki-fjmFTxpenqhUspZsIdA> ;
+        prov:generatedAtTime "2026-07-03T21:19:25.967171+02:00"^^xsd:dateTime ;
+        prov:wasAttributedTo <https://w3id.org/np/RArbMo6bMp74oD1SpHhwsDut0n_b_uoNc7QnZWUu8js5I/matrix-bot> .
+}

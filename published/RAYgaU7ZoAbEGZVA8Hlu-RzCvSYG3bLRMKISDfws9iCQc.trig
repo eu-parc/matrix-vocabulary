@@ -1,0 +1,47 @@
+@prefix this: <https://w3id.org/np/RAYgaU7ZoAbEGZVA8Hlu-RzCvSYG3bLRMKISDfws9iCQc> .
+@prefix sub: <https://w3id.org/np/RAYgaU7ZoAbEGZVA8Hlu-RzCvSYG3bLRMKISDfws9iCQc/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix ns1: <http://schema.org/> .
+@prefix orcid: <https://orcid.org/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pehterms: <https://w3id.org/peh/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+sub:Head {
+    this: a np:Nanopublication ;
+        np:hasAssertion sub:assertion ;
+        np:hasProvenance sub:provenance ;
+        np:hasPublicationInfo sub:pubinfo .
+}
+
+sub:assertion {
+    <https://w3id.org/peh/matrices/RAYgaU7ZoAbEGZVA8Hlu-RzCvSYG3bLRMKISDfws9iCQc> a owl:Class ;
+        rdfs:label "toenails",
+            "alle teennagels"@nl ;
+        dcterms:isPartOf <https://w3id.org/spaces/chemical-exposome-matrix/r/vocabulary> ;
+        ns1:alternateName "tnal" ;
+        rdfs:subClassOf <https://w3id.org/peh/matrices/RAS7Iz3jzij1Ihp05DYfpOutaaJoFn6whfCx5DLQnrR6E> .
+}
+
+sub:provenance {
+    sub:assertion prov:generatedAtTime "2026-07-03T21:19:15.483283+02:00"^^xsd:dateTime ;
+        prov:wasAttributedTo orcid:0000-0001-8327-0142 .
+}
+
+sub:pubinfo {
+    sub:sig npx:hasAlgorithm "RSA" ;
+        npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoYXKCw/BWx+0exERmA7cxc7MUibjOCXzSZOUOquHYk9ugwE2qMo6dYxNCOWWMyge5tqrdqi7kqiTPCNmUhwLzUa35OIhWUNHf6bgF0Giw6nRetEH6ILbXX+l16DCHQjMWeCweZIpnghryEy1kyO6UU03qVZinBByf0UpfoB25ZUWyS2zKJiulVFAFK193Wd5lPsltmaOnmyKoVOA34aTIJkAxWEHrK1OuSuF9UCH+belw+QRNJWFKJcoJ+r8OsFM89+DKncnUuVDx8B04TpDoTby7UQ09608eMUPKOlfi//TfzzG3tgvP8kNNb1yczrwNYPvXnstN3LChLvmMjT2KQIDAQAB" ;
+        npx:hasSignature "hE9kJB7SJWdjbqA4+Cr1ZWBWcKk9ss2H6HPNBvX9v3wW1+y5mcGi9hwOqY1AVKCI1FOBACm3HLStLZK7nlIki9Ede5gVPRS5jNBafhCuHls224Ho6DlTfLL2N7O3OqAi9rOcG2Nz7MoHujPLJ308nD9rQXe2a5U2ToXW3ubtZQ2SkhfBwwibMuA7eihc91FCJWE5NPbhrCTX7tC7UrDrwELKd4z3mpid+roLOZyuIT5n6/IJXca4jj86qGNj59b8mAKv/Hvh7iemee+0GqLf1HM4ilcdqXhTr76LIFLO6rd8GcrMu0agu//uCUTLKatZR2SWNvxM2t1Iq/nmh5WbmA==" ;
+        npx:hasSignatureTarget this: ;
+        npx:signedBy <https://w3id.org/np/RArbMo6bMp74oD1SpHhwsDut0n_b_uoNc7QnZWUu8js5I/matrix-bot> .
+    this: rdfs:label "toenails" ;
+        dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+        npx:hasNanopubType pehterms:Matrix ;
+        npx:introduces <https://w3id.org/peh/matrices/RAYgaU7ZoAbEGZVA8Hlu-RzCvSYG3bLRMKISDfws9iCQc> ;
+        prov:generatedAtTime "2026-07-03T21:19:15.483283+02:00"^^xsd:dateTime ;
+        prov:wasAttributedTo <https://w3id.org/np/RArbMo6bMp74oD1SpHhwsDut0n_b_uoNc7QnZWUu8js5I/matrix-bot> .
+}

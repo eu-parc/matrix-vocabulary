@@ -1,0 +1,44 @@
+@prefix this: <https://w3id.org/np/RAti6M21zGXJ5ARmtSz04oxAHUUaGySr2R7kqCtH43azQ> .
+@prefix sub: <https://w3id.org/np/RAti6M21zGXJ5ARmtSz04oxAHUUaGySr2R7kqCtH43azQ/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix orcid: <https://orcid.org/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pehterms: <https://w3id.org/peh/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+sub:Head {
+    this: a np:Nanopublication ;
+        np:hasAssertion sub:assertion ;
+        np:hasProvenance sub:provenance ;
+        np:hasPublicationInfo sub:pubinfo .
+}
+
+sub:assertion {
+    <https://w3id.org/peh/matrices/RAti6M21zGXJ5ARmtSz04oxAHUUaGySr2R7kqCtH43azQ> a owl:Class ;
+        rdfs:label "inhalable fraction" ;
+        dcterms:isPartOf <https://w3id.org/spaces/chemical-exposome-matrix/r/vocabulary> ;
+        rdfs:subClassOf <https://w3id.org/peh/matrices/RA2aXLICa6EJdbaFMQ4RpEEki-fjmFTxpenqhUspZsIdA> .
+}
+
+sub:provenance {
+    sub:assertion prov:generatedAtTime "2026-07-03T21:19:34.252920+02:00"^^xsd:dateTime ;
+        prov:wasAttributedTo orcid:0000-0001-8327-0142 .
+}
+
+sub:pubinfo {
+    sub:sig npx:hasAlgorithm "RSA" ;
+        npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoYXKCw/BWx+0exERmA7cxc7MUibjOCXzSZOUOquHYk9ugwE2qMo6dYxNCOWWMyge5tqrdqi7kqiTPCNmUhwLzUa35OIhWUNHf6bgF0Giw6nRetEH6ILbXX+l16DCHQjMWeCweZIpnghryEy1kyO6UU03qVZinBByf0UpfoB25ZUWyS2zKJiulVFAFK193Wd5lPsltmaOnmyKoVOA34aTIJkAxWEHrK1OuSuF9UCH+belw+QRNJWFKJcoJ+r8OsFM89+DKncnUuVDx8B04TpDoTby7UQ09608eMUPKOlfi//TfzzG3tgvP8kNNb1yczrwNYPvXnstN3LChLvmMjT2KQIDAQAB" ;
+        npx:hasSignature "etX3Rfh4oDGvtTbL4WfGsftxD/VWWyTWXi+mqBjxQD2uM4CsiYdguvEm3Qfb5NEBZBYtAejs20MmvcOlZXoy4V9NagXeC40KYpfH7FvugftcGRephPu/nBdu4PVipO0875/Tr9Dy9NC77ZGW80BQEXAnN6M1YYpMRGwXG/jymTdCHifcKYoj9BV3WMFrQk7ylXXe+NXM8r9bge8QIz7htFU1J71NwaaYRlePfsRfgt3oqqskcDKk/7D3UaskPUbDDCviJobFEIL16xKWX0F9N6pHAuUJtH+yu3/jGTVFipP3b9dmMDZuclPTNM19UYmaUE4BrC4UaQpvUAEicIP/GA==" ;
+        npx:hasSignatureTarget this: ;
+        npx:signedBy <https://w3id.org/np/RArbMo6bMp74oD1SpHhwsDut0n_b_uoNc7QnZWUu8js5I/matrix-bot> .
+    this: rdfs:label "inhalable fraction" ;
+        dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+        npx:hasNanopubType pehterms:Matrix ;
+        npx:introduces <https://w3id.org/peh/matrices/RAti6M21zGXJ5ARmtSz04oxAHUUaGySr2R7kqCtH43azQ> ;
+        prov:generatedAtTime "2026-07-03T21:19:34.252920+02:00"^^xsd:dateTime ;
+        prov:wasAttributedTo <https://w3id.org/np/RArbMo6bMp74oD1SpHhwsDut0n_b_uoNc7QnZWUu8js5I/matrix-bot> .
+}

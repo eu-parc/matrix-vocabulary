@@ -1,0 +1,44 @@
+@prefix this: <https://w3id.org/np/RAxy7q3YcliQzC4TBevMXFkM1A0kqGI5bQH0OuhBuP6rQ> .
+@prefix sub: <https://w3id.org/np/RAxy7q3YcliQzC4TBevMXFkM1A0kqGI5bQH0OuhBuP6rQ/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix orcid: <https://orcid.org/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pehterms: <https://w3id.org/peh/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+sub:Head {
+    this: a np:Nanopublication ;
+        np:hasAssertion sub:assertion ;
+        np:hasProvenance sub:provenance ;
+        np:hasPublicationInfo sub:pubinfo .
+}
+
+sub:assertion {
+    <https://w3id.org/peh/matrices/RAxy7q3YcliQzC4TBevMXFkM1A0kqGI5bQH0OuhBuP6rQ> a owl:Class ;
+        rdfs:label "total suspended particles" ;
+        dcterms:isPartOf <https://w3id.org/spaces/chemical-exposome-matrix/r/vocabulary> ;
+        rdfs:subClassOf <https://w3id.org/peh/matrices/RA2aXLICa6EJdbaFMQ4RpEEki-fjmFTxpenqhUspZsIdA> .
+}
+
+sub:provenance {
+    sub:assertion prov:generatedAtTime "2026-07-03T21:19:35.681752+02:00"^^xsd:dateTime ;
+        prov:wasAttributedTo orcid:0000-0001-8327-0142 .
+}
+
+sub:pubinfo {
+    sub:sig npx:hasAlgorithm "RSA" ;
+        npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoYXKCw/BWx+0exERmA7cxc7MUibjOCXzSZOUOquHYk9ugwE2qMo6dYxNCOWWMyge5tqrdqi7kqiTPCNmUhwLzUa35OIhWUNHf6bgF0Giw6nRetEH6ILbXX+l16DCHQjMWeCweZIpnghryEy1kyO6UU03qVZinBByf0UpfoB25ZUWyS2zKJiulVFAFK193Wd5lPsltmaOnmyKoVOA34aTIJkAxWEHrK1OuSuF9UCH+belw+QRNJWFKJcoJ+r8OsFM89+DKncnUuVDx8B04TpDoTby7UQ09608eMUPKOlfi//TfzzG3tgvP8kNNb1yczrwNYPvXnstN3LChLvmMjT2KQIDAQAB" ;
+        npx:hasSignature "gScfVpvhYWROvqWst7z1znEP3xu40KiMhcyzhhucBJTzYnEssW90PZf5lqZ9Gj3/GrzZBcWS7qqoMOfT4WvqNqzl+l7+jrSHgyUDVI48OGFqTIsmKJs/rWoRzrGmZC3kUVvHjfkkaQteOHH+VzcHEp82tUbyUV7zde0qfS261dEecaruPe6Q/0S5MV1LipRnS1CdfBTQ5KhuRJdjD24u6OipK2BMcVL8YP4dKB7Ub+geRMvFLrs2EL1usaaYWeOwqhUjzt6O3EHtMGbdk0Gf8bwapT3lMyMjA6Ox7mS2DGUYGvQ9ij8Xx4dvy9eXiphFzQ4nNtNRnryxNz0lEuGHMw==" ;
+        npx:hasSignatureTarget this: ;
+        npx:signedBy <https://w3id.org/np/RArbMo6bMp74oD1SpHhwsDut0n_b_uoNc7QnZWUu8js5I/matrix-bot> .
+    this: rdfs:label "total suspended particles" ;
+        dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+        npx:hasNanopubType pehterms:Matrix ;
+        npx:introduces <https://w3id.org/peh/matrices/RAxy7q3YcliQzC4TBevMXFkM1A0kqGI5bQH0OuhBuP6rQ> ;
+        prov:generatedAtTime "2026-07-03T21:19:35.681752+02:00"^^xsd:dateTime ;
+        prov:wasAttributedTo <https://w3id.org/np/RArbMo6bMp74oD1SpHhwsDut0n_b_uoNc7QnZWUu8js5I/matrix-bot> .
+}
