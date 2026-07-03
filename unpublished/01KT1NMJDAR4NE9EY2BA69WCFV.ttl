@@ -1,9 +1,0 @@
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix schema1: <http://schema.org/> .
-
-<https://w3id.org/peh/matrices/01KT1NMJDAR4NE9EY2BA69WCFV> a owl:Class ;
-    rdfs:label "plant matrix" ;
-    schema1:description "All plant-based materials in which chemicals can be measured." ;
-    rdfs:subClassOf <https://w3id.org/peh/matrices/01KQ9QXVQP3KQ5SFQ184YYQF5Z> .
-

@@ -1,9 +1,0 @@
-@prefix ns1: <http://schema.org/> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-
-<https://w3id.org/peh/matrices/01KQ9QXVQNNJBQFZTAC8Y3ARD1> a owl:Class ;
-    rdfs:label "environmental matrix" ;
-    ns1:description "All abiotic environmental compartments in which chemicals can be measured" ;
-    rdfs:subClassOf <https://w3id.org/peh/terms/Matrix> .
-

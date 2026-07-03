@@ -1,0 +1,44 @@
+@prefix this: <https://w3id.org/np/RAVOBJckXcVFKA7TEZIWz6A-Hp5fTYOJ1Eim3oHRn75NE> .
+@prefix sub: <https://w3id.org/np/RAVOBJckXcVFKA7TEZIWz6A-Hp5fTYOJ1Eim3oHRn75NE/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix orcid: <https://orcid.org/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pehterms: <https://w3id.org/peh/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+sub:Head {
+    this: a np:Nanopublication ;
+        np:hasAssertion sub:assertion ;
+        np:hasProvenance sub:provenance ;
+        np:hasPublicationInfo sub:pubinfo .
+}
+
+sub:assertion {
+    <https://w3id.org/peh/matrices/RAVOBJckXcVFKA7TEZIWz6A-Hp5fTYOJ1Eim3oHRn75NE> a owl:Class ;
+        rdfs:label "spinach" ;
+        dcterms:isPartOf <https://w3id.org/spaces/chemical-exposome-matrix/r/vocabulary> ;
+        rdfs:subClassOf <https://w3id.org/peh/matrices/RA_TYQHRFgdIlwCiFJl5iEjmdrrNH3uxL69mQTyqA9WQU> .
+}
+
+sub:provenance {
+    sub:assertion prov:generatedAtTime "2026-07-03T21:19:22.467877+02:00"^^xsd:dateTime ;
+        prov:wasAttributedTo orcid:0000-0001-8327-0142 .
+}
+
+sub:pubinfo {
+    sub:sig npx:hasAlgorithm "RSA" ;
+        npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoYXKCw/BWx+0exERmA7cxc7MUibjOCXzSZOUOquHYk9ugwE2qMo6dYxNCOWWMyge5tqrdqi7kqiTPCNmUhwLzUa35OIhWUNHf6bgF0Giw6nRetEH6ILbXX+l16DCHQjMWeCweZIpnghryEy1kyO6UU03qVZinBByf0UpfoB25ZUWyS2zKJiulVFAFK193Wd5lPsltmaOnmyKoVOA34aTIJkAxWEHrK1OuSuF9UCH+belw+QRNJWFKJcoJ+r8OsFM89+DKncnUuVDx8B04TpDoTby7UQ09608eMUPKOlfi//TfzzG3tgvP8kNNb1yczrwNYPvXnstN3LChLvmMjT2KQIDAQAB" ;
+        npx:hasSignature "ML0Ui1gUJErYRuR47OfPoBvytLr7Pwqe9Rz5jnI3ICqPsk2Km6kJ4S69EIcxbYN+bxkodXMddx60ONTOSHO2H3kcRjRi7CBnmSpp1CQyxb2QXThDpZNOdZCTdO7eAtYE5H/btlY/HRwj4b90OKlaqPjs4gsBDnG/VEbSuUwIh3Jked3ZOjjRMOFlQ9/P5xxrI5uDq7oE9FgqGBd2kG3modTmIwQKeRNrXriQ3qDfXjnRkm06tewFMSgSjJRNZrl0QNUFFJnmOsu86XoLMvw/zeHVK5fQNmrvn8OykF4kGlO+mab5o373BROQWvhNO20Yim997U2Pkqb4QWzI0VnjnA==" ;
+        npx:hasSignatureTarget this: ;
+        npx:signedBy <https://w3id.org/np/RArbMo6bMp74oD1SpHhwsDut0n_b_uoNc7QnZWUu8js5I/matrix-bot> .
+    this: rdfs:label "spinach" ;
+        dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+        npx:hasNanopubType pehterms:Matrix ;
+        npx:introduces <https://w3id.org/peh/matrices/RAVOBJckXcVFKA7TEZIWz6A-Hp5fTYOJ1Eim3oHRn75NE> ;
+        prov:generatedAtTime "2026-07-03T21:19:22.467877+02:00"^^xsd:dateTime ;
+        prov:wasAttributedTo <https://w3id.org/np/RArbMo6bMp74oD1SpHhwsDut0n_b_uoNc7QnZWUu8js5I/matrix-bot> .
+}

@@ -1,0 +1,44 @@
+@prefix this: <https://w3id.org/np/RAZafB952xHok6_XpY4CX-pDHw1wYhJxp8Xy2KJcSUwq4> .
+@prefix sub: <https://w3id.org/np/RAZafB952xHok6_XpY4CX-pDHw1wYhJxp8Xy2KJcSUwq4/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix orcid: <https://orcid.org/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pehterms: <https://w3id.org/peh/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+sub:Head {
+    this: a np:Nanopublication ;
+        np:hasAssertion sub:assertion ;
+        np:hasProvenance sub:provenance ;
+        np:hasPublicationInfo sub:pubinfo .
+}
+
+sub:assertion {
+    <https://w3id.org/peh/matrices/RAZafB952xHok6_XpY4CX-pDHw1wYhJxp8Xy2KJcSUwq4> a owl:Class ;
+        rdfs:label "deposition wet" ;
+        dcterms:isPartOf <https://w3id.org/spaces/chemical-exposome-matrix/r/vocabulary> ;
+        rdfs:subClassOf <https://w3id.org/peh/matrices/RASWRwsvJSZ0umkEzg8hd5LElsOfKo3hmHOewiO3_tBeI> .
+}
+
+sub:provenance {
+    sub:assertion prov:generatedAtTime "2026-07-03T21:19:28.191318+02:00"^^xsd:dateTime ;
+        prov:wasAttributedTo orcid:0000-0001-8327-0142 .
+}
+
+sub:pubinfo {
+    sub:sig npx:hasAlgorithm "RSA" ;
+        npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoYXKCw/BWx+0exERmA7cxc7MUibjOCXzSZOUOquHYk9ugwE2qMo6dYxNCOWWMyge5tqrdqi7kqiTPCNmUhwLzUa35OIhWUNHf6bgF0Giw6nRetEH6ILbXX+l16DCHQjMWeCweZIpnghryEy1kyO6UU03qVZinBByf0UpfoB25ZUWyS2zKJiulVFAFK193Wd5lPsltmaOnmyKoVOA34aTIJkAxWEHrK1OuSuF9UCH+belw+QRNJWFKJcoJ+r8OsFM89+DKncnUuVDx8B04TpDoTby7UQ09608eMUPKOlfi//TfzzG3tgvP8kNNb1yczrwNYPvXnstN3LChLvmMjT2KQIDAQAB" ;
+        npx:hasSignature "a2d6+Dpb0J/pG3PNjVreyp8rcVwtnNopeJm71UBl68s080VUq4bTHdLmRZ8/n0cSm17mOgqD2QPAk+R199gkFPM5M0Z25H+Rz0FsYv5Kiv09DTjsU6CbERGPw+P4r1sK9ooIqUhsN2GVcq3vx8rpK5qGKeQeZPmb6TpMtb4NnW7T7oWBJ7LZ5d/Lpbhi+DXWmD+COLJZqyS/ioXjNk7arWTqWlgy8fpFII5ZCt6HM/LfeTpj97ztR2L3Zn4a04/m8y5463tHZrL1E6MElNSEzWeMzb75r8fUq1v9QZSxkYe8vGk6iJ8fbtp+mXy00fWR9WmpTzZ+LHeFVeQ6C/iS1Q==" ;
+        npx:hasSignatureTarget this: ;
+        npx:signedBy <https://w3id.org/np/RArbMo6bMp74oD1SpHhwsDut0n_b_uoNc7QnZWUu8js5I/matrix-bot> .
+    this: rdfs:label "deposition wet" ;
+        dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+        npx:hasNanopubType pehterms:Matrix ;
+        npx:introduces <https://w3id.org/peh/matrices/RAZafB952xHok6_XpY4CX-pDHw1wYhJxp8Xy2KJcSUwq4> ;
+        prov:generatedAtTime "2026-07-03T21:19:28.191318+02:00"^^xsd:dateTime ;
+        prov:wasAttributedTo <https://w3id.org/np/RArbMo6bMp74oD1SpHhwsDut0n_b_uoNc7QnZWUu8js5I/matrix-bot> .
+}

@@ -1,0 +1,44 @@
+@prefix this: <https://w3id.org/np/RA13HftvdIUUqM7Lw-U2M8Wp0sbhnKbhMo-0wezBNo3Eo> .
+@prefix sub: <https://w3id.org/np/RA13HftvdIUUqM7Lw-U2M8Wp0sbhnKbhMo-0wezBNo3Eo/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix orcid: <https://orcid.org/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pehterms: <https://w3id.org/peh/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+sub:Head {
+    this: a np:Nanopublication ;
+        np:hasAssertion sub:assertion ;
+        np:hasProvenance sub:provenance ;
+        np:hasPublicationInfo sub:pubinfo .
+}
+
+sub:assertion {
+    <https://w3id.org/peh/matrices/RA13HftvdIUUqM7Lw-U2M8Wp0sbhnKbhMo-0wezBNo3Eo> a owl:Class ;
+        rdfs:label "A horizon" ;
+        dcterms:isPartOf <https://w3id.org/spaces/chemical-exposome-matrix/r/vocabulary> ;
+        rdfs:subClassOf <https://w3id.org/peh/matrices/RAK5VM0elb32Xjk2uCL2Uh44x4QM8BKu0kubzlqBnA3-Y> .
+}
+
+sub:provenance {
+    sub:assertion prov:generatedAtTime "2026-07-03T21:19:24.986958+02:00"^^xsd:dateTime ;
+        prov:wasAttributedTo orcid:0000-0001-8327-0142 .
+}
+
+sub:pubinfo {
+    sub:sig npx:hasAlgorithm "RSA" ;
+        npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoYXKCw/BWx+0exERmA7cxc7MUibjOCXzSZOUOquHYk9ugwE2qMo6dYxNCOWWMyge5tqrdqi7kqiTPCNmUhwLzUa35OIhWUNHf6bgF0Giw6nRetEH6ILbXX+l16DCHQjMWeCweZIpnghryEy1kyO6UU03qVZinBByf0UpfoB25ZUWyS2zKJiulVFAFK193Wd5lPsltmaOnmyKoVOA34aTIJkAxWEHrK1OuSuF9UCH+belw+QRNJWFKJcoJ+r8OsFM89+DKncnUuVDx8B04TpDoTby7UQ09608eMUPKOlfi//TfzzG3tgvP8kNNb1yczrwNYPvXnstN3LChLvmMjT2KQIDAQAB" ;
+        npx:hasSignature "VMCWIElCbruX+SowSqZmDG8f+fZunKaYIoa87H5hGDrzhAVb/f1Ct90gt/YG4P9bOkvFa1slkfPEq6IisJ2ecn8V9yEmJAEppiREwDcVCZZWuAE6buNVUM4lXot2IKnMpZWUeRoOlQKZinbreflbhAKuFstJTe/Ao/m1KfxTvm6fXXCsvZngTaqtg9XNnYS7JXICPsaOxM0fM7nJm4bTR43+27KPpxSDUZNumwkQnW9Qifr6Ih67ThKUD5LKi8T2LwyCMM2+5DUilHFgy4aI2++TOc1RGx49wEB/tEsZmFCjupYkwB6/Se7qj9uRJ0zLo2HM00wdVyAFIccfj/ixdw==" ;
+        npx:hasSignatureTarget this: ;
+        npx:signedBy <https://w3id.org/np/RArbMo6bMp74oD1SpHhwsDut0n_b_uoNc7QnZWUu8js5I/matrix-bot> .
+    this: rdfs:label "A horizon" ;
+        dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+        npx:hasNanopubType pehterms:Matrix ;
+        npx:introduces <https://w3id.org/peh/matrices/RA13HftvdIUUqM7Lw-U2M8Wp0sbhnKbhMo-0wezBNo3Eo> ;
+        prov:generatedAtTime "2026-07-03T21:19:24.986958+02:00"^^xsd:dateTime ;
+        prov:wasAttributedTo <https://w3id.org/np/RArbMo6bMp74oD1SpHhwsDut0n_b_uoNc7QnZWUu8js5I/matrix-bot> .
+}

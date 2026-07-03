@@ -1,0 +1,47 @@
+@prefix this: <https://w3id.org/np/RAKDUpflxTKHJUZlsFCh-Ab54sP--MYRlc-cb9XI0R4G8> .
+@prefix sub: <https://w3id.org/np/RAKDUpflxTKHJUZlsFCh-Ab54sP--MYRlc-cb9XI0R4G8/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix ns1: <http://schema.org/> .
+@prefix orcid: <https://orcid.org/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pehterms: <https://w3id.org/peh/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+sub:Head {
+    this: a np:Nanopublication ;
+        np:hasAssertion sub:assertion ;
+        np:hasProvenance sub:provenance ;
+        np:hasPublicationInfo sub:pubinfo .
+}
+
+sub:assertion {
+    <https://w3id.org/peh/matrices/RAKDUpflxTKHJUZlsFCh-Ab54sP--MYRlc-cb9XI0R4G8> a owl:Class ;
+        rdfs:label "whole blood",
+            "volbloed"@nl ;
+        dcterms:isPartOf <https://w3id.org/spaces/chemical-exposome-matrix/r/vocabulary> ;
+        ns1:alternateName "wbld" ;
+        rdfs:subClassOf <https://w3id.org/peh/matrices/RACjmW-FuXnJiFjOh6ZxNjXmvBNU7sjOn9oM20wPobePo> .
+}
+
+sub:provenance {
+    sub:assertion prov:generatedAtTime "2026-07-03T21:19:19.747648+02:00"^^xsd:dateTime ;
+        prov:wasAttributedTo orcid:0000-0001-8327-0142 .
+}
+
+sub:pubinfo {
+    sub:sig npx:hasAlgorithm "RSA" ;
+        npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoYXKCw/BWx+0exERmA7cxc7MUibjOCXzSZOUOquHYk9ugwE2qMo6dYxNCOWWMyge5tqrdqi7kqiTPCNmUhwLzUa35OIhWUNHf6bgF0Giw6nRetEH6ILbXX+l16DCHQjMWeCweZIpnghryEy1kyO6UU03qVZinBByf0UpfoB25ZUWyS2zKJiulVFAFK193Wd5lPsltmaOnmyKoVOA34aTIJkAxWEHrK1OuSuF9UCH+belw+QRNJWFKJcoJ+r8OsFM89+DKncnUuVDx8B04TpDoTby7UQ09608eMUPKOlfi//TfzzG3tgvP8kNNb1yczrwNYPvXnstN3LChLvmMjT2KQIDAQAB" ;
+        npx:hasSignature "YFPQjlEKaFTU1424B+KS3SvF883M0q/GfdgRhIMLG9CMeTbGfWSjOd0ok756emz0QoubULjl31j9/I7ZHeTAhv8yWfUIcj0avEETxnxB4+GVAvZYeOK8PmUdMWb3OigYnnpydlGVpFbyS0VZ6b9Ixk5J+qJ+PPDnBPWI3g57xE3UbbyKrR0lduyxUZaXFc8ppDboGQAsO4bDitGVEE9Urt4wSYZ7YqEsdHzPg+qlWNO6bGJLVsisE3WZHxFX9Ds8D8PhtZLQKUHzbNHA08WeE6PhMYAzwkmz43eaK5oPrOKxbpT3csjd/BV6t5wnpXyPFaqBxujxBoC9ulTPMibm4w==" ;
+        npx:hasSignatureTarget this: ;
+        npx:signedBy <https://w3id.org/np/RArbMo6bMp74oD1SpHhwsDut0n_b_uoNc7QnZWUu8js5I/matrix-bot> .
+    this: rdfs:label "whole blood" ;
+        dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+        npx:hasNanopubType pehterms:Matrix ;
+        npx:introduces <https://w3id.org/peh/matrices/RAKDUpflxTKHJUZlsFCh-Ab54sP--MYRlc-cb9XI0R4G8> ;
+        prov:generatedAtTime "2026-07-03T21:19:19.747648+02:00"^^xsd:dateTime ;
+        prov:wasAttributedTo <https://w3id.org/np/RArbMo6bMp74oD1SpHhwsDut0n_b_uoNc7QnZWUu8js5I/matrix-bot> .
+}

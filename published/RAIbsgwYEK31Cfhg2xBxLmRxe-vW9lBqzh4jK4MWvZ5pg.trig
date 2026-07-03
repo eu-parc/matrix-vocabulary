@@ -1,0 +1,44 @@
+@prefix this: <https://w3id.org/np/RAIbsgwYEK31Cfhg2xBxLmRxe-vW9lBqzh4jK4MWvZ5pg> .
+@prefix sub: <https://w3id.org/np/RAIbsgwYEK31Cfhg2xBxLmRxe-vW9lBqzh4jK4MWvZ5pg/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix orcid: <https://orcid.org/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pehterms: <https://w3id.org/peh/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+sub:Head {
+    this: a np:Nanopublication ;
+        np:hasAssertion sub:assertion ;
+        np:hasProvenance sub:provenance ;
+        np:hasPublicationInfo sub:pubinfo .
+}
+
+sub:assertion {
+    <https://w3id.org/peh/matrices/RAIbsgwYEK31Cfhg2xBxLmRxe-vW9lBqzh4jK4MWvZ5pg> a owl:Class ;
+        rdfs:label "radish" ;
+        dcterms:isPartOf <https://w3id.org/spaces/chemical-exposome-matrix/r/vocabulary> ;
+        rdfs:subClassOf <https://w3id.org/peh/matrices/RA_TYQHRFgdIlwCiFJl5iEjmdrrNH3uxL69mQTyqA9WQU> .
+}
+
+sub:provenance {
+    sub:assertion prov:generatedAtTime "2026-07-03T21:19:21.860655+02:00"^^xsd:dateTime ;
+        prov:wasAttributedTo orcid:0000-0001-8327-0142 .
+}
+
+sub:pubinfo {
+    sub:sig npx:hasAlgorithm "RSA" ;
+        npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoYXKCw/BWx+0exERmA7cxc7MUibjOCXzSZOUOquHYk9ugwE2qMo6dYxNCOWWMyge5tqrdqi7kqiTPCNmUhwLzUa35OIhWUNHf6bgF0Giw6nRetEH6ILbXX+l16DCHQjMWeCweZIpnghryEy1kyO6UU03qVZinBByf0UpfoB25ZUWyS2zKJiulVFAFK193Wd5lPsltmaOnmyKoVOA34aTIJkAxWEHrK1OuSuF9UCH+belw+QRNJWFKJcoJ+r8OsFM89+DKncnUuVDx8B04TpDoTby7UQ09608eMUPKOlfi//TfzzG3tgvP8kNNb1yczrwNYPvXnstN3LChLvmMjT2KQIDAQAB" ;
+        npx:hasSignature "QNjJeDLazhS5jMNEEb2B3Yf8dD36on9gSwN79Id7s490+1je0z0VO3DBCFb4h7DuoDIYs94T1Refbc5Ax19T7UsfeoJ/9TNJXVVw2GvIvES+Y4ePXRQJDMChhgwGiyDQKAXHu2kWg6Rc4IOAyUMKwOqTr04yGHjFGBiR/JHqQ4aHllm6YB8T4tcZuIF7iDVRMo6D+EiKRraJfeeh9PP2nCeFgJ5Rn7/BqcmqhshQ6Azdg4DlCOt1EzZssAnG8ewDoS2S9ua12/R69WOF48apgrEtwaN0YBJFm+CDg94tjIoQaUOtEJ3GVaixZ5QQX2y+CiqQwWszpb33WlFr6+ii7Q==" ;
+        npx:hasSignatureTarget this: ;
+        npx:signedBy <https://w3id.org/np/RArbMo6bMp74oD1SpHhwsDut0n_b_uoNc7QnZWUu8js5I/matrix-bot> .
+    this: rdfs:label "radish" ;
+        dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+        npx:hasNanopubType pehterms:Matrix ;
+        npx:introduces <https://w3id.org/peh/matrices/RAIbsgwYEK31Cfhg2xBxLmRxe-vW9lBqzh4jK4MWvZ5pg> ;
+        prov:generatedAtTime "2026-07-03T21:19:21.860655+02:00"^^xsd:dateTime ;
+        prov:wasAttributedTo <https://w3id.org/np/RArbMo6bMp74oD1SpHhwsDut0n_b_uoNc7QnZWUu8js5I/matrix-bot> .
+}

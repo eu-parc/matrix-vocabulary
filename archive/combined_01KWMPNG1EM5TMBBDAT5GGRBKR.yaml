@@ -1,0 +1,623 @@
+matrix_subclasses:
+- id: https://w3id.org/peh/matrices/atmospheric-matrix
+  name: atmospheric matrix
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RA-fRSJZhT-OdospP_TRivM-L_tO-YsfYRBb_1jdfR9kY
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/3c45881163
+  short_name: air
+  name: air
+  parent_matrices:
+  - https://w3id.org/peh/matrices/atmospheric-matrix
+  translations:
+  - property_name: name
+    language: nl
+    translated_value: lucht
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/air-total
+  name: air total
+  parent_matrices:
+  - https://w3id.org/peh/matrices/3c45881163
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/air-gas-phase
+  name: air gas phase
+  parent_matrices:
+  - https://w3id.org/peh/matrices/3c45881163
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/air-particulate-phase
+  name: air particulate phase
+  parent_matrices:
+  - https://w3id.org/peh/matrices/3c45881163
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/total-suspended-particles
+  name: total suspended particles
+  parent_matrices:
+  - https://w3id.org/peh/matrices/air-particulate-phase
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/pm10
+  name: PM10
+  parent_matrices:
+  - https://w3id.org/peh/matrices/air-particulate-phase
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/pm2-5
+  name: PM2.5
+  parent_matrices:
+  - https://w3id.org/peh/matrices/air-particulate-phase
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/inhalable-fraction
+  name: inhalable fraction
+  parent_matrices:
+  - https://w3id.org/peh/matrices/air-particulate-phase
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/respirable-fraction
+  name: respirable fraction
+  parent_matrices:
+  - https://w3id.org/peh/matrices/air-particulate-phase
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/passive-sampler-fraction
+  name: passive sampler fraction
+  parent_matrices:
+  - https://w3id.org/peh/matrices/3c45881163
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/atmospheric-deposition
+  name: atmospheric deposition
+  parent_matrices:
+  - https://w3id.org/peh/matrices/atmospheric-matrix
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/deposition-total
+  name: deposition total
+  parent_matrices:
+  - https://w3id.org/peh/matrices/atmospheric-deposition
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/deposition-wet
+  name: deposition wet
+  parent_matrices:
+  - https://w3id.org/peh/matrices/atmospheric-deposition
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/dust
+  short_name: dust
+  name: dust
+  parent_matrices:
+  - https://w3id.org/peh/matrices/atmospheric-matrix
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/surface-dust
+  short_name: surface dust
+  name: surface dust
+  parent_matrices:
+  - https://w3id.org/peh/matrices/dust
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/floor-dust
+  short_name: floor dust
+  name: floor dust
+  parent_matrices:
+  - https://w3id.org/peh/matrices/dust
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/aquatic-matrix
+  name: aquatic matrix
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RA-fRSJZhT-OdospP_TRivM-L_tO-YsfYRBb_1jdfR9kY
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/9460370bb0
+  short_name: water
+  name: water
+  parent_matrices:
+  - https://w3id.org/peh/matrices/aquatic-matrix
+  translations:
+  - property_name: name
+    language: nl
+    translated_value: water
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/water-total
+  name: water total
+  parent_matrices:
+  - https://w3id.org/peh/matrices/9460370bb0
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/passive-water-sampler-fraction
+  name: passive water sampler fraction
+  parent_matrices:
+  - https://w3id.org/peh/matrices/9460370bb0
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/sediment
+  name: sediment
+  parent_matrices:
+  - https://w3id.org/peh/matrices/aquatic-matrix
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/sediment-total
+  name: sediment total
+  parent_matrices:
+  - https://w3id.org/peh/matrices/sediment
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/terrestrial-matrix
+  name: terrestrial matrix
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RA-fRSJZhT-OdospP_TRivM-L_tO-YsfYRBb_1jdfR9kY
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/cf6c9df68d
+  short_name: soil
+  name: soil
+  parent_matrices:
+  - https://w3id.org/peh/matrices/terrestrial-matrix
+  translations:
+  - property_name: name
+    language: nl
+    translated_value: grond
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/soil-profile
+  name: soil profile
+  parent_matrices:
+  - https://w3id.org/peh/matrices/cf6c9df68d
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/o-horizon
+  name: O horizon
+  parent_matrices:
+  - https://w3id.org/peh/matrices/cf6c9df68d
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/a-horizon
+  name: A horizon
+  parent_matrices:
+  - https://w3id.org/peh/matrices/cf6c9df68d
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/e-horizon
+  name: E horizon
+  parent_matrices:
+  - https://w3id.org/peh/matrices/cf6c9df68d
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/b-horizon
+  name: B horizon
+  parent_matrices:
+  - https://w3id.org/peh/matrices/cf6c9df68d
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/c-horizon
+  name: C horizon
+  parent_matrices:
+  - https://w3id.org/peh/matrices/cf6c9df68d
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/r-horizon
+  name: R horizon
+  parent_matrices:
+  - https://w3id.org/peh/matrices/cf6c9df68d
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/s-horizon
+  name: S horizon
+  parent_matrices:
+  - https://w3id.org/peh/matrices/cf6c9df68d
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/h-horizon
+  name: H horizon
+  parent_matrices:
+  - https://w3id.org/peh/matrices/cf6c9df68d
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/compost
+  name: compost
+  parent_matrices:
+  - https://w3id.org/peh/matrices/terrestrial-matrix
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/plant-tissue
+  name: plant tissue
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAfJMLEKnVj-xx_PJhMZcKEYONp6CrV9WPEEqf99YbMb4
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/whole-plant
+  name: whole plant
+  parent_matrices:
+  - https://w3id.org/peh/matrices/plant-tissue
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/seed
+  name: seed
+  parent_matrices:
+  - https://w3id.org/peh/matrices/whole-plant
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/leaves
+  name: leaves
+  parent_matrices:
+  - https://w3id.org/peh/matrices/whole-plant
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/needles
+  name: needles
+  parent_matrices:
+  - https://w3id.org/peh/matrices/whole-plant
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/root
+  name: root
+  parent_matrices:
+  - https://w3id.org/peh/matrices/whole-plant
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/fruit
+  name: fruit
+  parent_matrices:
+  - https://w3id.org/peh/matrices/whole-plant
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/bark
+  name: bark
+  parent_matrices:
+  - https://w3id.org/peh/matrices/whole-plant
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/wood
+  name: wood
+  parent_matrices:
+  - https://w3id.org/peh/matrices/whole-plant
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/radish
+  name: radish
+  parent_matrices:
+  - https://w3id.org/peh/matrices/plant-tissue
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/spinach
+  name: spinach
+  parent_matrices:
+  - https://w3id.org/peh/matrices/plant-tissue
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/beans
+  name: beans
+  parent_matrices:
+  - https://w3id.org/peh/matrices/plant-tissue
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/zucchini
+  name: zucchini
+  parent_matrices:
+  - https://w3id.org/peh/matrices/plant-tissue
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/nuts
+  name: nuts
+  parent_matrices:
+  - https://w3id.org/peh/matrices/plant-tissue
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/animal-tissue
+  name: animal tissue
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAoSsPdY12TYwXc9GZ_tRtO9HnI9R00M0MhqjIEl3S8c0
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/animal-blood
+  name: blood
+  parent_matrices:
+  - https://w3id.org/peh/matrices/animal-tissue
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/liver
+  name: liver
+  parent_matrices:
+  - https://w3id.org/peh/matrices/animal-tissue
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/kidney
+  name: kidney
+  parent_matrices:
+  - https://w3id.org/peh/matrices/animal-tissue
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/muscle
+  name: muscle
+  parent_matrices:
+  - https://w3id.org/peh/matrices/animal-tissue
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/fat
+  name: fat
+  parent_matrices:
+  - https://w3id.org/peh/matrices/animal-tissue
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/animal-hair
+  name: hair
+  parent_matrices:
+  - https://w3id.org/peh/matrices/animal-tissue
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/bone
+  name: bone
+  parent_matrices:
+  - https://w3id.org/peh/matrices/animal-tissue
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/0e9312087f
+  short_name: egg
+  name: eggs
+  parent_matrices:
+  - https://w3id.org/peh/matrices/animal-tissue
+  translations:
+  - property_name: name
+    language: nl
+    translated_value: kippenei
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/6b157916b4
+  short_name: bld
+  name: blood
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAQP5G8v9lpCFpvfYLiPUDR3_H6geD1Q57_qUjeVm3jJI
+  translations:
+  - property_name: name
+    language: nl
+    translated_value: bloed
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/f9b8d97e48
+  short_name: wbld
+  name: whole blood
+  parent_matrices:
+  - https://w3id.org/peh/matrices/6b157916b4
+  translations:
+  - property_name: name
+    language: nl
+    translated_value: volbloed
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/85afaab5f3
+  short_name: dwb
+  name: dried blood spots
+  parent_matrices:
+  - https://w3id.org/peh/matrices/f9b8d97e48
+  translations:
+  - property_name: name
+    language: nl
+    translated_value: bloed spot gedroogd
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/6685e16510
+  short_name: vams
+  name: volumetric absorptive microsample
+  parent_matrices:
+  - https://w3id.org/peh/matrices/f9b8d97e48
+  translations:
+  - property_name: name
+    language: nl
+    translated_value: volumetrische absorptieve microsample
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/7c9df80123
+  short_name: ser
+  name: blood serum
+  parent_matrices:
+  - https://w3id.org/peh/matrices/6b157916b4
+  translations:
+  - property_name: name
+    language: nl
+    translated_value: bloedserum
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/5cfdb867e9
+  short_name: pls
+  name: blood plasma
+  parent_matrices:
+  - https://w3id.org/peh/matrices/6b157916b4
+  translations:
+  - property_name: name
+    language: nl
+    translated_value: bloedplasma
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/99be496ab9
+  short_name: wbc
+  name: blood cells
+  parent_matrices:
+  - https://w3id.org/peh/matrices/6b157916b4
+  translations:
+  - property_name: name
+    language: nl
+    translated_value: bloedcellen
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/white-blood-cells
+  short_name: wbc
+  name: white blood cells
+  parent_matrices:
+  - https://w3id.org/peh/matrices/99be496ab9
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/6a49f67ed8
+  short_name: rbc
+  name: red blood cells
+  parent_matrices:
+  - https://w3id.org/peh/matrices/99be496ab9
+  translations:
+  - property_name: name
+    language: nl
+    translated_value: rode bloedcellen
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/1c6b3cd2ac
+  short_name: crd
+  name: cord blood
+  parent_matrices:
+  - https://w3id.org/peh/matrices/6b157916b4
+  translations:
+  - property_name: name
+    language: nl
+    translated_value: navelstrengbloed
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/a8b88464e5
+  short_name: crd-wbld
+  name: cord whole blood
+  parent_matrices:
+  - https://w3id.org/peh/matrices/1c6b3cd2ac
+  translations:
+  - property_name: name
+    language: nl
+    translated_value: navelstrengbloed-volbloed
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/8e113caded
+  short_name: crd-ser
+  name: cord serum
+  parent_matrices:
+  - https://w3id.org/peh/matrices/1c6b3cd2ac
+  translations:
+  - property_name: name
+    language: nl
+    translated_value: navelstrengbloed-serum
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/87cd3c0eee
+  short_name: crd-pls
+  name: cord plasma
+  parent_matrices:
+  - https://w3id.org/peh/matrices/1c6b3cd2ac
+  translations:
+  - property_name: name
+    language: nl
+    translated_value: navelstreng bloedplasma
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/b9aa273080
+  short_name: crd-bldc
+  name: cord blood cells
+  parent_matrices:
+  - https://w3id.org/peh/matrices/1c6b3cd2ac
+  translations:
+  - property_name: name
+    language: nl
+    translated_value: navelstreng bloed cellen
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/3e88197d1d
+  short_name: ur
+  name: urine
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAQP5G8v9lpCFpvfYLiPUDR3_H6geD1Q57_qUjeVm3jJI
+  translations:
+  - property_name: name
+    language: nl
+    translated_value: urine
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/627fcdb6cc
+  short_name: stl
+  name: stool
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAQP5G8v9lpCFpvfYLiPUDR3_H6geD1Q57_qUjeVm3jJI
+  translations:
+  - property_name: name
+    language: nl
+    translated_value: stoelgang
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/meconium
+  short_name: mec
+  name: meconium
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAQP5G8v9lpCFpvfYLiPUDR3_H6geD1Q57_qUjeVm3jJI
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/bd9a2916f0
+  short_name: sem
+  name: semen
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAQP5G8v9lpCFpvfYLiPUDR3_H6geD1Q57_qUjeVm3jJI
+  translations:
+  - property_name: name
+    language: nl
+    translated_value: zaad
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/c12e01f2a1
+  short_name: sal
+  name: saliva
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAQP5G8v9lpCFpvfYLiPUDR3_H6geD1Q57_qUjeVm3jJI
+  translations:
+  - property_name: name
+    language: nl
+    translated_value: speeksel
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/sputum
+  short_name: spt
+  name: sputum
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAQP5G8v9lpCFpvfYLiPUDR3_H6geD1Q57_qUjeVm3jJI
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/93122a9e4a
+  short_name: nmuc
+  name: nasal mucus
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAQP5G8v9lpCFpvfYLiPUDR3_H6geD1Q57_qUjeVm3jJI
+  translations:
+  - property_name: name
+    language: nl
+    translated_value: neusslijm
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/0842438558
+  short_name: bmk
+  name: breast milk
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAQP5G8v9lpCFpvfYLiPUDR3_H6geD1Q57_qUjeVm3jJI
+  translations:
+  - property_name: name
+    language: nl
+    translated_value: moedermelk
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/breath
+  name: breath
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAQP5G8v9lpCFpvfYLiPUDR3_H6geD1Q57_qUjeVm3jJI
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/01e40bb5c7
+  short_name: ebc
+  name: exhaled breath condensate
+  parent_matrices:
+  - https://w3id.org/peh/matrices/breath
+  translations:
+  - property_name: name
+    language: nl
+    translated_value: uitgeademde lucht condensaat
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/7638e20f13
+  short_name: umct
+  name: umbilical cord tissue
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAi949d7yjXol2LDmFJ4c9GGyzann2cM-gWOasXu90e5o
+  translations:
+  - property_name: name
+    language: nl
+    translated_value: weefsel van navelstreng
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/60443f67c6
+  short_name: plct
+  name: placenta
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAi949d7yjXol2LDmFJ4c9GGyzann2cM-gWOasXu90e5o
+  translations:
+  - property_name: name
+    language: nl
+    translated_value: placenta weefsel
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/f0357a3f15
+  short_name: amn
+  name: amniotic fluid
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAi949d7yjXol2LDmFJ4c9GGyzann2cM-gWOasXu90e5o
+  translations:
+  - property_name: name
+    language: nl
+    translated_value: vruchtwater
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/c46335eb26
+  short_name: adi
+  name: adipose tissue
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAi949d7yjXol2LDmFJ4c9GGyzann2cM-gWOasXu90e5o
+  translations:
+  - property_name: name
+    language: nl
+    translated_value: vetweefsel/vet
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/2510c39011
+  short_name: har
+  name: hair
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RArqXjsWKq1YgDeEYPhQq6qa7jL-PoIBtebLBq1CSTA8k
+  translations:
+  - property_name: name
+    language: nl
+    translated_value: haar
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/7b8b965ad4
+  short_name: nal
+  name: nails
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RArqXjsWKq1YgDeEYPhQq6qa7jL-PoIBtebLBq1CSTA8k
+  translations:
+  - property_name: name
+    language: nl
+    translated_value: nagel
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/fingernails
+  short_name: fnal
+  name: fingernails
+  parent_matrices:
+  - https://w3id.org/peh/matrices/7b8b965ad4
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/44bff383cf
+  short_name: tnal
+  name: toenails
+  parent_matrices:
+  - https://w3id.org/peh/matrices/7b8b965ad4
+  translations:
+  - property_name: name
+    language: nl
+    translated_value: alle teennagels
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/d4f5c2c948
+  short_name: hnal
+  name: big toe nail
+  parent_matrices:
+  - https://w3id.org/peh/matrices/7b8b965ad4
+  translations:
+  - property_name: name
+    language: nl
+    translated_value: grote teen nagel
+  suggester: https://orcid.org/0000-0001-8327-0142

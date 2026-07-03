@@ -1,0 +1,44 @@
+@prefix this: <https://w3id.org/np/RAJrcdBbJmAwgFCvE7H6LHtzZMvi-wJUk5czUGHKEtlEQ> .
+@prefix sub: <https://w3id.org/np/RAJrcdBbJmAwgFCvE7H6LHtzZMvi-wJUk5czUGHKEtlEQ/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix orcid: <https://orcid.org/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pehterms: <https://w3id.org/peh/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+sub:Head {
+    this: a np:Nanopublication ;
+        np:hasAssertion sub:assertion ;
+        np:hasProvenance sub:provenance ;
+        np:hasPublicationInfo sub:pubinfo .
+}
+
+sub:assertion {
+    <https://w3id.org/peh/matrices/RAJrcdBbJmAwgFCvE7H6LHtzZMvi-wJUk5czUGHKEtlEQ> a owl:Class ;
+        rdfs:label "O horizon" ;
+        dcterms:isPartOf <https://w3id.org/spaces/chemical-exposome-matrix/r/vocabulary> ;
+        rdfs:subClassOf <https://w3id.org/peh/matrices/RAK5VM0elb32Xjk2uCL2Uh44x4QM8BKu0kubzlqBnA3-Y> .
+}
+
+sub:provenance {
+    sub:assertion prov:generatedAtTime "2026-07-03T21:19:30.701142+02:00"^^xsd:dateTime ;
+        prov:wasAttributedTo orcid:0000-0001-8327-0142 .
+}
+
+sub:pubinfo {
+    sub:sig npx:hasAlgorithm "RSA" ;
+        npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoYXKCw/BWx+0exERmA7cxc7MUibjOCXzSZOUOquHYk9ugwE2qMo6dYxNCOWWMyge5tqrdqi7kqiTPCNmUhwLzUa35OIhWUNHf6bgF0Giw6nRetEH6ILbXX+l16DCHQjMWeCweZIpnghryEy1kyO6UU03qVZinBByf0UpfoB25ZUWyS2zKJiulVFAFK193Wd5lPsltmaOnmyKoVOA34aTIJkAxWEHrK1OuSuF9UCH+belw+QRNJWFKJcoJ+r8OsFM89+DKncnUuVDx8B04TpDoTby7UQ09608eMUPKOlfi//TfzzG3tgvP8kNNb1yczrwNYPvXnstN3LChLvmMjT2KQIDAQAB" ;
+        npx:hasSignature "O6/PYHvB6hvmgAFplK0gidmfzFqqQ8OTSYPKvuMq5gpUh7X9gxJW9fNoPZmfqcgwBeEW2zZFayfJsUHNKBo64eya6Ay9bqSDuiwufSzh0DaOF4DY9Tf9ZCL97o3UFD+5XuXgbL3gF0kVgPx8GAddDLBJUdDaCvuBkbQ5895Iw6f1tVDAjEDpdwhX2ahZ+hyvH/aT1yCczwvaygxeNhghXaZzVYr/rrRdkoOxZGSjlOtutr4/0WLCoY5uLeOWp6f8ZDhjaA86k1S5kPfv0+RMh/4ZA0OAu5xc0Z3iZHBq7V7CjNQsDUydEUmTW+9ge7y6W4BCKiNw/SVMcRTHhfCJ6Q==" ;
+        npx:hasSignatureTarget this: ;
+        npx:signedBy <https://w3id.org/np/RArbMo6bMp74oD1SpHhwsDut0n_b_uoNc7QnZWUu8js5I/matrix-bot> .
+    this: rdfs:label "O horizon" ;
+        dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+        npx:hasNanopubType pehterms:Matrix ;
+        npx:introduces <https://w3id.org/peh/matrices/RAJrcdBbJmAwgFCvE7H6LHtzZMvi-wJUk5czUGHKEtlEQ> ;
+        prov:generatedAtTime "2026-07-03T21:19:30.701142+02:00"^^xsd:dateTime ;
+        prov:wasAttributedTo <https://w3id.org/np/RArbMo6bMp74oD1SpHhwsDut0n_b_uoNc7QnZWUu8js5I/matrix-bot> .
+}

@@ -1,0 +1,43 @@
+@prefix this: <https://w3id.org/np/RAC1dtx3t1m9kMn-N4Fe0WrPZxzHoebeTTFW23rNQC8b0> .
+@prefix sub: <https://w3id.org/np/RAC1dtx3t1m9kMn-N4Fe0WrPZxzHoebeTTFW23rNQC8b0/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix orcid: <https://orcid.org/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pehterms: <https://w3id.org/peh/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+sub:Head {
+    this: a np:Nanopublication ;
+        np:hasAssertion sub:assertion ;
+        np:hasProvenance sub:provenance ;
+        np:hasPublicationInfo sub:pubinfo .
+}
+
+sub:assertion {
+    <https://w3id.org/peh/matrices/RAC1dtx3t1m9kMn-N4Fe0WrPZxzHoebeTTFW23rNQC8b0> a owl:Class ;
+        rdfs:label "animal tissue" ;
+        dcterms:isPartOf <https://w3id.org/spaces/chemical-exposome-matrix/r/vocabulary> .
+}
+
+sub:provenance {
+    sub:assertion prov:generatedAtTime "2026-07-03T21:19:10.378047+02:00"^^xsd:dateTime ;
+        prov:wasAttributedTo orcid:0000-0001-8327-0142 .
+}
+
+sub:pubinfo {
+    sub:sig npx:hasAlgorithm "RSA" ;
+        npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoYXKCw/BWx+0exERmA7cxc7MUibjOCXzSZOUOquHYk9ugwE2qMo6dYxNCOWWMyge5tqrdqi7kqiTPCNmUhwLzUa35OIhWUNHf6bgF0Giw6nRetEH6ILbXX+l16DCHQjMWeCweZIpnghryEy1kyO6UU03qVZinBByf0UpfoB25ZUWyS2zKJiulVFAFK193Wd5lPsltmaOnmyKoVOA34aTIJkAxWEHrK1OuSuF9UCH+belw+QRNJWFKJcoJ+r8OsFM89+DKncnUuVDx8B04TpDoTby7UQ09608eMUPKOlfi//TfzzG3tgvP8kNNb1yczrwNYPvXnstN3LChLvmMjT2KQIDAQAB" ;
+        npx:hasSignature "J11G6wwrQhcaSz1VzJW1J9REbtRE3IhnKFE/ETgnHBruhsAaX1Em4FWNK0HN0BA1qbfGakxMuVXIx/VbfEseNTmJYAh8cxLFpwDa7GruCFrgYuXEmLl80jUX0MRZEXUrijWHoa2/Ns63fGZ+MNqSJ1NlSxYotL8xvEnDBk4n+Z288V67dtl7ox8REbELZXEouVKVTHtlbSiJ9rG9ruKjCkllJmuheFqXbmJlAqrOpJjirlgXwJs25zo3cVzlOXBKva+Fhr3dh6u+kXS0Qy5TaI90IMK+yDaBCMXioBXlKEgVBTSfwlinhtNjD8fGX8I0K5qr1RKDiUrpo70WKBh6Cg==" ;
+        npx:hasSignatureTarget this: ;
+        npx:signedBy <https://w3id.org/np/RArbMo6bMp74oD1SpHhwsDut0n_b_uoNc7QnZWUu8js5I/matrix-bot> .
+    this: rdfs:label "animal tissue" ;
+        dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+        npx:hasNanopubType pehterms:Matrix ;
+        npx:introduces <https://w3id.org/peh/matrices/RAC1dtx3t1m9kMn-N4Fe0WrPZxzHoebeTTFW23rNQC8b0> ;
+        prov:generatedAtTime "2026-07-03T21:19:10.378047+02:00"^^xsd:dateTime ;
+        prov:wasAttributedTo <https://w3id.org/np/RArbMo6bMp74oD1SpHhwsDut0n_b_uoNc7QnZWUu8js5I/matrix-bot> .
+}

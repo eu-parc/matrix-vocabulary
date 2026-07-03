@@ -1,0 +1,46 @@
+@prefix this: <https://w3id.org/np/RA03lxAcq1Ae6e6Fx_jxwwG5MlZSiFV4Owa-iotENKMHg> .
+@prefix sub: <https://w3id.org/np/RA03lxAcq1Ae6e6Fx_jxwwG5MlZSiFV4Owa-iotENKMHg/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix ns1: <http://schema.org/> .
+@prefix orcid: <https://orcid.org/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pehterms: <https://w3id.org/peh/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+sub:Head {
+    this: a np:Nanopublication ;
+        np:hasAssertion sub:assertion ;
+        np:hasProvenance sub:provenance ;
+        np:hasPublicationInfo sub:pubinfo .
+}
+
+sub:assertion {
+    <https://w3id.org/peh/matrices/RA03lxAcq1Ae6e6Fx_jxwwG5MlZSiFV4Owa-iotENKMHg> a owl:Class ;
+        rdfs:label "breast milk",
+            "moedermelk"@nl ;
+        dcterms:isPartOf <https://w3id.org/spaces/chemical-exposome-matrix/r/vocabulary> ;
+        ns1:alternateName "bmk" .
+}
+
+sub:provenance {
+    sub:assertion prov:generatedAtTime "2026-07-03T21:19:07.494182+02:00"^^xsd:dateTime ;
+        prov:wasAttributedTo orcid:0000-0001-8327-0142 .
+}
+
+sub:pubinfo {
+    sub:sig npx:hasAlgorithm "RSA" ;
+        npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoYXKCw/BWx+0exERmA7cxc7MUibjOCXzSZOUOquHYk9ugwE2qMo6dYxNCOWWMyge5tqrdqi7kqiTPCNmUhwLzUa35OIhWUNHf6bgF0Giw6nRetEH6ILbXX+l16DCHQjMWeCweZIpnghryEy1kyO6UU03qVZinBByf0UpfoB25ZUWyS2zKJiulVFAFK193Wd5lPsltmaOnmyKoVOA34aTIJkAxWEHrK1OuSuF9UCH+belw+QRNJWFKJcoJ+r8OsFM89+DKncnUuVDx8B04TpDoTby7UQ09608eMUPKOlfi//TfzzG3tgvP8kNNb1yczrwNYPvXnstN3LChLvmMjT2KQIDAQAB" ;
+        npx:hasSignature "SGAqdHap+MxSXE/QcmktzL5plIxOsam4Bi9Q2iRUMtdOjUKIVl+Cci2iNKWtOgVLA2FSsoolJR63p9y3q9cLQ8erLa/VMYFjfTQyOansHGwwsU3usPc1/L4WUq6x515TvXfFWDRW3Qfip/HgrcHmggSTp6Na5c4jrEyP0U7eRF/9bdyCWNm4R0DKwx0siMTFsBJghRdykqvnzbgwXCf+C7nODS1rXysH76fz2oERemjIp6V3O9cAs9s/jTkeCfahz1g0a0AQ/FR813LqhB2Zp5o7YL7Z8PhDJ9NPYPlrm4g7a/rV0BoP588x+ziERowtbPd5mUIw9ZyetiaMfItdtw==" ;
+        npx:hasSignatureTarget this: ;
+        npx:signedBy <https://w3id.org/np/RArbMo6bMp74oD1SpHhwsDut0n_b_uoNc7QnZWUu8js5I/matrix-bot> .
+    this: rdfs:label "breast milk" ;
+        dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+        npx:hasNanopubType pehterms:Matrix ;
+        npx:introduces <https://w3id.org/peh/matrices/RA03lxAcq1Ae6e6Fx_jxwwG5MlZSiFV4Owa-iotENKMHg> ;
+        prov:generatedAtTime "2026-07-03T21:19:07.494182+02:00"^^xsd:dateTime ;
+        prov:wasAttributedTo <https://w3id.org/np/RArbMo6bMp74oD1SpHhwsDut0n_b_uoNc7QnZWUu8js5I/matrix-bot> .
+}
