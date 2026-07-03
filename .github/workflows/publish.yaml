@@ -1,70 +1,169 @@
-name: Publish nanopublications
+name: Vocabulary pipeline
 
 on:
-  release:
-    types: [published]
+  pull_request:
+    paths:
+      - ".github/workflows/publish.yaml"
+      - "dropbox/**"
+      - "schema/dropbox-matrix.example.yaml"
+      - "schema/dropbox-matrix.schema.json"
+      - "Makefile"
+      - "pyproject.toml"
   push:
-    tags:
-      - "*" # any tag triggers dry-run
+    branches: [main]
+    paths:
+      - "dropbox/**"
   workflow_dispatch:
     inputs:
       mode:
-        description: "Publish mode"
-        required: true
-        default: "dry-run"
+        description: "dry-run (offline) | test-publish (test registry) | production"
         type: choice
         options:
           - dry-run
-          - publish
+          - test-publish
+          - production
+        default: dry-run
 
 permissions:
   contents: write
 
-jobs:
-  publish:
-    runs-on: ubuntu-latest
+concurrency:
+  group: vocabulary-${{ github.ref }}
+  cancel-in-progress: false
 
+jobs:
+  vocabulary:
+    runs-on: ubuntu-latest
     steps:
+      - name: Resolve run mode
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          INPUT_MODE: ${{ inputs.mode }}
+          BOT_KEY: ${{ secrets.NANOPUB_BOT_PRIVATE_KEY }}
+        run: |
+          if [ "$EVENT_NAME" = "pull_request" ]; then
+            echo "MODE=test-publish" >> "$GITHUB_ENV"
+          elif [ "$EVENT_NAME" = "push" ]; then
+            echo "MODE=production" >> "$GITHUB_ENV"
+          else
+            echo "MODE=${INPUT_MODE:-dry-run}" >> "$GITHUB_ENV"
+          fi
+
+          if [ -n "$BOT_KEY" ]; then
+            echo "HAS_BOT_KEY=true" >> "$GITHUB_ENV"
+          else
+            echo "HAS_BOT_KEY=false" >> "$GITHUB_ENV"
+          fi
+
       - uses: actions/checkout@v6
         with:
           fetch-depth: 0
 
-      - uses: astral-sh/setup-uv@v7
+      - uses: astral-sh/setup-uv@v8.2.0
 
       - name: Install dependencies
         run: uv sync
 
-      - name: Set publish mode
-        id: mode
+      # PR/manual validation path: build the proposal exactly as the merge path
+      # would, but into isolated folders. This avoids touching committed
+      # unpublished/ or archive/ and keeps the result disposable.
+      - name: Seed example proposal when no dropbox files changed
+        if: ${{ env.MODE != 'production' }}
         run: |
-          if [[ "${{ github.event_name }}" == "release" ]]; then
-            echo "dryrun=" >> $GITHUB_OUTPUT
-            echo "mode_label=release-publish" >> $GITHUB_OUTPUT
-            echo "commit_move=false" >> $GITHUB_OUTPUT
-          elif [[ "${{ github.event_name }}" == "workflow_dispatch" && "${{ inputs.mode }}" == "publish" ]]; then
-            echo "dryrun=" >> $GITHUB_OUTPUT
-            echo "mode_label=manual-publish" >> $GITHUB_OUTPUT
-            echo "commit_move=true" >> $GITHUB_OUTPUT
-          else
-            echo "dryrun=--dry-run" >> $GITHUB_OUTPUT
-            echo "mode_label=dry-run" >> $GITHUB_OUTPUT
-            echo "commit_move=false" >> $GITHUB_OUTPUT
+          mkdir -p dropbox
+          if ! find dropbox -maxdepth 1 -name "*.yaml" | grep -q .; then
+            cp schema/dropbox-matrix.example.yaml dropbox/example.yaml
+            echo "::notice::No dropbox YAML found; seeded dropbox/example.yaml from the schema example."
           fi
 
-      - name: Publish nanopublications and update repository folders
-        env:
-          NANOPUB_PRIVATE_KEY: ${{ secrets.NANOPUB_PRIVATE_KEY }}
-          NANOPUB_PUBLIC_KEY: ${{ secrets.NANOPUB_PUBLIC_KEY }}
-          INTRO_NANOPUB_URI: ${{ secrets.INTRO_NANOPUB_URI }}
-        run: |
-          make publish-pipeline DRY="${{ steps.mode.outputs.dryrun }}"
+      - name: Build proposed term assertions
+        if: ${{ env.MODE != 'production' }}
+        run: make validate-pipeline UNPUBLISHED_FOLDER=build/pr-assertions
 
-      - name: Commit published move (manual real publish only)
-        if: steps.mode.outputs.commit_move == 'true'
+      - name: Validate expected processing effects
+        if: ${{ env.MODE != 'production' }}
+        run: |
+          test -f build/combined.yaml || (echo "Expected build/combined.yaml to exist" && exit 1)
+          grep -q "https://w3id.org/peh/matrices/" build/combined.yaml || (echo "Expected build/combined.yaml to contain minted matrix URIs" && exit 1)
+          test -f build/matrices.ttl || (echo "Expected build/matrices.ttl to exist" && exit 1)
+          find build/pr-assertions -maxdepth 1 -name "*.ttl" | grep -q . || (echo "Expected generated assertions for the proposed terms" && exit 1)
+
+      - name: Validate proposed defining nanopubs offline
+        if: ${{ env.MODE != 'production' }}
+        run: make validate-nanopubs
+
+      - name: Install test-server signing support
+        if: ${{ env.MODE == 'test-publish' }}
+        run: uv pip install nanopub-testsuite-connector
+
+      - name: Mint defining nanopubs (dry-run, offline)
+        if: ${{ env.MODE == 'dry-run' }}
+        run: make publish-defining UNPUBLISHED_FOLDER=build/pr-assertions PUBLISH_KEY_ARGS= DRY=--dry-run
+
+      - name: Mint and publish defining nanopubs (test registry)
+        if: ${{ env.MODE == 'test-publish' }}
+        run: make publish-defining UNPUBLISHED_FOLDER=build/pr-assertions PUBLISH_KEY_ARGS=--use-testsuite-keys
+
+      - name: Upload disposable nanopubs and id-map
+        if: ${{ env.MODE != 'production' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: defining-nanopubs-${{ env.MODE }}
+          path: |
+            published/
+            redirect/id-map.tsv
+          if-no-files-found: warn
+
+      # Merge path: after a PR is accepted, run the same build for real,
+      # archive/drop the submitted YAML, publish with the bot key, then commit
+      # the repository artifacts produced by both stages.
+      - name: Process accepted dropbox files
+        if: ${{ env.MODE == 'production' }}
+        run: make pipeline
+
+      - name: Commit generated assertions and minted archive
+        if: ${{ env.MODE == 'production' }}
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
+          git add -A dropbox archive unpublished
+          git diff --cached --quiet || git commit -m "Process dropbox: generate unpublished assertions and archive minted YAML [skip ci]"
 
-          git add -A unpublished published redirect
-          git commit -m "Move published assertions and add redirect mappings" || echo "No changes to commit"
-          git push || echo "No changes to push"
+      - name: Push processed dropbox artifacts
+        if: ${{ env.MODE == 'production' }}
+        run: git push || echo "No processed dropbox changes to push"
+
+      - name: Production requested without bot key
+        if: ${{ env.MODE == 'production' && env.HAS_BOT_KEY != 'true' }}
+        run: |
+          echo "::notice::Production publish requested but NANOPUB_BOT_PRIVATE_KEY is not configured."
+          echo "::notice::Processed dropbox artifacts were committed locally, but publishing was skipped."
+          echo "::notice::See docs/bot-identity-setup.md to wire up the bot identity."
+
+      - name: Write bot signing key
+        if: ${{ env.MODE == 'production' && env.HAS_BOT_KEY == 'true' }}
+        run: |
+          install -m 600 /dev/null bot_id_rsa
+          printf '%s' "${{ secrets.NANOPUB_BOT_PRIVATE_KEY }}" > bot_id_rsa
+          printf '%s' "${{ vars.NANOPUB_BOT_PUBLIC_KEY }}"     > bot_id_rsa.pub
+
+      - name: Mint and publish defining nanopubs (production)
+        if: ${{ env.MODE == 'production' && env.HAS_BOT_KEY == 'true' }}
+        run: |
+          make publish-defining \
+            PUBLISH_KEY_ARGS="--private-key bot_id_rsa --public-key bot_id_rsa.pub \
+              --orcid-id ${{ vars.NANOPUB_BOT_URI }} --name 'Matrix bot' \
+              --intro-nanopub-uri ${{ vars.NANOPUB_BOT_INTRO_URI }}"
+
+      - name: Commit published nanopubs and id-map
+        if: ${{ env.MODE == 'production' && env.HAS_BOT_KEY == 'true' }}
+        run: |
+          rm -f bot_id_rsa bot_id_rsa.pub
+          git config user.name "matrix-bot"
+          git config user.email "noreply@knowledgepixels.com"
+          git add published/ redirect/id-map.tsv
+          git diff --cached --quiet || git commit -m "Publish defining nanopubs [skip ci]"
+
+      - name: Push production commits
+        if: ${{ env.MODE == 'production' && env.HAS_BOT_KEY == 'true' }}
+        run: git push || echo "No published nanopub changes to push"

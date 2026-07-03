@@ -1,0 +1,24 @@
+# Example matrix dropbox file.
+# Validates against schema/dropbox-matrix.schema.json.
+# Copy a trimmed-down version of this into dropbox/ and open a PR.
+
+# Optional file-level default suggester (ORCID): applied to every entry below
+# that does not set its own `suggester`. Used as prov:wasAttributedTo on the
+# resulting nanopublication.
+suggester: https://orcid.org/0000-0002-1825-0097
+
+matrix_subclasses:
+  # Minimal entry: identifiers are minted on the fly, so `id` is optional.
+  - name: "environmental matrix"
+    description: All abiotic environmental compartments in which chemicals can be measured
+    parent_matrices:
+      - https://w3id.org/peh/terms/Matrix
+
+  # Richer entry with a per-entry suggester override.
+  - id: bioticmatrix
+    name: "biotic matrix"
+    short_name: "biotic"
+    description: All biological organisms and their tissues
+    parent_matrices:
+      - https://w3id.org/peh/terms/Matrix
+    suggester: https://orcid.org/0000-0001-5109-3700

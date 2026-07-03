@@ -4,6 +4,8 @@ on:
   push:
     branches: [main]
   pull_request:
+    paths:
+      - ".github/workflows/pages.yaml"
   workflow_dispatch:
 
 permissions:
@@ -21,11 +23,13 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Extract assertions from published nanopubs
+        run: make assertions
+
       - name: Build site
         run: |
           uvx --from git+https://github.com/eu-parc/serves-me-right@v0.0.1 serves-me-right-build \
-            --data-dir published \
-            --data-dir unpublished \
+            --data-dir build/assertions \
             --shapes site/ui-shapes.ttl \
             --out-dir dist
 

@@ -1,0 +1,49 @@
+@prefix this: <https://w3id.org/np/RArqXjsWKq1YgDeEYPhQq6qa7jL-PoIBtebLBq1CSTA8k> .
+@prefix sub: <https://w3id.org/np/RArqXjsWKq1YgDeEYPhQq6qa7jL-PoIBtebLBq1CSTA8k/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix ns1: <http://schema.org/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix orcid: <https://orcid.org/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pehterms: <https://w3id.org/peh/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+sub:Head {
+    this: a np:Nanopublication ;
+        np:hasAssertion sub:assertion ;
+        np:hasProvenance sub:provenance ;
+        np:hasPublicationInfo sub:pubinfo .
+}
+
+sub:assertion {
+    <https://w3id.org/peh/matrices/RArqXjsWKq1YgDeEYPhQq6qa7jL-PoIBtebLBq1CSTA8k> a owl:Class ;
+        rdfs:label "integumentary system" ;
+        dcterms:isPartOf <https://w3id.org/spaces/chemical-exposome-matrix/r/vocabulary> ;
+        ns1:description "Any component of the enveloping membrane of the body, including the epidermis and dermis, and all of the derivatives of the epidermis. (NCI)" ;
+        rdfs:subClassOf <https://w3id.org/peh/matrices/RAy2XFY4tcAktluhxPOOHzjCw7PrKL2e1UW5DzGRl6Wwg> ;
+        skos:exactMatch obo:NCIT_C38620 .
+}
+
+sub:provenance {
+    sub:assertion prov:generatedAtTime "2026-07-03T14:25:02.850455+02:00"^^xsd:dateTime ;
+        prov:wasAttributedTo orcid:0000-0001-8327-0142 .
+}
+
+sub:pubinfo {
+    sub:sig npx:hasAlgorithm "RSA" ;
+        npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoYXKCw/BWx+0exERmA7cxc7MUibjOCXzSZOUOquHYk9ugwE2qMo6dYxNCOWWMyge5tqrdqi7kqiTPCNmUhwLzUa35OIhWUNHf6bgF0Giw6nRetEH6ILbXX+l16DCHQjMWeCweZIpnghryEy1kyO6UU03qVZinBByf0UpfoB25ZUWyS2zKJiulVFAFK193Wd5lPsltmaOnmyKoVOA34aTIJkAxWEHrK1OuSuF9UCH+belw+QRNJWFKJcoJ+r8OsFM89+DKncnUuVDx8B04TpDoTby7UQ09608eMUPKOlfi//TfzzG3tgvP8kNNb1yczrwNYPvXnstN3LChLvmMjT2KQIDAQAB" ;
+        npx:hasSignature "Nme06hRUj1tmE6t8iiPepq+gT8rgxz6FyN68nVECE99wikKqxED9Xj8rMJkTfiVq14BE4+QM98egLFAIF0r9PB8+ER8+vd0fcYHcNcpyANQj6VHhNcqyaGhjRmNZgDiym7YoZxdlQ+lTDrr/MELddcceMTo4kU0x3rXxX3V1A+uw7xzgRv+OSqA1f0lDS7u7wHuJvyq4raiXt9TbnS2+HzLQX2MVFSg3FLp6PxMAMk5YRbxYSETCHVIgxD3kNbMILMVaENU65kVbz8WJUZRsydxkIT8zJxi4MVHVMjB3IRxrR6t79zTbPGlaqcueNjKLbdVCZt9TKSrxV1ghS7CY3w==" ;
+        npx:hasSignatureTarget this: ;
+        npx:signedBy <https://w3id.org/np/RArbMo6bMp74oD1SpHhwsDut0n_b_uoNc7QnZWUu8js5I/matrix-bot> .
+    this: rdfs:label "integumentary system" ;
+        dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+        npx:hasNanopubType pehterms:Matrix ;
+        npx:introduces <https://w3id.org/peh/matrices/RArqXjsWKq1YgDeEYPhQq6qa7jL-PoIBtebLBq1CSTA8k> ;
+        prov:generatedAtTime "2026-07-03T14:25:02.850455+02:00"^^xsd:dateTime ;
+        prov:wasAttributedTo <https://w3id.org/np/RArbMo6bMp74oD1SpHhwsDut0n_b_uoNc7QnZWUu8js5I/matrix-bot> .
+}

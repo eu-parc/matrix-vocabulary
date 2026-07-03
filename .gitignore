@@ -2,8 +2,15 @@
 _temp/*.ttl
 _temp/*
 
+# build artifacts (combined YAML, ontology, extracted site assertions)
+build/
+
 # virtual environments
 venv/*
 .venv/*
 uv.lock
 .codex
+
+__pycache__
+# Bot signing identity (private key) -- never commit; see docs/bot-identity-setup.md
+bot-identity/

@@ -1,0 +1,103 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://w3id.org/peh/matrix-vocabulary/schema/dropbox-matrix.schema.json",
+  "title": "Matrix dropbox file",
+  "description": "Contract for a dropbox/*.yaml file proposing one or more matrix subclasses. Each entry maps to a LinkML MatrixSubClass (defined upstream in eu-parc/parco-hbm, schema/peh.yaml).",
+  "type": "object",
+  "required": ["matrix_subclasses"],
+  "additionalProperties": false,
+  "properties": {
+    "suggester": {
+      "$ref": "#/$defs/orcid",
+      "description": "File-level default suggester (ORCID). Applied to every entry that does not set its own suggester."
+    },
+    "matrix_subclasses": {
+      "type": "array",
+      "description": "The list of proposed matrix subclasses (the TARGET_CLASS).",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/matrixSubClass" }
+    }
+  },
+  "$defs": {
+    "orcid": {
+      "type": "string",
+      "description": "Canonical ORCID URL, e.g. https://orcid.org/0000-0002-1825-0097.",
+      "pattern": "^https://orcid\\.org/[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{3}[0-9X]$"
+    },
+    "contextAlias": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["property_name", "alias"],
+      "properties": {
+        "property_name": { "type": "string", "description": "The entity property the alias applies to." },
+        "context": { "type": "string", "description": "The scope/context (community, project, study) in which the alias is used." },
+        "alias": { "type": "string", "description": "The alternative term used in that context." }
+      }
+    },
+    "translation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["property_name", "language", "translated_value"],
+      "properties": {
+        "property_name": { "type": "string", "description": "The entity property being translated." },
+        "language": { "type": "string", "description": "Language tag of the translation, e.g. nl, de, fr." },
+        "translated_value": { "type": "string", "description": "The translated term." }
+      }
+    },
+    "matrixSubClass": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Subject IRI or CURIE (schema:identifier). Optional; minted on the fly if absent. An existing valid URI is kept."
+        },
+        "name": {
+          "type": "string",
+          "description": "Preferred label (rdfs:label). Effectively required."
+        },
+        "short_name": {
+          "type": "string",
+          "description": "Shortened name or code (schema:alternateName)."
+        },
+        "ui_label": {
+          "type": "string",
+          "description": "Human-readable label for UI forms/documents (pehterms:hasUiLabel)."
+        },
+        "description": {
+          "type": "string",
+          "description": "Free-text description (schema:description)."
+        },
+        "remark": {
+          "type": "string",
+          "description": "Additional comment/note/remark (schema:comment)."
+        },
+        "exact_matches": {
+          "type": "array",
+          "description": "External identifiers this term is an exact match of (skos:exactMatch).",
+          "items": { "type": "string" }
+        },
+        "context_aliases": {
+          "type": "array",
+          "description": "Context-specific aliases (pehterms:hasContextAlias).",
+          "items": { "$ref": "#/$defs/contextAlias" }
+        },
+        "translations": {
+          "type": "array",
+          "description": "Translations of entity properties (pehterms:hasTranslation).",
+          "items": { "$ref": "#/$defs/translation" }
+        },
+        "parent_matrices": {
+          "type": "array",
+          "description": "Superclasses (rdfs:subClassOf); usually https://w3id.org/peh/terms/Matrix, may be another matrix. Multiple allowed.",
+          "items": { "type": "string" }
+        },
+        "suggester": {
+          "$ref": "#/$defs/orcid",
+          "description": "Per-entry suggester (ORCID, prov:wasAttributedTo). Overrides any file-level default."
+        }
+      }
+    }
+  }
+}
