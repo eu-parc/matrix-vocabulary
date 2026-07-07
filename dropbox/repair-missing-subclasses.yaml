@@ -1,0 +1,266 @@
+matrix_subclasses:
+- id: https://w3id.org/peh/matrices/RA8NOdZTYkul2xyhl3fdxnC8YsNvgjlcLjjpfC2C2-KyM
+  short_name: adi
+  name: adipose tissue
+  description: A specialized form of connective tissue consisting primarily of adipocytes (fat cells), surrounded by a meshwork of collagen fibers. (NCI)
+  exact_matches:
+  - http://snomed.info/id/258414004
+  - http://id.nlm.nih.gov/mesh/D000273
+  - http://purl.obolibrary.org/obo/NCIT_C12472
+  translations:
+  - property_name: name
+    language: nl
+    translated_value: vetweefsel/vet
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAi949d7yjXol2LDmFJ4c9GGyzann2cM-gWOasXu90e5o
+  - https://w3id.org/peh/terms/Matrix
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/RAMclxfdOCs4lQt-CF5HgrXLV7VTBst1gG5FkBXTlv0qs
+  short_name: amn
+  name: amniotic fluid
+  description: The fluid within the amniotic cavity which surrounds and protects the developing embryo. (NCI)
+  exact_matches:
+  - http://snomed.info/id/119373006
+  - http://purl.obolibrary.org/obo/NCIT_C13188
+  - http://id.nlm.nih.gov/mesh/D000653
+  translations:
+  - property_name: name
+    language: nl
+    translated_value: vruchtwater
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAi949d7yjXol2LDmFJ4c9GGyzann2cM-gWOasXu90e5o
+  - https://w3id.org/peh/terms/Matrix
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/RAC1dtx3t1m9kMn-N4Fe0WrPZxzHoebeTTFW23rNQC8b0
+  name: animal tissue
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAoSsPdY12TYwXc9GZ_tRtO9HnI9R00M0MhqjIEl3S8c0
+  - https://w3id.org/peh/terms/Matrix
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/RA1pfcwPnFNCcg9yYs4RClmzylUCyurYhMT4BYwomb11g
+  name: aquatic matrix
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RA-fRSJZhT-OdospP_TRivM-L_tO-YsfYRBb_1jdfR9kY
+  - https://w3id.org/peh/terms/Matrix
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/RAiWn0Rc6aqeB18L5SLVtJwTmz_D9ToELO1Fzc1gxxrO8
+  name: atmospheric matrix
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RA-fRSJZhT-OdospP_TRivM-L_tO-YsfYRBb_1jdfR9kY
+  - https://w3id.org/peh/terms/Matrix
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/RACjmW-FuXnJiFjOh6ZxNjXmvBNU7sjOn9oM20wPobePo
+  short_name: bld
+  name: blood
+  description: The body fluid circulating throughout the cardiovascular system, consisting of plasma and blood cells. (MeSH)
+  exact_matches:
+  - http://purl.obolibrary.org/obo/NCIT_C12434
+  - http://id.nlm.nih.gov/mesh/D001769
+  - http://snomed.info/id/119297000
+  translations:
+  - property_name: name
+    language: nl
+    translated_value: bloed
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAQP5G8v9lpCFpvfYLiPUDR3_H6geD1Q57_qUjeVm3jJI
+  - https://w3id.org/peh/terms/Matrix
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/RA03lxAcq1Ae6e6Fx_jxwwG5MlZSiFV4Owa-iotENKMHg
+  short_name: bmk
+  name: breast milk
+  description: A nutrient-rich fluid secreted by the mammary glands of a female mammal for the purpose of feeding their young. (NCI)
+  exact_matches:
+  - http://id.nlm.nih.gov/mesh/D008895
+  - http://purl.obolibrary.org/obo/NCIT_C13257
+  - http://snomed.info/id/119328004
+  translations:
+  - property_name: name
+    language: nl
+    translated_value: moedermelk
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAQP5G8v9lpCFpvfYLiPUDR3_H6geD1Q57_qUjeVm3jJI
+  - https://w3id.org/peh/terms/Matrix
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/RADSOMvAux8GtQxYEc-HOHB2hjqS_Feo6EptO4uNY4xlI
+  name: breath
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAQP5G8v9lpCFpvfYLiPUDR3_H6geD1Q57_qUjeVm3jJI
+  - https://w3id.org/peh/terms/Matrix
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/RAcx2M-8YgdACmQKkiV5BrWOBeXu5X6WlqqwBtYeXCm0Y
+  short_name: har
+  name: hair
+  description: The filamentous outgrowth of the epidermis. (NCI)
+  exact_matches:
+  - http://snomed.info/id/119326000
+  - http://purl.obolibrary.org/obo/NCIT_C32705
+  - http://id.nlm.nih.gov/mesh/D006197
+  translations:
+  - property_name: name
+    language: nl
+    translated_value: haar
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RArqXjsWKq1YgDeEYPhQq6qa7jL-PoIBtebLBq1CSTA8k
+  - https://w3id.org/peh/terms/Matrix
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/RAi-C-_2o5gcIhvlg6AfVsfTA0zDvs53BYcwZKxLu-9NU
+  short_name: mec
+  name: meconium
+  description: The first feces of a newborn, composed of materials ingested during the time the infant spends in the uterus. It is typically passed within the first few days after birth. (NCI)
+  exact_matches:
+  - http://purl.obolibrary.org/obo/NCIT_C78743
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAQP5G8v9lpCFpvfYLiPUDR3_H6geD1Q57_qUjeVm3jJI
+  - https://w3id.org/peh/terms/Matrix
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/RAS7Iz3jzij1Ihp05DYfpOutaaJoFn6whfCx5DLQnrR6E
+  short_name: nal
+  name: nails
+  description: The thin, horny plates that cover the dorsal surfaces of the distal phalanges of the fingers and toes of primates.
+  exact_matches:
+  - http://id.nlm.nih.gov/mesh/D009262
+  - http://purl.obolibrary.org/obo/NCIT_C33156
+  - http://snomed.info/id/119327009
+  translations:
+  - property_name: name
+    language: nl
+    translated_value: nagel
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RArqXjsWKq1YgDeEYPhQq6qa7jL-PoIBtebLBq1CSTA8k
+  - https://w3id.org/peh/terms/Matrix
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/RAlsQ-lf0BlYMQEv6nKOf_4AO-RzZizlAw8f-Nfo28WQM
+  short_name: nmuc
+  name: nasal mucus
+  description: The thick fluid secreted by the mucus glands in the nasal cavity. (NCI)
+  exact_matches:
+  - http://purl.obolibrary.org/obo/NCIT_C52551
+  translations:
+  - property_name: name
+    language: nl
+    translated_value: neusslijm
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAQP5G8v9lpCFpvfYLiPUDR3_H6geD1Q57_qUjeVm3jJI
+  - https://w3id.org/peh/terms/Matrix
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/RAB2CWC53iDWwONWmhVGz1XOZvM-q8PAgzfvDzLHnCark
+  short_name: plct
+  name: placenta
+  description: The placenta and tissue derived from the placenta (other than amniotic membrane). (NCI)
+  exact_matches:
+  - http://snomed.info/id/122736005
+  - http://id.nlm.nih.gov/mesh/D010920
+  - http://purl.obolibrary.org/obo/NCIT_C133341
+  translations:
+  - property_name: name
+    language: nl
+    translated_value: placenta weefsel
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAi949d7yjXol2LDmFJ4c9GGyzann2cM-gWOasXu90e5o
+  - https://w3id.org/peh/terms/Matrix
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/RA_TYQHRFgdIlwCiFJl5iEjmdrrNH3uxL69mQTyqA9WQU
+  name: plant tissue
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAfJMLEKnVj-xx_PJhMZcKEYONp6CrV9WPEEqf99YbMb4
+  - https://w3id.org/peh/terms/Matrix
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/RAyed7aRrZnJnjE795nmrj8hAdQCp6lkxB1NtmirWXwL4
+  short_name: sal
+  name: saliva
+  description: The clear, viscous fluid secreted by the SALIVARY GLANDS and mucous glands of the mouth. It contains MUCINS, water, organic salts, and ptylin.(MeSH)
+  exact_matches:
+  - http://id.nlm.nih.gov/mesh/D012463
+  translations:
+  - property_name: name
+    language: nl
+    translated_value: speeksel
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAQP5G8v9lpCFpvfYLiPUDR3_H6geD1Q57_qUjeVm3jJI
+  - https://w3id.org/peh/terms/Matrix
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/RAMJMXeG91lFf_X6_uwrCFIS_HRQDJ1Pj_zmjmumlRw3Y
+  short_name: sem
+  name: semen
+  description: The thick, whitish secretion of the male reproductive organs. It is composed of spermatozoa in their nutrient plasma, secretions from the prostate, seminal vesicles, and various other glands, epithelial cells, and minor constituents. (NCI)
+  exact_matches:
+  - http://purl.obolibrary.org/obo/NCIT_C13277
+  - http://id.nlm.nih.gov/mesh/D012661
+  - http://snomed.info/id/119347001
+  translations:
+  - property_name: name
+    language: nl
+    translated_value: zaad
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAQP5G8v9lpCFpvfYLiPUDR3_H6geD1Q57_qUjeVm3jJI
+  - https://w3id.org/peh/terms/Matrix
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/RA3eOqMz50NSxy4tARfcblPru3Hb2z4t3uPZCNodIXgas
+  short_name: spt
+  name: sputum
+  description: Material containing mucus, cellular debris, microorganisms and sometimes blood or pus. It is ejected through the mouth from the lungs, bronchi, and trachea. (NCI)
+  exact_matches:
+  - http://id.nlm.nih.gov/mesh/D013183
+  - http://purl.obolibrary.org/obo/NCIT_C13278
+  translations:
+  - property_name: name
+    language: nl
+    translated_value: longslijm
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAQP5G8v9lpCFpvfYLiPUDR3_H6geD1Q57_qUjeVm3jJI
+  - https://w3id.org/peh/terms/Matrix
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/RAjlhRhtV2dqaISU6KfjQg0OJjq08O5AKhaghsfKVg5JU
+  short_name: stl
+  name: stool
+  description: The material discharged from the bowel during defecation. It consists of undigested food, intestinal mucus, epithelial cells, and bacteria. (NCI)
+  exact_matches:
+  - http://snomed.info/id/119339001
+  - http://id.nlm.nih.gov/mesh/D005243
+  - http://purl.obolibrary.org/obo/NCIT_C13234
+  translations:
+  - property_name: name
+    language: nl
+    translated_value: stoelgang
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAQP5G8v9lpCFpvfYLiPUDR3_H6geD1Q57_qUjeVm3jJI
+  - https://w3id.org/peh/terms/Matrix
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/RAp198yXIguLXKOuFcERg-ekxi1P0PthEBX8KS8rXSLUk
+  name: terrestrial matrix
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RA-fRSJZhT-OdospP_TRivM-L_tO-YsfYRBb_1jdfR9kY
+  - https://w3id.org/peh/terms/Matrix
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/RATFkSEeQ6WHCPtKpCas8r9fSjkwpnhX_tkCQV4eAD8gA
+  short_name: umct
+  name: umbilical cord tissue
+  description: Tissue derived from the umbilical cord. (NCI)
+  exact_matches:
+  - http://purl.obolibrary.org/obo/NCIT_C133318
+  - http://snomed.info/id/258436001
+  - http://id.nlm.nih.gov/mesh/D014470
+  translations:
+  - property_name: name
+    language: nl
+    translated_value: weefsel van navelstreng
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAi949d7yjXol2LDmFJ4c9GGyzann2cM-gWOasXu90e5o
+  - https://w3id.org/peh/terms/Matrix
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/RAXhZNocfYd4m1Lb-4jGnmyI34p0PGPseHik8zp_jBaX0
+  short_name: ur
+  name: urine
+  description: The fluid that is excreted by the kidneys. It is stored in the bladder and discharged through the urethra. (NCI)
+  exact_matches:
+  - http://id.nlm.nih.gov/mesh/D014556
+  - http://purl.obolibrary.org/obo/NCIT_C13283
+  - http://snomed.info/id/122575003
+  translations:
+  - property_name: name
+    language: nl
+    translated_value: urine
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAQP5G8v9lpCFpvfYLiPUDR3_H6geD1Q57_qUjeVm3jJI
+  - https://w3id.org/peh/terms/Matrix
+  suggester: https://orcid.org/0000-0001-8327-0142
