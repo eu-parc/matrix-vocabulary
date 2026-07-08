@@ -1,0 +1,19 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pehterms: <https://w3id.org/peh/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<https://w3id.org/peh/matrices/RA03lxAcq1Ae6e6Fx_jxwwG5MlZSiFV4Owa-iotENKMHg> a owl:Class ;
+    rdfs:label "breast milk",
+        "moedermelk"@nl ;
+    schema1:alternateName "bmk" ;
+    schema1:description "A nutrient-rich fluid secreted by the mammary glands of a female mammal for the purpose of feeding their young. (NCI)" ;
+    rdfs:subClassOf <https://w3id.org/peh/matrices/RAQP5G8v9lpCFpvfYLiPUDR3_H6geD1Q57_qUjeVm3jJI>,
+        pehterms:Matrix ;
+    skos:exactMatch <http://id.nlm.nih.gov/mesh/D008895>,
+        <http://purl.obolibrary.org/obo/NCIT_C13257>,
+        <http://snomed.info/id/119328004> ;
+    prov:wasAttributedTo <https://orcid.org/0000-0001-8327-0142> .
+

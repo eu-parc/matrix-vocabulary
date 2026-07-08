@@ -1,0 +1,19 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pehterms: <https://w3id.org/peh/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<https://w3id.org/peh/matrices/RAB2CWC53iDWwONWmhVGz1XOZvM-q8PAgzfvDzLHnCark> a owl:Class ;
+    rdfs:label "placenta",
+        "placenta weefsel"@nl ;
+    schema1:alternateName "plct" ;
+    schema1:description "The placenta and tissue derived from the placenta (other than amniotic membrane). (NCI)" ;
+    rdfs:subClassOf <https://w3id.org/peh/matrices/RAi949d7yjXol2LDmFJ4c9GGyzann2cM-gWOasXu90e5o>,
+        pehterms:Matrix ;
+    skos:exactMatch <http://id.nlm.nih.gov/mesh/D010920>,
+        <http://purl.obolibrary.org/obo/NCIT_C133341>,
+        <http://snomed.info/id/122736005> ;
+    prov:wasAttributedTo <https://orcid.org/0000-0001-8327-0142> .
+

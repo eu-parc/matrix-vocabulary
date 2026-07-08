@@ -1,0 +1,19 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pehterms: <https://w3id.org/peh/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<https://w3id.org/peh/matrices/RATFkSEeQ6WHCPtKpCas8r9fSjkwpnhX_tkCQV4eAD8gA> a owl:Class ;
+    rdfs:label "umbilical cord tissue",
+        "weefsel van navelstreng"@nl ;
+    schema1:alternateName "umct" ;
+    schema1:description "Tissue derived from the umbilical cord. (NCI)" ;
+    rdfs:subClassOf <https://w3id.org/peh/matrices/RAi949d7yjXol2LDmFJ4c9GGyzann2cM-gWOasXu90e5o>,
+        pehterms:Matrix ;
+    skos:exactMatch <http://id.nlm.nih.gov/mesh/D014470>,
+        <http://purl.obolibrary.org/obo/NCIT_C133318>,
+        <http://snomed.info/id/258436001> ;
+    prov:wasAttributedTo <https://orcid.org/0000-0001-8327-0142> .
+

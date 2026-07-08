@@ -1,0 +1,11 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pehterms: <https://w3id.org/peh/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://w3id.org/peh/matrices/RAC1dtx3t1m9kMn-N4Fe0WrPZxzHoebeTTFW23rNQC8b0> a owl:Class ;
+    rdfs:label "animal tissue" ;
+    rdfs:subClassOf <https://w3id.org/peh/matrices/RAoSsPdY12TYwXc9GZ_tRtO9HnI9R00M0MhqjIEl3S8c0>,
+        pehterms:Matrix ;
+    prov:wasAttributedTo <https://orcid.org/0000-0001-8327-0142> .
+

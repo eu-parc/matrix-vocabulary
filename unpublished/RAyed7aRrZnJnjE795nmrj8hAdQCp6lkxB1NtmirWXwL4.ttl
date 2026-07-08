@@ -1,0 +1,17 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pehterms: <https://w3id.org/peh/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<https://w3id.org/peh/matrices/RAyed7aRrZnJnjE795nmrj8hAdQCp6lkxB1NtmirWXwL4> a owl:Class ;
+    rdfs:label "saliva",
+        "speeksel"@nl ;
+    schema1:alternateName "sal" ;
+    schema1:description "The clear, viscous fluid secreted by the SALIVARY GLANDS and mucous glands of the mouth. It contains MUCINS, water, organic salts, and ptylin.(MeSH)" ;
+    rdfs:subClassOf <https://w3id.org/peh/matrices/RAQP5G8v9lpCFpvfYLiPUDR3_H6geD1Q57_qUjeVm3jJI>,
+        pehterms:Matrix ;
+    skos:exactMatch <http://id.nlm.nih.gov/mesh/D012463> ;
+    prov:wasAttributedTo <https://orcid.org/0000-0001-8327-0142> .
+

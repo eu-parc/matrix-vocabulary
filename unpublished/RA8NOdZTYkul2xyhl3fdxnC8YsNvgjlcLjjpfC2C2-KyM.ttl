@@ -1,0 +1,19 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pehterms: <https://w3id.org/peh/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<https://w3id.org/peh/matrices/RA8NOdZTYkul2xyhl3fdxnC8YsNvgjlcLjjpfC2C2-KyM> a owl:Class ;
+    rdfs:label "adipose tissue",
+        "vetweefsel/vet"@nl ;
+    schema1:alternateName "adi" ;
+    schema1:description "A specialized form of connective tissue consisting primarily of adipocytes (fat cells), surrounded by a meshwork of collagen fibers. (NCI)" ;
+    rdfs:subClassOf <https://w3id.org/peh/matrices/RAi949d7yjXol2LDmFJ4c9GGyzann2cM-gWOasXu90e5o>,
+        pehterms:Matrix ;
+    skos:exactMatch <http://id.nlm.nih.gov/mesh/D000273>,
+        <http://purl.obolibrary.org/obo/NCIT_C12472>,
+        <http://snomed.info/id/258414004> ;
+    prov:wasAttributedTo <https://orcid.org/0000-0001-8327-0142> .
+

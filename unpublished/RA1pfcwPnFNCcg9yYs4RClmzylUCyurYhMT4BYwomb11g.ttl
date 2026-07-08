@@ -1,0 +1,11 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pehterms: <https://w3id.org/peh/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://w3id.org/peh/matrices/RA1pfcwPnFNCcg9yYs4RClmzylUCyurYhMT4BYwomb11g> a owl:Class ;
+    rdfs:label "aquatic matrix" ;
+    rdfs:subClassOf <https://w3id.org/peh/matrices/RA-fRSJZhT-OdospP_TRivM-L_tO-YsfYRBb_1jdfR9kY>,
+        pehterms:Matrix ;
+    prov:wasAttributedTo <https://orcid.org/0000-0001-8327-0142> .
+

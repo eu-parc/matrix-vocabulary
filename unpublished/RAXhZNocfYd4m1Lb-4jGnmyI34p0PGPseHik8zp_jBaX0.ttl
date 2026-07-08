@@ -1,0 +1,19 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pehterms: <https://w3id.org/peh/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<https://w3id.org/peh/matrices/RAXhZNocfYd4m1Lb-4jGnmyI34p0PGPseHik8zp_jBaX0> a owl:Class ;
+    rdfs:label "urine",
+        "urine"@nl ;
+    schema1:alternateName "ur" ;
+    schema1:description "The fluid that is excreted by the kidneys. It is stored in the bladder and discharged through the urethra. (NCI)" ;
+    rdfs:subClassOf <https://w3id.org/peh/matrices/RAQP5G8v9lpCFpvfYLiPUDR3_H6geD1Q57_qUjeVm3jJI>,
+        pehterms:Matrix ;
+    skos:exactMatch <http://id.nlm.nih.gov/mesh/D014556>,
+        <http://purl.obolibrary.org/obo/NCIT_C13283>,
+        <http://snomed.info/id/122575003> ;
+    prov:wasAttributedTo <https://orcid.org/0000-0001-8327-0142> .
+
