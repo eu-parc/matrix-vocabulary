@@ -1,0 +1,54 @@
+@prefix this: <https://w3id.org/np/RA_7AKqvN2MTCF6wLzXd8Cn3UGxaIE-hqapwLEzRECRVM> .
+@prefix sub: <https://w3id.org/np/RA_7AKqvN2MTCF6wLzXd8Cn3UGxaIE-hqapwLEzRECRVM/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix ns1: <http://schema.org/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix orcid: <https://orcid.org/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pehterms: <https://w3id.org/peh/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+sub:Head {
+    this: a np:Nanopublication ;
+        np:hasAssertion sub:assertion ;
+        np:hasProvenance sub:provenance ;
+        np:hasPublicationInfo sub:pubinfo .
+}
+
+sub:assertion {
+    <https://w3id.org/peh/matrices/RA_7AKqvN2MTCF6wLzXd8Cn3UGxaIE-hqapwLEzRECRVM> a owl:Class ;
+        rdfs:label "urine",
+            "urine"@nl ;
+        dcterms:isPartOf <https://w3id.org/spaces/chemical-exposome-matrix/r/vocabulary> ;
+        ns1:alternateName "ur" ;
+        ns1:description "The fluid that is excreted by the kidneys. It is stored in the bladder and discharged through the urethra. (NCI)" ;
+        rdfs:subClassOf <https://w3id.org/peh/matrices/RAQP5G8v9lpCFpvfYLiPUDR3_H6geD1Q57_qUjeVm3jJI>,
+            pehterms:Matrix ;
+        skos:exactMatch <http://id.nlm.nih.gov/mesh/D014556>,
+            obo:NCIT_C13283,
+            <http://snomed.info/id/122575003> .
+}
+
+sub:provenance {
+    sub:assertion prov:generatedAtTime "2026-07-08T13:49:29.982248+00:00"^^xsd:dateTime ;
+        prov:wasAttributedTo orcid:0000-0001-8327-0142 .
+}
+
+sub:pubinfo {
+    sub:sig npx:hasAlgorithm "RSA" ;
+        npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoYXKCw/BWx+0exERmA7cxc7MUibjOCXzSZOUOquHYk9ugwE2qMo6dYxNCOWWMyge5tqrdqi7kqiTPCNmUhwLzUa35OIhWUNHf6bgF0Giw6nRetEH6ILbXX+l16DCHQjMWeCweZIpnghryEy1kyO6UU03qVZinBByf0UpfoB25ZUWyS2zKJiulVFAFK193Wd5lPsltmaOnmyKoVOA34aTIJkAxWEHrK1OuSuF9UCH+belw+QRNJWFKJcoJ+r8OsFM89+DKncnUuVDx8B04TpDoTby7UQ09608eMUPKOlfi//TfzzG3tgvP8kNNb1yczrwNYPvXnstN3LChLvmMjT2KQIDAQAB" ;
+        npx:hasSignature "QVs5QMwLNiDwnDY1vEO5kZ0PENn1ZXViuLRzQ1wequQBly7dJcdpTTd3SsxF7xaVlK62N9+ECMYiyk7yXDk7e0uVZstNL+askgfuIHln5eWMykr1zhHNifGkD706v5ok4U5X58stj00eF+oEjDdB2DxxMvMwg1nv3Q+MXHLktQISmTHb/O8gJ+43dK5VFqSGMS/ydpb5gbe7hfT3ymwOBpsfBNUJQJK/YqG8BjXmKW+ZH64ZJ3lwW2AP1njnAU2sNhm7C9X5bS3EpF1ZdZY4tToR0P3PoJQij5RBF3zbs2VZ9zCWMcqUUgJZLfviuP3HguwtDFSIurablwKxTYRNSQ==" ;
+        npx:hasSignatureTarget this: ;
+        npx:signedBy <https://w3id.org/np/RArbMo6bMp74oD1SpHhwsDut0n_b_uoNc7QnZWUu8js5I/matrix-bot> .
+    this: rdfs:label "urine" ;
+        dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+        npx:hasNanopubType pehterms:Matrix ;
+        npx:introduces <https://w3id.org/peh/matrices/RA_7AKqvN2MTCF6wLzXd8Cn3UGxaIE-hqapwLEzRECRVM> ;
+        prov:generatedAtTime "2026-07-08T13:49:29.982248+00:00"^^xsd:dateTime ;
+        prov:wasAttributedTo <https://w3id.org/np/RArbMo6bMp74oD1SpHhwsDut0n_b_uoNc7QnZWUu8js5I/matrix-bot> .
+}

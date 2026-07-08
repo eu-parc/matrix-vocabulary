@@ -1,0 +1,54 @@
+@prefix this: <https://w3id.org/np/RA-qfll1AS6vhXTr4rHXqzeyhV-imxcQQLcPcjRbteW10> .
+@prefix sub: <https://w3id.org/np/RA-qfll1AS6vhXTr4rHXqzeyhV-imxcQQLcPcjRbteW10/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix ns1: <http://schema.org/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix orcid: <https://orcid.org/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pehterms: <https://w3id.org/peh/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+sub:Head {
+    this: a np:Nanopublication ;
+        np:hasAssertion sub:assertion ;
+        np:hasProvenance sub:provenance ;
+        np:hasPublicationInfo sub:pubinfo .
+}
+
+sub:assertion {
+    <https://w3id.org/peh/matrices/RA-qfll1AS6vhXTr4rHXqzeyhV-imxcQQLcPcjRbteW10> a owl:Class ;
+        rdfs:label "hair",
+            "haar"@nl ;
+        dcterms:isPartOf <https://w3id.org/spaces/chemical-exposome-matrix/r/vocabulary> ;
+        ns1:alternateName "har" ;
+        ns1:description "The filamentous outgrowth of the epidermis. (NCI)" ;
+        rdfs:subClassOf <https://w3id.org/peh/matrices/RArqXjsWKq1YgDeEYPhQq6qa7jL-PoIBtebLBq1CSTA8k>,
+            pehterms:Matrix ;
+        skos:exactMatch <http://id.nlm.nih.gov/mesh/D006197>,
+            obo:NCIT_C32705,
+            <http://snomed.info/id/119326000> .
+}
+
+sub:provenance {
+    sub:assertion prov:generatedAtTime "2026-07-08T13:49:31.124099+00:00"^^xsd:dateTime ;
+        prov:wasAttributedTo orcid:0000-0001-8327-0142 .
+}
+
+sub:pubinfo {
+    sub:sig npx:hasAlgorithm "RSA" ;
+        npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoYXKCw/BWx+0exERmA7cxc7MUibjOCXzSZOUOquHYk9ugwE2qMo6dYxNCOWWMyge5tqrdqi7kqiTPCNmUhwLzUa35OIhWUNHf6bgF0Giw6nRetEH6ILbXX+l16DCHQjMWeCweZIpnghryEy1kyO6UU03qVZinBByf0UpfoB25ZUWyS2zKJiulVFAFK193Wd5lPsltmaOnmyKoVOA34aTIJkAxWEHrK1OuSuF9UCH+belw+QRNJWFKJcoJ+r8OsFM89+DKncnUuVDx8B04TpDoTby7UQ09608eMUPKOlfi//TfzzG3tgvP8kNNb1yczrwNYPvXnstN3LChLvmMjT2KQIDAQAB" ;
+        npx:hasSignature "MgXj8KnEPU2kh/3alVHal1jJai7JyziYe0na8A4Mgs+Oy/qI4Q2ROnkNIv0Oeb3suJVGhahAhXPz6RMDVQrs2htZ0LHPvwpQ8OLilQYJ+p0yWZcXHeOwItFWEm1+Wi0CPApVN+jf3f6z0OL365vMLGJp4D0puRVnVnwh4At1+ol2UydgQZGBKH9zqozmGsXSdi3P14MTf5IWikN3UreQqGrXG7PyS6xpJ0hlwewm93q8em3777SRcorhNwduenWCtn6offxL8B+b+/XVkBngDT5NC2iRy6arLhj55Ad3onT5k1ih0PvvXKlDQ95CkU5Km1hJtB7KS7jWRPPFgHbtXQ==" ;
+        npx:hasSignatureTarget this: ;
+        npx:signedBy <https://w3id.org/np/RArbMo6bMp74oD1SpHhwsDut0n_b_uoNc7QnZWUu8js5I/matrix-bot> .
+    this: rdfs:label "hair" ;
+        dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+        npx:hasNanopubType pehterms:Matrix ;
+        npx:introduces <https://w3id.org/peh/matrices/RA-qfll1AS6vhXTr4rHXqzeyhV-imxcQQLcPcjRbteW10> ;
+        prov:generatedAtTime "2026-07-08T13:49:31.124099+00:00"^^xsd:dateTime ;
+        prov:wasAttributedTo <https://w3id.org/np/RArbMo6bMp74oD1SpHhwsDut0n_b_uoNc7QnZWUu8js5I/matrix-bot> .
+}

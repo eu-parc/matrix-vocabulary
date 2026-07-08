@@ -1,0 +1,51 @@
+@prefix this: <https://w3id.org/np/RAsDIybUC-Hf5z9cKUhs0_f6aoBMzA3rhNK7gnLOtlpSI> .
+@prefix sub: <https://w3id.org/np/RAsDIybUC-Hf5z9cKUhs0_f6aoBMzA3rhNK7gnLOtlpSI/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix ns1: <http://schema.org/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix orcid: <https://orcid.org/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pehterms: <https://w3id.org/peh/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+sub:Head {
+    this: a np:Nanopublication ;
+        np:hasAssertion sub:assertion ;
+        np:hasProvenance sub:provenance ;
+        np:hasPublicationInfo sub:pubinfo .
+}
+
+sub:assertion {
+    <https://w3id.org/peh/matrices/RAsDIybUC-Hf5z9cKUhs0_f6aoBMzA3rhNK7gnLOtlpSI> a owl:Class ;
+        rdfs:label "meconium" ;
+        dcterms:isPartOf <https://w3id.org/spaces/chemical-exposome-matrix/r/vocabulary> ;
+        ns1:alternateName "mec" ;
+        ns1:description "The first feces of a newborn, composed of materials ingested during the time the infant spends in the uterus. It is typically passed within the first few days after birth. (NCI)" ;
+        rdfs:subClassOf <https://w3id.org/peh/matrices/RAQP5G8v9lpCFpvfYLiPUDR3_H6geD1Q57_qUjeVm3jJI>,
+            pehterms:Matrix ;
+        skos:exactMatch obo:NCIT_C78743 .
+}
+
+sub:provenance {
+    sub:assertion prov:generatedAtTime "2026-07-08T13:49:31.628336+00:00"^^xsd:dateTime ;
+        prov:wasAttributedTo orcid:0000-0001-8327-0142 .
+}
+
+sub:pubinfo {
+    sub:sig npx:hasAlgorithm "RSA" ;
+        npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoYXKCw/BWx+0exERmA7cxc7MUibjOCXzSZOUOquHYk9ugwE2qMo6dYxNCOWWMyge5tqrdqi7kqiTPCNmUhwLzUa35OIhWUNHf6bgF0Giw6nRetEH6ILbXX+l16DCHQjMWeCweZIpnghryEy1kyO6UU03qVZinBByf0UpfoB25ZUWyS2zKJiulVFAFK193Wd5lPsltmaOnmyKoVOA34aTIJkAxWEHrK1OuSuF9UCH+belw+QRNJWFKJcoJ+r8OsFM89+DKncnUuVDx8B04TpDoTby7UQ09608eMUPKOlfi//TfzzG3tgvP8kNNb1yczrwNYPvXnstN3LChLvmMjT2KQIDAQAB" ;
+        npx:hasSignature "NO/7tnZ187V2KkDXevpg2jSKkMP/pbCGGYKvlaiF6dNKB+umUzxAFJTtM2fbqG33y+vM689ncG8Z760QoRIqbFqWF2ltJquQuRfAO8aS26Q5rQgSb01IaHuunvdhIYGnzTsCuzFMPgBwRjOvW1nFqYXoeF4hxjwF4+j6qhsRlrsjX4d6CkaaqqA/vzobVSt3oUG/p4XQ0O9q8K9STZtw0Jk/sbraZLXaapXVvfjMYpOJxYFD9c6HlYo6PPW+2NMAI8UWhIRpUO/jxGK2Nd3qvR44jxjeHNtZd2o+3PiNGWPSB5IpqE6OzXDgfGQQrJ0YFPnIy+fnhChBiStb1iNJlA==" ;
+        npx:hasSignatureTarget this: ;
+        npx:signedBy <https://w3id.org/np/RArbMo6bMp74oD1SpHhwsDut0n_b_uoNc7QnZWUu8js5I/matrix-bot> .
+    this: rdfs:label "meconium" ;
+        dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+        npx:hasNanopubType pehterms:Matrix ;
+        npx:introduces <https://w3id.org/peh/matrices/RAsDIybUC-Hf5z9cKUhs0_f6aoBMzA3rhNK7gnLOtlpSI> ;
+        prov:generatedAtTime "2026-07-08T13:49:31.628336+00:00"^^xsd:dateTime ;
+        prov:wasAttributedTo <https://w3id.org/np/RArbMo6bMp74oD1SpHhwsDut0n_b_uoNc7QnZWUu8js5I/matrix-bot> .
+}

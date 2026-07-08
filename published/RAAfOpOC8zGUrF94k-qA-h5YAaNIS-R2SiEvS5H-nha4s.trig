@@ -1,0 +1,54 @@
+@prefix this: <https://w3id.org/np/RAAfOpOC8zGUrF94k-qA-h5YAaNIS-R2SiEvS5H-nha4s> .
+@prefix sub: <https://w3id.org/np/RAAfOpOC8zGUrF94k-qA-h5YAaNIS-R2SiEvS5H-nha4s/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix ns1: <http://schema.org/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix orcid: <https://orcid.org/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pehterms: <https://w3id.org/peh/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+sub:Head {
+    this: a np:Nanopublication ;
+        np:hasAssertion sub:assertion ;
+        np:hasProvenance sub:provenance ;
+        np:hasPublicationInfo sub:pubinfo .
+}
+
+sub:assertion {
+    <https://w3id.org/peh/matrices/RAAfOpOC8zGUrF94k-qA-h5YAaNIS-R2SiEvS5H-nha4s> a owl:Class ;
+        rdfs:label "breast milk",
+            "moedermelk"@nl ;
+        dcterms:isPartOf <https://w3id.org/spaces/chemical-exposome-matrix/r/vocabulary> ;
+        ns1:alternateName "bmk" ;
+        ns1:description "A nutrient-rich fluid secreted by the mammary glands of a female mammal for the purpose of feeding their young. (NCI)" ;
+        rdfs:subClassOf <https://w3id.org/peh/matrices/RAQP5G8v9lpCFpvfYLiPUDR3_H6geD1Q57_qUjeVm3jJI>,
+            pehterms:Matrix ;
+        skos:exactMatch <http://id.nlm.nih.gov/mesh/D008895>,
+            obo:NCIT_C13257,
+            <http://snomed.info/id/119328004> .
+}
+
+sub:provenance {
+    sub:assertion prov:generatedAtTime "2026-07-08T13:49:23.195022+00:00"^^xsd:dateTime ;
+        prov:wasAttributedTo orcid:0000-0001-8327-0142 .
+}
+
+sub:pubinfo {
+    sub:sig npx:hasAlgorithm "RSA" ;
+        npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoYXKCw/BWx+0exERmA7cxc7MUibjOCXzSZOUOquHYk9ugwE2qMo6dYxNCOWWMyge5tqrdqi7kqiTPCNmUhwLzUa35OIhWUNHf6bgF0Giw6nRetEH6ILbXX+l16DCHQjMWeCweZIpnghryEy1kyO6UU03qVZinBByf0UpfoB25ZUWyS2zKJiulVFAFK193Wd5lPsltmaOnmyKoVOA34aTIJkAxWEHrK1OuSuF9UCH+belw+QRNJWFKJcoJ+r8OsFM89+DKncnUuVDx8B04TpDoTby7UQ09608eMUPKOlfi//TfzzG3tgvP8kNNb1yczrwNYPvXnstN3LChLvmMjT2KQIDAQAB" ;
+        npx:hasSignature "W6SxEJaL9SOVVhKuMScIddFadt1W0ocPXXgUsLvREvE5kwmX7uNQC8yxktuLlo25N4BpnXJcWeaBY1vAysU7zol7WdTpZVXC3FvgMaVnXxNe4yveYc4tiW9yIKJVDU8oZ737ihsiUt7hFcS8eh/zmQEcEDIddZnf5ihNfEPbfL8J8HZbfQ0+gE+ujmvHcOO2ikddeMLyeeSBT0jEhYGpi2TgJmji8wJFnECVGgTccnnb/JtFwL54hLOXYnH3rE4LgfUeOe/Fpe5X8wVVUb1UMIOzEKa+lhfe0J3VSghsgHCIWYtYzWLDadeq2Kl5Zx6OeBMG0wPz290WFPHktGIu7A==" ;
+        npx:hasSignatureTarget this: ;
+        npx:signedBy <https://w3id.org/np/RArbMo6bMp74oD1SpHhwsDut0n_b_uoNc7QnZWUu8js5I/matrix-bot> .
+    this: rdfs:label "breast milk" ;
+        dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+        npx:hasNanopubType pehterms:Matrix ;
+        npx:introduces <https://w3id.org/peh/matrices/RAAfOpOC8zGUrF94k-qA-h5YAaNIS-R2SiEvS5H-nha4s> ;
+        prov:generatedAtTime "2026-07-08T13:49:23.195022+00:00"^^xsd:dateTime ;
+        prov:wasAttributedTo <https://w3id.org/np/RArbMo6bMp74oD1SpHhwsDut0n_b_uoNc7QnZWUu8js5I/matrix-bot> .
+}
