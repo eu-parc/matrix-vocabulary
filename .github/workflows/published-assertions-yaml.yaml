@@ -1,0 +1,55 @@
+name: Published Assertions YAML
+
+on:
+  schedule:
+    - cron: "17 3 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check schedule week
+        id: schedule
+        run: |
+          if [ "${{ github.event_name }}" != "schedule" ] || [ "$((10#$(date -u +%V) % 2))" -eq 0 ]; then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "run=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - uses: actions/checkout@v6
+        if: steps.schedule.outputs.run == 'true'
+        with:
+          fetch-depth: 0
+
+      - uses: astral-sh/setup-uv@v8.2.0
+        if: steps.schedule.outputs.run == 'true'
+
+      - uses: actions/setup-python@v6
+        if: steps.schedule.outputs.run == 'true'
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        if: steps.schedule.outputs.run == 'true'
+        run: uv sync
+
+      - name: Build published assertions YAML
+        if: steps.schedule.outputs.run == 'true'
+        run: make published-assertions-yaml
+
+      - name: Commit published assertions YAML
+        if: steps.schedule.outputs.run == 'true'
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add published-yaml/published-assertions.yaml
+          git diff --cached --quiet || git commit -m "Update published assertions YAML [skip ci]"
+
+      - name: Push published assertions YAML
+        if: steps.schedule.outputs.run == 'true'
+        run: git push || echo "No published assertions YAML changes to push"

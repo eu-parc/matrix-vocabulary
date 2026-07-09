@@ -1,0 +1,193 @@
+matrix_subclasses:
+- id: https://w3id.org/peh/matrices/RA1NmPPzHrbQcDcCcUSD1c_Jx0gEqIkrym9w6jY0sGsqA
+  name: air
+  translations:
+  - property_name: name
+    language: nl
+    translated_value: lucht
+  short_name: air
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAUm-9-ZoDsUuUqQSQ7SQJvOz56AU4Qxqv95DnyLl50mo
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/RA6yVQB3aTu-KBUoHcGsfGBDAo5ik_TOTriUDgNJUrIjI
+  name: blood cells
+  translations:
+  - property_name: name
+    language: nl
+    translated_value: bloedcellen
+  short_name: wbc
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAD-f9pG9nLiAQhTyv_np5Mlirawv0CDcu4m7-LMBJ2WQ
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/RA7Ufj-KOWs5HOiywyzoq9Pgt2g56q5PzJTQe09GLKZpg
+  name: blood serum
+  translations:
+  - property_name: name
+    language: nl
+    translated_value: bloedserum
+  short_name: ser
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAD-f9pG9nLiAQhTyv_np5Mlirawv0CDcu4m7-LMBJ2WQ
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/RA7bjQMmIG3Rpu8uSDlVHEb9mU0nuc-TQbH5GjRP0SrNc
+  name: compost
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAQ7NubGhAY8Tly5iznP4yMj-q99ggFdgWE4b2q5zBtfc
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/RA7wHzGxVRswpnU2GmWc30O4dP3pniz8OEAZOyQY8s_XQ
+  name: cord blood
+  translations:
+  - property_name: name
+    language: nl
+    translated_value: navelstrengbloed
+  short_name: crd
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAD-f9pG9nLiAQhTyv_np5Mlirawv0CDcu4m7-LMBJ2WQ
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/RAIbsgwYEK31Cfhg2xBxLmRxe-vW9lBqzh4jK4MWvZ5pg
+  name: radish
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAfYD7Gs8EEYjnvsYb59C_gpY_8CZa2TovcQViFxKkeuY
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/RAIgAAK2Iik9ENkvPh1XbB56m03oboR6f7LMvbztrRbn4
+  name: beans
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAfYD7Gs8EEYjnvsYb59C_gpY_8CZa2TovcQViFxKkeuY
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/RAK5VM0elb32Xjk2uCL2Uh44x4QM8BKu0kubzlqBnA3-Y
+  name: soil
+  translations:
+  - property_name: name
+    language: nl
+    translated_value: grond
+  short_name: soil
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAQ7NubGhAY8Tly5iznP4yMj-q99ggFdgWE4b2q5zBtfc
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/RAKDUpflxTKHJUZlsFCh-Ab54sP--MYRlc-cb9XI0R4G8
+  name: whole blood
+  translations:
+  - property_name: name
+    language: nl
+    translated_value: volbloed
+  short_name: wbld
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAD-f9pG9nLiAQhTyv_np5Mlirawv0CDcu4m7-LMBJ2WQ
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/RAQtYv5YRozuXuz-DFDVh7ze_OJUQQf1LjPJPH89vl1es
+  name: nuts
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAfYD7Gs8EEYjnvsYb59C_gpY_8CZa2TovcQViFxKkeuY
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/RARrMaCYS1_RnPZUKKSCUwGiW1b6xjIb0l9Wbb-apx4cs
+  name: zucchini
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAfYD7Gs8EEYjnvsYb59C_gpY_8CZa2TovcQViFxKkeuY
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/RASWRwsvJSZ0umkEzg8hd5LElsOfKo3hmHOewiO3_tBeI
+  name: atmospheric deposition
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAUm-9-ZoDsUuUqQSQ7SQJvOz56AU4Qxqv95DnyLl50mo
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/RAVMzASCvcLHqsMjZjnQnDNm52ugtdXdfw3jqZx4thiUE
+  name: fingernails
+  short_name: fnal
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAoXZHP0vZHQi1sELDWEojW4HdwnVVtyCEVnmDf3PP4BE
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/RAVOBJckXcVFKA7TEZIWz6A-Hp5fTYOJ1Eim3oHRn75NE
+  name: spinach
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAfYD7Gs8EEYjnvsYb59C_gpY_8CZa2TovcQViFxKkeuY
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/RAYgaU7ZoAbEGZVA8Hlu-RzCvSYG3bLRMKISDfws9iCQc
+  name: toenails
+  translations:
+  - property_name: name
+    language: nl
+    translated_value: alle teennagels
+  short_name: tnal
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAoXZHP0vZHQi1sELDWEojW4HdwnVVtyCEVnmDf3PP4BE
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/RAYnAn73ckYTntumb6ebToNrKsVSnUh51eZfdC2D3k1kc
+  name: water
+  translations:
+  - property_name: name
+    language: nl
+    translated_value: water
+  short_name: water
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAQyXl03bTKzH8quHZe0bijfev64RBi4KPtaXj1UEuYeY
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/RAbk6a3CTM-SqDwj7gSMtGk-5q7GkQiVxFA8IuBAcHvv4
+  name: whole plant
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAfYD7Gs8EEYjnvsYb59C_gpY_8CZa2TovcQViFxKkeuY
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/RAciCuWbXQnZmyNfSRy-41DNe9SLMaNZpHYjJ-4JvPEto
+  name: liver
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAOXnhBmU_ugVo5VT_1_w-PQeS-6EhwtLC-9-AWyuxBR8
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/RAeUUBaLCNLcWc98fyjyCFJx0d9GkTSQr77OCVOU0JUDo
+  name: eggs
+  translations:
+  - property_name: name
+    language: nl
+    translated_value: kippenei
+  short_name: egg
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAOXnhBmU_ugVo5VT_1_w-PQeS-6EhwtLC-9-AWyuxBR8
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/RAgGBv-AqMjYnH4uvvlW_e1J-EH_aPZoOEQtRkHQI6xG4
+  name: sediment
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAQyXl03bTKzH8quHZe0bijfev64RBi4KPtaXj1UEuYeY
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/RAjFtX_2fxsX9Sc_pT73cuTcb6NdfhApTmFUD_eK2c97I
+  name: muscle
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAOXnhBmU_ugVo5VT_1_w-PQeS-6EhwtLC-9-AWyuxBR8
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/RAnJmNgUQWYsrxglBQoG2L8OP-h7_uYHP9lnygQYZ0PNg
+  name: dust
+  short_name: dust
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAUm-9-ZoDsUuUqQSQ7SQJvOz56AU4Qxqv95DnyLl50mo
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/RAneysxQGkFzZw57_WcXTaEy11EnbmmQdCO7HviFbrpiM
+  name: big toe nail
+  translations:
+  - property_name: name
+    language: nl
+    translated_value: grote teen nagel
+  short_name: hnal
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAoXZHP0vZHQi1sELDWEojW4HdwnVVtyCEVnmDf3PP4BE
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/RAoyA6LZou1ggzbBL_yqUOts6tRR3Fm5mW10l45lpxPgc
+  name: kidney
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAOXnhBmU_ugVo5VT_1_w-PQeS-6EhwtLC-9-AWyuxBR8
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/RAsw6rPmqomqqPHEWz9eCx7dpyZa5ceXlX-6XLKQ-MsnM
+  name: bone
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAOXnhBmU_ugVo5VT_1_w-PQeS-6EhwtLC-9-AWyuxBR8
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/RAtIG1M0swHdH-qOQP8lFQizXNoUlEjqQohPbLE0XUFyU
+  name: blood plasma
+  translations:
+  - property_name: name
+    language: nl
+    translated_value: bloedplasma
+  short_name: pls
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAD-f9pG9nLiAQhTyv_np5Mlirawv0CDcu4m7-LMBJ2WQ
+  suggester: https://orcid.org/0000-0001-8327-0142
+- id: https://w3id.org/peh/matrices/RAtN4LvQXe2x5WKb8gX4ypEpAbhiMzlTn3H8_Q0CxuUTE
+  name: fat
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAOXnhBmU_ugVo5VT_1_w-PQeS-6EhwtLC-9-AWyuxBR8
+  suggester: https://orcid.org/0000-0001-8327-0142

@@ -12,6 +12,8 @@ PEH_SCHEMA_URL ?= https://raw.githubusercontent.com/$(PEH_SCHEMA_REPO)/$(PEH_SCH
 OUT_FOLDER ?= build
 ASSERTIONS_FOLDER ?= $(OUT_FOLDER)/assertions
 PR_ASSERTIONS_FOLDER ?= $(OUT_FOLDER)/pr-assertions
+PUBLISHED_YAML_FOLDER ?= published-yaml
+PUBLISHED_ASSERTIONS_YAML ?= $(PUBLISHED_YAML_FOLDER)/published-assertions.yaml
 ONTOLOGY_LABEL ?= matrices.ttl
 TARGET_CLASS ?= matrix_subclasses
 BASE_NAMESPACE ?= https://w3id.org/peh/terms/
@@ -56,7 +58,7 @@ DATA_FILES = $(sort $(wildcard $(DROPBOX_FOLDER)/*.yaml))
 
 .PHONY: help print-data prepare fetch-peh-schema aggregate mint build graph2assertions \
 	validate-pipeline validate-nanopubs validate-pr process-dropbox archive-dropbox \
-	publish-defining migrate pipeline assertions \
+	publish-defining migrate pipeline assertions published-assertions-yaml \
 	bot-identity publish-bot-introduction bot-ci-secrets \
 	test-flow clean
 
@@ -69,6 +71,7 @@ help:
 	@echo "  make assertions                # extract published/*.trig -> $(ASSERTIONS_FOLDER) (site build artifact)"
 	@echo "  make publish-defining          # mint unpublished assertions -> published/*.trig + id-map"
 	@echo "  make publish-defining DRY=--dry-run"
+	@echo "  make published-assertions-yaml # serialize published nanopub assertions -> $(PUBLISHED_ASSERTIONS_YAML)"
 	@echo "  make migrate                   # one-time id migration of existing terms (+ links) -> published/*.trig + id-map"
 	@echo "  make migrate DRY=--dry-run"
 	@echo "  make bot-identity              # one-time: generate bot keypair + introduction to review (offline)"
@@ -255,6 +258,18 @@ assertions: prepare
 	uv run pubmate-extract-assertions \
 		--nanopub-folder $(PUBLISHED_FOLDER) \
 		--out $(ASSERTIONS_FOLDER)
+
+published-assertions-yaml: assertions
+	uv run python scripts/published_assertions_to_yaml.py \
+		--assertion-folder $(ASSERTIONS_FOLDER) \
+		--output $(PUBLISHED_ASSERTIONS_YAML)
+	uv run linkml-convert \
+		--input-format yaml \
+		--output-format json \
+		--target-class EntityList \
+		-s $(SCHEMA) \
+		-o $(OUT_FOLDER)/published-assertions.json \
+		$(PUBLISHED_ASSERTIONS_YAML)
 
 test-flow:
 	$(MAKE) validate-pipeline
