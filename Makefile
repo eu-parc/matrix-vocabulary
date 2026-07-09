@@ -250,6 +250,8 @@ bot-ci-secrets:
 # by the Pages build; not committed.
 assertions: prepare
 	@set -e; \
+	mkdir -p "$(ASSERTIONS_FOLDER)"; \
+	find "$(ASSERTIONS_FOLDER)" -maxdepth 1 -type f -name '*.ttl' -delete; \
 	uv run pubmate-extract-assertions \
 		--nanopub-folder $(PUBLISHED_FOLDER) \
 		--out $(ASSERTIONS_FOLDER)
