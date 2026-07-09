@@ -9,7 +9,7 @@
 
 <#MatrixTable>
     a sh:NodeShape ;
-    sh:targetClass pehterms:Matrix ;
+    sh:targetClass owl:Class ;
     ui:hierarchyEnabled true ;
     ui:hierarchyPath rdfs:subClassOf ;
     sh:property [
