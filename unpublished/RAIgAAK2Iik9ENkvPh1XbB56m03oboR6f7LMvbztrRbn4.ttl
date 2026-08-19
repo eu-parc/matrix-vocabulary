@@ -1,0 +1,9 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://w3id.org/peh/matrices/RAIgAAK2Iik9ENkvPh1XbB56m03oboR6f7LMvbztrRbn4> a owl:Class ;
+    rdfs:label "beans" ;
+    rdfs:subClassOf <https://w3id.org/peh/matrices/RAfYD7Gs8EEYjnvsYb59C_gpY_8CZa2TovcQViFxKkeuY> ;
+    prov:wasAttributedTo <https://orcid.org/0000-0001-8327-0142> .
+

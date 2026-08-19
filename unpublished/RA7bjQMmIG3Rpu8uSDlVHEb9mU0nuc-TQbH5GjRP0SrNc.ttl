@@ -1,0 +1,9 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://w3id.org/peh/matrices/RA7bjQMmIG3Rpu8uSDlVHEb9mU0nuc-TQbH5GjRP0SrNc> a owl:Class ;
+    rdfs:label "compost" ;
+    rdfs:subClassOf <https://w3id.org/peh/matrices/RAQ7NubGhAY8Tly5iznP4yMj-q99ggFdgWE4b2q5zBtfc> ;
+    prov:wasAttributedTo <https://orcid.org/0000-0001-8327-0142> .
+

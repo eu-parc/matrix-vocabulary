@@ -1,0 +1,9 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://w3id.org/peh/matrices/RAciCuWbXQnZmyNfSRy-41DNe9SLMaNZpHYjJ-4JvPEto> a owl:Class ;
+    rdfs:label "liver" ;
+    rdfs:subClassOf <https://w3id.org/peh/matrices/RAOXnhBmU_ugVo5VT_1_w-PQeS-6EhwtLC-9-AWyuxBR8> ;
+    prov:wasAttributedTo <https://orcid.org/0000-0001-8327-0142> .
+

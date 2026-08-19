@@ -1,0 +1,11 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
+
+<https://w3id.org/peh/matrices/RAVMzASCvcLHqsMjZjnQnDNm52ugtdXdfw3jqZx4thiUE> a owl:Class ;
+    rdfs:label "fingernails" ;
+    schema1:alternateName "fnal" ;
+    rdfs:subClassOf <https://w3id.org/peh/matrices/RAoXZHP0vZHQi1sELDWEojW4HdwnVVtyCEVnmDf3PP4BE> ;
+    prov:wasAttributedTo <https://orcid.org/0000-0001-8327-0142> .
+

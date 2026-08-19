@@ -1,0 +1,11 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
+
+<https://w3id.org/peh/matrices/RAnJmNgUQWYsrxglBQoG2L8OP-h7_uYHP9lnygQYZ0PNg> a owl:Class ;
+    rdfs:label "dust" ;
+    schema1:alternateName "dust" ;
+    rdfs:subClassOf <https://w3id.org/peh/matrices/RAUm-9-ZoDsUuUqQSQ7SQJvOz56AU4Qxqv95DnyLl50mo> ;
+    prov:wasAttributedTo <https://orcid.org/0000-0001-8327-0142> .
+

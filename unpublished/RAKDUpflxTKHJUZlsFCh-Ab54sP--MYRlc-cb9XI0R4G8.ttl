@@ -1,0 +1,12 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
+
+<https://w3id.org/peh/matrices/RAKDUpflxTKHJUZlsFCh-Ab54sP--MYRlc-cb9XI0R4G8> a owl:Class ;
+    rdfs:label "whole blood",
+        "volbloed"@nl ;
+    schema1:alternateName "wbld" ;
+    rdfs:subClassOf <https://w3id.org/peh/matrices/RAD-f9pG9nLiAQhTyv_np5Mlirawv0CDcu4m7-LMBJ2WQ> ;
+    prov:wasAttributedTo <https://orcid.org/0000-0001-8327-0142> .
+
