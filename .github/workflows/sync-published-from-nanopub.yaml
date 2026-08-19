@@ -1,0 +1,61 @@
+name: Sync published nanopubs from network
+
+on:
+  workflow_dispatch:
+    inputs:
+      commit_changes:
+        description: "Commit rebuilt published/ files back to the current branch"
+        type: boolean
+        default: false
+      min_count:
+        description: "Fail if the query returns fewer nanopubs than this"
+        type: number
+        default: 100
+  # schedule:
+  #   # Disabled for now. Uncomment when the network-backed sync should run automatically.
+  #   - cron: "17 3 * * 1"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-published-from-nanopub-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Rebuild published nanopubs from network
+        run: |
+          python scripts/sync_published_from_nanopub_network.py \
+            --output-dir published \
+            --manifest build/nanopub-network-published.tsv \
+            --min-count "${{ inputs.min_count || 100 }}"
+
+      - name: Show sync summary
+        run: |
+          echo "Downloaded nanopubs:"
+          find published -maxdepth 1 -name "*.trig" | wc -l
+          git status --short published build/nanopub-network-published.tsv
+
+      - name: Upload sync manifest
+        uses: actions/upload-artifact@v4
+        with:
+          name: nanopub-network-published-manifest
+          path: build/nanopub-network-published.tsv
+
+      - name: Commit rebuilt published nanopubs
+        if: ${{ github.event_name == 'schedule' || inputs.commit_changes }}
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add published
+          git diff --cached --quiet || git commit -m "Sync published nanopubs from nanopub network [skip ci]"
+          git push

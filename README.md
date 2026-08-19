@@ -118,3 +118,6 @@ make test-flow
   configured.
 - `pages.yaml`: extracts assertion TTL from `published/*.trig` and builds the
   vocabulary browser.
+- `sync-published-from-nanopub.yaml`: manually rebuilds `published/*.trig` from
+  the nanopub network query result. It includes a commented-out weekly schedule
+  that can be enabled later.
