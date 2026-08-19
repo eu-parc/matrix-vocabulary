@@ -1,9 +1,0 @@
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix prov: <http://www.w3.org/ns/prov#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-
-<https://w3id.org/peh/matrices/RAgGBv-AqMjYnH4uvvlW_e1J-EH_aPZoOEQtRkHQI6xG4> a owl:Class ;
-    rdfs:label "sediment" ;
-    rdfs:subClassOf <https://w3id.org/peh/matrices/RAQyXl03bTKzH8quHZe0bijfev64RBi4KPtaXj1UEuYeY> ;
-    prov:wasAttributedTo <https://orcid.org/0000-0001-8327-0142> .
-
