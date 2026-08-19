@@ -1,0 +1,44 @@
+@prefix this: <https://w3id.org/np/RAsII6l04E8gpDQaB9Q7hQIwnryYpaBpPLJG2F2A2rxhk> .
+@prefix sub: <https://w3id.org/np/RAsII6l04E8gpDQaB9Q7hQIwnryYpaBpPLJG2F2A2rxhk/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix orcid: <https://orcid.org/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pehterms: <https://w3id.org/peh/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+sub:Head {
+    this: a np:Nanopublication ;
+        np:hasAssertion sub:assertion ;
+        np:hasProvenance sub:provenance ;
+        np:hasPublicationInfo sub:pubinfo .
+}
+
+sub:assertion {
+    <https://w3id.org/peh/matrices/RAsII6l04E8gpDQaB9Q7hQIwnryYpaBpPLJG2F2A2rxhk> a owl:Class ;
+        rdfs:label "zucchini" ;
+        dcterms:isPartOf <https://w3id.org/spaces/chemical-exposome-matrix/r/vocabulary> ;
+        rdfs:subClassOf <https://w3id.org/peh/matrices/RAfYD7Gs8EEYjnvsYb59C_gpY_8CZa2TovcQViFxKkeuY> .
+}
+
+sub:provenance {
+    sub:assertion prov:generatedAtTime "2026-08-19T07:30:03.729364+00:00"^^xsd:dateTime ;
+        prov:wasAttributedTo orcid:0000-0001-8327-0142 .
+}
+
+sub:pubinfo {
+    sub:sig npx:hasAlgorithm "RSA" ;
+        npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoYXKCw/BWx+0exERmA7cxc7MUibjOCXzSZOUOquHYk9ugwE2qMo6dYxNCOWWMyge5tqrdqi7kqiTPCNmUhwLzUa35OIhWUNHf6bgF0Giw6nRetEH6ILbXX+l16DCHQjMWeCweZIpnghryEy1kyO6UU03qVZinBByf0UpfoB25ZUWyS2zKJiulVFAFK193Wd5lPsltmaOnmyKoVOA34aTIJkAxWEHrK1OuSuF9UCH+belw+QRNJWFKJcoJ+r8OsFM89+DKncnUuVDx8B04TpDoTby7UQ09608eMUPKOlfi//TfzzG3tgvP8kNNb1yczrwNYPvXnstN3LChLvmMjT2KQIDAQAB" ;
+        npx:hasSignature "CdQDzZTFoIrNmGzn6yP36jIvC9qFXzv5+QMA1oMh9/YHweELFxy56DJ/GzXuIRYtmqObTp6JcPgnLAsazdvXvQhuxavpVho7wm+KYlOx/AV08a3Cvd+Out1PIDLcGU6FQ3vBbHliu/7piYO5SgXcqr2vjSGOa2EcDGfL9GbODEVXIqorFjsyKZdKPHYyulbmr7kkUZiWoZp2K8hX4zhWRHOmIx03rTT/pnGGCWJGfbsYx24MFf9zHthc/tduxsGqvcQYpCiKet3DYjuCn7IaZCedeIVhkOmAYWiMkmlFm9HU/JzxztTOwy72JgGK6Qbz1zaSGvPMf5QBaxITSXba7Q==" ;
+        npx:hasSignatureTarget this: ;
+        npx:signedBy <https://w3id.org/np/RArbMo6bMp74oD1SpHhwsDut0n_b_uoNc7QnZWUu8js5I/matrix-bot> .
+    this: rdfs:label "zucchini" ;
+        dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+        npx:hasNanopubType pehterms:Matrix ;
+        npx:introduces <https://w3id.org/peh/matrices/RAsII6l04E8gpDQaB9Q7hQIwnryYpaBpPLJG2F2A2rxhk> ;
+        prov:generatedAtTime "2026-08-19T07:30:03.729364+00:00"^^xsd:dateTime ;
+        prov:wasAttributedTo <https://w3id.org/np/RArbMo6bMp74oD1SpHhwsDut0n_b_uoNc7QnZWUu8js5I/matrix-bot> .
+}
