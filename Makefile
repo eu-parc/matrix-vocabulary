@@ -14,6 +14,9 @@ ASSERTIONS_FOLDER ?= $(OUT_FOLDER)/assertions
 PR_ASSERTIONS_FOLDER ?= $(OUT_FOLDER)/pr-assertions
 PUBLISHED_YAML_FOLDER ?= published-yaml
 PUBLISHED_ASSERTIONS_YAML ?= $(PUBLISHED_YAML_FOLDER)/published-assertions.yaml
+PUBLISHED_NANOPUB_MANIFEST ?= $(OUT_FOLDER)/published-nanopubs.tsv
+VOCABULARY_QUERY_URL ?= https://query.knowledgepixels.com/api/RA5rQSjX-6t_ccwhgZhxCpWryxuRjMFeCMXelxJYfxtdw/get-approved-classes-of-an-ontology-from-space-members?ontology=https%3A%2F%2Fw3id.org%2Fspaces%2Fchemical-exposome-matrix%2Fr%2Fvocabulary
+PUBLISHED_NANOPUB_MIN_COUNT ?= 1
 ONTOLOGY_LABEL ?= matrices.ttl
 TARGET_CLASS ?= matrix_subclasses
 BASE_NAMESPACE ?= https://w3id.org/peh/terms/
@@ -58,7 +61,7 @@ DATA_FILES = $(sort $(wildcard $(DROPBOX_FOLDER)/*.yaml))
 
 .PHONY: help print-data prepare fetch-peh-schema aggregate mint build graph2assertions \
 	validate-pipeline validate-nanopubs validate-pr process-dropbox archive-dropbox \
-	publish-defining migrate pipeline assertions published-assertions-yaml \
+	publish-defining migrate pipeline sync-published assertions published-assertions-yaml \
 	bot-identity publish-bot-introduction bot-ci-secrets \
 	test-flow clean
 
@@ -68,6 +71,7 @@ help:
 	@echo "  make pipeline                  # process dropbox -> unpublished + archive"
 	@echo "  make validate-pipeline         # process dropbox -> build + unpublished, without archive/publish"
 	@echo "  make validate-pr               # PR gate: build proposed terms + validate as defining nanopubs (keyless)"
+	@echo "  make sync-published            # download current vocabulary nanopubs into $(PUBLISHED_FOLDER)"
 	@echo "  make assertions                # extract published/*.trig -> $(ASSERTIONS_FOLDER) (site build artifact)"
 	@echo "  make publish-defining          # mint unpublished assertions -> published/*.trig + id-map"
 	@echo "  make publish-defining DRY=--dry-run"
@@ -251,6 +255,14 @@ bot-ci-secrets:
 # Site-facing projection: extract the assertion graph of each published
 # nanopublication (.trig) into plain .ttl. This is a build artifact consumed only
 # by the Pages build; not committed.
+sync-published: prepare
+	@set -e; \
+	uv run python scripts/sync_published_nanopubs.py \
+		--query-url "$(VOCABULARY_QUERY_URL)" \
+		--output-dir $(PUBLISHED_FOLDER) \
+		--manifest $(PUBLISHED_NANOPUB_MANIFEST) \
+		--min-count $(PUBLISHED_NANOPUB_MIN_COUNT)
+
 assertions: prepare
 	@set -e; \
 	mkdir -p "$(ASSERTIONS_FOLDER)"; \
@@ -259,7 +271,8 @@ assertions: prepare
 		--nanopub-folder $(PUBLISHED_FOLDER) \
 		--out $(ASSERTIONS_FOLDER)
 
-published-assertions-yaml: assertions
+published-assertions-yaml: sync-published
+	$(MAKE) assertions
 	uv run python scripts/published_assertions_to_yaml.py \
 		--assertion-folder $(ASSERTIONS_FOLDER) \
 		--output $(PUBLISHED_ASSERTIONS_YAML)

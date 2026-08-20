@@ -18,6 +18,7 @@ PROV = Namespace("http://www.w3.org/ns/prov#")
 RDFS = Namespace("http://www.w3.org/2000/01/rdf-schema#")
 SCHEMA = Namespace("http://schema.org/")
 SKOS = Namespace("http://www.w3.org/2004/02/skos/core#")
+MATRIX_NAMESPACE = "https://w3id.org/peh/matrices/"
 
 
 PREDICATE_SLOTS = {
@@ -54,7 +55,11 @@ def scalar(value: Any) -> Any:
     return str(value)
 
 
-def append(record: dict[str, Any], slot: str, value: Any) -> None:
+def append(record: dict[str, Any], slot: str, value: Any, active_subjects: set[str]) -> None:
+    if slot == "parent_matrices" and isinstance(value, str):
+        if value.startswith(MATRIX_NAMESPACE) and value not in active_subjects:
+            return
+
     if slot in LIST_SLOTS:
         record.setdefault(slot, [])
         if value not in record[slot]:
@@ -88,6 +93,7 @@ def main() -> None:
         graph.parse(ttl_file, format="turtle")
 
     records: list[dict[str, Any]] = []
+    active_subjects = {str(subject) for subject in graph.subjects(RDF.type, OWL.Class)}
     for subject in sorted(graph.subjects(RDF.type, OWL.Class), key=str):
         record: dict[str, Any] = {"id": str(subject)}
 
@@ -105,7 +111,7 @@ def main() -> None:
 
         for predicate, slot in PREDICATE_SLOTS.items():
             for value in graph.objects(subject, predicate):
-                append(record, slot, scalar(value))
+                append(record, slot, scalar(value), active_subjects)
 
         for node in graph.objects(subject, PEHTERMS.hasContextAlias):
             item = context_alias(graph, node)

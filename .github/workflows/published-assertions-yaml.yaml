@@ -38,18 +38,18 @@ jobs:
         if: steps.schedule.outputs.run == 'true'
         run: uv sync
 
-      - name: Build published assertions YAML
+      - name: Sync published nanopubs and build assertions YAML
         if: steps.schedule.outputs.run == 'true'
         run: make published-assertions-yaml
 
-      - name: Commit published assertions YAML
+      - name: Commit published nanopubs and assertions YAML
         if: steps.schedule.outputs.run == 'true'
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
-          git add published-yaml/published-assertions.yaml
-          git diff --cached --quiet || git commit -m "Update published assertions YAML [skip ci]"
+          git add published/ published-yaml/published-assertions.yaml
+          git diff --cached --quiet || git commit -m "Update published nanopubs and assertions YAML [skip ci]"
 
-      - name: Push published assertions YAML
+      - name: Push published nanopubs and assertions YAML
         if: steps.schedule.outputs.run == 'true'
-        run: git push || echo "No published assertions YAML changes to push"
+        run: git push || echo "No published nanopub or assertions YAML changes to push"
