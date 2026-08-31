@@ -1,0 +1,802 @@
+matrix_subclasses:
+- id: https://w3id.org/peh/matrices/RA-1ife8o8pseb2Yfx5MeIFSvnpaNL-90yQlMtecjJhzk
+  name: air gas phase
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RA1NmPPzHrbQcDcCcUSD1c_Jx0gEqIkrym9w6jY0sGsqA
+- id: https://w3id.org/peh/matrices/RA-fRSJZhT-OdospP_TRivM-L_tO-YsfYRBb_1jdfR9kY
+  name: environmental matrix
+  parent_matrices:
+  - https://w3id.org/peh/terms/Matrix
+  description: All abiotic environmental compartments in which chemicals can be measured
+- id: https://w3id.org/peh/matrices/RA-igQuPYnBqhAzk9e_dLVktRbtxLoGnf9n3u_LlN9APo
+  name: spinach
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAfYD7Gs8EEYjnvsYb59C_gpY_8CZa2TovcQViFxKkeuY
+- id: https://w3id.org/peh/matrices/RA-qfll1AS6vhXTr4rHXqzeyhV-imxcQQLcPcjRbteW10
+  name: hair
+  translations:
+  - property_name: name
+    language: nl
+    translated_value: haar
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RArqXjsWKq1YgDeEYPhQq6qa7jL-PoIBtebLBq1CSTA8k
+  - https://w3id.org/peh/terms/Matrix
+  description: The filamentous outgrowth of the epidermis. (NCI)
+  short_name: har
+  exact_matches:
+  - http://id.nlm.nih.gov/mesh/D006197
+  - http://purl.obolibrary.org/obo/NCIT_C32705
+  - http://snomed.info/id/119326000
+- id: https://w3id.org/peh/matrices/RA13HftvdIUUqM7Lw-U2M8Wp0sbhnKbhMo-0wezBNo3Eo
+  name: A horizon
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAK5VM0elb32Xjk2uCL2Uh44x4QM8BKu0kubzlqBnA3-Y
+- id: https://w3id.org/peh/matrices/RA1NmPPzHrbQcDcCcUSD1c_Jx0gEqIkrym9w6jY0sGsqA
+  name: air
+  translations:
+  - property_name: name
+    language: nl
+    translated_value: lucht
+  short_name: air
+- id: https://w3id.org/peh/matrices/RA1sHPpYgQ_h8Dku-o1dizb8YGZ6xHddcmaenlyZ4IMvA
+  name: toenails
+  translations:
+  - property_name: name
+    language: nl
+    translated_value: alle teennagels
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAoXZHP0vZHQi1sELDWEojW4HdwnVVtyCEVnmDf3PP4BE
+  short_name: tnal
+- id: https://w3id.org/peh/matrices/RA2CfX2HnCfXAPWk55wOTwmjviUX-vtSnNVoM7xP1BKlY
+  name: R horizon
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAK5VM0elb32Xjk2uCL2Uh44x4QM8BKu0kubzlqBnA3-Y
+- id: https://w3id.org/peh/matrices/RA2aXLICa6EJdbaFMQ4RpEEki-fjmFTxpenqhUspZsIdA
+  name: air particulate phase
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RA1NmPPzHrbQcDcCcUSD1c_Jx0gEqIkrym9w6jY0sGsqA
+- id: https://w3id.org/peh/matrices/RA3MFOK0PYKmReZCzLbvgHbfSyKA37lUCaOh78neLk7bU
+  name: whole plant
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAfYD7Gs8EEYjnvsYb59C_gpY_8CZa2TovcQViFxKkeuY
+- id: https://w3id.org/peh/matrices/RA3OgMUI14j1a1n9WOqYoJp5DKOXiOr0u8egOnvgEA40E
+  name: cord whole blood
+  translations:
+  - property_name: name
+    language: nl
+    translated_value: navelstrengbloed-volbloed
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RA7wHzGxVRswpnU2GmWc30O4dP3pniz8OEAZOyQY8s_XQ
+  short_name: crd-wbld
+- id: https://w3id.org/peh/matrices/RA3W5WDRsMF-Q-fp2aclhnZ-6EG8EOZ8h57Xu9mUA6isw
+  name: soil profile
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAK5VM0elb32Xjk2uCL2Uh44x4QM8BKu0kubzlqBnA3-Y
+- id: https://w3id.org/peh/matrices/RA3xOAf2s6RD7Qt_kXdfKwXFOUIuBh-jFNcBxYQ7xz_30
+  name: PM10
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RA2aXLICa6EJdbaFMQ4RpEEki-fjmFTxpenqhUspZsIdA
+- id: https://w3id.org/peh/matrices/RA5NDXoP-H4FfzoHu2oUTdW2XGMY2E9sBkEqnhLbfYusM
+  name: water total
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAYnAn73ckYTntumb6ebToNrKsVSnUh51eZfdC2D3k1kc
+- id: https://w3id.org/peh/matrices/RA5jqya6S2tHQbTIjRERUB8ifkBRRQvMEnKF-8lXC98Kw
+  name: cord plasma
+  translations:
+  - property_name: name
+    language: nl
+    translated_value: navelstreng bloedplasma
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RA7wHzGxVRswpnU2GmWc30O4dP3pniz8OEAZOyQY8s_XQ
+  short_name: crd-pls
+- id: https://w3id.org/peh/matrices/RA6yVQB3aTu-KBUoHcGsfGBDAo5ik_TOTriUDgNJUrIjI
+  name: blood cells
+  translations:
+  - property_name: name
+    language: nl
+    translated_value: bloedcellen
+  short_name: wbc
+- id: https://w3id.org/peh/matrices/RA7Ufj-KOWs5HOiywyzoq9Pgt2g56q5PzJTQe09GLKZpg
+  name: blood serum
+  translations:
+  - property_name: name
+    language: nl
+    translated_value: bloedserum
+  short_name: ser
+- id: https://w3id.org/peh/matrices/RA7bjQMmIG3Rpu8uSDlVHEb9mU0nuc-TQbH5GjRP0SrNc
+  name: compost
+- id: https://w3id.org/peh/matrices/RA7wHzGxVRswpnU2GmWc30O4dP3pniz8OEAZOyQY8s_XQ
+  name: cord blood
+  translations:
+  - property_name: name
+    language: nl
+    translated_value: navelstrengbloed
+  short_name: crd
+- id: https://w3id.org/peh/matrices/RA8B1Y1qZZEziI-EyNq7LTbpXk1jpD7KGAOWzwS6w0v2E
+  name: needles
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAbk6a3CTM-SqDwj7gSMtGk-5q7GkQiVxFA8IuBAcHvv4
+- id: https://w3id.org/peh/matrices/RA8dvUqPYov55HV308ynqwelJiAc9Lw91xerfntOY9oVo
+  name: air
+  translations:
+  - property_name: name
+    language: nl
+    translated_value: lucht
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAUm-9-ZoDsUuUqQSQ7SQJvOz56AU4Qxqv95DnyLl50mo
+  short_name: air
+- id: https://w3id.org/peh/matrices/RAAZiWmgwfvHC0IdmofDnAxgbdCK0ETN_j96B6jA23PU4
+  name: liver
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAOXnhBmU_ugVo5VT_1_w-PQeS-6EhwtLC-9-AWyuxBR8
+- id: https://w3id.org/peh/matrices/RAAfOpOC8zGUrF94k-qA-h5YAaNIS-R2SiEvS5H-nha4s
+  name: breast milk
+  translations:
+  - property_name: name
+    language: nl
+    translated_value: moedermelk
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAQP5G8v9lpCFpvfYLiPUDR3_H6geD1Q57_qUjeVm3jJI
+  - https://w3id.org/peh/terms/Matrix
+  description: A nutrient-rich fluid secreted by the mammary glands of a female mammal
+    for the purpose of feeding their young. (NCI)
+  short_name: bmk
+  exact_matches:
+  - http://id.nlm.nih.gov/mesh/D008895
+  - http://purl.obolibrary.org/obo/NCIT_C13257
+  - http://snomed.info/id/119328004
+- id: https://w3id.org/peh/matrices/RAAja9mGrZMpBeS991_CYT03U5cAEg3m34UspzENXFkUI
+  name: blood serum
+  translations:
+  - property_name: name
+    language: nl
+    translated_value: bloedserum
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAD-f9pG9nLiAQhTyv_np5Mlirawv0CDcu4m7-LMBJ2WQ
+  short_name: ser
+- id: https://w3id.org/peh/matrices/RAAv6QqmojemCXqRLLnAQLUNiBI3Hvm_fQD0pbCNO5L7Q
+  name: leaves
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAbk6a3CTM-SqDwj7gSMtGk-5q7GkQiVxFA8IuBAcHvv4
+- id: https://w3id.org/peh/matrices/RAB2oB89IoXKTIZII5ctrfnEsk8jui2tv-tinwYSJbc1o
+  name: root
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAbk6a3CTM-SqDwj7gSMtGk-5q7GkQiVxFA8IuBAcHvv4
+- id: https://w3id.org/peh/matrices/RABtYw7tYBZN4wjSpiVKEJWR6i3SvXkosBh9OuXsJp900
+  name: B horizon
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAK5VM0elb32Xjk2uCL2Uh44x4QM8BKu0kubzlqBnA3-Y
+- id: https://w3id.org/peh/matrices/RAD-f9pG9nLiAQhTyv_np5Mlirawv0CDcu4m7-LMBJ2WQ
+  name: blood
+  translations:
+  - property_name: name
+    language: nl
+    translated_value: bloed
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAQP5G8v9lpCFpvfYLiPUDR3_H6geD1Q57_qUjeVm3jJI
+  - https://w3id.org/peh/terms/Matrix
+  description: The body fluid circulating throughout the cardiovascular system, consisting
+    of plasma and blood cells. (MeSH)
+  short_name: bld
+  exact_matches:
+  - http://id.nlm.nih.gov/mesh/D001769
+  - http://purl.obolibrary.org/obo/NCIT_C12434
+  - http://snomed.info/id/119297000
+- id: https://w3id.org/peh/matrices/RADF1SisIvum3157bYON5GLZW66DbuiM7xjkP8dGFzn3E
+  name: volumetric absorptive microsample
+  translations:
+  - property_name: name
+    language: nl
+    translated_value: volumetrische absorptieve microsample
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAKDUpflxTKHJUZlsFCh-Ab54sP--MYRlc-cb9XI0R4G8
+  short_name: vams
+- id: https://w3id.org/peh/matrices/RADSOMvAux8GtQxYEc-HOHB2hjqS_Feo6EptO4uNY4xlI
+  name: breath
+- id: https://w3id.org/peh/matrices/RADbqOiSdL2hyzuJpALjJfmFD2hwdOdBWFLAFKXeoBAAY
+  name: blood plasma
+  translations:
+  - property_name: name
+    language: nl
+    translated_value: bloedplasma
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAD-f9pG9nLiAQhTyv_np5Mlirawv0CDcu4m7-LMBJ2WQ
+  short_name: pls
+- id: https://w3id.org/peh/matrices/RAE6tWjTfeqoiLGdHwt_82UkmaGY88KKVKj7mic1zfA_0
+  name: cord serum
+  translations:
+  - property_name: name
+    language: nl
+    translated_value: navelstrengbloed-serum
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RA7wHzGxVRswpnU2GmWc30O4dP3pniz8OEAZOyQY8s_XQ
+  short_name: crd-ser
+- id: https://w3id.org/peh/matrices/RAF_kCntxZPkMQVCT6LGtLDns2IzSyG2_i0uAmFoiofKY
+  name: biotic matrix
+  parent_matrices:
+  - https://w3id.org/peh/terms/Matrix
+  description: All biological organisms and their tissues
+- id: https://w3id.org/peh/matrices/RAFtNuLo2HktvNGEZkvWLZoLP00QSZTT2UnqocEASmSSo
+  name: fingernails
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAoXZHP0vZHQi1sELDWEojW4HdwnVVtyCEVnmDf3PP4BE
+  short_name: fnal
+- id: https://w3id.org/peh/matrices/RAGC0XSTbo14wafNO4L20FsaSsll4JCNbyDMSCGddpaDI
+  name: cord blood
+  translations:
+  - property_name: name
+    language: nl
+    translated_value: navelstrengbloed
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAD-f9pG9nLiAQhTyv_np5Mlirawv0CDcu4m7-LMBJ2WQ
+  short_name: crd
+- id: https://w3id.org/peh/matrices/RAIbsgwYEK31Cfhg2xBxLmRxe-vW9lBqzh4jK4MWvZ5pg
+  name: radish
+- id: https://w3id.org/peh/matrices/RAIgAAK2Iik9ENkvPh1XbB56m03oboR6f7LMvbztrRbn4
+  name: beans
+- id: https://w3id.org/peh/matrices/RAJrcdBbJmAwgFCvE7H6LHtzZMvi-wJUk5czUGHKEtlEQ
+  name: O horizon
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAK5VM0elb32Xjk2uCL2Uh44x4QM8BKu0kubzlqBnA3-Y
+- id: https://w3id.org/peh/matrices/RAK5VM0elb32Xjk2uCL2Uh44x4QM8BKu0kubzlqBnA3-Y
+  name: soil
+  translations:
+  - property_name: name
+    language: nl
+    translated_value: grond
+  short_name: soil
+- id: https://w3id.org/peh/matrices/RAKDUpflxTKHJUZlsFCh-Ab54sP--MYRlc-cb9XI0R4G8
+  name: whole blood
+  translations:
+  - property_name: name
+    language: nl
+    translated_value: volbloed
+  short_name: wbld
+- id: https://w3id.org/peh/matrices/RALKUDuY7YhK-y-FqYAnlXGUk53ZrdGjzbWatrrKBSJyU
+  name: surface dust
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAnJmNgUQWYsrxglBQoG2L8OP-h7_uYHP9lnygQYZ0PNg
+  short_name: surface dust
+- id: https://w3id.org/peh/matrices/RALNbBmx3-i6eZHfDNYNSp3nyH5jOnHGvclj-G3rGTdPU
+  name: E horizon
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAK5VM0elb32Xjk2uCL2Uh44x4QM8BKu0kubzlqBnA3-Y
+- id: https://w3id.org/peh/matrices/RALox5B5dJhVzrMOGgdCA659uDSYF8w-TCodRLi0AhRnE
+  name: fat
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAOXnhBmU_ugVo5VT_1_w-PQeS-6EhwtLC-9-AWyuxBR8
+- id: https://w3id.org/peh/matrices/RAMuEORzqjK8LD9QFU18XWK81EWuBWgi6BIwKj8hDW0QM
+  name: dried blood spots
+  translations:
+  - property_name: name
+    language: nl
+    translated_value: bloed spot gedroogd
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAKDUpflxTKHJUZlsFCh-Ab54sP--MYRlc-cb9XI0R4G8
+  short_name: dwb
+- id: https://w3id.org/peh/matrices/RAMyy6UtNqbuypRxvZ9XwsKJyQSC4xzmheDtc6lAnI-WY
+  name: floor dust
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAnJmNgUQWYsrxglBQoG2L8OP-h7_uYHP9lnygQYZ0PNg
+  short_name: floor dust
+- id: https://w3id.org/peh/matrices/RANKwPAhyjHXBUjMPY5ml4_Fyth63tGEaqqvXtTJGk9tA
+  name: exhaled breath condensate
+  translations:
+  - property_name: name
+    language: nl
+    translated_value: uitgeademde lucht condensaat
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RADSOMvAux8GtQxYEc-HOHB2hjqS_Feo6EptO4uNY4xlI
+  short_name: ebc
+- id: https://w3id.org/peh/matrices/RAO1F-P19caz2xuwDdWA3-eWTkkiD5zD_scZ-AVEIYPMo
+  name: soil
+  translations:
+  - property_name: name
+    language: nl
+    translated_value: grond
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAQ7NubGhAY8Tly5iznP4yMj-q99ggFdgWE4b2q5zBtfc
+  short_name: soil
+- id: https://w3id.org/peh/matrices/RAOXnhBmU_ugVo5VT_1_w-PQeS-6EhwtLC-9-AWyuxBR8
+  name: animal tissue
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAoSsPdY12TYwXc9GZ_tRtO9HnI9R00M0MhqjIEl3S8c0
+  - https://w3id.org/peh/terms/Matrix
+- id: https://w3id.org/peh/matrices/RAP1BE2Z9awdYWsovCtO526Nbtknn8SRr9R3s4CJIuTdM
+  name: food matrix
+  parent_matrices:
+  - https://w3id.org/peh/terms/Matrix
+  description: All edible materials derived from plants or animals that may be analyzed
+    for chemical residues or contaminants
+- id: https://w3id.org/peh/matrices/RAP6SyyNeJJEfJfiKnGuTMt53uCsnGL8YbOpHiIAPaN4E
+  name: adipose tissue
+  translations:
+  - property_name: name
+    language: nl
+    translated_value: vetweefsel/vet
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAi949d7yjXol2LDmFJ4c9GGyzann2cM-gWOasXu90e5o
+  - https://w3id.org/peh/terms/Matrix
+  description: A specialized form of connective tissue consisting primarily of adipocytes
+    (fat cells), surrounded by a meshwork of collagen fibers. (NCI)
+  short_name: adi
+  exact_matches:
+  - http://id.nlm.nih.gov/mesh/D000273
+  - http://purl.obolibrary.org/obo/NCIT_C12472
+  - http://snomed.info/id/258414004
+- id: https://w3id.org/peh/matrices/RAPG8ff6HSFxlInKdbuK6EqVAVnPSdlPK0utQe7SEkfMA
+  name: umbilical cord tissue
+  translations:
+  - property_name: name
+    language: nl
+    translated_value: weefsel van navelstreng
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAi949d7yjXol2LDmFJ4c9GGyzann2cM-gWOasXu90e5o
+  - https://w3id.org/peh/terms/Matrix
+  description: Tissue derived from the umbilical cord. (NCI)
+  short_name: umct
+  exact_matches:
+  - http://id.nlm.nih.gov/mesh/D014470
+  - http://purl.obolibrary.org/obo/NCIT_C133318
+  - http://snomed.info/id/258436001
+- id: https://w3id.org/peh/matrices/RAPUisClC9hUFbeFTYRJpwMV1-ur28X6tDAZ53egbxUMo
+  name: atmospheric deposition
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAUm-9-ZoDsUuUqQSQ7SQJvOz56AU4Qxqv95DnyLl50mo
+- id: https://w3id.org/peh/matrices/RAQ7NubGhAY8Tly5iznP4yMj-q99ggFdgWE4b2q5zBtfc
+  name: terrestrial matrix
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RA-fRSJZhT-OdospP_TRivM-L_tO-YsfYRBb_1jdfR9kY
+  - https://w3id.org/peh/terms/Matrix
+- id: https://w3id.org/peh/matrices/RAQP5G8v9lpCFpvfYLiPUDR3_H6geD1Q57_qUjeVm3jJI
+  name: human body fluid
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAy2XFY4tcAktluhxPOOHzjCw7PrKL2e1UW5DzGRl6Wwg
+  description: Liquid substances produced by the body. (NCI)
+  exact_matches:
+  - http://purl.obolibrary.org/obo/NCIT_C13236
+- id: https://w3id.org/peh/matrices/RAQQaHIF0BqfRt9MSBrkOqJ5l2v-Qwzfo88QGJT2LyMTo
+  name: saliva
+  translations:
+  - property_name: name
+    language: nl
+    translated_value: speeksel
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAQP5G8v9lpCFpvfYLiPUDR3_H6geD1Q57_qUjeVm3jJI
+  - https://w3id.org/peh/terms/Matrix
+  description: The clear, viscous fluid secreted by the SALIVARY GLANDS and mucous
+    glands of the mouth. It contains MUCINS, water, organic salts, and ptylin.(MeSH)
+  short_name: sal
+  exact_matches:
+  - http://id.nlm.nih.gov/mesh/D012463
+- id: https://w3id.org/peh/matrices/RAQtYv5YRozuXuz-DFDVh7ze_OJUQQf1LjPJPH89vl1es
+  name: nuts
+- id: https://w3id.org/peh/matrices/RAQyXl03bTKzH8quHZe0bijfev64RBi4KPtaXj1UEuYeY
+  name: aquatic matrix
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RA-fRSJZhT-OdospP_TRivM-L_tO-YsfYRBb_1jdfR9kY
+  - https://w3id.org/peh/terms/Matrix
+- id: https://w3id.org/peh/matrices/RARrMaCYS1_RnPZUKKSCUwGiW1b6xjIb0l9Wbb-apx4cs
+  name: zucchini
+- id: https://w3id.org/peh/matrices/RASWRwsvJSZ0umkEzg8hd5LElsOfKo3hmHOewiO3_tBeI
+  name: atmospheric deposition
+- id: https://w3id.org/peh/matrices/RASXP7fc5JHUt1Ec9MZblJoOkiAtbo1iRvche6SmoxLAs
+  name: nuts
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAfYD7Gs8EEYjnvsYb59C_gpY_8CZa2TovcQViFxKkeuY
+- id: https://w3id.org/peh/matrices/RAT0pnvlQSxST9cVr347gG9o-EMl-y6y2cuBRMIQwpRMo
+  name: nasal mucus
+  translations:
+  - property_name: name
+    language: nl
+    translated_value: neusslijm
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAQP5G8v9lpCFpvfYLiPUDR3_H6geD1Q57_qUjeVm3jJI
+  - https://w3id.org/peh/terms/Matrix
+  description: The thick fluid secreted by the mucus glands in the nasal cavity. (NCI)
+  short_name: nmuc
+  exact_matches:
+  - http://purl.obolibrary.org/obo/NCIT_C52551
+- id: https://w3id.org/peh/matrices/RAT2c_BBoT0XnI9uZYnWvNAVHDQZ0zuOWaLqKnDXXZc40
+  name: cord blood cells
+  translations:
+  - property_name: name
+    language: nl
+    translated_value: navelstreng bloed cellen
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RA7wHzGxVRswpnU2GmWc30O4dP3pniz8OEAZOyQY8s_XQ
+  short_name: crd-bldc
+- id: https://w3id.org/peh/matrices/RAUMc-JTcrYrokwqx_HKcM4MYIU84WoNpLmW-fN059pXE
+  name: water
+  translations:
+  - property_name: name
+    language: nl
+    translated_value: water
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAQyXl03bTKzH8quHZe0bijfev64RBi4KPtaXj1UEuYeY
+  short_name: water
+- id: https://w3id.org/peh/matrices/RAUZ4lM2ipUddS-sJao36ooXgYoHiS_mDeZOH8FjGTSBY
+  name: beans
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAfYD7Gs8EEYjnvsYb59C_gpY_8CZa2TovcQViFxKkeuY
+- id: https://w3id.org/peh/matrices/RAUm-9-ZoDsUuUqQSQ7SQJvOz56AU4Qxqv95DnyLl50mo
+  name: atmospheric matrix
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RA-fRSJZhT-OdospP_TRivM-L_tO-YsfYRBb_1jdfR9kY
+  - https://w3id.org/peh/terms/Matrix
+- id: https://w3id.org/peh/matrices/RAUyy50s2lAa3UWew6xYYE0byuJ2Ibl1DrwdzZ_DX_ArI
+  name: muscle
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAOXnhBmU_ugVo5VT_1_w-PQeS-6EhwtLC-9-AWyuxBR8
+- id: https://w3id.org/peh/matrices/RAVMzASCvcLHqsMjZjnQnDNm52ugtdXdfw3jqZx4thiUE
+  name: fingernails
+  short_name: fnal
+- id: https://w3id.org/peh/matrices/RAVOBJckXcVFKA7TEZIWz6A-Hp5fTYOJ1Eim3oHRn75NE
+  name: spinach
+- id: https://w3id.org/peh/matrices/RAVp8hisV4HBuuOnYXh38wUHUc-lECcGpyxNJ9SEnN-aE
+  name: amniotic fluid
+  translations:
+  - property_name: name
+    language: nl
+    translated_value: vruchtwater
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAi949d7yjXol2LDmFJ4c9GGyzann2cM-gWOasXu90e5o
+  - https://w3id.org/peh/terms/Matrix
+  description: The fluid within the amniotic cavity which surrounds and protects the
+    developing embryo. (NCI)
+  short_name: amn
+  exact_matches:
+  - http://id.nlm.nih.gov/mesh/D000653
+  - http://purl.obolibrary.org/obo/NCIT_C13188
+  - http://snomed.info/id/119373006
+- id: https://w3id.org/peh/matrices/RAXps27IPt04MNq_vzWC4QhAC-bBBeOXM1AX4MzRI6-VA
+  name: bone
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAOXnhBmU_ugVo5VT_1_w-PQeS-6EhwtLC-9-AWyuxBR8
+- id: https://w3id.org/peh/matrices/RAYgaU7ZoAbEGZVA8Hlu-RzCvSYG3bLRMKISDfws9iCQc
+  name: toenails
+  translations:
+  - property_name: name
+    language: nl
+    translated_value: alle teennagels
+  short_name: tnal
+- id: https://w3id.org/peh/matrices/RAYnAn73ckYTntumb6ebToNrKsVSnUh51eZfdC2D3k1kc
+  name: water
+  translations:
+  - property_name: name
+    language: nl
+    translated_value: water
+  short_name: water
+- id: https://w3id.org/peh/matrices/RAYs1o2pSjbS5pZpxujn4Zlp38XukJRxhvhLf8S1nkrC4
+  name: respirable fraction
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RA2aXLICa6EJdbaFMQ4RpEEki-fjmFTxpenqhUspZsIdA
+- id: https://w3id.org/peh/matrices/RAZafB952xHok6_XpY4CX-pDHw1wYhJxp8Xy2KJcSUwq4
+  name: deposition wet
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RASWRwsvJSZ0umkEzg8hd5LElsOfKo3hmHOewiO3_tBeI
+- id: https://w3id.org/peh/matrices/RA_7AKqvN2MTCF6wLzXd8Cn3UGxaIE-hqapwLEzRECRVM
+  name: urine
+  translations:
+  - property_name: name
+    language: nl
+    translated_value: urine
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAQP5G8v9lpCFpvfYLiPUDR3_H6geD1Q57_qUjeVm3jJI
+  - https://w3id.org/peh/terms/Matrix
+  description: The fluid that is excreted by the kidneys. It is stored in the bladder
+    and discharged through the urethra. (NCI)
+  short_name: ur
+  exact_matches:
+  - http://id.nlm.nih.gov/mesh/D014556
+  - http://purl.obolibrary.org/obo/NCIT_C13283
+  - http://snomed.info/id/122575003
+- id: https://w3id.org/peh/matrices/RA_i_ENb0rLmkeE-x8PBuKyi-Vk_WeOy2DpCE3ys8lXwY
+  name: fruit
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAbk6a3CTM-SqDwj7gSMtGk-5q7GkQiVxFA8IuBAcHvv4
+- id: https://w3id.org/peh/matrices/RAaP6htDAyWuP9gjZuA3Vbwe78AjeMEFlvTqmXRCsvcNg
+  name: deposition total
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RASWRwsvJSZ0umkEzg8hd5LElsOfKo3hmHOewiO3_tBeI
+- id: https://w3id.org/peh/matrices/RAbfyb6RhJlNnL8qwlOdZ6gf4yR_JBiU9fvPMIQmSpXYg
+  name: material matrix
+  parent_matrices:
+  - https://w3id.org/peh/terms/Matrix
+  description: Non-biological, non-environmental materials used for sampling or exposure
+    assessment
+- id: https://w3id.org/peh/matrices/RAbk6a3CTM-SqDwj7gSMtGk-5q7GkQiVxFA8IuBAcHvv4
+  name: whole plant
+- id: https://w3id.org/peh/matrices/RAbovw_gve_jMl2cA6BgIPCXuKq4FvonHKZDkm5euFKgI
+  name: semen
+  translations:
+  - property_name: name
+    language: nl
+    translated_value: zaad
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAQP5G8v9lpCFpvfYLiPUDR3_H6geD1Q57_qUjeVm3jJI
+  - https://w3id.org/peh/terms/Matrix
+  description: The thick, whitish secretion of the male reproductive organs. It is
+    composed of spermatozoa in their nutrient plasma, secretions from the prostate,
+    seminal vesicles, and various other glands, epithelial cells, and minor constituents.
+    (NCI)
+  short_name: sem
+  exact_matches:
+  - http://id.nlm.nih.gov/mesh/D012661
+  - http://purl.obolibrary.org/obo/NCIT_C13277
+  - http://snomed.info/id/119347001
+- id: https://w3id.org/peh/matrices/RAciCuWbXQnZmyNfSRy-41DNe9SLMaNZpHYjJ-4JvPEto
+  name: liver
+- id: https://w3id.org/peh/matrices/RAdEY4mkrqWm_zdRqYy_D_X0GvGGB229DhFaI8LKg9nKA
+  name: placenta
+  translations:
+  - property_name: name
+    language: nl
+    translated_value: placenta weefsel
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAi949d7yjXol2LDmFJ4c9GGyzann2cM-gWOasXu90e5o
+  - https://w3id.org/peh/terms/Matrix
+  description: The placenta and tissue derived from the placenta (other than amniotic
+    membrane). (NCI)
+  short_name: plct
+  exact_matches:
+  - http://id.nlm.nih.gov/mesh/D010920
+  - http://purl.obolibrary.org/obo/NCIT_C133341
+  - http://snomed.info/id/122736005
+- id: https://w3id.org/peh/matrices/RAeA4Ww8dzMzrgtMvY3WxtuqV6dVT-fbbq_nn_8RbyBXo
+  name: seed
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAbk6a3CTM-SqDwj7gSMtGk-5q7GkQiVxFA8IuBAcHvv4
+- id: https://w3id.org/peh/matrices/RAeDs0Bmrmu4gwCPkpMmathvT6Yw2R_FRFLcBqyb4dhNo
+  name: passive water sampler fraction
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAYnAn73ckYTntumb6ebToNrKsVSnUh51eZfdC2D3k1kc
+- id: https://w3id.org/peh/matrices/RAeUUBaLCNLcWc98fyjyCFJx0d9GkTSQr77OCVOU0JUDo
+  name: eggs
+  translations:
+  - property_name: name
+    language: nl
+    translated_value: kippenei
+  short_name: egg
+- id: https://w3id.org/peh/matrices/RAegbj-HcJqNDb3J6f5ggfpBpnnYCagw2u_yIoQu1JGQc
+  name: compost
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAQ7NubGhAY8Tly5iznP4yMj-q99ggFdgWE4b2q5zBtfc
+- id: https://w3id.org/peh/matrices/RAfJMLEKnVj-xx_PJhMZcKEYONp6CrV9WPEEqf99YbMb4
+  name: plant matrix
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAF_kCntxZPkMQVCT6LGtLDns2IzSyG2_i0uAmFoiofKY
+  description: All plant-based materials in which chemicals can be measured.
+- id: https://w3id.org/peh/matrices/RAfYD7Gs8EEYjnvsYb59C_gpY_8CZa2TovcQViFxKkeuY
+  name: plant tissue
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAfJMLEKnVj-xx_PJhMZcKEYONp6CrV9WPEEqf99YbMb4
+  - https://w3id.org/peh/terms/Matrix
+- id: https://w3id.org/peh/matrices/RAgGBv-AqMjYnH4uvvlW_e1J-EH_aPZoOEQtRkHQI6xG4
+  name: sediment
+- id: https://w3id.org/peh/matrices/RAgNmPPDMOpewQg-7aooCubcxMd3gOxPx2rDkzA3AFfPk
+  name: PM2.5
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RA2aXLICa6EJdbaFMQ4RpEEki-fjmFTxpenqhUspZsIdA
+- id: https://w3id.org/peh/matrices/RAi949d7yjXol2LDmFJ4c9GGyzann2cM-gWOasXu90e5o
+  name: human tissue
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAy2XFY4tcAktluhxPOOHzjCw7PrKL2e1UW5DzGRl6Wwg
+  description: An anatomical structure consisting of similarly specialized cells and
+    intercellular matrix, aggregated according to genetically determined spatial relationships,
+    performing a specific function. (NCI)
+  exact_matches:
+  - http://purl.obolibrary.org/obo/NCIT_C12801
+- id: https://w3id.org/peh/matrices/RAjFtX_2fxsX9Sc_pT73cuTcb6NdfhApTmFUD_eK2c97I
+  name: muscle
+- id: https://w3id.org/peh/matrices/RAkYVqCXeDhllNie2G8bwyi1F4WpRGKKEkrnqy0EAHtPc
+  name: sediment
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAQyXl03bTKzH8quHZe0bijfev64RBi4KPtaXj1UEuYeY
+- id: https://w3id.org/peh/matrices/RAlzI_uLgpJRy67R7TqO7XnZdMJRI-ph0cWBU93HGvGXM
+  name: air total
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RA1NmPPzHrbQcDcCcUSD1c_Jx0gEqIkrym9w6jY0sGsqA
+- id: https://w3id.org/peh/matrices/RAmK9SsEw00wnum1u5jyGMy2f9Cas_F0rYp2bfZnMvPPE
+  name: radish
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAfYD7Gs8EEYjnvsYb59C_gpY_8CZa2TovcQViFxKkeuY
+- id: https://w3id.org/peh/matrices/RAmmKfCuHlLIk-MhylA2Zj4OqF9dAwXqg2QLz4_kc2uPY
+  name: passive sampler fraction
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RA1NmPPzHrbQcDcCcUSD1c_Jx0gEqIkrym9w6jY0sGsqA
+- id: https://w3id.org/peh/matrices/RAmxkkh9fvCFSWTruBrED5_YVskpNlYFlSTo0C2jVqkq4
+  name: kidney
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAOXnhBmU_ugVo5VT_1_w-PQeS-6EhwtLC-9-AWyuxBR8
+- id: https://w3id.org/peh/matrices/RAnD62F36hpfHEthhCsFGks6TKt7l4W5uZFoVJEc87vHE
+  name: C horizon
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAK5VM0elb32Xjk2uCL2Uh44x4QM8BKu0kubzlqBnA3-Y
+- id: https://w3id.org/peh/matrices/RAnJmNgUQWYsrxglBQoG2L8OP-h7_uYHP9lnygQYZ0PNg
+  name: dust
+  short_name: dust
+- id: https://w3id.org/peh/matrices/RAnTGv40HBJ9Jlg0OOEdl2C2LAKdlRW1cAWZNBket-5F8
+  name: stool
+  translations:
+  - property_name: name
+    language: nl
+    translated_value: stoelgang
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAQP5G8v9lpCFpvfYLiPUDR3_H6geD1Q57_qUjeVm3jJI
+  - https://w3id.org/peh/terms/Matrix
+  description: The material discharged from the bowel during defecation. It consists
+    of undigested food, intestinal mucus, epithelial cells, and bacteria. (NCI)
+  short_name: stl
+  exact_matches:
+  - http://id.nlm.nih.gov/mesh/D005243
+  - http://purl.obolibrary.org/obo/NCIT_C13234
+  - http://snomed.info/id/119339001
+- id: https://w3id.org/peh/matrices/RAneysxQGkFzZw57_WcXTaEy11EnbmmQdCO7HviFbrpiM
+  name: big toe nail
+  translations:
+  - property_name: name
+    language: nl
+    translated_value: grote teen nagel
+  short_name: hnal
+- id: https://w3id.org/peh/matrices/RAoSsPdY12TYwXc9GZ_tRtO9HnI9R00M0MhqjIEl3S8c0
+  name: animal matrix
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAF_kCntxZPkMQVCT6LGtLDns2IzSyG2_i0uAmFoiofKY
+  description: All animal-based materials in which chemicals can be measured.
+- id: https://w3id.org/peh/matrices/RAoXZHP0vZHQi1sELDWEojW4HdwnVVtyCEVnmDf3PP4BE
+  name: nails
+  translations:
+  - property_name: name
+    language: nl
+    translated_value: nagel
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RArqXjsWKq1YgDeEYPhQq6qa7jL-PoIBtebLBq1CSTA8k
+  - https://w3id.org/peh/terms/Matrix
+  description: The thin, horny plates that cover the dorsal surfaces of the distal
+    phalanges of the fingers and toes of primates.
+  short_name: nal
+  exact_matches:
+  - http://id.nlm.nih.gov/mesh/D009262
+  - http://purl.obolibrary.org/obo/NCIT_C33156
+  - http://snomed.info/id/119327009
+- id: https://w3id.org/peh/matrices/RAothmgyQfEz2jpuk-RY3bYWvmYvNXLRuTKf2G1dw3Bfo
+  name: H horizon
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAK5VM0elb32Xjk2uCL2Uh44x4QM8BKu0kubzlqBnA3-Y
+- id: https://w3id.org/peh/matrices/RAoyA6LZou1ggzbBL_yqUOts6tRR3Fm5mW10l45lpxPgc
+  name: kidney
+- id: https://w3id.org/peh/matrices/RAp60af5p7t4ugEnaQJEMJ0AVGyBf4qbkxSnnqHsfydxw
+  name: red blood cells
+  translations:
+  - property_name: name
+    language: nl
+    translated_value: rode bloedcellen
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RA6yVQB3aTu-KBUoHcGsfGBDAo5ik_TOTriUDgNJUrIjI
+  short_name: rbc
+- id: https://w3id.org/peh/matrices/RApD-tWwixrG91xhqStMC7b90IU5B7_JeNcYvX7JlBRfs
+  name: white blood cells
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RA6yVQB3aTu-KBUoHcGsfGBDAo5ik_TOTriUDgNJUrIjI
+  short_name: wbc
+- id: https://w3id.org/peh/matrices/RApEPTC4SgZrdvB0BL5tUaRw6ejoCCKsZ8AYspid2bjdE
+  name: bark
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAbk6a3CTM-SqDwj7gSMtGk-5q7GkQiVxFA8IuBAcHvv4
+- id: https://w3id.org/peh/matrices/RApoQUCi5LpbAvxbmBOOiQEuCNZlnXcOWReVGpvGgonrk
+  name: sediment total
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAgGBv-AqMjYnH4uvvlW_e1J-EH_aPZoOEQtRkHQI6xG4
+- id: https://w3id.org/peh/matrices/RApoidfyggtj4Y0yWk4KzvUdJxhQqWqd13zKGvEvXn5ak
+  name: dust
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAUm-9-ZoDsUuUqQSQ7SQJvOz56AU4Qxqv95DnyLl50mo
+  short_name: dust
+- id: https://w3id.org/peh/matrices/RArK5TPl1kPtOf-ive2YOEvtlOCqehaCE4jG_YyU9c_VU
+  name: blood cells
+  translations:
+  - property_name: name
+    language: nl
+    translated_value: bloedcellen
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAD-f9pG9nLiAQhTyv_np5Mlirawv0CDcu4m7-LMBJ2WQ
+  short_name: wbc
+- id: https://w3id.org/peh/matrices/RArqXjsWKq1YgDeEYPhQq6qa7jL-PoIBtebLBq1CSTA8k
+  name: integumentary system
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAy2XFY4tcAktluhxPOOHzjCw7PrKL2e1UW5DzGRl6Wwg
+  description: Any component of the enveloping membrane of the body, including the
+    epidermis and dermis, and all of the derivatives of the epidermis. (NCI)
+  exact_matches:
+  - http://purl.obolibrary.org/obo/NCIT_C38620
+- id: https://w3id.org/peh/matrices/RAsDIybUC-Hf5z9cKUhs0_f6aoBMzA3rhNK7gnLOtlpSI
+  name: meconium
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAQP5G8v9lpCFpvfYLiPUDR3_H6geD1Q57_qUjeVm3jJI
+  - https://w3id.org/peh/terms/Matrix
+  description: The first feces of a newborn, composed of materials ingested during
+    the time the infant spends in the uterus. It is typically passed within the first
+    few days after birth. (NCI)
+  short_name: mec
+  exact_matches:
+  - http://purl.obolibrary.org/obo/NCIT_C78743
+- id: https://w3id.org/peh/matrices/RAsII6l04E8gpDQaB9Q7hQIwnryYpaBpPLJG2F2A2rxhk
+  name: zucchini
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAfYD7Gs8EEYjnvsYb59C_gpY_8CZa2TovcQViFxKkeuY
+- id: https://w3id.org/peh/matrices/RAspLSf9XPFmmH3gUYgSB9XWknHAsRdV4mzcpgFH6kDjU
+  name: big toe nail
+  translations:
+  - property_name: name
+    language: nl
+    translated_value: grote teen nagel
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAoXZHP0vZHQi1sELDWEojW4HdwnVVtyCEVnmDf3PP4BE
+  short_name: hnal
+- id: https://w3id.org/peh/matrices/RAsw6rPmqomqqPHEWz9eCx7dpyZa5ceXlX-6XLKQ-MsnM
+  name: bone
+- id: https://w3id.org/peh/matrices/RAtIG1M0swHdH-qOQP8lFQizXNoUlEjqQohPbLE0XUFyU
+  name: blood plasma
+  translations:
+  - property_name: name
+    language: nl
+    translated_value: bloedplasma
+  short_name: pls
+- id: https://w3id.org/peh/matrices/RAtN4LvQXe2x5WKb8gX4ypEpAbhiMzlTn3H8_Q0CxuUTE
+  name: fat
+- id: https://w3id.org/peh/matrices/RAtduVNksokoYYYXO-XCLWNCKPtrM0BOeq_YUshVkqFJ0
+  name: eggs
+  translations:
+  - property_name: name
+    language: nl
+    translated_value: kippenei
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAOXnhBmU_ugVo5VT_1_w-PQeS-6EhwtLC-9-AWyuxBR8
+  short_name: egg
+- id: https://w3id.org/peh/matrices/RAti6M21zGXJ5ARmtSz04oxAHUUaGySr2R7kqCtH43azQ
+  name: inhalable fraction
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RA2aXLICa6EJdbaFMQ4RpEEki-fjmFTxpenqhUspZsIdA
+- id: https://w3id.org/peh/matrices/RAvK91PNzIfu6mYNiA6wRXL4LhjPLAiwN7SZnk-KoxiPo
+  name: wood
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAbk6a3CTM-SqDwj7gSMtGk-5q7GkQiVxFA8IuBAcHvv4
+- id: https://w3id.org/peh/matrices/RAxy7q3YcliQzC4TBevMXFkM1A0kqGI5bQH0OuhBuP6rQ
+  name: total suspended particles
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RA2aXLICa6EJdbaFMQ4RpEEki-fjmFTxpenqhUspZsIdA
+- id: https://w3id.org/peh/matrices/RAy2XFY4tcAktluhxPOOHzjCw7PrKL2e1UW5DzGRl6Wwg
+  name: human matrix
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAF_kCntxZPkMQVCT6LGtLDns2IzSyG2_i0uAmFoiofKY
+  description: All human-based materials in which chemicals can be measured.
+- id: https://w3id.org/peh/matrices/RAyBzOQBdGxY2wkzsSqDlHyMrSOA87vzQQy8VSb0XF03M
+  name: S horizon
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAK5VM0elb32Xjk2uCL2Uh44x4QM8BKu0kubzlqBnA3-Y
+- id: https://w3id.org/peh/matrices/RAz4OR3yKRJcA-w0jpjN_vOnVbc6nyMghOs-tWk9-WbYw
+  name: whole blood
+  translations:
+  - property_name: name
+    language: nl
+    translated_value: volbloed
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAD-f9pG9nLiAQhTyv_np5Mlirawv0CDcu4m7-LMBJ2WQ
+  short_name: wbld
+- id: https://w3id.org/peh/matrices/RAzDmsDSQT7m97_gEKyu9rRhhrsrtjRhKEBOaBi7U1WuI
+  name: sputum
+  translations:
+  - property_name: name
+    language: nl
+    translated_value: longslijm
+  parent_matrices:
+  - https://w3id.org/peh/matrices/RAQP5G8v9lpCFpvfYLiPUDR3_H6geD1Q57_qUjeVm3jJI
+  - https://w3id.org/peh/terms/Matrix
+  description: Material containing mucus, cellular debris, microorganisms and sometimes
+    blood or pus. It is ejected through the mouth from the lungs, bronchi, and trachea.
+    (NCI)
+  short_name: spt
+  exact_matches:
+  - http://id.nlm.nih.gov/mesh/D013183
+  - http://purl.obolibrary.org/obo/NCIT_C13278

@@ -1,44 +1,45 @@
-@prefix this: <https://w3id.org/np/RALox5B5dJhVzrMOGgdCA659uDSYF8w-TCodRLi0AhRnE> .
-@prefix sub: <https://w3id.org/np/RALox5B5dJhVzrMOGgdCA659uDSYF8w-TCodRLi0AhRnE/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
 @prefix npx: <http://purl.org/nanopub/x/> .
 @prefix orcid: <https://orcid.org/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix pehterms: <https://w3id.org/peh/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sub: <https://w3id.org/np/RALox5B5dJhVzrMOGgdCA659uDSYF8w-TCodRLi0AhRnE/> .
+@prefix this: <https://w3id.org/np/RALox5B5dJhVzrMOGgdCA659uDSYF8w-TCodRLi0AhRnE> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 sub:Head {
-    this: a np:Nanopublication ;
-        np:hasAssertion sub:assertion ;
-        np:hasProvenance sub:provenance ;
-        np:hasPublicationInfo sub:pubinfo .
+  this: a np:Nanopublication;
+    np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo .
 }
 
 sub:assertion {
-    <https://w3id.org/peh/matrices/RALox5B5dJhVzrMOGgdCA659uDSYF8w-TCodRLi0AhRnE> a owl:Class ;
-        rdfs:label "fat" ;
-        dcterms:isPartOf <https://w3id.org/spaces/chemical-exposome-matrix/r/vocabulary> ;
-        rdfs:subClassOf <https://w3id.org/peh/matrices/RAOXnhBmU_ugVo5VT_1_w-PQeS-6EhwtLC-9-AWyuxBR8> .
+  <https://w3id.org/peh/matrices/RALox5B5dJhVzrMOGgdCA659uDSYF8w-TCodRLi0AhRnE> a owl:Class;
+    dcterms:isPartOf <https://w3id.org/spaces/chemical-exposome-matrix/r/vocabulary>;
+    rdfs:label "fat";
+    rdfs:subClassOf <https://w3id.org/peh/matrices/RAOXnhBmU_ugVo5VT_1_w-PQeS-6EhwtLC-9-AWyuxBR8> .
 }
 
 sub:provenance {
-    sub:assertion prov:generatedAtTime "2026-08-19T07:30:12.849248+00:00"^^xsd:dateTime ;
-        prov:wasAttributedTo orcid:0000-0001-8327-0142 .
+  sub:assertion prov:generatedAtTime "2026-08-19T07:30:12.849248+00:00"^^xsd:dateTime;
+    prov:wasAttributedTo orcid:0000-0001-8327-0142 .
 }
 
 sub:pubinfo {
-    sub:sig npx:hasAlgorithm "RSA" ;
-        npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoYXKCw/BWx+0exERmA7cxc7MUibjOCXzSZOUOquHYk9ugwE2qMo6dYxNCOWWMyge5tqrdqi7kqiTPCNmUhwLzUa35OIhWUNHf6bgF0Giw6nRetEH6ILbXX+l16DCHQjMWeCweZIpnghryEy1kyO6UU03qVZinBByf0UpfoB25ZUWyS2zKJiulVFAFK193Wd5lPsltmaOnmyKoVOA34aTIJkAxWEHrK1OuSuF9UCH+belw+QRNJWFKJcoJ+r8OsFM89+DKncnUuVDx8B04TpDoTby7UQ09608eMUPKOlfi//TfzzG3tgvP8kNNb1yczrwNYPvXnstN3LChLvmMjT2KQIDAQAB" ;
-        npx:hasSignature "gzuYgf//rhg1o9LutCqxQsqab2SRQECoRmZxUwDU9np6nDpqdSv69YnmA1f3LKIU6lrgiAcRg98SLZ/hG+RhEgRZYg8xom4EaUnCZRIV4j/5wRVlA43Id1DGPcVpKPtHKAm5XE1rKLs1lf4Kqx6I0MHbgiAioiUYIJLJ4a6qgNW9aNppEIjnzzk7ouRTow6aHfBn6KJNeiSSredojUZNgzMd35TFUMpNat60lRtaJeqZAG1kJnS49UBnWCrLLsmEvL//neKeZclcQiamrb2Dw9S+cDnV/cOiAssgmNZOQx+XdKg1VjeK4io4CfBfYZZau9flltaO/yoM9e++yeW6Xw==" ;
-        npx:hasSignatureTarget this: ;
-        npx:signedBy <https://w3id.org/np/RArbMo6bMp74oD1SpHhwsDut0n_b_uoNc7QnZWUu8js5I/matrix-bot> .
-    this: rdfs:label "fat" ;
-        dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
-        npx:hasNanopubType pehterms:Matrix ;
-        npx:introduces <https://w3id.org/peh/matrices/RALox5B5dJhVzrMOGgdCA659uDSYF8w-TCodRLi0AhRnE> ;
-        prov:generatedAtTime "2026-08-19T07:30:12.849248+00:00"^^xsd:dateTime ;
-        prov:wasAttributedTo <https://w3id.org/np/RArbMo6bMp74oD1SpHhwsDut0n_b_uoNc7QnZWUu8js5I/matrix-bot> .
+  this: dcterms:license <https://creativecommons.org/licenses/by/4.0/>;
+    npx:hasNanopubType <https://w3id.org/peh/terms/Matrix>;
+    npx:introduces <https://w3id.org/peh/matrices/RALox5B5dJhVzrMOGgdCA659uDSYF8w-TCodRLi0AhRnE>;
+    rdfs:label "fat";
+    prov:generatedAtTime "2026-08-19T07:30:12.849248+00:00"^^xsd:dateTime;
+    prov:wasAttributedTo <https://w3id.org/np/RArbMo6bMp74oD1SpHhwsDut0n_b_uoNc7QnZWUu8js5I/matrix-bot> .
+  
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoYXKCw/BWx+0exERmA7cxc7MUibjOCXzSZOUOquHYk9ugwE2qMo6dYxNCOWWMyge5tqrdqi7kqiTPCNmUhwLzUa35OIhWUNHf6bgF0Giw6nRetEH6ILbXX+l16DCHQjMWeCweZIpnghryEy1kyO6UU03qVZinBByf0UpfoB25ZUWyS2zKJiulVFAFK193Wd5lPsltmaOnmyKoVOA34aTIJkAxWEHrK1OuSuF9UCH+belw+QRNJWFKJcoJ+r8OsFM89+DKncnUuVDx8B04TpDoTby7UQ09608eMUPKOlfi//TfzzG3tgvP8kNNb1yczrwNYPvXnstN3LChLvmMjT2KQIDAQAB";
+    npx:hasSignature "gzuYgf//rhg1o9LutCqxQsqab2SRQECoRmZxUwDU9np6nDpqdSv69YnmA1f3LKIU6lrgiAcRg98SLZ/hG+RhEgRZYg8xom4EaUnCZRIV4j/5wRVlA43Id1DGPcVpKPtHKAm5XE1rKLs1lf4Kqx6I0MHbgiAioiUYIJLJ4a6qgNW9aNppEIjnzzk7ouRTow6aHfBn6KJNeiSSredojUZNgzMd35TFUMpNat60lRtaJeqZAG1kJnS49UBnWCrLLsmEvL//neKeZclcQiamrb2Dw9S+cDnV/cOiAssgmNZOQx+XdKg1VjeK4io4CfBfYZZau9flltaO/yoM9e++yeW6Xw==";
+    npx:hasSignatureTarget this:;
+    npx:signedBy <https://w3id.org/np/RArbMo6bMp74oD1SpHhwsDut0n_b_uoNc7QnZWUu8js5I/matrix-bot> .
 }
+

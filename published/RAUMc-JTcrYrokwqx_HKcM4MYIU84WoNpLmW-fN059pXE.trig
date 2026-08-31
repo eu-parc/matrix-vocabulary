@@ -1,47 +1,47 @@
-@prefix this: <https://w3id.org/np/RAUMc-JTcrYrokwqx_HKcM4MYIU84WoNpLmW-fN059pXE> .
-@prefix sub: <https://w3id.org/np/RAUMc-JTcrYrokwqx_HKcM4MYIU84WoNpLmW-fN059pXE/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
 @prefix npx: <http://purl.org/nanopub/x/> .
 @prefix ns1: <http://schema.org/> .
 @prefix orcid: <https://orcid.org/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix pehterms: <https://w3id.org/peh/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sub: <https://w3id.org/np/RAUMc-JTcrYrokwqx_HKcM4MYIU84WoNpLmW-fN059pXE/> .
+@prefix this: <https://w3id.org/np/RAUMc-JTcrYrokwqx_HKcM4MYIU84WoNpLmW-fN059pXE> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 sub:Head {
-    this: a np:Nanopublication ;
-        np:hasAssertion sub:assertion ;
-        np:hasProvenance sub:provenance ;
-        np:hasPublicationInfo sub:pubinfo .
+  this: a np:Nanopublication;
+    np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo .
 }
 
 sub:assertion {
-    <https://w3id.org/peh/matrices/RAUMc-JTcrYrokwqx_HKcM4MYIU84WoNpLmW-fN059pXE> a owl:Class ;
-        rdfs:label "water",
-            "water"@nl ;
-        dcterms:isPartOf <https://w3id.org/spaces/chemical-exposome-matrix/r/vocabulary> ;
-        ns1:alternateName "water" ;
-        rdfs:subClassOf <https://w3id.org/peh/matrices/RAQyXl03bTKzH8quHZe0bijfev64RBi4KPtaXj1UEuYeY> .
+  <https://w3id.org/peh/matrices/RAUMc-JTcrYrokwqx_HKcM4MYIU84WoNpLmW-fN059pXE> a owl:Class;
+    dcterms:isPartOf <https://w3id.org/spaces/chemical-exposome-matrix/r/vocabulary>;
+    ns1:alternateName "water";
+    rdfs:label "water", "water"@nl;
+    rdfs:subClassOf <https://w3id.org/peh/matrices/RAQyXl03bTKzH8quHZe0bijfev64RBi4KPtaXj1UEuYeY> .
 }
 
 sub:provenance {
-    sub:assertion prov:generatedAtTime "2026-08-19T07:30:06.426835+00:00"^^xsd:dateTime ;
-        prov:wasAttributedTo orcid:0000-0001-8327-0142 .
+  sub:assertion prov:generatedAtTime "2026-08-19T07:30:06.426835+00:00"^^xsd:dateTime;
+    prov:wasAttributedTo orcid:0000-0001-8327-0142 .
 }
 
 sub:pubinfo {
-    sub:sig npx:hasAlgorithm "RSA" ;
-        npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoYXKCw/BWx+0exERmA7cxc7MUibjOCXzSZOUOquHYk9ugwE2qMo6dYxNCOWWMyge5tqrdqi7kqiTPCNmUhwLzUa35OIhWUNHf6bgF0Giw6nRetEH6ILbXX+l16DCHQjMWeCweZIpnghryEy1kyO6UU03qVZinBByf0UpfoB25ZUWyS2zKJiulVFAFK193Wd5lPsltmaOnmyKoVOA34aTIJkAxWEHrK1OuSuF9UCH+belw+QRNJWFKJcoJ+r8OsFM89+DKncnUuVDx8B04TpDoTby7UQ09608eMUPKOlfi//TfzzG3tgvP8kNNb1yczrwNYPvXnstN3LChLvmMjT2KQIDAQAB" ;
-        npx:hasSignature "Dw7ONjERJ9f6GV7HKxjxWxMNAT8linxr6YLgL2oI7ryeb/nya5szgRMuCXek3ZDoG8OICXvc5OQ3QlBunV6eynmy5aV9HC8Qi+w9rUEnAD6/j7zgKWhWKu0vx20l88WbFAYn9LyBAiNhM8VV5ZLOvwbtg73+T7xSYEdw0n7CGDueccDb/dinj+JMGySf/VbFD3omfoAB0RC/3KpI5gjezs31r6m11h/VeDeMkEtLv5keZgT/9SuddCNC2GfJ5oSLzwa1fNJ+W9eBTjbBAOOpN9kUkD6TTKz1SnS6sHI0kufdvz0KXilxJtYI5pSuKoYo658IKdAABAkCKgRq4S4q/Q==" ;
-        npx:hasSignatureTarget this: ;
-        npx:signedBy <https://w3id.org/np/RArbMo6bMp74oD1SpHhwsDut0n_b_uoNc7QnZWUu8js5I/matrix-bot> .
-    this: rdfs:label "water" ;
-        dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
-        npx:hasNanopubType pehterms:Matrix ;
-        npx:introduces <https://w3id.org/peh/matrices/RAUMc-JTcrYrokwqx_HKcM4MYIU84WoNpLmW-fN059pXE> ;
-        prov:generatedAtTime "2026-08-19T07:30:06.426835+00:00"^^xsd:dateTime ;
-        prov:wasAttributedTo <https://w3id.org/np/RArbMo6bMp74oD1SpHhwsDut0n_b_uoNc7QnZWUu8js5I/matrix-bot> .
+  this: dcterms:license <https://creativecommons.org/licenses/by/4.0/>;
+    npx:hasNanopubType <https://w3id.org/peh/terms/Matrix>;
+    npx:introduces <https://w3id.org/peh/matrices/RAUMc-JTcrYrokwqx_HKcM4MYIU84WoNpLmW-fN059pXE>;
+    rdfs:label "water";
+    prov:generatedAtTime "2026-08-19T07:30:06.426835+00:00"^^xsd:dateTime;
+    prov:wasAttributedTo <https://w3id.org/np/RArbMo6bMp74oD1SpHhwsDut0n_b_uoNc7QnZWUu8js5I/matrix-bot> .
+  
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoYXKCw/BWx+0exERmA7cxc7MUibjOCXzSZOUOquHYk9ugwE2qMo6dYxNCOWWMyge5tqrdqi7kqiTPCNmUhwLzUa35OIhWUNHf6bgF0Giw6nRetEH6ILbXX+l16DCHQjMWeCweZIpnghryEy1kyO6UU03qVZinBByf0UpfoB25ZUWyS2zKJiulVFAFK193Wd5lPsltmaOnmyKoVOA34aTIJkAxWEHrK1OuSuF9UCH+belw+QRNJWFKJcoJ+r8OsFM89+DKncnUuVDx8B04TpDoTby7UQ09608eMUPKOlfi//TfzzG3tgvP8kNNb1yczrwNYPvXnstN3LChLvmMjT2KQIDAQAB";
+    npx:hasSignature "Dw7ONjERJ9f6GV7HKxjxWxMNAT8linxr6YLgL2oI7ryeb/nya5szgRMuCXek3ZDoG8OICXvc5OQ3QlBunV6eynmy5aV9HC8Qi+w9rUEnAD6/j7zgKWhWKu0vx20l88WbFAYn9LyBAiNhM8VV5ZLOvwbtg73+T7xSYEdw0n7CGDueccDb/dinj+JMGySf/VbFD3omfoAB0RC/3KpI5gjezs31r6m11h/VeDeMkEtLv5keZgT/9SuddCNC2GfJ5oSLzwa1fNJ+W9eBTjbBAOOpN9kUkD6TTKz1SnS6sHI0kufdvz0KXilxJtYI5pSuKoYo658IKdAABAkCKgRq4S4q/Q==";
+    npx:hasSignatureTarget this:;
+    npx:signedBy <https://w3id.org/np/RArbMo6bMp74oD1SpHhwsDut0n_b_uoNc7QnZWUu8js5I/matrix-bot> .
 }
+
