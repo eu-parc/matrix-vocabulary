@@ -1,0 +1,57 @@
+@prefix this: <https://w3id.org/np/RAfYJEC8ImxibI2vqIq_aOqOiE20TP8bIKZc377QAhV9I> .
+@prefix sub: <https://w3id.org/np/RAfYJEC8ImxibI2vqIq_aOqOiE20TP8bIKZc377QAhV9I/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix matrix: <https://w3id.org/peh/matrices/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix pehterms: <https://w3id.org/peh/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+sub:Head {
+  this: a np:Nanopublication;
+    np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo .
+}
+
+sub:assertion {
+  matrix:RAQtYv5YRozuXuz-DFDVh7ze_OJUQQf1LjPJPH89vl1es a owl:Class;
+    dct:isPartOf <https://w3id.org/spaces/chemical-exposome-matrix/r/vocabulary>;
+    rdfs:label "nuts";
+    rdfs:subClassOf matrix:RAfYD7Gs8EEYjnvsYb59C_gpY_8CZa2TovcQViFxKkeuY .
+}
+
+sub:provenance {
+  sub:assertion prov:wasAttributedTo orcid:0000-0002-1267-0234 .
+}
+
+sub:pubinfo {
+  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
+  
+  this: dct:created "2026-11-18T16:15:48.888+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+    dct:creator <https://w3id.org/np/RAm5naDB6khIweaMdoHm7BIt3SxgiMmBYBLqFQDz82Ybo/parc-vocabulary-bot>;
+    dct:license <https://creativecommons.org/licenses/by/4.0/>;
+    npx:hasNanopubType pehterms:Matrix;
+    npx:introduces matrix:RAQtYv5YRozuXuz-DFDVh7ze_OJUQQf1LjPJPH89vl1es;
+    rdfs:label "nuts";
+    skos:changeNote "Parent class re-pointed from a withdrawn duplicate to the term that is kept. (PARC vocabulary clean-up, 2026-11; eu-parc/matrix-vocabulary#54)";
+    prov:wasDerivedFrom <https://w3id.org/np/RAQtYv5YRozuXuz-DFDVh7ze_OJUQQf1LjPJPH89vl1es>;
+    nt:wasCreatedFromProvenanceTemplate <https://w3id.org/np/RA7lSq6MuK_TIC6JMSHvLtee3lpLoZDOqLJCLXevnrPoU>;
+    nt:wasCreatedFromPubinfoTemplate <https://w3id.org/np/RA-N4_kFxcruvBTlo1yJv29E4SLOXsx5KO_th69PprMrA>,
+      <https://w3id.org/np/RA7NZ9N1vb-mbTo6pOyR14fdbQ8PpFtJHTY3UBPb6vMh4>, <https://w3id.org/np/RACJ58Gvyn91LqCKIO9zu1eijDQIeEff28iyDrJgjSJF8>,
+      <https://w3id.org/np/RAKc76yHLDbloE6ObluzYQsfX37v6qrZXbYeIKpe8-YUo>;
+    nt:wasCreatedFromTemplate <https://w3id.org/np/RA191ipgpFeRmvtTIRkRpN7om6Lgz5GInE1AXMHKnKXY0> .
+  
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuOFM1Fckms40xQCXJHC/yOnjdXyxMYPvodw4fqEj6SXt6/FIH1NimGbrQhtMBX7RC6za1LFh1QPqyQ1iFYU8SxPAzqzvYI7eVH58+To7olMm7dEANyMTeZQuhJ0+9dip/PUi1xe19FdysS1OQhGydiUcpuDg2hiaeC0sELydZsdrqGMbOaGO5nms4I1+j2cuD/z2hbwDQhCx52ZvrYv3R/OEA7bOpmh7ejbGu0noGDyr8DzB7OmdUeHkvqsl8v7aHAORibJ7rDhNeapBrrSJq/lAZ010gmS3m9dMv3/XYezHEgyBUsw7q5RPNzm3U2KmwUkF2EPmaopXMCl5aBMYWwIDAQAB";
+    npx:hasSignature "hFcJs9WwpzTSUY1UZ8YBY9HK5zIg8xeg19cUYLBgxyGZkoG5FuZ4EnNzWes8EoEj2jbK2z49+gFYLZGhjVZjX7KC23/f3AQ+ZUwipcZPfANktCdwTewgV0K0pQeIBDz6dwmrIjW5R7gJfJGyAOTOFrC7pESgnM61TKwf4Y5/keVmStYaWMQ58Be/G6EpqycXwJhZzRvVUB4ipKh2xN3xVATFVDEMr96+IWXgL8avTNi4q8rCuk30rMGaaObt4rjLJHJVMgep8/TVJOAp/e99BjWNEqIOmtlYv+UuC6LEOCYetPKRDPIiFOlhlEjV9/3B5HsrHqcueZaHpSegH0wrqw==";
+    npx:hasSignatureTarget this:;
+    npx:signedBy <https://w3id.org/np/RAm5naDB6khIweaMdoHm7BIt3SxgiMmBYBLqFQDz82Ybo/parc-vocabulary-bot> .
+}
+
