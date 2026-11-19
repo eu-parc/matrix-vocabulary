@@ -1,0 +1,59 @@
+@prefix this: <https://w3id.org/np/RA8n1qIAMRzVNf7B0aEhmcFfVUNtbYOn2FZAIXAM45zFk> .
+@prefix sub: <https://w3id.org/np/RA8n1qIAMRzVNf7B0aEhmcFfVUNtbYOn2FZAIXAM45zFk/> .
+@prefix schema: <http://schema.org/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix matrix: <https://w3id.org/peh/matrices/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix pehterms: <https://w3id.org/peh/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+sub:Head {
+  this: a np:Nanopublication;
+    np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo .
+}
+
+sub:assertion {
+  matrix:RA1NmPPzHrbQcDcCcUSD1c_Jx0gEqIkrym9w6jY0sGsqA a owl:Class;
+    dct:isPartOf <https://w3id.org/spaces/chemical-exposome-matrix/r/vocabulary>;
+    schema:alternateName "air";
+    rdfs:label "air", "lucht"@nl;
+    rdfs:subClassOf matrix:RAUm-9-ZoDsUuUqQSQ7SQJvOz56AU4Qxqv95DnyLl50mo .
+}
+
+sub:provenance {
+  sub:assertion prov:wasAttributedTo orcid:0000-0002-1267-0234 .
+}
+
+sub:pubinfo {
+  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
+  
+  this: dct:created "2026-11-18T16:14:48.476+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+    dct:creator <https://w3id.org/np/RAm5naDB6khIweaMdoHm7BIt3SxgiMmBYBLqFQDz82Ybo/parc-vocabulary-bot>;
+    dct:license <https://creativecommons.org/licenses/by/4.0/>;
+    npx:hasNanopubType pehterms:Matrix;
+    npx:introduces matrix:RA1NmPPzHrbQcDcCcUSD1c_Jx0gEqIkrym9w6jY0sGsqA;
+    rdfs:label "air";
+    skos:changeNote "Parent class re-pointed from a withdrawn duplicate to the term that is kept. (PARC vocabulary clean-up, 2026-11; eu-parc/matrix-vocabulary#54)";
+    prov:wasDerivedFrom <https://w3id.org/np/RA1NmPPzHrbQcDcCcUSD1c_Jx0gEqIkrym9w6jY0sGsqA>;
+    nt:wasCreatedFromProvenanceTemplate <https://w3id.org/np/RA7lSq6MuK_TIC6JMSHvLtee3lpLoZDOqLJCLXevnrPoU>;
+    nt:wasCreatedFromPubinfoTemplate <https://w3id.org/np/RA-N4_kFxcruvBTlo1yJv29E4SLOXsx5KO_th69PprMrA>,
+      <https://w3id.org/np/RA7NZ9N1vb-mbTo6pOyR14fdbQ8PpFtJHTY3UBPb6vMh4>, <https://w3id.org/np/RACJ58Gvyn91LqCKIO9zu1eijDQIeEff28iyDrJgjSJF8>,
+      <https://w3id.org/np/RAKc76yHLDbloE6ObluzYQsfX37v6qrZXbYeIKpe8-YUo>;
+    nt:wasCreatedFromTemplate <https://w3id.org/np/RA191ipgpFeRmvtTIRkRpN7om6Lgz5GInE1AXMHKnKXY0> .
+  
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuOFM1Fckms40xQCXJHC/yOnjdXyxMYPvodw4fqEj6SXt6/FIH1NimGbrQhtMBX7RC6za1LFh1QPqyQ1iFYU8SxPAzqzvYI7eVH58+To7olMm7dEANyMTeZQuhJ0+9dip/PUi1xe19FdysS1OQhGydiUcpuDg2hiaeC0sELydZsdrqGMbOaGO5nms4I1+j2cuD/z2hbwDQhCx52ZvrYv3R/OEA7bOpmh7ejbGu0noGDyr8DzB7OmdUeHkvqsl8v7aHAORibJ7rDhNeapBrrSJq/lAZ010gmS3m9dMv3/XYezHEgyBUsw7q5RPNzm3U2KmwUkF2EPmaopXMCl5aBMYWwIDAQAB";
+    npx:hasSignature "DcI/paH+3jRcRu7T/SFbPG6zJd7EZGtxf4Az7Bc1JQ0B+xr12T8lqNzJ4poda26Zwk4dqOXBe8UwXgC/ajm8jE+kTXA9XCEkPMehjGJSxZvPIuiuxSCBXhnDC048mpnSTCB+a1+2DyLi+Oeah5/Wf0aCQCab088PiV7uPRSh6XPWFHayBBttXMQINcwAvB6Vsad69KHPeqyqXNp4LgBytuW5sCB4mH8aNhDIR/95Yjv8C93FO7yTjQVsss4JhMNVnNJ4otTMDaLJMgjj5sT5dfu+5uGFjxQCAWa+B9XSesapIKjfFs/TFOR+YosfcNjleIy8quC+pFoo9uUdcz60gw==";
+    npx:hasSignatureTarget this:;
+    npx:signedBy <https://w3id.org/np/RAm5naDB6khIweaMdoHm7BIt3SxgiMmBYBLqFQDz82Ybo/parc-vocabulary-bot> .
+}
+
