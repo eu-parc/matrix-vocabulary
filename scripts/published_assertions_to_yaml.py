@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import sys
 from decimal import Decimal
 from pathlib import Path
 from typing import Any
@@ -31,6 +32,14 @@ PREDICATE_SLOTS = {
     PROV.wasAttributedTo: "suggester",
 }
 
+# Language-tagged values of these predicates are exported as translations, under
+# the property names that pubmate-cleanrdf turns back into language-tagged
+# literals, so that a re-submitted entry comes out unchanged.
+TRANSLATED_PREDICATES = {
+    RDFS.label: "name",
+    SCHEMA.alternateName: "short_name",
+}
+
 LIST_SLOTS = {
     "exact_matches",
     "parent_matrices",
@@ -55,6 +64,10 @@ def scalar(value: Any) -> Any:
     return str(value)
 
 
+def warn(subject: Any, message: str) -> None:
+    print(f"WARNING {subject}: {message}", file=sys.stderr)
+
+
 def append(record: dict[str, Any], slot: str, value: Any, active_subjects: set[str]) -> None:
     if slot == "parent_matrices" and isinstance(value, str):
         if value.startswith(MATRIX_NAMESPACE) and value not in active_subjects:
@@ -66,6 +79,21 @@ def append(record: dict[str, Any], slot: str, value: Any, active_subjects: set[s
             record[slot].append(value)
     elif slot not in record:
         record[slot] = value
+    elif record[slot] != value:
+        warn(record["id"], f"{slot} has more than one value; exported only {record[slot]!r}, not {value!r}")
+
+
+def translations(graph: Graph, subject: Any) -> list[dict[str, str]]:
+    items = [
+        {"property_name": name, "language": value.language, "translated_value": str(value)}
+        for predicate, name in TRANSLATED_PREDICATES.items()
+        for value in graph.objects(subject, predicate)
+        if isinstance(value, Literal) and value.language
+    ]
+    return sorted(
+        items,
+        key=lambda t: (t["property_name"] != "name", t["property_name"], t["language"], t["translated_value"]),
+    )
 
 
 def context_alias(graph: Graph, node: Any) -> dict[str, Any]:
@@ -97,20 +125,19 @@ def main() -> None:
     for subject in sorted(graph.subjects(RDF.type, OWL.Class), key=str):
         record: dict[str, Any] = {"id": str(subject)}
 
-        for label in graph.objects(subject, RDFS.label):
-            if isinstance(label, Literal) and label.language:
-                record.setdefault("translations", []).append(
-                    {
-                        "property_name": "name",
-                        "language": label.language,
-                        "translated_value": str(label),
-                    }
-                )
-            elif "name" not in record:
-                record["name"] = str(label)
+        for label in sorted(graph.objects(subject, RDFS.label), key=str):
+            if not (isinstance(label, Literal) and label.language):
+                append(record, "name", str(label), active_subjects)
+        if translated := translations(graph, subject):
+            record["translations"] = translated
 
         for predicate, slot in PREDICATE_SLOTS.items():
             for value in graph.objects(subject, predicate):
+                if isinstance(value, Literal) and value.language:
+                    if predicate not in TRANSLATED_PREDICATES:
+                        warn(subject, f"{slot} {value!r}: exported without its language tag")
+                    else:
+                        continue
                 append(record, slot, scalar(value), active_subjects)
 
         for node in graph.objects(subject, PEHTERMS.hasContextAlias):

@@ -1,0 +1,33 @@
+name: Consistency check
+
+# Checks the vocabulary as Nanodash shows it (the vocabulary query) and as
+# published/ holds it: fails on duplicate labels and on links to terms that
+# aren't current; warns when published/ is out of date, on links to deprecated
+# terms, and on terms that share an InChIKey or CAS number. The report is in the
+# run's summary.
+
+on:
+  schedule:
+    - cron: "41 5 * * 2"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: astral-sh/setup-uv@v8.2.0
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: uv sync
+
+      - name: Check the vocabulary
+        run: make check-consistency
