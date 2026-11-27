@@ -63,7 +63,7 @@ DATA_FILES = $(sort $(wildcard $(DROPBOX_FOLDER)/*.yaml))
 	validate-pipeline validate-nanopubs validate-pr process-dropbox archive-dropbox \
 	publish-defining migrate pipeline sync-published assertions published-assertions-yaml \
 	bot-identity publish-bot-introduction bot-ci-secrets \
-	test-flow clean
+	check-consistency test-flow clean
 
 help:
 	@echo "Targets:"
@@ -81,6 +81,7 @@ help:
 	@echo "  make bot-identity              # one-time: generate bot keypair + introduction to review (offline)"
 	@echo "  make publish-bot-introduction  # one-time: publish the reviewed introduction to the network"
 	@echo "  make bot-ci-secrets            # one-time: push signing key + identity URIs to $(CI_REPO)"
+	@echo "  make check-consistency         # check the vocabulary query and $(PUBLISHED_FOLDER) for duplicates, broken links, drift"
 	@echo "  make test-flow                 # local end-to-end dry-run test"
 
 print-data:
@@ -283,6 +284,12 @@ published-assertions-yaml: sync-published
 		-s $(SCHEMA) \
 		-o $(OUT_FOLDER)/published-assertions.json \
 		$(PUBLISHED_ASSERTIONS_YAML)
+
+check-consistency:
+	uv run python scripts/check_consistency.py \
+		--query-url "$(VOCABULARY_QUERY_URL)" \
+		--namespace "$(MINT_NAMESPACE)" \
+		--published-dir $(PUBLISHED_FOLDER)
 
 test-flow:
 	$(MAKE) validate-pipeline
