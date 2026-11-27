@@ -46,8 +46,11 @@ DRY ?=
 # Publishing bot identity (one-time setup; see docs/bot-identity-setup.md).
 BOT_NAME ?= Matrix bot
 BOT_ID ?= matrix-bot
-BOT_OWNER_ORCID ?= https://orcid.org/0000-0001-8327-0142
-BOT_OWNER_NAME ?= Gertjan Bisschop
+# Owner named in the bot's introduction: the person who sets up the bot. No
+# default; pass both, e.g. make bot-identity BOT_OWNER_ORCID=https://orcid.org/...
+# BOT_OWNER_NAME='...'.
+BOT_OWNER_ORCID ?=
+BOT_OWNER_NAME ?=
 BOT_IDENTITY_DIR ?= bot-identity
 # Repo the publishing CI runs in (where the signing secret/variables live).
 CI_REPO ?= eu-parc/matrix-vocabulary
@@ -62,7 +65,7 @@ DATA_FILES = $(sort $(wildcard $(DROPBOX_FOLDER)/*.yaml))
 .PHONY: help print-data prepare fetch-peh-schema aggregate mint build graph2assertions \
 	validate-pipeline validate-nanopubs validate-pr process-dropbox archive-dropbox \
 	publish-defining migrate pipeline sync-published assertions published-assertions-yaml \
-	bot-identity publish-bot-introduction bot-ci-secrets \
+	check-bot-owner bot-identity publish-bot-introduction bot-ci-secrets \
 	check-consistency test-flow clean
 
 help:
@@ -234,10 +237,16 @@ migrate: prepare
 # its agent URI to that key so consumers can verify what it signs. Generate the
 # key OFFLINE and review before publishing -- the key IS the identity.
 
-bot-identity:
+check-bot-owner:
+	@if [ -z "$(BOT_OWNER_ORCID)" ] || [ -z "$(BOT_OWNER_NAME)" ]; then \
+		echo "Set BOT_OWNER_ORCID and BOT_OWNER_NAME to the ORCID and name of the person setting up the bot."; \
+		exit 1; \
+	fi
+
+bot-identity: check-bot-owner
 	uv run pubmate-bootstrap-identity $(_BOOTSTRAP_ARGS) --generate-keys
 
-publish-bot-introduction:
+publish-bot-introduction: check-bot-owner
 	uv run pubmate-bootstrap-identity $(_BOOTSTRAP_ARGS) \
 		--private-key $(BOT_IDENTITY_DIR)/id_rsa --public-key $(BOT_IDENTITY_DIR)/id_rsa.pub \
 		--publish $(BOT_PUBLISH_ARGS)

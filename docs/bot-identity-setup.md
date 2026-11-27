@@ -17,7 +17,7 @@ These are pinned as `make` variables (override on the command line if needed):
 |---|---|
 | `BOT_NAME` | `Matrix bot` |
 | `BOT_ID` | `matrix-bot` (-> `.../np/RA<code>/matrix-bot`) |
-| `BOT_OWNER_ORCID` | `https://orcid.org/0000-0001-8327-0142` (Gertjan Bisschop) |
+| `BOT_OWNER_ORCID`, `BOT_OWNER_NAME` | none: the ORCID and name of the person who sets up the bot (the current Matrix bot's introduction names Gertjan Bisschop) |
 | `CI_REPO` | `eu-parc/matrix-vocabulary` |
 | `NANOPUB_PART_OF` | `https://w3id.org/spaces/matrix/r/vocabulary` |
 | `NANOPUB_TYPE` | `https://w3id.org/peh/terms/Matrix` |
