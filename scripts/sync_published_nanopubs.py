@@ -1,13 +1,19 @@
 #!/usr/bin/env python3
-"""Sync approved, non-deprecated matrix vocabulary nanopubs into published/."""
+"""Sync approved, non-deprecated matrix vocabulary nanopubs into published/.
+
+The vocabulary query decides which nanopub currently defines each term, the
+same way Nanodash does: a nanopub retracted or superseded with its own key is
+no longer listed, while a retraction signed with another key has no effect.
+This script takes the query's answer as it is (minus deprecated and example
+terms) and doesn't filter retractions itself, so published/ lists the same
+definitions as Nanodash.
+"""
 
 from __future__ import annotations
 
 import argparse
 import json
 from pathlib import Path
-import urllib.parse
-import urllib.request
 
 from pubmate.download import (
     DownloadedNanopub,
@@ -16,7 +22,6 @@ from pubmate.download import (
     write_manifest,
 )
 
-NANOPUB_SPARQL_URL = "https://query.knowledgepixels.com/repo/full"
 DEFAULT_QUERY_URL = (
     "https://query.knowledgepixels.com/api/"
     "RA5rQSjX-6t_ccwhgZhxCpWryxuRjMFeCMXelxJYfxtdw/"
@@ -64,53 +69,9 @@ def approved_nanopub_uris(
     return sorted(uris), skipped
 
 
-def retracted_nanopub_uris(
-    np_uris: list[str],
-    *,
-    sparql_url: str,
-    timeout: int,
-) -> set[str]:
-    if not np_uris:
-        return set()
-
-    values = "\n    ".join(f"<{uri}>" for uri in np_uris)
-    query = f"""
-PREFIX np: <http://www.nanopub.org/nschema#>
-PREFIX npx: <http://purl.org/nanopub/x/>
-
-SELECT DISTINCT ?target WHERE {{
-  VALUES ?target {{
-    {values}
-  }}
-  ?retraction np:hasAssertion ?assertion .
-  GRAPH ?assertion {{
-    ?agent npx:retracts ?target .
-  }}
-}}
-"""
-    payload = urllib.parse.urlencode({"query": query}).encode("utf-8")
-    request = urllib.request.Request(
-        sparql_url,
-        data=payload,
-        headers={
-            "Accept": "application/sparql-results+json",
-            "Content-Type": "application/x-www-form-urlencoded",
-        },
-    )
-    with urllib.request.urlopen(request, timeout=timeout) as response:
-        data = json.loads(response.read())
-
-    return {
-        row["target"]["value"]
-        for row in data.get("results", {}).get("bindings", [])
-        if row.get("target", {}).get("type") == "uri" and row["target"].get("value")
-    }
-
-
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--query-url", default=DEFAULT_QUERY_URL)
-    parser.add_argument("--sparql-url", default=NANOPUB_SPARQL_URL)
     parser.add_argument("--output-dir", default=Path("published"), type=Path)
     parser.add_argument("--manifest", default=Path("build/published-nanopubs.tsv"), type=Path)
     parser.add_argument("--timeout", default=120, type=int)
@@ -129,18 +90,6 @@ def main() -> None:
     if len(np_uris) < args.min_count:
         raise SystemExit(f"Expected at least {args.min_count} nanopub(s), got {len(np_uris)}.")
 
-    retracted = retracted_nanopub_uris(
-        np_uris,
-        sparql_url=args.sparql_url,
-        timeout=args.timeout,
-    )
-    np_uris = [uri for uri in np_uris if uri not in retracted]
-    if len(np_uris) < args.min_count:
-        raise SystemExit(
-            f"Expected at least {args.min_count} active nanopub(s), got {len(np_uris)} "
-            f"after filtering {len(retracted)} retracted nanopub(s)."
-        )
-
     downloaded: list[DownloadedNanopub] = sync_nanopubs(
         np_uris,
         output_dir=args.output_dir,
@@ -151,7 +100,6 @@ def main() -> None:
 
     skipped_text = ", ".join(f"{status}={count}" for status, count in sorted(skipped.items()))
     print(f"Synced {len(downloaded)} approved nanopub(s) to {args.output_dir}.")
-    print(f"Skipped retracted nanopubs: {len(retracted)}.")
     print(f"Skipped statuses: {skipped_text}.")
     print(f"Wrote manifest to {args.manifest}.")
 
