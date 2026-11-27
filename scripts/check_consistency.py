@@ -15,6 +15,8 @@ It reports warnings, but passes, when:
 - current terms share an external identifier (InChIKey or CAS number).
 
 A term is current when the vocabulary query lists it and it isn't deprecated.
+Both the "approved classes" and the "approved terms" queries work (columns
+class/class_label or term/term_label); the latter also covers I-ADOPT variables.
 That is what Nanodash shows as the vocabulary; the query already applies
 approval, retraction and supersession. Links and identifiers are read from the
 terms' nanopubs in published/, so they cover terms that are already synced.
@@ -42,7 +44,9 @@ MAX_LISTED = 25
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument("--query-url", required=True, help="vocabulary query (approved classes), SPARQL-JSON API URL")
+    parser.add_argument(
+        "--query-url", required=True, help="vocabulary query (approved classes or terms), SPARQL-JSON API URL"
+    )
     parser.add_argument("--namespace", required=True, help="namespace of the vocabulary's terms")
     parser.add_argument("--published-dir", type=Path, default=Path("published"))
     parser.add_argument("--timeout", type=int, default=180)
@@ -50,8 +54,11 @@ def parse_args() -> argparse.Namespace:
     return parser.parse_args()
 
 
-def val(row: dict, key: str) -> str:
-    return row.get(key, {}).get("value", "")
+def val(row: dict, *keys: str) -> str:
+    for key in keys:
+        if key in row:
+            return row[key].get("value", "")
+    return ""
 
 
 def short(uri: str) -> str:
@@ -108,10 +115,10 @@ def main() -> None:
     parents: dict[str, set[str]] = {}
     statuses: dict[str, set[str]] = {}
     for row in rows:
-        term = val(row, "class")
+        term = val(row, "class", "term")
         if not term:
             continue
-        label[term] = val(row, "class_label").strip()
+        label[term] = val(row, "class_label", "term_label").strip()
         np_of[term] = val(row, "np")
         parents[term] = set(val(row, "superclasses_multi_iri").split())
         statuses[term] = {s.strip().lower() for s in val(row, "status_multi").splitlines() if s.strip()}
@@ -126,7 +133,8 @@ def main() -> None:
     # Duplicate labels among current terms.
     by_label = collections.defaultdict(list)
     for term in current:
-        by_label[label[term].lower()].append(term)
+        if label[term]:
+            by_label[label[term].lower()].append(term)
     report.error(
         "current terms with the same label",
         [" / ".join(name(t) for t in sorted(ts)) for _, ts in sorted(by_label.items()) if len(ts) > 1],
